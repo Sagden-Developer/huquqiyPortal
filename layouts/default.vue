@@ -17,7 +17,8 @@ export default {
 </script>
 <style lang="scss">
 .body {
-  width: 1700px !important;
+  width: 1300px !important;
   margin: 0 auto;
+  // background: red;
 }
 </style>
