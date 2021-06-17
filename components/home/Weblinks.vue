@@ -2,17 +2,15 @@
   <div>
     <div class="weblinks">
       <Carousel v-bind="slickOptions">
-        <div class="link">
-          <img src="@/assets/image/adliya.png" alt="" />
+        <div
+          class="link"
+          v-for="(site, index) in $store.state.home.sites"
+          :key="index"
+        >
+          <img :src="`http://ass.tujjor.org/${site.image}`" alt="" />
         </div>
         <div class="link">
           <img src="@/assets/image/bolahuquq.png" alt="" />
-        </div>
-        <div class="link">
-          <img src="@/assets/image/huquq.png" alt="" />
-        </div>
-        <div class="link">
-          <img src="@/assets/image/advice.png" alt="" />
         </div>
       </Carousel>
     </div>
@@ -42,8 +40,8 @@ export default {
               infinite: true,
               slidesToScroll: 1,
               dots: true,
-              draggable: true
-            }
+              draggable: true,
+            },
           },
           {
             breakpoint: 600,
@@ -59,13 +57,13 @@ export default {
               autoplaySpeed: 3000,
               infinite: true,
               slidesToScroll: 1,
-              draggable: true
-            }
-          }
-        ]
-      }
+              draggable: true,
+            },
+          },
+        ],
+      },
     };
-  }
+  },
 };
 </script>
 

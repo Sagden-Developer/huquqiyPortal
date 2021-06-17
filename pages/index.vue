@@ -33,7 +33,12 @@ export default {
 
   mounted() {},
 
-  methods: {}
+  methods: {},
+  beforeCreate() {
+    this.$store.dispatch('home/GET_HOMES_VIDEO');
+    this.$store.dispatch('home/GET_HOMES_NEWS');
+    this.$store.dispatch('home/GET_HOMES_SITES');
+  }
 };
 </script>
 

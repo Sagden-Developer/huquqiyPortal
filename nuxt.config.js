@@ -19,12 +19,14 @@ export default {
   css: [
     // SCSS file in the project
     '@/assets/scss/style.scss',
+    '@/assets/css/swiper.css',
     'vue-slick-carousel/dist/vue-slick-carousel.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: "@/plugins/vue-slick-carousel.js" },
+    { src: "~/plugins/vue-swiper.js", ssr: false },
   ],
   // plugins: [{ src: './plugins/vue-slick-carousel.js' }],
 
@@ -38,7 +40,9 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    "nuxt-i18n"
+    "nuxt-i18n",
+    '@nuxtjs/axios',
+
   ],
   i18n: {
     locales: [
@@ -55,7 +59,11 @@ export default {
     langDir: "lang/",
     defaultLocale: "uz"
   },
-
+  
+  axios: {
+    baseURL: "http://ass.tujjor.org/api/"
+    // baseURL: "http://localhost:3301/api"
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: ["vue-slick"]
