@@ -103,7 +103,13 @@ export default {
         -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
         -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
         box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+        transition: 0.3s linear;
         text-decoration: none;
+        &:hover {
+          -webkit-box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+          -moz-box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+        }
         img {
           margin-bottom: 25px;
         }
