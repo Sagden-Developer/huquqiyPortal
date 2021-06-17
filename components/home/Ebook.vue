@@ -7,10 +7,16 @@
       </div>
 
       <Carousel v-bind="slickOptions">
-        <div class="card-book">
-          <img src="@/assets/image/yoshlar uchun.png" alt="" />
-          <p>Yoshlar uchun yuridik ensiklopediya</p>
-          <span>2021</span>
+        <div
+          class="card-book"
+          v-for="(library, index) in $store.state.home.libraries"
+          :key="index"
+        >
+          <a :href="library.link">
+            <img :src="`http://ass.tujjor.org/${library.image}`" alt="" />
+            <p>{{ library.name }}</p>
+            <span>2021</span>
+          </a>
         </div>
         <div class="card-book">
           <img src="@/assets/image/bolalar uchun.png" alt="" />
@@ -70,8 +76,8 @@ export default {
               infinite: true,
               slidesToScroll: 1,
               dots: true,
-              draggable: true
-            }
+              draggable: true,
+            },
           },
           {
             breakpoint: 600,
@@ -87,13 +93,13 @@ export default {
               autoplaySpeed: 3000,
               infinite: true,
               slidesToScroll: 1,
-              draggable: true
-            }
-          }
-        ]
-      }
+              draggable: true,
+            },
+          },
+        ],
+      },
     };
-  }
+  },
 };
 </script>
 
