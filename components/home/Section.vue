@@ -77,6 +77,7 @@ export default {
         height: 222px;
         margin: 10px 0;
         border-radius: 12px;
+        cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;

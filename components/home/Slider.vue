@@ -1,7 +1,6 @@
 <template>
   <div>
-    <VueSlickCarousel v-bind="settings">
-      <div v-for="(item, index) in 5" :key="index" id="slider">
+      <div id="slider">
         <div class="slide-texts">
           <div class="head-text">
             <h1>Huquqiy portal</h1>
@@ -26,7 +25,6 @@
           />
         </div>
       </div>
-    </VueSlickCarousel>
   </div>
 </template>
 
@@ -41,13 +39,6 @@ export default {
         { title: "Ishonch raqamlari" },
         { title: "Onlayn Huquqiy maslahatlar" }
       ],
-      settings: {
-        dots: false,
-        arrows: false,
-        infinite: true,
-        slidesToScroll: 1,
-        rtl: true,
-      }
     };
   }
 };
@@ -63,7 +54,7 @@ export default {
   border: 1px solid;
   border-radius: 24px;
   padding: 55px;
-  margin: 0 auto;
+  margin: 25px auto;
   background-image: url("/img/slide.png");
   color: #fff;
   .head-text {
@@ -71,9 +62,11 @@ export default {
   }
   .info-text {
     width: 60%;
+    margin: 25px 0;
   }
   .search-button {
-    & input[type="text"] {
+    margin: 20px 0;
+    input[type="text"] {
       width: 570px;
       height: 54px;
       border-radius: 12px;
@@ -97,6 +90,11 @@ export default {
       margin: 10px 5px 5px 0;
       padding: 5px 10px;
       background: transparent;
+      &:hover{
+        background-color: #fff;
+        color: black;
+        cursor: pointer;
+      }
     }
   }
 }
