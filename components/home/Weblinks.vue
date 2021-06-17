@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div class="weblinks">
       <Carousel v-bind="slickOptions">
         <div class="link">
           <img src="@/assets/image/adliya.png" alt="" />
@@ -70,16 +70,23 @@ export default {
 </script>
 
 <style lang="scss">
-.container {
-  display: flex;
+.weblinks {
+  background: #E5E5E5;
+  // display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   div.link {
     padding: 0 20px;
     width: 20%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
     img{
-      width: 100%;
+      pointer-events: none;
+      width: 70%;
+      height: auto;
     }
   }
 }

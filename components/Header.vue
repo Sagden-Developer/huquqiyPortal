@@ -328,7 +328,7 @@ export default {
 
   button {
     border: 0;
-    background: #fff;
+    background: transparent;
     width: 120px;
     // padding: 10px 40px;
     border-radius: 8px;
@@ -352,8 +352,9 @@ export default {
 .til-menu {
   position: absolute;
   div {
-    width: 50px;
-    margin-left: 39px;
+    width: 100px;
+    padding: 0 10px;
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
     background: #fff;
