@@ -13,11 +13,17 @@
           </div>
         </div>
         <div class="search-button">
-          <input type="text" v-model="power_from" :placeholder="placeholder" />
+          <input type="text" :placeholder="placeholder" />
         </div>
         <div class="tag-text">Teglar</div>
         <div class="tags">
-          <input type="button" class="tag-links" v-for="tagLink in tagLinks" :key="tagLink" :value="tagLink.title" />
+          <input
+            type="button"
+            class="tag-links"
+            v-for="tagLink in tagLinks"
+            :key="tagLink"
+            :value="tagLink.title"
+          />
         </div>
       </div>
     </VueSlickCarousel>
@@ -40,10 +46,10 @@ export default {
         arrows: false,
         infinite: true,
         slidesToScroll: 1,
-        rtl: true
+        rtl: true,
       }
     };
-  },
+  }
 };
 </script>
 
@@ -67,7 +73,7 @@ export default {
     width: 60%;
   }
   .search-button {
-    & input[type=text] {
+    & input[type="text"] {
       width: 570px;
       height: 54px;
       border-radius: 12px;

@@ -10,7 +10,7 @@
         >
           <img :src="item.sectionIcon" alt="" />{{ item.sectionTitle }}
           <a :href="item.href" v-if="item.href">
-            Link
+            {{ item.sectionTitle }}
           </a>
           <nuxt-link :to="item.to" v-if="item.to">Link to </nuxt-link>
         </div>
@@ -67,17 +67,25 @@ export default {
   #sections {
     max-width: 1240px;
     height: 529px;
-    border: 1px solid;
     margin: 0 30px;
     .section-list-group {
       display: flex;
       flex-wrap: wrap;
-      border: 1px solid blue;
-      justify-content: center;
+      justify-content: space-between;
       .section-list-box {
         width: 400px;
         height: 222px;
-        border: 1px solid red;
+        margin: 10px 0;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+        box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
       }
     }
   }
