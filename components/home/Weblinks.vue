@@ -71,7 +71,7 @@ export default {
 
 <style lang="scss">
 .weblinks {
-  background: #E5E5E5;
+  // background: #E5E5E5;
   // display: flex;
   width: 100%;
   justify-content: space-between;
@@ -83,7 +83,7 @@ export default {
     align-items: center;
     justify-content: center;
     height: 200px;
-    img{
+    img {
       pointer-events: none;
       width: 70%;
       height: auto;

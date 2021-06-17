@@ -144,8 +144,8 @@ export default {
   box-sizing: border-box;
   #question {
     max-width: 1240px;
-    height: 529px;
     margin: 0 30px;
+    margin-bottom: 30px;
     .question-text {
       font-family: "Oxygen";
       font-style: normal;

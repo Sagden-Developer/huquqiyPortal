@@ -152,7 +152,12 @@
                 stroke-linejoin="round"
               /></svg
           ></span>
-          <h3>Maxsus imkoniyatlar</h3>
+          <h3 @click="maxsus = !maxsus">Maxsus imkoniyatlar</h3>
+          <br />
+
+          <div v-if="maxsus" class="special">
+            <p>Shrift o'lchami</p>
+          </div>
         </div>
       </div>
     </div>
@@ -247,6 +252,7 @@
 export default {
   data() {
     return {
+      maxsus: false,
       classLan: false,
       dropdownOpenProfil: false,
       Targibot: false,
