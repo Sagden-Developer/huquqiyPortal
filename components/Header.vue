@@ -1,9 +1,24 @@
 <template>
   <div>
     <div class="header">
+      <!-- <h1>{{ $t("lan") }}</h1> -->
+      <!-- <button @click="selectLan" class="select-language">
+        <h6 v-if="$i18n.locale == 'uz'">UZ</h6>
+        <h6 v-if="$i18n.locale == 'ru'">RU</h6>
+        <fa icon="angle-down" />
+
+        <ul v-if="classLan">
+          <li>
+            <a href="#" @click.prevent="$i18n.setLocale('uz')">UZ</a>
+          </li>
+          <li>
+            <a href="#" @click.prevent="$i18n.setLocale('ru')">RU</a>
+          </li>
+        </ul>
+      </button> -->
       <div class="left">
-        <span
-          ><svg
+        <span>
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             width="64"
@@ -32,12 +47,39 @@
               />
             </defs></svg
         ></span>
-        <h2>O’zbekiston Respublikasi Milliy Huquqiy Portali</h2>
+        <h2>{{ $t("lan") }}</h2>
       </div>
       <div class="right">
-        <input type="text" placeholder="Izlash" />
+        <div class="izlash">
+          <input type="text" placeholder="Izlash" />
+          <button class="search-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                stroke="#333333"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M20.9999 21L16.6499 16.65"
+                stroke="#333333"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+
         <div class="til">
-          <button @click="dropdownOpenProfil = !dropdownOpenProfil">
+          <button>
             <svg
               class="flag"
               xmlns="http://www.w3.org/2000/svg"
@@ -79,16 +121,10 @@
             </svg>
           </button>
 
-          <div
-            v-show="dropdownOpenProfil"
-            @click="dropdownOpenProfil = false"
-            class=""
-          ></div>
-
-          <div v-show="dropdownOpenProfil" class="til-menu">
+          <div class="til-menu">
             <div class="">
-              <a href="" class="">Uzbekcha</a>
-              <a class="">Ruscha</a>
+              <a href="#" @click.prevent="$i18n.setLocale('uz')">Uzbekcha</a>
+              <a href="#" @click.prevent="$i18n.setLocale('ru')">Ruscha</a>
             </div>
           </div>
         </div>
@@ -141,8 +177,7 @@
           </a>
         </li>
         <li>
-          <a href="#" 
-          @click="onlineTest = !onlineTest"
+          <a href="#" @click="onlineTest = !onlineTest"
             >Onlayn sinov
             <svg
               :class="Targibot ? 'bur' : ''"
@@ -180,30 +215,30 @@
         <li><a class="end" href="#">Ishonch raqamlari</a></li>
       </ul>
 
-      <div  class="targibot">
-            <div class="">
-              <a href="" class="">Targ'ibot</a>
-              <a href="" class="">Targ'ibot</a>
-              <a href="" class="">Targ'ibot</a>
-              <a href="" class="">Targ'ibot</a>
-            </div>
-          </div>
-      <div  class="test">
-            <div class="">
-              <a href="" class="">Targ'ibot</a>
-              <a href="" class="">Targ'ibot</a>
-              <a href="" class="">Targ'ibot</a>
-              <a href="" class="">Targ'ibot</a>
-            </div>
-          </div>
-      <div  class="book">
-            <div class="">
-              <a href="" class="">Targ'ibot</a>
-              <a href="" class="">Targ'ibot</a>
-              <a href="" class="">Targ'ibot</a>
-              <a href="" class="">Targ'ibot</a>
-            </div>
-          </div>
+      <div class="targibot">
+        <div class="">
+          <a href="" class="">Targ'ibot</a>
+          <a href="" class="">Targ'ibot</a>
+          <a href="" class="">Targ'ibot</a>
+          <a href="" class="">Targ'ibot</a>
+        </div>
+      </div>
+      <div class="test">
+        <div class="">
+          <a href="" class="">Targ'ibot</a>
+          <a href="" class="">Targ'ibot</a>
+          <a href="" class="">Targ'ibot</a>
+          <a href="" class="">Targ'ibot</a>
+        </div>
+      </div>
+      <div class="book">
+        <div class="">
+          <a href="" class="">Targ'ibot</a>
+          <a href="" class="">Targ'ibot</a>
+          <a href="" class="">Targ'ibot</a>
+          <a href="" class="">Targ'ibot</a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -212,11 +247,17 @@
 export default {
   data() {
     return {
+      classLan: false,
       dropdownOpenProfil: false,
       Targibot: false,
       onlineTest: false,
-      Book: false,
+      Book: false
     };
+  },
+  methods: {
+    selectLan() {
+      this.classLan = !this.classLan;
+    }
   }
 };
 </script>
@@ -225,29 +266,32 @@ export default {
 .bottom {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    width: 100%;
-    .targibot, .test, .book{
-      display: none;
+  width: 100%;
+  margin-top: 40px;
+  .targibot,
+  .test,
+  .book {
+    display: none;
+  }
+  .test-link:hover {
+    .test {
+      display: block;
     }
-    .test-link:hover{
-      .test{
-        display: block;
-      }
+  }
+  .book-link:hover {
+    .book {
+      display: block;
     }
-    .book-link:hover{
-      .book{
-        display: block;
-      }
+  }
+  .targibot-link:hover {
+    .targibot {
+      display: block;
     }
-    .targibot-link:hover{
-      .targibot{
-        display: block;
-      }
-    }
+  }
   ul {
     padding-left: 10px !important;
     li {
-      a.start{
+      a.start {
         padding-left: 0px;
       }
       a {
@@ -257,18 +301,18 @@ export default {
         line-height: 20px;
         text-decoration: none;
         color: #333333;
-        border-right: 1px solid #B2A4BE;
-            svg{
-              margin-left: 10px;
-              path{
-                fill: #333;
-            }
-        }
-            }
-          a.end{
-            border-right: 0 ;
-            padding-right: 0;
+        border-right: 1px solid #b2a4be;
+        svg {
+          margin-left: 10px;
+          path {
+            fill: #333;
           }
+        }
+      }
+      a.end {
+        border-right: 0;
+        padding-right: 0;
+      }
       display: inline-block;
     }
   }
@@ -281,19 +325,37 @@ export default {
   .left {
     font-weight: 600;
     font-size: 16px;
-    line-height: 150%;
+    // line-height: 150%;
     color: #333333;
     justify-content: center;
     align-items: center;
     width: 30%;
     display: flex;
+    svg {
+      margin-right: 15px;
+    }
   }
   .right {
     width: 65%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .izlash {
+      position: relative;
+    }
+    button.search-icon {
+      padding: 10px;
+      background: #e6e2df;
+      z-index: 10;
+      position: absolute;
+      right: 10px;
+      top: 5px;
+      cursor: pointer;
+      border: 0;
+      background: transparent;
+    }
     input {
+      z-index: 1;
       width: 400px;
       padding: 0 20px;
       height: 54px;
@@ -349,8 +411,12 @@ export default {
     transform: rotate(0);
   }
 }
+.til:hover .til-menu {
+  display: block;
+}
 .til-menu {
   position: absolute;
+  display: none;
   div {
     width: 100px;
     padding: 0 10px;
@@ -363,6 +429,38 @@ export default {
       text-decoration: none;
       margin-top: 10px;
       color: #000;
+    }
+  }
+}
+button.select-language {
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  position: relative;
+  ul {
+    position: absolute;
+    width: 60px;
+    border-radius: 3px;
+    list-style-type: none;
+    left: 0;
+    top: 25px;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    li {
+      padding: 5px 10px 5px 3px;
+      a {
+        color: red;
+        font-size: 16px;
+      }
+      &:hover {
+        a {
+          color: #333;
+        }
+      }
     }
   }
 }

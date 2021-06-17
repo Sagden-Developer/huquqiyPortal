@@ -1,38 +1,36 @@
 <template>
   <div>
-
     <div class="rating">
       <div class="title">
         <p>Huquqiy targ’ibotni baholash tizimi bo’yicha reyting</p>
         <button>To'liq reyting</button>
       </div>
       <div class="rating-body">
-        <div class="left" style="width: 60%">
-        
-        <div class="rating-list">
-          <div
-            class="rating-list-item"
-            v-for="(item, index) in ratingItem"
-            :key="index"
-            :style="'width:' + item.rating + '%'"
-          >
-          <dir class="chap"><b> {{ index + 1 }} </b></dir>
-          <dir class="ong"><h4>
-              {{ item.rating }}
-            </h4></dir>
-            
-            
+        <div class="left" style="width: 65%">
+          <div class="rating-list">
+            <div
+              class="rating-list-item"
+              v-for="(item, index) in ratingItem"
+              :key="index"
+              
+            >
+              <div class="chap">
+                <b> {{ index + 1 }} </b>
+              </div>
+              <dir class="ong"  :style="'width:' + item.rating + '%'">
+                <h4>
+                  {{ item.rating }}
+                </h4>
+              </dir>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="right">
-        <img src="@/assets/image/ratingimg.png" alt="">
-      </div>
+        <div class="right">
+          <img src="@/assets/image/ratingimg.png" alt="" />
+        </div>
       </div>
 
       <div></div>
-
-      
     </div>
   </div>
 </template>
@@ -43,19 +41,19 @@ export default {
     return {
       ratingItem: [
         {
-          rating: 98.6
+          rating: 50
         },
         {
-          rating: 97.2
+          rating: 93.1
         },
         {
-          rating: 96
+          rating: 40
         },
         {
-          rating: 95.3
+          rating: 78
         },
         {
-          rating: 94.5
+          rating: 65
         }
       ]
     };
@@ -65,8 +63,10 @@ export default {
 
 <style lang="scss">
 .rating {
+  padding: 20px;
   background: rgba(95, 146, 211, 0.1);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   .title {
     padding: 10px;
     font-weight: bold;
@@ -81,24 +81,44 @@ export default {
       line-height: 150%;
       padding: 8px 25px;
       color: #fff;
-      background: #597ba3;
+      background: #07A287;
+      cursor: pointer;
       border-radius: 50px;
       border: 0;
     }
   }
-  .rating-body{
+  .rating-body {
     display: flex;
+    margin-top: 20px;
+    .left{
+      width: 65%;
+    }
+    .right{
+      width: 35%;
+      img{
+        width: 100%;
+      }
+    }
+    .chap{
+      width: 50px !important;
+      background: transparent !important;
+    }
+    .ong{
+      margin-left: 10px;
+      background: #3C59AA;
+       border-radius: 10000px;
+       display: flex;
+    justify-content: flex-end;
+    }
   }
-  .left {
-    // display: flex;
-  }
+  
 }
 .rating-list-item {
-  background: #3c59aa;
+  // background: #3c59aa;
   border-radius: 10000px;
   margin-bottom: 10px;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   h4 {
     background: #fff;
     width: 60px;
@@ -116,7 +136,8 @@ export default {
   }
 }
 b {
-  background: cyan;
+  background: #3C59AA;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
