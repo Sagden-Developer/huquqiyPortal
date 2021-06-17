@@ -1,30 +1,57 @@
 <template>
   <div>
-      <div id="slider">
-        <div class="slide-texts">
-          <div class="head-text">
-            <h1>Huquqiy portal</h1>
-          </div>
-          <div class="info-text">
-            <h1>
-              O’zbekiston Respublikasi Milliy Huquqiy informatsion portali
-            </h1>
-          </div>
+    <div id="slider">
+      <div class="slide-texts">
+        <div class="head-text">
+          <h1>Huquqiy portal</h1>
         </div>
-        <div class="search-button">
-          <input type="text" :placeholder="placeholder" />
-        </div>
-        <div class="tag-text">Teglar</div>
-        <div class="tags">
-          <input
-            type="button"
-            class="tag-links"
-            v-for="tagLink in tagLinks"
-            :key="tagLink"
-            :value="tagLink.title"
-          />
+        <div class="info-text">
+          <h1>
+            O’zbekiston Respublikasi Milliy Huquqiy informatsion portali
+          </h1>
         </div>
       </div>
+      <div class="search-button">
+        <input type="text" :placeholder="placeholder" />
+        <button class="search-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+              stroke="#333333"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M20.9999 21L16.6499 16.65"
+              stroke="#333333"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="tag-section">
+        <div class="tag-text">Teglar</div>
+        <img :src="tagIcon" alt="" class="tag-icon" />
+      </div>
+      <div class="tags">
+        <input
+          type="button"
+          class="tag-links"
+          v-for="tagLink in tagLinks"
+          :key="tagLink"
+          :value="tagLink.title"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -39,6 +66,7 @@ export default {
         { title: "Ishonch raqamlari" },
         { title: "Onlayn Huquqiy maslahatlar" }
       ],
+      tagIcon: require("@/assets/img/tag.svg")
     };
   }
 };
@@ -47,6 +75,9 @@ export default {
 <style lang="scss" scoped>
 * {
   box-sizing: border-box;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
 }
 #slider {
   max-width: 1240px;
@@ -66,20 +97,46 @@ export default {
   }
   .search-button {
     margin: 20px 0;
-    input[type="text"] {
+    position: relative;
+    input[type=text] {
       width: 570px;
       height: 54px;
       border-radius: 12px;
-      border: 2px solid;
+      border: none;
       outline: none;
       margin: 10px 0 15px 0;
       padding: 10px;
+      z-index: 1;
+      font-size: 18px;
+      font-weight: 500;
+      color: #D5D5D5;
+    }
+    .search-icon {
+      padding: 10px;
+      background: #e6e2df;
+      z-index: 10;
+      position: absolute;
+      top: 50%;
+      left: 48%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      border: 0;
+      background: transparent;
+    }
+  }
+  .tag-section {
+    position: relative;
+    .tag-icon {
+      position: absolute;
+      left: 5.5%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
   }
   .tags {
     padding: 10px 0 10px 0;
     display: flex;
-    width: 35%;
+    width: 30%;
     flex-wrap: wrap;
     justify-content: space-between;
 
@@ -90,7 +147,13 @@ export default {
       margin: 10px 5px 5px 0;
       padding: 5px 10px;
       background: transparent;
-      &:hover{
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      transition: .3s linear;
+      &:hover {
         background-color: #fff;
         color: black;
         cursor: pointer;
