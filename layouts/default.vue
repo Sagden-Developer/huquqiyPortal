@@ -3,8 +3,8 @@
     <div class="body">
       <Header />
       <Nuxt />
-      <Footer />
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -16,6 +16,10 @@ export default {
 };
 </script>
 <style lang="scss">
+*{
+  margin: 0;
+  padding: 0;
+}
 .body {
   width: 1300px !important;
   margin: 0 auto;
