@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>ebook</h1>
     <div class="ebook">
       <div class="head">
         <img src="@/assets/image/ebook.png" alt="" />
@@ -14,23 +13,23 @@
           <span>2021</span>
         </div>
         <div class="card-book">
-          <img src="@/assets/image/yoshlar uchun.png" alt="" />
-          <p>Yoshlar uchun yuridik ensiklopediya</p>
+          <img src="@/assets/image/bolalar uchun.png" alt="" />
+          <p>Bolalar uchun yuridik ensiklopediya</p>
           <span>2021</span>
         </div>
         <div class="card-book">
-          <img src="@/assets/image/yoshlar uchun.png" alt="" />
-          <p>Yoshlar uchun yuridik ensiklopediya</p>
+          <img src="@/assets/image/advokatura.png" alt="" />
+          <p>Advokatura (darslik adabiyoti)</p>
           <span>2021</span>
         </div>
         <div class="card-book">
-          <img src="@/assets/image/yoshlar uchun.png" alt="" />
-          <p>Yoshlar uchun yuridik ensiklopediya</p>
+          <img src="@/assets/image/yer huquqi.png" alt="" />
+          <p>Yer huquqi</p>
           <span>2021</span>
         </div>
         <div class="card-book">
-          <img src="@/assets/image/yoshlar uchun.png" alt="" />
-          <p>Yoshlar uchun yuridik ensiklopediya</p>
+          <img src="@/assets/image/xalqaro huquq.png" alt="" />
+          <p>Xalqaro iqtisodiy huquq</p>
           <span>2021</span>
         </div>
         <div class="card-book">
@@ -101,8 +100,8 @@ export default {
 <style lang="scss">
 .ebook {
   width: 1140px;
-  margin: 20px auto;
-  .slick-prev{
+  margin: 30px auto;
+  .slick-prev {
     display: block;
     width: 50px;
     height: 50px;
@@ -110,15 +109,15 @@ export default {
     border-radius: 50%;
     left: -70px;
   }
-  .slick-next{
-      display: block;
+  .slick-next {
+    display: block;
     width: 50px;
     height: 50px;
     background: rebeccapurple;
     border-radius: 50%;
-    right:  -70px;
+    right: -70px;
   }
-  .head{
+  .head {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,19 +126,22 @@ export default {
   img {
     pointer-events: none;
   }
-  .card-book{
-    p{
-      font-weight: 500;
-font-size: 18px;
-line-height: 22px;
-color: #333333;
-margin: 10px 0;
+  .card-book {
+    img {
+      height: 270px;
     }
-    span{
+    p {
       font-weight: 500;
-font-size: 18px;
-line-height: 22px;
-color: #FFBA00;
+      font-size: 18px;
+      line-height: 22px;
+      color: #333333;
+      margin: 10px 0;
+    }
+    span {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      color: #ffba00;
     }
   }
 }

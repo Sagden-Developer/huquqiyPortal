@@ -25,12 +25,7 @@
                     transform="scale(0.00364964 0.00328981)"
                   />
                 </pattern>
-                <image
-                  id="image0"
-                  width="274"
-                  height="304"
-                  
-                />
+                <image id="image0" width="274" height="304" />
               </defs>
             </svg>
             O’zbekiston Respublikasi Milliy Huquqiy Portali
@@ -219,8 +214,8 @@
             Enter tugmasini bosing
           </p>
           <div class="by">
-            <p>Design by </p>
-            <img src="@/assets/image/napa.png" alt="">
+            <p>Design by</p>
+            <img src="@/assets/image/napa.png" alt="" />
           </div>
         </div>
       </div>
@@ -305,6 +300,7 @@ footer {
         font-weight: 500;
         display: flex;
         align-items: center;
+        font-weight: 500;
         font-size: 18px;
         line-height: 22px;
         margin-top: 20px;
@@ -325,13 +321,13 @@ footer {
     display: flex;
     // justify-content: center;
     flex-direction: column;
-    .by{
+    .by {
       // margin-top: 70px;
       display: flex;
       margin: 70px auto;
       align-items: center;
       // justify-content: ;
-      p{
+      p {
         margin-right: 10px;
       }
     }
