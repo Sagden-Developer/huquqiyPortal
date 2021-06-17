@@ -3,8 +3,8 @@
     <div class="body">
       <Header />
       <Nuxt />
-    </div>
     <Footer />
+    </div>
   </div>
 </template>
 
