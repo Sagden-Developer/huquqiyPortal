@@ -72,7 +72,7 @@ export default {
   box-sizing: border-box;
   #sections {
     max-width: 1240px;
-    height: 529px;
+    // height: 529px;
     margin: 0 30px;
     .section-text {
       font-family: "Oxygen";
@@ -126,4 +126,5 @@ export default {
     }
   }
 }
+
 </style>

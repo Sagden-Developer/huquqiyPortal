@@ -3,10 +3,18 @@
 .body {
   width: 1440px !important;
   margin: 0 auto;
-  background-color: #fff;
+ background:#FBF9FB;
 }
 
 *{
   font-family: 'Montserrat',
   sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  max-width: 1300px;
+  margin: 0 auto;
 }

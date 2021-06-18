@@ -1,36 +1,44 @@
 <template>
   <div>
     <div class="rating">
-      <div class="title">
-        <p>Huquqiy targ’ibotni baholash tizimi bo’yicha reyting</p>
-        <button>To'liq reyting</button>
-      </div>
-      <div class="rating-body">
-        <div class="left" style="width: 65%">
-          <div class="rating-list">
-            <div
-              class="rating-list-item"
-              v-for="(item, index) in ratingItem"
-              :key="index"
-              
-            >
-              <div class="chap">
-                <b> {{ index + 1 }} </b>
+      <div class="container">
+        <div class="title">
+          <p>Huquqiy targ’ibotni baholash tizimi bo’yicha reyting</p>
+          <button>To'liq reyting</button>
+        </div>
+        <div class="rating-body">
+          <div class="left" style="width: 65%">
+            <div class="rating-list">
+              <div
+                class="rating-list-item"
+                v-for="(item, index) in ratingItem"
+                :key="index"
+              >
+                <div class="chap">
+                  <b> {{ index + 1 }} </b>
+                </div>
+
+                <dir
+                  class="ong"
+                  :style="
+                    'width:' + 'calc( ' + item.rating + '%' + ' - 60px );'
+                  "
+                >
+                  <p>{{ item.text }}</p>
+                  <h4>
+                    {{ item.rating }}
+                  </h4>
+                </dir>
               </div>
-              <dir class="ong"  :style="'width:' + item.rating + '%'">
-                <h4>
-                  {{ item.rating }}
-                </h4>
-              </dir>
             </div>
           </div>
+          <div class="right">
+            <img src="@/assets/image/ratingimg.png" alt="" />
+          </div>
         </div>
-        <div class="right">
-          <img src="@/assets/image/ratingimg.png" alt="" />
-        </div>
-      </div>
 
-      <div></div>
+        <div></div>
+      </div>
     </div>
   </div>
 </template>
@@ -41,19 +49,24 @@ export default {
     return {
       ratingItem: [
         {
-          rating: 50
+          rating: 78.3,
+          text: "Moliya vazirligi"
         },
         {
-          rating: 93.1
+          rating: 93.1,
+          text: "Sog'liqni saqlash vazirligi"
         },
         {
-          rating: 40
+          rating: 100,
+          text: "Qurilish vazirligi"
         },
         {
-          rating: 78
+          rating: 78,
+          text: "Mudofaa vazirligi"
         },
         {
-          rating: 65
+          rating: 65,
+          text: "Xalq ta'limi vazirligi"
         }
       ]
     };
@@ -81,7 +94,7 @@ export default {
       line-height: 150%;
       padding: 8px 25px;
       color: #fff;
-      background: #07A287;
+      background: #07a287;
       cursor: pointer;
       border-radius: 50px;
       border: 0;
@@ -90,28 +103,35 @@ export default {
   .rating-body {
     display: flex;
     margin-top: 20px;
-    .left{
+    .left {
       width: 65%;
     }
-    .right{
+    .right {
       width: 35%;
-      img{
+      img {
         width: 100%;
       }
     }
-    .chap{
+    .chap {
       width: 50px !important;
       background: transparent !important;
     }
-    .ong{
+    .ong {
       margin-left: 10px;
-      background: #3C59AA;
-       border-radius: 10000px;
-       display: flex;
-    justify-content: flex-end;
+      background: #3c59aa;
+      border-radius: 10000px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      p {
+        padding-left: 20px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: #ffffff;
+      }
     }
   }
-  
 }
 .rating-list-item {
   // background: #3c59aa;
@@ -136,7 +156,7 @@ export default {
   }
 }
 b {
-  background: #3C59AA;
+  background: #3c59aa;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -145,5 +165,26 @@ b {
   height: 50px;
   margin-right: 100px;
   border-radius: 50%;
+}
+@media (min-width: 576px) and (max-width: 950px) {
+  .rating-body {
+    flex-direction: column;
+    .left {
+      width: 100% !important;
+      .rating-list {
+        width: 100%;
+      }
+    }
+    .right {
+      padding: 40px;
+      margin-top: 30px;
+      width: 100% !important;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 70% !important;
+      }
+    }
+  }
 }
 </style>

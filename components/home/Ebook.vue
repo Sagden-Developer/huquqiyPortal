@@ -1,54 +1,56 @@
 <template>
   <div>
     <div class="ebook">
-      <div class="head">
-        <img src="@/assets/image/ebook.png" alt="" />
-        <p>Elektron Kutubxona</p>
-      </div>
+      <div class="continer">
+        <div class="head">
+          <img src="@/assets/image/ebook.png" alt="" />
+          <p>Elektron Kutubxona</p>
+        </div>
 
-      <Carousel v-bind="slickOptions">
-        <div
-          class="card-book"
-          v-for="(library, index) in $store.state.home.libraries"
-          :key="index"
-        >
-          <a :href="library.link">
-            <img :src="`http://ass.tujjor.org/${library.image}`" alt="" />
-            <p>{{ library.name }}</p>
+        <Carousel v-bind="slickOptions">
+          <div
+            class="card-book"
+            v-for="(library, index) in $store.state.home.libraries"
+            :key="index"
+          >
+            <a :href="library.link">
+              <img :src="`http://ass.tujjor.org/${library.image}`" alt="" />
+              <p>{{ library.name }}</p>
+              <span>2021</span>
+            </a>
+          </div>
+          <div class="card-book">
+            <img src="@/assets/image/bolalar uchun.png" alt="" />
+            <p>Bolalar uchun yuridik ensiklopediya</p>
             <span>2021</span>
-          </a>
-        </div>
-        <div class="card-book">
-          <img src="@/assets/image/bolalar uchun.png" alt="" />
-          <p>Bolalar uchun yuridik ensiklopediya</p>
-          <span>2021</span>
-        </div>
-        <div class="card-book">
-          <img src="@/assets/image/advokatura.png" alt="" />
-          <p>Advokatura (darslik adabiyoti)</p>
-          <span>2021</span>
-        </div>
-        <div class="card-book">
-          <img src="@/assets/image/yer huquqi.png" alt="" />
-          <p>Yer huquqi</p>
-          <span>2021</span>
-        </div>
-        <div class="card-book">
-          <img src="@/assets/image/xalqaro huquq.png" alt="" />
-          <p>Xalqaro iqtisodiy huquq</p>
-          <span>2021</span>
-        </div>
-        <div class="card-book">
-          <img src="@/assets/image/yoshlar uchun.png" alt="" />
-          <p>Yoshlar uchun yuridik ensiklopediya</p>
-          <span>2021</span>
-        </div>
-        <div class="card-book">
-          <img src="@/assets/image/yoshlar uchun.png" alt="" />
-          <p>Yoshlar uchun yuridik ensiklopediya</p>
-          <span>2021</span>
-        </div>
-      </Carousel>
+          </div>
+          <div class="card-book">
+            <img src="@/assets/image/advokatura.png" alt="" />
+            <p>Advokatura (darslik adabiyoti)</p>
+            <span>2021</span>
+          </div>
+          <div class="card-book">
+            <img src="@/assets/image/yer huquqi.png" alt="" />
+            <p>Yer huquqi</p>
+            <span>2021</span>
+          </div>
+          <div class="card-book">
+            <img src="@/assets/image/xalqaro huquq.png" alt="" />
+            <p>Xalqaro iqtisodiy huquq</p>
+            <span>2021</span>
+          </div>
+          <div class="card-book">
+            <img src="@/assets/image/yoshlar uchun.png" alt="" />
+            <p>Yoshlar uchun yuridik ensiklopediya</p>
+            <span>2021</span>
+          </div>
+          <div class="card-book">
+            <img src="@/assets/image/yoshlar uchun.png" alt="" />
+            <p>Yoshlar uchun yuridik ensiklopediya</p>
+            <span>2021</span>
+          </div>
+        </Carousel>
+      </div>
     </div>
   </div>
 </template>
@@ -70,14 +72,14 @@ export default {
             settings: {
               speed: 1500,
               touchThreshold: 1000,
-              autoplay: true,
+              autoplay: false,
               autoplaySpeed: 2000,
               slidesToShow: 3,
               infinite: true,
               slidesToScroll: 1,
-              dots: true,
-              draggable: true,
-            },
+              dots: false,
+              draggable: true
+            }
           },
           {
             breakpoint: 600,
@@ -85,7 +87,7 @@ export default {
               focusOnSelect: true,
               loop: false,
               arrows: false,
-              dots: true,
+              dots: false,
               slidesToShow: 2,
               speed: 1500,
               touchThreshold: 1000,
@@ -93,20 +95,23 @@ export default {
               autoplaySpeed: 3000,
               infinite: true,
               slidesToScroll: 1,
-              draggable: true,
-            },
-          },
-        ],
-      },
+              draggable: true
+            }
+          }
+        ]
+      }
     };
-  },
+  }
 };
 </script>
 
 <style lang="scss">
 .ebook {
   width: 1140px;
-  margin: 30px auto;
+  margin: 70px auto;
+  background: #fff;
+  border-radius: 24px;
+  padding: 30px;
   .slick-prev {
     display: block;
     width: 50px;
@@ -114,6 +119,9 @@ export default {
     background: rebeccapurple;
     border-radius: 50%;
     left: -70px;
+  }
+  .slick-prev::before {
+    content: " \276E" !important;
   }
   .slick-next {
     display: block;
@@ -123,11 +131,17 @@ export default {
     border-radius: 50%;
     right: -70px;
   }
+  .slick-next::before {
+    content: " \276F" !important;
+  }
   .head {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    img {
+      margin-top: -80px;
+    }
   }
   img {
     pointer-events: none;
@@ -136,7 +150,8 @@ export default {
     img {
       height: 270px;
     }
-    p {
+    a {
+      text-decoration: none;
       font-weight: 500;
       font-size: 18px;
       line-height: 22px;
