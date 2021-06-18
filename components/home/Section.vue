@@ -1,18 +1,20 @@
 <template>
+    <div class="container">
   <div id="sections">
-    <div class="sections-body">
-      <div class="section-text title-text">{{ sectionTitle }}</div>
-      <div class="section-list-group">
-        <div v-for="(item, index) in sectionItem" :key="index">
-          <a
-            :href="item.href"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="section-list-box"
-          >
-            <img :src="item.sectionIcon" :alt="item.iimgAlt" />
-            <div class="section-title-text">{{ item.sectionTitle }}</div>
-          </a>
+      <div class="sections-body">
+        <div class="section-text title-text">{{ sectionTitle }}</div>
+        <div class="section-list-group">
+          <div v-for="(item, index) in sectionItem" :key="index">
+            <a
+              :href="item.href"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="section-list-box"
+            >
+              <img :src="item.sectionIcon" :alt="item.iimgAlt" />
+              <div class="section-title-text">{{ item.sectionTitle }}</div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -70,9 +72,8 @@ export default {
 <style lang="scss" scoped>
 * {
   box-sizing: border-box;
-  
+
   #sections {
-    
     max-width: 1240px;
     // height: 529px;
     margin: 60px 30px;
@@ -128,18 +129,16 @@ export default {
   }
 }
 @media (min-width: 576px) and (max-width: 950px) {
-  .section-list-group{
+  .section-list-group {
     // width: 50%;
-    div{
+    div {
       width: 33%;
       display: block;
-      a{
+      a {
         margin: 10px auto !important;
         width: 95% !important;
-        
       }
     }
   }
 }
-
 </style>

@@ -349,8 +349,10 @@ footer {
 }
 @media (min-width: 576px) and (max-width: 950px) {
   footer {
+    // padding-bottom: 10px !important;
     .footer-left {
       width: 50% !important;
+      justify-content: flex-start !important;
       .logo{
         width: 88% !important;
       }

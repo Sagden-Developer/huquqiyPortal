@@ -203,6 +203,9 @@ export default {
   }
 }
 @media (min-width: 576px) and (max-width: 950px) {
+  .ebook{
+    width: 700px;
+  }
   .rating-body {
     flex-direction: column;
     .left {

@@ -3,7 +3,9 @@
     <div class="rating">
       <div class="container">
         <div class="title title-text">
-          <p class="title-text">Huquqiy targ’ibotni baholash tizimi bo’yicha reyting</p>
+          <p class="title-text">
+            Huquqiy targ’ibotni baholash tizimi bo’yicha reyting
+          </p>
           <button>To'liq reyting</button>
         </div>
         <div class="rating-body">
@@ -167,6 +169,19 @@ b {
   border-radius: 50%;
 }
 @media (min-width: 576px) and (max-width: 950px) {
+  .title {
+    p {
+      max-width: 400px;
+      font-size: 24px !important;
+    }
+    button {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px !important;
+      line-height: 150%;
+      padding: 8px 10px !important;
+    }
+  }
   .rating-body {
     flex-direction: column;
     .left {
@@ -182,7 +197,7 @@ b {
       display: flex;
       justify-content: center;
       img {
-        width: 70% !important;
+        width: 60% !important;
       }
     }
   }
