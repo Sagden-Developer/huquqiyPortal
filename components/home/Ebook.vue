@@ -167,6 +167,10 @@ export default {
         overflow: hidden;
         text-overflow: ellipsis;
       }
+      img {
+        height: 270px;
+        border-radius: 10px;
+      }
     }
     p {
       max-width: 200px;
