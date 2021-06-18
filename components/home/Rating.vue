@@ -170,12 +170,14 @@ b {
 }
 @media (min-width: 576px) and (max-width: 950px) {
   .title {
+    align-items: center;
     p {
       max-width: 400px;
       font-size: 24px !important;
     }
     button {
       font-style: normal;
+      height: 40px;
       font-weight: 500;
       font-size: 14px !important;
       line-height: 150%;

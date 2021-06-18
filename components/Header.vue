@@ -472,9 +472,7 @@ h2.logo-text {
 }
 
 @media (min-width: 576px) and (max-width: 950px) {
-  header {
-    width: 100%;
-    .bottom-media {
+  .bottom-media {
       position: fixed;
       top: 0;
       left: 0;
@@ -482,14 +480,14 @@ h2.logo-text {
       background-color: #fff;
       width: 60%;
       padding: 15px 20px;
-      height: 100vh;
+      height: 100vh !important;
       li {
         display: block !important;
       }
     }
     .bottom {
-      display: none;
       transition: 0.3s;
+      left: -100%;
       z-index: 23;
       background: #fff;
       ul {
@@ -504,12 +502,19 @@ h2.logo-text {
         }
       }
     }
+  h2.logo-text {
+  font-size: 14px;
+  max-width: 220px !important;
+}
+  header {
+    width: 700px;
+    
 
     .header {
       width: 90%;
       margin: 0 auto;
       .left {
-        width: 35%;
+        // width: 35%;
       }
       .right {
         width: 50%;
@@ -528,6 +533,7 @@ h2.logo-text {
           }
         }
         .til {
+          margin: 0 20px;
           button {
             width: 45px;
             svg {
@@ -539,6 +545,7 @@ h2.logo-text {
           }
         }
         .maxsus {
+          margin-right: 10px;
           h3 {
             display: none;
           }

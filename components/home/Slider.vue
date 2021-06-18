@@ -6,9 +6,9 @@
           <h1>Huquqiy portal</h1>
         </div>
         <div class="info-text">
-          <h1>
+          <h2>
             O’zbekiston Respublikasi Milliy Huquqiy informatsion portali
-          </h1>
+          </h2>
         </div>
       </div>
       <div class="search-button">
@@ -162,11 +162,26 @@ export default {
   }
 }
 @media (min-width: 576px) and (max-width: 950px) {
+  .info-text {
+    h2 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #eeeeee;
+    }
+  }
+  #slider {
+    padding-left: 35px !important;
+  }
   .tag-section {
     display: none;
   }
   .tags {
     display: none !important;
+  }
+  input {
+    width: 390px !important;
   }
   .slide-texts {
     margin-top: 80px !important;
