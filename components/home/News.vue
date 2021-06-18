@@ -1,153 +1,219 @@
 
 <template>
-  <div class="news-section">
-    <swiper class="swiper" :options="swiperOption">
-      <swiper-slide v-for="(mainNews, index) in $store.state.home.news" :key="index">
-        <div>
-          <img
-            class="swiper-img"
-            :src="`http://ass.tujjor.org/${mainNews.image}`"
-          />
+  <div id="news-section">
+    <div class="news-header">
+      <h2>{{ title }}</h2>
+      <button type="submit">Barcha Yangiliklar</button>
+    </div>
+    <div class="slid">
+      <Carousel
+      v-bind="settings"
+      
+    >
+      <div class="news-slide">
+        <div class="news-box">
+          <div class="news-img">
+            <img
+              class="swiper-img"
+              :src="newsImg"
+              width="505"
+              height="380"
+            />
+          </div>
+          <div class="news-text">
+            <div class="text-head">
+              <h3>
+                Sud-huquq islohotida advokatura instituti markaziy o‘rinda
+              </h3>
+            </div>
+            <div class="text-info">
+              <h6>
+                2019 yilning 25—27 aprel' kunlari Toshkentda ilk bor “Tashkent
+                Law Spring” – xalqaro miqyosdagi yuridik forumi bo‘lib o‘tgan
+                edi. Forum doirasida davlat idoralari, xalqaro tashkilotlar,
+                O‘zbekiston va dunyoning yetakchi yuridik hamda konsalting
+                firmalari vakillari, advokatlar, yurisprudensiya, xalqaro
+                aloqalar sohasidagi taniqli olimlar, OAV vakillari,
+                mutaxassislar, ekspertlar, huquq sohasidagi eng so‘nggi
+                tendensiyalarni muhokama qilish, zamonaviy yuridik fan va
+                amaliyotning dolzarb masalalari yuzasidan o‘zaro fikr almashgan
+                edi.
+              </h6>
+              <nuxt-link to="/">Batafsil >></nuxt-link>
+            </div>
+            <div class="news-data">
+              <div class="info">
+                <div class="data">
+                  <img :src="icons.dataIcon" alt="" />
+                  <div>02.06.2021</div>
+                </div>
+                <div class="views">
+                  <img :src="icons.viewIcon" alt="" />
+                  <div>528</div>
+                </div>
+              </div>
+              <div class="arrows">wqdwd</div>
+            </div>
+          </div>
         </div>
-        <div>
-          <div class="swiper-title-text">
-            {{mainNews.title}}
-          </div>
-          <div class="swiper-body-description" v-html="mainNews.article">
-            
-          </div>
-          <button>
-            Batafsil
-            <span
-              ><svg
-                width="24"
-                height="25"
-                viewBox="0 0 24 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15 14.5L20 9.5L15 4.5"
-                  stroke="#07A287"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M4 20.5V13.5C4 12.4391 4.42143 11.4217 5.17157 10.6716C5.92172 9.92143 6.93913 9.5 8 9.5H20"
-                  stroke="#07A287"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </span>
-          </button>
-          <div></div></div
-      ></swiper-slide>
-    </swiper>
-    <div class="swiper-button-prev swiper-slider-buttons first-slider-btn"></div>
-    <div class="swiper-button-next swiper-slider-buttons last-slider-btn"></div>
-    <div class="swiper-pagination" slot="pagination"></div>
-
-    <div class="swiper-pagination"></div>
+      </div>
+    </Carousel>
+    </div>
   </div>
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+// import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 // import "swiper/css/swiper.css";
 
 export default {
-  name: "swiper-example-pagination",
-  title: "Pagination",
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
   data() {
     return {
-      swiperOption: {
-        pagination: {
-          el: ".swiper-pagination",
-        },
+      title: "Yangiliklar",
+      newsImg: require("@/assets/images/news.jpg"),
+      icons: {
+        dataIcon: require("@/assets/images/calendar.svg"),
+        viewIcon: require("@/assets/images/eye.svg")
       },
+      settings: {
+        dots: true,
+        infinite: true,
+        initialSlide: 1,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        swipeToSlide: true,
+        arrows: false,
+        dotsClass: "bu-class"
+      }
     };
-  },
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-.news-section{
-  position:relative;
+.bu-class {
+  background: red !important; /* bg color of container */
 }
-.first-slider-btn{
-  left: -5%;
-  z-index: 1000;
+.bu-class button:before {
+  color: #000; /* color of dots */
+  opacity: 0.25; /* opacity of dots */
+  background-color: red !important; /* bg color of each "button" 
+                                  * (blends with the one set in .slick-dots
+                                  * if opacity is not 1) */
+  content: "•"; /* this is the actual dot (yep, it's text)
+                 * set it to ❥, 🤡 or whatever other string you want); 
+             NOTE: don't set it to `none`: the dots won't display! */
+  font-size: 10px; /* font-size of the dot */
 }
-
-.last-slider-btn{
-  right: -5%;
-  z-index: 1000;
+.bu-class .slick-active button:before {
+  /* everything already listed under `.slick-dots button:before`
+     except `opacity` is set to 1 by default */
 }
-.swiper-slider-buttons {
-  width: 60px;
-  height: 60px; 
-  border-radius: 50%;
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 60%;
-  transform: translate(0, -50%);
-/* rating green */
-
-  background: #07a287;
-}
-.swiper-img {
-  width: 570px;
-  height: 400px;
-  border-radius: 12px;
-  box-sizing: border-box;
-}
-.swiper-body-description {
-  width: 810px;
-  box-sizing: border-box;
-  height: 189px;
-  text-align: left;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  padding: 0 30px;
-  line-height: 150%;
-  margin-top: 30px;
-  color: #333333;
-}
-.swiper-title-text {
-  width: 731px;
-  height: 31px;
-  left: 855px;
-  top: 1025px;
-
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 130%;
-  color: #333333;
-}
-.swiper {
-  height: 300px;
-  width: 100%;
+#news-section {
   position: relative;
-  .swiper-slide {
+  width: 1240px;
+  margin: 65px auto;
+  .news-header {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: bold;
-    // font-size: $font-size-huge * 2;
-    background-color: white;
+    justify-content: space-between;
+    h2 {
+      font-family: Oxygen;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 35px;
+      /* dark gray */
+      color: #333333;
+    }
+    button[type="submit"] {
+      /* rating green */
+      background: #597ba3;
+      color: #fff;
+      border: 1px solid;
+      border-radius: 50px;
+      padding: 10px 25px;
+      margin-bottom: 18px;
+      cursor: pointer;
+    }
+  }
+  .news-slide {
+    width: 100%;
+    .news-box {
+      width: 100%;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .news-img {
+        width: 505px;
+        height: 380px;
+        img {
+          border-radius: 12px;
+        }
+      }
+      .news-text {
+        position: relative;
+        width: 715px;
+        height: 380px;
+        padding: 20px;
+        .text-head {
+          // position: absolute;
+          width: 715px;
+          height: 62px;
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 130%;
+          color: #333333;
+          margin: 0 0 10px 0;
+        }
+        .text-info {
+          height: 216px;
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 150%;
+          /* or 27px */
+          /* dark gray */
+          color: #333333;
+          h6 {
+            height: 195px;
+            overflow: hidden;
+          }
+        }
+        .news-data {
+          display: flex;
+          flex-direction: row;
+          align-content: center;
+          align-items: center;
+          justify-content: space-between;
+          .info {
+            width: 245px;
+            display: flex;
+            justify-content: space-between;
+            .data {
+              width: 117px;
+              height: 44px;
+              padding: 10px 0px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+            }
+            .views {
+              width: 63px;
+              height: 44px;
+              padding: 10px 0px;
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+            }
+          }
+        }
+      }
+    }
   }
 }
 </style>

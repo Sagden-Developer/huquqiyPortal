@@ -97,7 +97,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .ebook {
   width: 1140px;
   margin: 30px auto;

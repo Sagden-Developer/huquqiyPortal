@@ -3,7 +3,7 @@
     <div class="body">
       <Header />
       <Nuxt />
-    <Footer />
+      <Footer />
     </div>
   </div>
 </template>
@@ -16,7 +16,7 @@ export default {
 };
 </script>
 <style lang="scss">
-*{
+* {
   margin: 0;
   padding: 0;
 }
