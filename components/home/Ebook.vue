@@ -133,6 +133,17 @@ export default {
     pointer-events: none;
   }
   .card-book {
+    a {
+      text-decoration: none;
+      p {
+        padding-right: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
     img {
       height: 270px;
     }
