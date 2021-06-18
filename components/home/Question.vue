@@ -199,4 +199,17 @@ export default {
     }
   }
 }
+
+@media (min-width: 350px) and (max-width: 576px){
+  .question-list-group{
+    div{
+      width: 100%;
+      a{width: 100% !important}
+
+    }
+    .question-title-text{
+
+    }
+  }
+}
 </style>

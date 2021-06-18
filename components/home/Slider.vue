@@ -86,7 +86,7 @@ export default {
   border-radius: 24px;
   padding: 55px;
   margin: 25px auto;
-  background-image: url("/img/slide.png");
+  background-image: url("assets/img/slide.png");
   color: #fff;
   .head-text {
     text-transform: uppercase;
@@ -161,4 +161,48 @@ export default {
     }
   }
 }
+
+  @media (min-width: 350px) and (max-width: 576px){
+    #slider{
+      width: 350px;
+      height: 163px;
+      margin-bottom: 0;
+      .head-text{
+        h1{
+          /*margin-top: 0;*/
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 0px;
+          /*margin-left: 10px;*/
+          margin-left: -25px;
+          margin-bottom: 0;
+        }
+      }
+      .info-text {
+        h1{
+         /*margin-left: 10px;*/
+          font-size: 16px;
+          line-height: 20px;
+          font-family: Montserrat sans-serif;
+          margin-left: -25px;
+          /*margin-top: 16px;*/
+        }
+      }
+      .search-button{
+        display: none;
+      }
+      .search-icon{
+        display: none;
+      }
+      .tag-links{
+        display: none;
+      }
+      img{
+        display: none;
+      }
+      .tag-text{
+        display: none;
+      }
+    }
+  }
 </style>

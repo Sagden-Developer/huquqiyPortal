@@ -72,7 +72,6 @@ export default {
   box-sizing: border-box;
   #sections {
     max-width: 1240px;
-    height: 529px;
     margin: 0 30px;
     .section-text {
       font-family: "Oxygen";
@@ -119,11 +118,20 @@ export default {
           font-weight: 700;
           font-size: 20px;
           line-height: 24px;
-          text-align: center;
           color: #000000;
+          text-align: center;
         }
       }
     }
   }
+}
+
+@media (min-width: 350px) and (max-width: 576px){
+     .section-list-group{
+       div{
+         width: 50%;
+         a{width: 100% !important}
+       }
+   }
 }
 </style>

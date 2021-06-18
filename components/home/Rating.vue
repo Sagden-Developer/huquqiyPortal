@@ -12,7 +12,7 @@
               class="rating-list-item"
               v-for="(item, index) in ratingItem"
               :key="index"
-              
+
             >
               <div class="chap">
                 <b> {{ index + 1 }} </b>
@@ -111,7 +111,7 @@ export default {
     justify-content: flex-end;
     }
   }
-  
+
 }
 .rating-list-item {
   // background: #3c59aa;
@@ -145,5 +145,25 @@ b {
   height: 50px;
   margin-right: 100px;
   border-radius: 50%;
+}
+
+@media (min-width: 350px) and (max-width: 576px){
+  .rating{
+    .title{
+      flex-direction: column;
+      p{
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 25px;
+
+      }
+
+      button{
+        padding: 10px 0;
+        margin-top: 20px;
+        height: 47px;
+      }
+    }
+  }
 }
 </style>

@@ -42,7 +42,7 @@ export default {
   modules: [
     "nuxt-i18n",
     '@nuxtjs/axios',
-
+    'bootstrap-vue/nuxt',
   ],
   i18n: {
     locales: [
@@ -59,7 +59,7 @@ export default {
     langDir: "lang/",
     defaultLocale: "uz"
   },
-  
+
   axios: {
     baseURL: "http://ass.tujjor.org/api/"
     // baseURL: "http://localhost:3301/api"
