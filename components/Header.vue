@@ -329,9 +329,10 @@ export default {
   display: flex;
   justify-content: space-between;
   .left {
+    font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    // line-height: 150%;
+    line-height: 150%;
     color: #333333;
     justify-content: center;
     align-items: center;
