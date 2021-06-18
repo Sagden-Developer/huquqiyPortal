@@ -5,20 +5,53 @@
       <h2>{{ title }}</h2>
       <button type="submit">Barcha Yangiliklar</button>
     </div>
-    <div class="slid">
-      <Carousel
-      v-bind="settings"
-      
-    >
+    <Carousel v-bind="settings">
       <div class="news-slide">
         <div class="news-box">
           <div class="news-img">
-            <img
-              class="swiper-img"
-              :src="newsImg"
-              width="505"
-              height="380"
-            />
+            <img class="swiper-img" :src="newsImg" width="505" height="380" />
+          </div>
+          <div class="news-text">
+            <div class="text-head">
+              <h3>
+                Sud-huquq islohotida advokatura instituti markaziy o‘rinda
+              </h3>
+            </div>
+            <div class="text-info">
+              <h6>
+                2019 yilning 25—27 aprel' kunlari Toshkentda ilk bor “Tashkent
+                Law Spring” – xalqaro miqyosdagi yuridik forumi bo‘lib o‘tgan
+                edi. Forum doirasida davlat idoralari, xalqaro tashkilotlar,
+                O‘zbekiston va dunyoning yetakchi yuridik hamda konsalting
+                firmalari vakillari, advokatlar, yurisprudensiya, xalqaro
+                aloqalar sohasidagi taniqli olimlar, OAV vakillari,
+                mutaxassislar, ekspertlar, huquq sohasidagi eng so‘nggi
+                tendensiyalarni muhokama qilish, zamonaviy yuridik fan va
+                amaliyotning dolzarb masalalari yuzasidan o‘zaro fikr almashgan
+                edi.
+              </h6>
+              <nuxt-link to="/">Batafsil >></nuxt-link>
+            </div>
+            <div class="news-data">
+              <div class="info">
+                <div class="data">
+                  <img :src="icons.dataIcon" alt="" />
+                  <div>02.06.2021</div>
+                </div>
+                <div class="views">
+                  <img :src="icons.viewIcon" alt="" />
+                  <div>528</div>
+                </div>
+              </div>
+              <div class="arrows">wqdwd</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="news-slide">
+        <div class="news-box">
+          <div class="news-img">
+            <img class="swiper-img" :src="newsImg" width="505" height="380" />
           </div>
           <div class="news-text">
             <div class="text-head">
@@ -58,7 +91,6 @@
         </div>
       </div>
     </Carousel>
-    </div>
   </div>
 </template>
 
@@ -106,10 +138,10 @@ export default {
              NOTE: don't set it to `none`: the dots won't display! */
   font-size: 10px; /* font-size of the dot */
 }
-.bu-class .slick-active button:before {
-  /* everything already listed under `.slick-dots button:before`
-     except `opacity` is set to 1 by default */
-}
+// .bu-class .slick-active button:before {
+//   /* everything already listed under `.slick-dots button:before`
+//      except `opacity` is set to 1 by default */
+// }
 #news-section {
   position: relative;
   width: 1240px;

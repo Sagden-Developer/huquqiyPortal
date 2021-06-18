@@ -6,8 +6,8 @@
     </div>
     <div id="carusel-video-box">
       <Carousel v-bind="slickOptions">
-        <div v-for="index in videos" :key="index" class="video-box-item">
-          {{ index }}
+        <div  class="video-box-item">
+          <!-- {{ index }} -->
         </div>
       </Carousel>
       <div class="video-footer-text" v-text="footText"></div>
@@ -34,7 +34,6 @@ export default {
         centerPadding: "20px",
         focusOnSelect: true
       },
-      videos: [{}, {}, {}, {}, {}]
     };
   }
 };

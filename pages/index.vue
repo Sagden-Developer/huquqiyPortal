@@ -1,13 +1,13 @@
 <template>
   <div>
     <!-- <Slider /> -->
-    <News />
+    <!-- <News /> -->
     <!-- <Section /> -->
     <!-- <Question /> -->
-    <!-- <Courses /> -->
+    <Courses />
     <!-- <Rating /> -->
     <!-- <Ebook /> -->
-    <Videos />
+    <!-- <Videos /> -->
     <!-- <Weblinks /> -->
   </div>
 </template>

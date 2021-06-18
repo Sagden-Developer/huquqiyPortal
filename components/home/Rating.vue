@@ -61,7 +61,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .rating {
   padding: 20px;
   background: rgba(95, 146, 211, 0.1);
