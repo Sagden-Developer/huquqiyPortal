@@ -207,6 +207,11 @@
               5
             </li>
           </ul>
+
+          <div class="by">
+            <p>Design by</p>
+            <img src="@/assets/image/napa.png" alt="" />
+          </div>
         </div>
         <div class="footer-right">
           <p class="matn">
@@ -286,6 +291,12 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    .by{
+       display: none;
+      margin: 70px auto;
+      align-items: center;
+      
+    }
     h2 {
       // margin-left: 45px;
       margin-bottom: 0;
@@ -333,6 +344,30 @@ footer {
     }
     p.matn {
       width: 80%;
+    }
+  }
+}
+@media (min-width: 576px) and (max-width: 950px) {
+  footer {
+    // padding-bottom: 10px !important;
+    .footer-left {
+      width: 50% !important;
+      justify-content: flex-start !important;
+      .logo{
+        width: 88% !important;
+      }
+    }
+    .footer-center {
+      width: 50% !important;
+      .by{
+        display: flex !important;
+      }
+    }
+    .footer-right {
+      display: none !important;
+      // p.matn {
+      //   display: none;
+      // }
     }
   }
 }

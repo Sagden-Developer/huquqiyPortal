@@ -98,7 +98,7 @@ export default {
   .search-button {
     margin: 20px 0;
     position: relative;
-    input[type=text] {
+    input[type="text"] {
       width: 570px;
       height: 54px;
       border-radius: 12px;
@@ -109,7 +109,7 @@ export default {
       z-index: 1;
       font-size: 18px;
       font-weight: 500;
-      color: #D5D5D5;
+      color: #d5d5d5;
     }
     .search-icon {
       padding: 10px;
@@ -152,13 +152,24 @@ export default {
       font-weight: 500;
       font-size: 16px;
       line-height: 20px;
-      transition: .3s linear;
+      transition: 0.3s linear;
       &:hover {
         background-color: #fff;
         color: black;
         cursor: pointer;
       }
     }
+  }
+}
+@media (min-width: 576px) and (max-width: 950px) {
+  .tag-section {
+    display: none;
+  }
+  .tags {
+    display: none !important;
+  }
+  .slide-texts {
+    margin-top: 80px !important;
   }
 }
 </style>

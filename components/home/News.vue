@@ -46,8 +46,8 @@
           <div></div></div
       ></swiper-slide>
     </swiper>
-    <div class="swiper-button-prev swiper-slider-buttons first-slider-btn"></div>
-    <div class="swiper-button-next swiper-slider-buttons last-slider-btn"></div>
+    <!-- <div class="swiper-button-prev swiper-slider-buttons first-slider-btn"></div> -->
+    <!-- <div class="swiper-button-next swiper-slider-buttons last-slider-btn"></div> -->
     <div class="swiper-pagination" slot="pagination"></div>
 
     <div class="swiper-pagination"></div>
@@ -114,7 +114,7 @@ export default {
   box-sizing: border-box;
   height: 189px;
   text-align: left;
-  font-family: Montserrat;
+  // font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
