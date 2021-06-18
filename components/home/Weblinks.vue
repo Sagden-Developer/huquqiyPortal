@@ -12,6 +12,12 @@
         <div class="link">
           <img src="@/assets/image/bolahuquq.png" alt="" />
         </div>
+        <div class="link">
+          <img src="@/assets/image/advice.png" alt="" />
+        </div>
+        <div class="link">
+          <img src="@/assets/image/huquq.png" alt="" />
+        </div>
       </Carousel>
     </div>
   </div>
@@ -75,6 +81,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   div.link {
+    cursor: pointer;
     padding: 0 20px;
     width: 20%;
     display: flex !important;

@@ -2,8 +2,8 @@
   <div>
     <div class="rating">
       <div class="container">
-        <div class="title">
-          <p>Huquqiy targ’ibotni baholash tizimi bo’yicha reyting</p>
+        <div class="title title-text">
+          <p class="title-text">Huquqiy targ’ibotni baholash tizimi bo’yicha reyting</p>
           <button>To'liq reyting</button>
         </div>
         <div class="rating-body">
@@ -76,10 +76,10 @@ export default {
 
 <style lang="scss">
 .rating {
+  width: 100%;
   padding: 20px;
   background: rgba(95, 146, 211, 0.1);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
   .title {
     padding: 10px;
     font-weight: bold;

@@ -1,7 +1,7 @@
 <template>
   <div id="sections">
     <div class="sections-body">
-      <div class="section-text">{{ sectionTitle }}</div>
+      <div class="section-text title-text">{{ sectionTitle }}</div>
       <div class="section-list-group">
         <div v-for="(item, index) in sectionItem" :key="index">
           <a
@@ -70,12 +70,13 @@ export default {
 <style lang="scss" scoped>
 * {
   box-sizing: border-box;
+  
   #sections {
+    
     max-width: 1240px;
     // height: 529px;
-    margin: 0 30px;
+    margin: 60px 30px;
     .section-text {
-      font-family: "Oxygen";
       font-style: normal;
       font-weight: bold;
       font-size: 28px;
@@ -122,6 +123,20 @@ export default {
           text-align: center;
           color: #000000;
         }
+      }
+    }
+  }
+}
+@media (min-width: 576px) and (max-width: 950px) {
+  .section-list-group{
+    // width: 50%;
+    div{
+      width: 33%;
+      display: block;
+      a{
+        margin: 10px auto !important;
+        width: 95% !important;
+        
       }
     }
   }

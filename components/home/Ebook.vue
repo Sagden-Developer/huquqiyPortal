@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="ebook">
-      <div class="continer">
+      <div class="container">
         <div class="head">
           <img src="@/assets/image/ebook.png" alt="" />
-          <p>Elektron Kutubxona</p>
+          <p class="title-text">Elektron Kutubxona</p>
         </div>
 
         <Carousel v-bind="slickOptions">
@@ -107,18 +107,23 @@ export default {
 
 <style lang="scss">
 .ebook {
-  width: 1140px;
+  width: 1240px;
   margin: 70px auto;
   background: #fff;
   border-radius: 24px;
   padding: 30px;
+  .slick-track{
+    overflow: show !important;
+    white-space: nowrap !important;
+  }
   .slick-prev {
     display: block;
     width: 50px;
     height: 50px;
-    background: rebeccapurple;
+    background: #501E5A;;
     border-radius: 50%;
-    left: -70px;
+    left: -55px;
+    top: 38%;
   }
   .slick-prev::before {
     content: " \276E" !important;
@@ -127,9 +132,10 @@ export default {
     display: block;
     width: 50px;
     height: 50px;
-    background: rebeccapurple;
+    background: #501E5A;;
     border-radius: 50%;
-    right: -70px;
+    right: -55px;
+    top: 38%;
   }
   .slick-next::before {
     content: " \276F" !important;
@@ -147,9 +153,13 @@ export default {
     pointer-events: none;
   }
   .card-book {
+    // padding: 0 10px;
+    // margin: 0 10px;
+    margin: 0 auto !important;
     a {
       text-decoration: none;
       p {
+        margin: 10px 0;
         padding-right: 20px;
         display: -webkit-box;
         -webkit-line-clamp: 2;
@@ -158,10 +168,25 @@ export default {
         text-overflow: ellipsis;
       }
     }
+    p {
+      max-width: 200px;
+        margin: 10px 0;
+        padding-right: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     img {
+      margin: 0 auto;
+      width: 200px;
       height: 270px;
+      border-radius: 20px;
+      pointer-events: none;
     }
     a {
+      width: 100%;
       text-decoration: none;
       font-weight: 500;
       font-size: 18px;
@@ -174,6 +199,27 @@ export default {
       font-size: 18px;
       line-height: 22px;
       color: #ffba00;
+    }
+  }
+}
+@media (min-width: 576px) and (max-width: 950px) {
+  .rating-body {
+    flex-direction: column;
+    .left {
+      width: 100% !important;
+      .rating-list {
+        width: 100%;
+      }
+    }
+    .right {
+      padding: 40px;
+      margin-top: 30px;
+      width: 100% !important;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 70% !important;
+      }
     }
   }
 }

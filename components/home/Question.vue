@@ -1,7 +1,7 @@
 <template>
   <div id="question">
     <div class="question-body">
-      <div class="question-text">{{ questionTitle }}</div>
+      <div class="question-text title-text">{{ questionTitle }}</div>
       <div class="question-list-group">
         <div v-for="(item, index) in questionItem" :key="index">
           <a
@@ -147,7 +147,6 @@ export default {
     margin: 0 30px;
     margin-bottom: 30px;
     .question-text {
-      font-family: "Oxygen";
       font-style: normal;
       font-weight: bold;
       font-size: 28px;
