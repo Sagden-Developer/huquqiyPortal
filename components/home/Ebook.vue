@@ -143,6 +143,10 @@ export default {
         overflow: hidden;
         text-overflow: ellipsis;
       }
+      img {
+        height: 270px;
+        border-radius: 10px;
+      }
     }
     img {
       height: 270px;
