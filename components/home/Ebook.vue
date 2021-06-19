@@ -91,7 +91,7 @@ export default {
               slidesToShow: 2,
               speed: 1500,
               touchThreshold: 1000,
-              autoplay: true,
+              autoplay: false,
               autoplaySpeed: 3000,
               infinite: true,
               slidesToScroll: 1,
@@ -129,15 +129,20 @@ export default {
     content: " \276E" !important;
   }
   .slick-next {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
     height: 50px;
-    background: #501E5A;;
+    background: #07f32f;
     border-radius: 50%;
     right: -55px;
     top: 38%;
   }
   .slick-next::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     content: " \276F" !important;
   }
   .head {
@@ -209,6 +214,33 @@ export default {
 @media (min-width: 576px) and (max-width: 950px) {
   .ebook{
     width: 700px;
+  }
+  .rating-body {
+    flex-direction: column;
+    .left {
+      width: 100% !important;
+      .rating-list {
+        width: 100%;
+      }
+    }
+    .right {
+      padding: 40px;
+      margin-top: 30px;
+      width: 100% !important;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 70% !important;
+      }
+    }
+  }
+}
+@media (min-width: 350px) and (max-width: 576px) {
+  .ebook{
+    width: 90%;
+    .card-book{
+      width: 160px !important;
+    }
   }
   .rating-body {
     flex-direction: column;

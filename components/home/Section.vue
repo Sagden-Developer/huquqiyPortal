@@ -141,4 +141,18 @@ export default {
     }
   }
 }
+@media (min-width: 350px) and (max-width: 576px) {
+  .section-list-group {
+    // width: 50%;
+    div {
+      width: 50%;
+      display: block;
+      a {
+        font-size: 16px !important;
+        margin: 10px auto !important;
+        width: 95% !important;
+      }
+    }
+  }
+}
 </style>

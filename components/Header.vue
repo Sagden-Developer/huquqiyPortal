@@ -39,7 +39,7 @@
 
           <div class="right">
             <div class="izlash">
-              <input type="text" placeholder="Izlash" />
+              <input type="text" :placeholder="$t('lan8')" />
               <button class="search-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +141,7 @@
                     stroke-linejoin="round"
                   /></svg
               ></span>
-              <h3 @click="maxsus = !maxsus">Maxsus imkoniyatlar</h3>
+              <h3 @click="maxsus = !maxsus">{{ $t("lan9") }}</h3>
               <br />
 
               <div v-if="maxsus" class="special">
@@ -188,7 +188,7 @@
           <ul>
             <li>
               <a class="start targibot-link" href="#">
-                Targ'ibot materiallari
+                {{ $t("lan2") }}
                 <svg
                   class="Targibot-bur"
                   xmlns="http://www.w3.org/2000/svg"
@@ -205,8 +205,8 @@
               </a>
             </li>
             <li>
-              <a href="#" @click="onlineTest = !onlineTest"
-                >Onlayn sinov
+              <a href="#" @click="onlineTest = !onlineTest">
+                {{ $t("lan3") }}
                 <svg
                   :class="Targibot ? 'bur' : ''"
                   xmlns="http://www.w3.org/2000/svg"
@@ -222,8 +222,8 @@
               ></a>
             </li>
             <li>
-              <a href="#"
-                >Huquqiy adabiyot
+              <a href="#">
+                {{ $t("lan4") }}
                 <svg
                   :class="Targibot ? 'bur' : ''"
                   xmlns="http://www.w3.org/2000/svg"
@@ -238,9 +238,15 @@
                   /></svg
               ></a>
             </li>
-            <li><a href="#">Huquqiy muammolar yechimi</a></li>
-            <li><a href="#">Bepul huquqiy maslahat</a></li>
-            <li><a class="end" href="#">Ishonch raqamlari</a></li>
+            <li>
+              <a href="#">{{ $t("lan5") }}</a>
+            </li>
+            <li>
+              <a href="#">{{ $t("lan6") }}</a>
+            </li>
+            <li>
+              <a class="end" href="#">{{ $t("lan7") }}</a>
+            </li>
           </ul>
 
           <div class="targibot">
@@ -267,6 +273,33 @@
               <a href="" class="">Targ'ibot</a>
             </div>
           </div>
+        </div>
+        <div class="izlash-two">
+          <input type="text" :placeholder="$t('lan8')" />
+          <button class="search-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                stroke="#333333"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M20.9999 21L16.6499 16.65"
+                stroke="#333333"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </header>
@@ -314,21 +347,25 @@ h2.logo-text {
     background: red;
   }
   ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
     padding-left: 10px !important;
     li {
       a.start {
         padding-left: 0px;
       }
       a {
-        padding: 0px 17px;
+        // padding: 0px 10px;
+        padding-right: 10px;
         font-weight: 500;
-        font-size: 16px;
+        font-size: 13px;
         line-height: 20px;
         text-decoration: none;
         color: #333333;
         border-right: 1px solid #b2a4be;
         svg {
-          margin-left: 10px;
+          margin-left: 7px;
           path {
             fill: #333;
           }
@@ -338,10 +375,13 @@ h2.logo-text {
         border-right: 0;
         padding-right: 0;
       }
-      display: inline-block;
+      // display: inline-block;
     }
   }
 }
+.izlash-two {
+      display: none !important;
+    }
 .header {
   display: flex;
   justify-content: space-between;
@@ -361,6 +401,7 @@ h2.logo-text {
       margin-right: 15px;
     }
   }
+  
   .izlash {
     position: relative;
     button.search-icon {
@@ -473,43 +514,47 @@ h2.logo-text {
 
 @media (min-width: 576px) and (max-width: 950px) {
   .bottom-media {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 999;
-      background-color: #fff;
-      width: 60%;
-      padding: 15px 20px;
-      height: 100vh !important;
-      li {
-        display: block !important;
-      }
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #fff;
+    width: 60%;
+    padding: 15px 20px;
+    height: 100vh !important;
+    ul {
+      flex-direction: column;
+      // display: block !important;
     }
-    .bottom {
-      transition: 0.3s;
-      left: -100%;
-      z-index: 23;
-      background: #fff;
-      ul {
-        li {
-          display: block;
-          margin-top: 10px;
-          a {
-            border: none;
-            padding: 0;
-            font-size: 25px;
-          }
+  }
+  .bottom {
+    transition: 0.3s;
+    left: -100%;
+    z-index: 23;
+    background: #fff;
+    ul {
+      flex-direction: column;
+      li {
+        display: block;
+        margin-top: 10px;
+        a {
+          border: none;
+          padding: 0;
+          font-size: 25px;
         }
       }
     }
+  }
+  .izlash-two {
+      display: none !important;
+    }
   h2.logo-text {
-  font-size: 14px;
-  max-width: 220px !important;
-}
+    font-size: 14px;
+    max-width: 220px !important;
+  }
   header {
     width: 700px;
-    
-
+  
     .header {
       width: 90%;
       margin: 0 auto;
@@ -519,6 +564,7 @@ h2.logo-text {
       .right {
         width: 50%;
         justify-content: space-between;
+
         .izlash {
           input {
             width: 215px;
@@ -533,6 +579,140 @@ h2.logo-text {
           }
         }
         .til {
+          margin: 0 20px;
+          button {
+            width: 45px;
+            svg {
+              font-size: 20px;
+            }
+            span {
+              display: none;
+            }
+          }
+        }
+        .maxsus {
+          margin-right: 10px;
+          h3 {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 350px) and (max-width: 575px) {
+  .bottom-media {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #fff;
+    width: 60%;
+    padding: 15px 20px;
+    height: 100vh !important;
+    ul {
+      flex-direction: column;
+      // display: block !important;
+    }
+  }
+  .bottom {
+    transition: 0.3s;
+    left: -100%;
+    z-index: 23;
+    background: #fff;
+    ul {
+      flex-direction: column;
+      li {
+        display: block;
+        margin-top: 10px;
+        a {
+          border: none;
+          padding: 0;
+          font-size: 25px;
+        }
+      }
+    }
+  }
+  h2.logo-text {
+    font-size: 14px;
+    max-width: 220px !important;
+  }
+  header {
+    width: 100%;
+    .izlash-two {
+      width: 380px;
+      margin: 0 auto;
+      display: block !important;
+      position: relative;
+      button.search-icon {
+        padding: 10px;
+        background: #e6e2df;
+        z-index: 10;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        cursor: pointer;
+        border: 0;
+        background: transparent;
+      }
+      input {
+        z-index: 1;
+        width: 100%;
+        padding: 0 20px;
+        height: 54px;
+        background: rgba(51, 51, 51, 0.1);
+        border-radius: 50px;
+        border: 0;
+      }
+      input::placeholder {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #9e9e9e;
+      }
+      input:focus-visible {
+        border: 0;
+        outline: none;
+      }
+    }
+
+    .header {
+      width: 90%;
+      margin: 0 auto;
+      .left {
+        // width: 35%;
+        span {
+          width: 75px;
+          svg {
+            width: 100%;
+          }
+        }
+        h2.logo-text {
+          max-width: 160px;
+          margin-left: 2px;
+          font-size: 12px !important;
+        }
+      }
+      .right {
+        width: 50%;
+        justify-content: space-between;
+        .izlash {
+          display: none;
+          input {
+            // width: 215px;
+          }
+        }
+
+        .bar {
+          display: block;
+          button {
+            background: transparent;
+            border: 0;
+          }
+        }
+        .til {
+          z-index: 222;
           margin: 0 20px;
           button {
             width: 45px;

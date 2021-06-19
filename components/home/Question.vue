@@ -213,4 +213,17 @@ export default {
     }
   }
 }
+@media (min-width: 350px) and (max-width: 575px) {
+  .question-list-group {
+    // width: 50%;
+    div {
+      width: 100% !important;
+      display: block;
+      a {
+        margin: 10px auto !important;
+        width: 95% !important;
+      }
+    }
+  }
+}
 </style>

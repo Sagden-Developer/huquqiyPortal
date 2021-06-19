@@ -126,8 +126,11 @@
                 /></svg
             ></a>
           </div>
+          <div class="f-text">
           <p>2021 O’zbekiston Respublikasi Adliya Vazirligi</p>
           <p>Barcha huquqlar himoyalangan</p>
+
+          </div>
         </div>
         <div class="footer-center">
           <h2>Aloqa uchun</h2>
@@ -207,7 +210,11 @@
               5
             </li>
           </ul>
+        <div class="f-text">
+          <p>2021 O’zbekiston Respublikasi Adliya Vazirligi</p>
+          <p>Barcha huquqlar himoyalangan</p>
 
+          </div>
           <div class="by">
             <p>Design by</p>
             <img src="@/assets/image/napa.png" alt="" />
@@ -297,6 +304,17 @@ footer {
       align-items: center;
       
     }
+    .f-text{
+      display: none;
+      p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: 20px;
+      margin-bottom: 0px;
+      color: #ababab;
+    }
+    }
     h2 {
       // margin-left: 45px;
       margin-bottom: 0;
@@ -359,6 +377,40 @@ footer {
     }
     .footer-center {
       width: 50% !important;
+      .by{
+        display: flex !important;
+      }
+    }
+    .footer-right {
+      display: none !important;
+      // p.matn {
+      //   display: none;
+      // }
+    }
+  }
+}
+@media (min-width: 350px) and (max-width: 576px) {
+  footer {
+    // padding-bottom: 10px !important;
+    .footer{
+    flex-direction: column;
+
+    }
+    .footer-left {
+      .f-text{
+        display: none;
+      }
+      width: 100% !important;
+      justify-content: flex-start !important;
+      .logo{
+        width: 88% !important;
+      }
+    }
+    .footer-center {
+      .f-text{
+        display: block !important;
+      }
+      width: 100% !important;
       .by{
         display: flex !important;
       }

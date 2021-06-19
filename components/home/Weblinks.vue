@@ -55,7 +55,7 @@ export default {
               focusOnSelect: true,
               loop: false,
               arrows: false,
-              dots: true,
+              dots: false,
               slidesToShow: 2,
               speed: 1500,
               touchThreshold: 1000,
