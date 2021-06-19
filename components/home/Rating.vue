@@ -111,6 +111,7 @@ export default {
     .right {
       width: 35%;
       img {
+        pointer-events: none;
         width: 100%;
       }
     }

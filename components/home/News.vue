@@ -1,4 +1,3 @@
-
 <template>
   <div id="news-section">
     <div class="news-header">
@@ -50,7 +49,6 @@
 </template>
 
 <script>
-
 export default {
   data() {
     return {
@@ -125,7 +123,7 @@ export default {
         .text-head {
           // position: absolute;
           width: 715px;
-          height: 62px;
+          // height: 62px;
           font-family: Montserrat;
           font-style: normal;
           font-weight: 600;
@@ -250,6 +248,57 @@ export default {
     align-items: center;
     font-size: 30px;
     font-weight: 500;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 950px) {
+  #news-section {
+    position: relative;
+    width: 700px;
+    margin: 65px auto;
+  }
+  .news-text {
+    width: 340px !important;
+    padding: 0 20px !important;
+    height: auto !important;
+    h3 {
+      font-size: 20px !important;
+    }
+  }
+  .news-img {
+    width: 300px !important;
+    height: auto !important;
+    img {
+      border-radius: 12px;
+    }
+  }
+  .text-head {
+    margin-bottom: 0;
+    width: 340px !important;
+  }
+  .text-info {
+    margin-top: 5px !important;
+    font-size: 16px;
+    height: 72px !important;
+    h6 {
+      height: 60px !important;
+      overflow: hidden !important;
+    }
+  }
+  .news-img {
+    width: 340px !important;
+    height: 380px;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+  }
+  .news-box {
+    height: 275px !important;
+  }
+  .info {
+    margin-top: 15px;
   }
 }
 </style>
