@@ -3,7 +3,7 @@
       <div class="boxs">
       <div class="box">
         <h4>Qonunlar bo’yicha targ’ibot materiallari</h4>
-        <p>Bosh sahifa  /  Targ’ibot materiallari</p>
+        <p> <a style="color: white" href="#"> Bosh sahifa </a> /  Targ’ibot materiallari</p>
       </div>
 
       </div>
@@ -20,10 +20,10 @@
          <div class="circle">
            <div>
              <h5>Normativ hujjat nomi</h5>
-           <div style="display: flex">
+           <div class="normativ" style="display: flex">
              <p>18.06.2021 </p>
              <p style="margin-left: 35px">
-               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+               <svg style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
       <g clip-path="url(#clip0)">
       <path d="M0.916504 11C0.916504 11 4.58317 3.66669 10.9998 3.66669C17.4165 3.66669 21.0832 11 21.0832 11C21.0832 11 17.4165 18.3334 10.9998 18.3334C4.58317 18.3334 0.916504 11 0.916504 11Z" stroke="#8D8D8D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M11 13.75C12.5188 13.75 13.75 12.5188 13.75 11C13.75 9.48122 12.5188 8.25 11 8.25C9.48122 8.25 8.25 9.48122 8.25 11C8.25 12.5188 9.48122 13.75 11 13.75Z" stroke="#8D8D8D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -56,10 +56,10 @@
          <div class="circle">
            <div>
              <h5>Normativ hujjat nomi</h5>
-           <div style="display: flex">
+           <div class="normativ" style="display: flex">
              <p>18.06.2021 </p>
              <p style="margin-left: 35px">
-               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+               <svg style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
       <g clip-path="url(#clip0)">
       <path d="M0.916504 11C0.916504 11 4.58317 3.66669 10.9998 3.66669C17.4165 3.66669 21.0832 11 21.0832 11C21.0832 11 17.4165 18.3334 10.9998 18.3334C4.58317 18.3334 0.916504 11 0.916504 11Z" stroke="#8D8D8D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M11 13.75C12.5188 13.75 13.75 12.5188 13.75 11C13.75 9.48122 12.5188 8.25 11 8.25C9.48122 8.25 8.25 9.48122 8.25 11C8.25 12.5188 9.48122 13.75 11 13.75Z" stroke="#8D8D8D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -96,10 +96,10 @@
          <div class="circle">
            <div>
              <h5>Normativ hujjat nomi</h5>
-           <div style="display: flex">
+           <div class="normativ" style="display: flex">
              <p>18.06.2021 </p>
              <p style="margin-left: 35px">
-               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+               <svg style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
       <g clip-path="url(#clip0)">
       <path d="M0.916504 11C0.916504 11 4.58317 3.66669 10.9998 3.66669C17.4165 3.66669 21.0832 11 21.0832 11C21.0832 11 17.4165 18.3334 10.9998 18.3334C4.58317 18.3334 0.916504 11 0.916504 11Z" stroke="#8D8D8D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M11 13.75C12.5188 13.75 13.75 12.5188 13.75 11C13.75 9.48122 12.5188 8.25 11 8.25C9.48122 8.25 8.25 9.48122 8.25 11C8.25 12.5188 9.48122 13.75 11 13.75Z" stroke="#8D8D8D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -127,16 +127,16 @@
           <div class="imgs">
              <img src="@/assets/image/image 13825.png" alt="">
               <img src="@/assets/image/card1.png" alt="">
-               
+               <img src="@/assets/image/card3.png" alt="">
           </div>
 
          <div class="circle">
            <div>
              <h5>Normativ hujjat nomi</h5>
-           <div style="display: flex">
+           <div class="normativ" style="display: flex">
              <p>18.06.2021 </p>
              <p style="margin-left: 35px">
-               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+               <svg style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
       <g clip-path="url(#clip0)">
       <path d="M0.916504 11C0.916504 11 4.58317 3.66669 10.9998 3.66669C17.4165 3.66669 21.0832 11 21.0832 11C21.0832 11 17.4165 18.3334 10.9998 18.3334C4.58317 18.3334 0.916504 11 0.916504 11Z" stroke="#8D8D8D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M11 13.75C12.5188 13.75 13.75 12.5188 13.75 11C13.75 9.48122 12.5188 8.25 11 8.25C9.48122 8.25 8.25 9.48122 8.25 11C8.25 12.5188 9.48122 13.75 11 13.75Z" stroke="#8D8D8D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -173,10 +173,10 @@
          <div class="circle">
            <div>
              <h5>Normativ hujjat nomi</h5>
-           <div style="display: flex">
+           <div class="normativ" style="display: flex">
              <p>18.06.2021 </p>
              <p style="margin-left: 35px">
-               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+               <svg style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
       <g clip-path="url(#clip0)">
       <path d="M0.916504 11C0.916504 11 4.58317 3.66669 10.9998 3.66669C17.4165 3.66669 21.0832 11 21.0832 11C21.0832 11 17.4165 18.3334 10.9998 18.3334C4.58317 18.3334 0.916504 11 0.916504 11Z" stroke="#8D8D8D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M11 13.75C12.5188 13.75 13.75 12.5188 13.75 11C13.75 9.48122 12.5188 8.25 11 8.25C9.48122 8.25 8.25 9.48122 8.25 11C8.25 12.5188 9.48122 13.75 11 13.75Z" stroke="#8D8D8D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -210,10 +210,10 @@
          <div class="circle">
            <div>
              <h5>Normativ hujjat nomi</h5>
-           <div style="display: flex">
+           <div class="normativ" style="display: flex">
              <p>18.06.2021 </p>
              <p style="margin-left: 35px">
-               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+               <svg style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
       <g clip-path="url(#clip0)">
       <path d="M0.916504 11C0.916504 11 4.58317 3.66669 10.9998 3.66669C17.4165 3.66669 21.0832 11 21.0832 11C21.0832 11 17.4165 18.3334 10.9998 18.3334C4.58317 18.3334 0.916504 11 0.916504 11Z" stroke="#8D8D8D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M11 13.75C12.5188 13.75 13.75 12.5188 13.75 11C13.75 9.48122 12.5188 8.25 11 8.25C9.48122 8.25 8.25 9.48122 8.25 11C8.25 12.5188 9.48122 13.75 11 13.75Z" stroke="#8D8D8D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -316,7 +316,8 @@ body{
             }
         img{
           text-align: center;
-          margin: 25px 10px;
+          margin: 0 10px 25px 10px;
+          //@at-rootmargin: 25px 10px;
           // width: 195px;
         
         }
@@ -334,6 +335,15 @@ body{
           margin-top: 18px;
           margin-left: 22px;
           color: #fff;
+          }
+        }
+        .normativ{
+          p{
+            color: #8D8D8D;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            font-family: Montserrat sans-serif;
           }
         }
       }
