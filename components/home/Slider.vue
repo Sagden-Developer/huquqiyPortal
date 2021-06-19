@@ -88,7 +88,7 @@ export default {
   border-radius: 24px;
   padding: 55px;
   margin: 25px auto;
-  background-image: url("/img/slide.png");
+  background-image: url("assets/img/slide.png");
   color: #fff;
   .head-text {
     text-transform: uppercase;

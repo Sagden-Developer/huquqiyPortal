@@ -123,8 +123,8 @@ export default {
           font-weight: 700;
           font-size: 20px;
           line-height: 24px;
-          text-align: center;
           color: #000000;
+          text-align: center;
         }
       }
     }
