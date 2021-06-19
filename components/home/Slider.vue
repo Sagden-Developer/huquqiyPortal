@@ -187,4 +187,34 @@ export default {
     margin-top: 80px !important;
   }
 }
+@media (min-width: 350px) and (max-width: 575px) {
+  .info-text {
+    h2 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #eeeeee;
+    }
+  }
+  #slider {
+    padding-left: 35px !important;
+  }
+  .tag-section {
+    display: none;
+  }
+  .search-button{
+    display: none;
+  }
+  .tags {
+    display: none !important;
+  }
+  input {
+    display: none;
+    width: 390px !important;
+  }
+  .slide-texts {
+    margin-top: 80px !important;
+  }
+}
 </style>
