@@ -118,7 +118,7 @@ export default {
       }
       .allCourse {
         padding: 10px 25px;
-        width: 183px;
+        width: 193px;
         height: 47px;
         background: #597ba3;
         color: #fff;
