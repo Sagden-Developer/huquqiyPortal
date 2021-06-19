@@ -76,7 +76,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .rating {
   width: 100%;
   padding: 20px;
@@ -96,7 +96,7 @@ export default {
       line-height: 150%;
       padding: 8px 25px;
       color: #fff;
-      background: #07a287;
+      background: #597BA3;
       cursor: pointer;
       border-radius: 50px;
       border: 0;
@@ -182,6 +182,55 @@ b {
       font-size: 14px !important;
       line-height: 150%;
       padding: 8px 10px !important;
+    }
+  }
+  .rating-body {
+    flex-direction: column;
+    .left {
+      width: 100% !important;
+      .rating-list {
+        width: 100%;
+      }
+    }
+    .right {
+      padding: 40px;
+      margin-top: 30px;
+      width: 100% !important;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 60% !important;
+      }
+    }
+  }
+}
+@media (min-width: 350px) and (max-width: 575px) {
+  .title {
+    align-items: center;
+    flex-direction: column !important;
+    p {
+      max-width: 100%;
+      font-size: 24px !important;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      font-style: normal;
+      height: 40px;
+      font-weight: 500;
+      font-size: 14px !important;
+      line-height: 150%;
+      padding: 8px 10px !important;
+    }
+  }
+  .ong {
+    h4{
+      font-size: 20px !important;
+    }
+    p {
+      font-weight: 600;
+      font-size: 14px !important;
+      line-height: 17px;
     }
   }
   .rating-body {

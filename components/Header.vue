@@ -205,7 +205,7 @@
               </a>
             </li>
             <li>
-              <a href="#" @click="onlineTest = !onlineTest">
+              <a href="#" @click="onlineTest = !onlineTest" class="targibot-link">
                 {{ $t("lan3") }}
                 <svg
                   :class="Targibot ? 'bur' : ''"
@@ -334,6 +334,9 @@ h2.logo-text {
   .test,
   .book {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   a.test-link:hover {
     display: block;
@@ -342,9 +345,14 @@ h2.logo-text {
   a.book-link:hover .book {
     display: block;
   }
-  a.targibot-link:hover div.targibot {
-    display: block;
-    background: red;
+  a.targibot-link:hover .targibot {
+    display: block !important;
+    z-index: 99;
+    background: red !important;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
   }
   ul {
     display: flex;
@@ -379,6 +387,9 @@ h2.logo-text {
     }
   }
 }
+.izlash-two {
+      display: none !important;
+    }
 .header {
   display: flex;
   justify-content: space-between;
@@ -398,6 +409,7 @@ h2.logo-text {
       margin-right: 15px;
     }
   }
+  
   .izlash {
     position: relative;
     button.search-icon {
@@ -541,16 +553,16 @@ h2.logo-text {
       }
     }
   }
+  .izlash-two {
+      display: none !important;
+    }
   h2.logo-text {
     font-size: 14px;
     max-width: 220px !important;
   }
   header {
     width: 700px;
-    .izlash-two {
-      display: none !important;
-    }
-
+  
     .header {
       width: 90%;
       margin: 0 auto;
@@ -638,7 +650,7 @@ h2.logo-text {
     .izlash-two {
       width: 380px;
       margin: 0 auto;
-      display: block;
+      display: block !important;
       position: relative;
       button.search-icon {
         padding: 10px;
@@ -685,6 +697,7 @@ h2.logo-text {
           }
         }
         h2.logo-text {
+          max-width: 160px;
           margin-left: 2px;
           font-size: 12px !important;
         }
@@ -707,6 +720,7 @@ h2.logo-text {
           }
         }
         .til {
+          z-index: 222;
           margin: 0 20px;
           button {
             width: 45px;
