@@ -23,7 +23,6 @@
           <div class="news-text">
             <div class="text-head">
               <h3>
-                <!-- Sud-huquq islohotida advokatura instituti markaziy o‘rinda -->
                 {{ mainNews.title }}
               </h3>
             </div>
@@ -42,48 +41,6 @@
                   <div>528</div>
                 </div>
               </div>
-              <!-- <div class="arrows">
-                <button type="submit" class="left-arrow">
-                  <svg
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M18.75 22.5L11.25 15L18.75 7.5"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-                <button
-                  type="submit"
-                  class="pages"
-                  v-for="index in 5"
-                  :key="index"
-                ></button>
-                <button type="submit" class="right-arrow">
-                  <svg
-                    width="30"
-                    height="30"
-                    viewBox="0 0 30 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M11.25 22.5L18.75 15L11.25 7.5"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div> -->
             </div>
           </div>
         </div>
@@ -93,8 +50,6 @@
 </template>
 
 <script>
-// import { Swiper, SwiperSlide } from "vue-awesome-swiper";
-// import "swiper/css/swiper.css";
 
 export default {
   data() {

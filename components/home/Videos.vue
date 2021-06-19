@@ -6,15 +6,33 @@
     </div>
     <div id="carusel-video-box">
       <Carousel v-bind="slickOptions">
-        <div class="card-video"></div>
-        <div class="card-video"></div>
-        <div class="card-video"></div>
-        <div class="card-video"></div>
-        <div class="card-video"></div>
-        <div class="card-video"></div>
-        <div class="card-video"></div>
-        <div class="card-video"></div>
-        <div class="card-video"></div>
+        <div class="card-video">
+          <img :src="slImg" alt="" />
+        </div>
+        <div class="card-video">
+          <img :src="slImg" alt="" width="400" height="250" />
+        </div>
+        <div class="card-video">
+          <img :src="slImg" alt="" />
+        </div>
+        <div class="card-video">
+          <img :src="slImg" alt="" />
+        </div>
+        <div class="card-video">
+          <img :src="slImg" alt="" />
+        </div>
+        <div class="card-video">
+          <img :src="slImg" alt="" />
+        </div>
+        <div class="card-video">
+          <img :src="slImg" alt="" />
+        </div>
+        <div class="card-video">
+          <img :src="slImg" alt="" />
+        </div>
+        <div class="card-video">
+          <img :src="slImg" alt="" />
+        </div>
       </Carousel>
       <div class="video-footer-text" v-text="footText"></div>
     </div>
@@ -26,12 +44,14 @@ export default {
   data() {
     return {
       videoText: "Barcha videolar",
+      slImg: require("~/assets/img/course/bogcha.svg"),
       footText: "Qanday ishlar maqbul kelmaydigan ish hisoblanadi",
       slickOptions: {
         dots: true,
         infinite: true,
         slidesToShow: 3,
         centerPadding: "10px",
+        centerMode: true,
         centerMode: true,
         focusOnSelect: true,
         arrows: false
@@ -47,7 +67,7 @@ export default {
   // height: 10000px !important;
   // display: none !important;
   .video-box-item {
-    border: 1px solid red !important;
+    // border: 1px solid red !important;
     padding: 10px;
     height: 100px;
     margin: 15px;
@@ -80,10 +100,9 @@ export default {
     .card-video {
       width: 427px;
       height: 235px;
-      border: 1px solid;
       // margin: 10px 50px;
       padding: 20px;
-      border: 1px solid red;
+      // border: 1px solid red;
     }
 
     .active {
@@ -108,7 +127,7 @@ export default {
       }
     }
     .slick-current {
-      width: 667,27px !important;
+      width: 667, 27px !important;
       height: 367px !important;
     }
 

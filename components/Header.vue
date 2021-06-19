@@ -36,6 +36,7 @@
             ></span>
             <h2 class="logo-text">{{ $t("lan") }}</h2>
           </div>
+
           <div class="right">
             <div class="izlash">
               <input type="text" placeholder="Izlash" />
