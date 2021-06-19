@@ -151,6 +151,8 @@ export default {
     background: #e2eaf1 !important;
     max-width: 100%;
     margin-bottom: 70px;
+    padding-top: 40px;
+    padding-bottom: 30px;
     .question-text {
       font-style: normal;
       font-weight: bold;
@@ -158,7 +160,7 @@ export default {
       line-height: 35px;
       /* dark gray */
       color: #333333;
-      margin: 75px 0 15px 0;
+      margin: 7px 0 15px 0;
     }
     .question-list-group {
       display: flex;
