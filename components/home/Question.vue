@@ -1,19 +1,21 @@
 <template>
-  <div class="container">
+  <div>
     <div id="question">
-      <div class="question-body">
-        <div class="question-text title-text">{{ questionTitle }}</div>
-        <div class="question-list-group">
-          <div v-for="(item, index) in questionItem" :key="index">
-            <a
-              :href="item.href"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="question-list-box"
-            >
-              <img :src="item.questionIcon" :alt="item.iimgAlt" />
-              <div class="question-title-text">{{ item.questionTitle }}</div>
-            </a>
+      <div class="container">
+        <div class="question-body">
+          <div class="question-text title-text">{{ questionTitle }}</div>
+          <div class="question-list-group">
+            <div v-for="(item, index) in questionItem" :key="index">
+              <a
+                :href="item.href"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="question-list-box"
+              >
+                <img :src="item.questionIcon" :alt="item.iimgAlt" />
+                <div class="question-title-text">{{ item.questionTitle }}</div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -144,10 +146,11 @@ export default {
 <style lang="scss" scoped>
 * {
   box-sizing: border-box;
+  // background: #E2EAF1;
   #question {
-    max-width: 1240px;
-    margin: 0 30px;
-    margin-bottom: 30px;
+    background: #e2eaf1 !important;
+    max-width: 100%;
+    margin-bottom: 70px;
     .question-text {
       font-style: normal;
       font-weight: bold;

@@ -134,7 +134,7 @@ export default {
     align-items: center;
     width: 50px;
     height: 50px;
-    background: #07f32f;
+    background: #501E5A;
     border-radius: 50%;
     right: -55px;
     top: 38%;

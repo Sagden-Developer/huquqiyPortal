@@ -205,7 +205,7 @@
               </a>
             </li>
             <li>
-              <a href="#" @click="onlineTest = !onlineTest">
+              <a href="#" @click="onlineTest = !onlineTest" class="targibot-link">
                 {{ $t("lan3") }}
                 <svg
                   :class="Targibot ? 'bur' : ''"
@@ -334,6 +334,9 @@ h2.logo-text {
   .test,
   .book {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   a.test-link:hover {
     display: block;
@@ -342,9 +345,14 @@ h2.logo-text {
   a.book-link:hover .book {
     display: block;
   }
-  a.targibot-link:hover div.targibot {
-    display: block;
-    background: red;
+  a.targibot-link:hover .targibot {
+    display: block !important;
+    z-index: 99;
+    background: red !important;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
   }
   ul {
     display: flex;
