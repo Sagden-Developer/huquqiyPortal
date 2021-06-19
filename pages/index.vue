@@ -1,14 +1,14 @@
 <template>
   <div>
-    <!-- <Slider /> -->
-    <!-- <News /> -->
-    <!-- <Section /> -->
-    <!-- <Question /> -->
+    <Slider />
+    <News />
+    <Section />
+    <Question />
     <Courses />
-    <!-- <Rating /> -->
-    <!-- <Ebook /> -->
-    <!-- <Videos /> -->
-    <!-- <Weblinks /> -->
+    <Rating />
+    <Ebook />
+    <Videos />
+    <Weblinks />
   </div>
 </template>
 
@@ -40,6 +40,7 @@ export default {
     this.$store.dispatch('home/GET_HOMES_VIDEO');
     this.$store.dispatch('home/GET_HOMES_NEWS');
     this.$store.dispatch('home/GET_HOMES_SITES');
+    this.$store.dispatch('home/GET_HOMES_LIBRARIES');
   }
 };
 </script>

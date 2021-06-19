@@ -5,31 +5,30 @@
       <h2>{{ title }}</h2>
       <button type="submit">Barcha Yangiliklar</button>
     </div>
-    <Carousel v-bind="settings">
-      <div class="news-slide">
+    <Carousel v-bind="settings" v-if="$store.state.home.news.length">
+      <div
+        class="news-slide"
+        v-for="(mainNews, index) in $store.state.home.news"
+        :key="index"
+      >
         <div class="news-box">
           <div class="news-img">
-            <img class="swiper-img" :src="newsImg" width="505" height="380" />
+            <img
+              class="swiper-img"
+              :src="`http://ass.tujjor.org/${mainNews.image}`"
+              width="505"
+              height="380"
+            />
           </div>
           <div class="news-text">
             <div class="text-head">
               <h3>
-                Sud-huquq islohotida advokatura instituti markaziy o‘rinda
+                <!-- Sud-huquq islohotida advokatura instituti markaziy o‘rinda -->
+                {{ mainNews.title }}
               </h3>
             </div>
             <div class="text-info">
-              <h6>
-                2019 yilning 25—27 aprel' kunlari Toshkentda ilk bor “Tashkent
-                Law Spring” – xalqaro miqyosdagi yuridik forumi bo‘lib o‘tgan
-                edi. Forum doirasida davlat idoralari, xalqaro tashkilotlar,
-                O‘zbekiston va dunyoning yetakchi yuridik hamda konsalting
-                firmalari vakillari, advokatlar, yurisprudensiya, xalqaro
-                aloqalar sohasidagi taniqli olimlar, OAV vakillari,
-                mutaxassislar, ekspertlar, huquq sohasidagi eng so‘nggi
-                tendensiyalarni muhokama qilish, zamonaviy yuridik fan va
-                amaliyotning dolzarb masalalari yuzasidan o‘zaro fikr almashgan
-                edi.
-              </h6>
+              <h6 v-html="mainNews.article"></h6>
               <nuxt-link to="/">Batafsil >></nuxt-link>
             </div>
             <div class="news-data">
@@ -43,49 +42,48 @@
                   <div>528</div>
                 </div>
               </div>
-              <div class="arrows">wqdwd</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="news-slide">
-        <div class="news-box">
-          <div class="news-img">
-            <img class="swiper-img" :src="newsImg" width="505" height="380" />
-          </div>
-          <div class="news-text">
-            <div class="text-head">
-              <h3>
-                Sud-huquq islohotida advokatura instituti markaziy o‘rinda
-              </h3>
-            </div>
-            <div class="text-info">
-              <h6>
-                2019 yilning 25—27 aprel' kunlari Toshkentda ilk bor “Tashkent
-                Law Spring” – xalqaro miqyosdagi yuridik forumi bo‘lib o‘tgan
-                edi. Forum doirasida davlat idoralari, xalqaro tashkilotlar,
-                O‘zbekiston va dunyoning yetakchi yuridik hamda konsalting
-                firmalari vakillari, advokatlar, yurisprudensiya, xalqaro
-                aloqalar sohasidagi taniqli olimlar, OAV vakillari,
-                mutaxassislar, ekspertlar, huquq sohasidagi eng so‘nggi
-                tendensiyalarni muhokama qilish, zamonaviy yuridik fan va
-                amaliyotning dolzarb masalalari yuzasidan o‘zaro fikr almashgan
-                edi.
-              </h6>
-              <nuxt-link to="/">Batafsil >></nuxt-link>
-            </div>
-            <div class="news-data">
-              <div class="info">
-                <div class="data">
-                  <img :src="icons.dataIcon" alt="" />
-                  <div>02.06.2021</div>
-                </div>
-                <div class="views">
-                  <img :src="icons.viewIcon" alt="" />
-                  <div>528</div>
-                </div>
-              </div>
-              <div class="arrows">wqdwd</div>
+              <!-- <div class="arrows">
+                <button type="submit" class="left-arrow">
+                  <svg
+                    width="30"
+                    height="30"
+                    viewBox="0 0 30 30"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.75 22.5L11.25 15L18.75 7.5"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <button
+                  type="submit"
+                  class="pages"
+                  v-for="index in 5"
+                  :key="index"
+                ></button>
+                <button type="submit" class="right-arrow">
+                  <svg
+                    width="30"
+                    height="30"
+                    viewBox="0 0 30 30"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.25 22.5L18.75 15L11.25 7.5"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div> -->
             </div>
           </div>
         </div>
@@ -115,33 +113,15 @@ export default {
         slidesToShow: 1,
         slidesToScroll: 1,
         swipeToSlide: true,
-        arrows: false,
-        dotsClass: "bu-class"
+        arrows: false
+        // dotsClass: "pages"
       }
     };
   }
 };
 </script>
 
-<style lang="scss" scoped>
-.bu-class {
-  background: red !important; /* bg color of container */
-}
-.bu-class button:before {
-  color: #000; /* color of dots */
-  opacity: 0.25; /* opacity of dots */
-  background-color: red !important; /* bg color of each "button" 
-                                  * (blends with the one set in .slick-dots
-                                  * if opacity is not 1) */
-  content: "•"; /* this is the actual dot (yep, it's text)
-                 * set it to ❥, 🤡 or whatever other string you want); 
-             NOTE: don't set it to `none`: the dots won't display! */
-  font-size: 10px; /* font-size of the dot */
-}
-// .bu-class .slick-active button:before {
-//   /* everything already listed under `.slick-dots button:before`
-//      except `opacity` is set to 1 by default */
-// }
+<style lang="scss">
 #news-section {
   position: relative;
   width: 1240px;
@@ -155,11 +135,9 @@ export default {
       font-weight: bold;
       font-size: 28px;
       line-height: 35px;
-      /* dark gray */
       color: #333333;
     }
     button[type="submit"] {
-      /* rating green */
       background: #597ba3;
       color: #fff;
       border: 1px solid;
@@ -243,9 +221,80 @@ export default {
               justify-content: space-around;
             }
           }
+          .arrows {
+            width: 210px;
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .left-arrow,
+            .right-arrow {
+              width: 50px;
+              height: 50px;
+              background: #597ba3;
+              color: #fff;
+              border: 1px solid;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 30px;
+              font-weight: 500;
+            }
+            .pages {
+              width: 15px;
+              height: 15px;
+              background: #597ba3;
+              opacity: 0.5;
+              border-radius: 50%;
+              border: 0;
+            }
+            .active {
+              width: 20px;
+              height: 20px;
+              background: #597ba3;
+            }
+          }
         }
       }
     }
+  }
+
+  // Slider components
+
+  // DOTS change
+  .slick-dots {
+    button::before {
+      color: #000 !important; /* color of dots */
+      background-color: transparent !important;
+      content: "";
+      font-size: 10px !important;
+      width: 15px !important;
+      height: 15px !important;
+      background: #597ba3 !important;
+      opacity: 0.5 !important;
+      border-radius: 50% !important;
+      border: 0 !important;
+    }
+    .slick-active button::before {
+      background: #597ba3 !important;
+      opacity: 1 !important;
+    }
+  }
+
+  // ARROW change
+  .slick-arrow {
+    width: 50px;
+    height: 50px;
+    background: #597ba3;
+    color: #fff;
+    border: 1px solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 500;
   }
 }
 </style>

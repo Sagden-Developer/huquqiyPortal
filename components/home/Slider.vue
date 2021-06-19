@@ -6,9 +6,9 @@
           <h1>Huquqiy portal</h1>
         </div>
         <div class="info-text">
-          <h1>
+          <h2>
             O’zbekiston Respublikasi Milliy Huquqiy informatsion portali
-          </h1>
+          </h2>
         </div>
       </div>
       <div class="search-button">
@@ -98,7 +98,7 @@ export default {
   .search-button {
     margin: 20px 0;
     position: relative;
-    input[type=text] {
+    input[type="text"] {
       width: 570px;
       height: 54px;
       border-radius: 12px;
@@ -109,7 +109,7 @@ export default {
       z-index: 1;
       font-size: 18px;
       font-weight: 500;
-      color: #D5D5D5;
+      color: #d5d5d5;
     }
     .search-icon {
       padding: 10px;
@@ -136,7 +136,7 @@ export default {
   .tags {
     padding: 10px 0 10px 0;
     display: flex;
-    width: 30%;
+    width: 40%;
     flex-wrap: wrap;
     justify-content: space-between;
 
@@ -152,13 +152,39 @@ export default {
       font-weight: 500;
       font-size: 16px;
       line-height: 20px;
-      transition: .3s linear;
+      transition: 0.3s linear;
       &:hover {
         background-color: #fff;
         color: black;
         cursor: pointer;
       }
     }
+  }
+}
+@media (min-width: 576px) and (max-width: 950px) {
+  .info-text {
+    h2 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #eeeeee;
+    }
+  }
+  #slider {
+    padding-left: 35px !important;
+  }
+  .tag-section {
+    display: none;
+  }
+  .tags {
+    display: none !important;
+  }
+  input {
+    width: 390px !important;
+  }
+  .slide-texts {
+    margin-top: 80px !important;
   }
 }
 </style>

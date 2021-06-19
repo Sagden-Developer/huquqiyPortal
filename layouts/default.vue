@@ -1,10 +1,8 @@
 <template>
   <div>
-    <div class="body">
-      <Header />
-      <Nuxt />
-      <Footer />
-    </div>
+    <Header />
+    <Nuxt />
+    <Footer />
   </div>
 </template>
 
@@ -19,10 +17,5 @@ export default {
 * {
   margin: 0;
   padding: 0;
-}
-.body {
-  width: 1300px !important;
-  margin: 0 auto;
-  // background: red;
 }
 </style>

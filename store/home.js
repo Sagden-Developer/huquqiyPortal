@@ -2,6 +2,7 @@ export const state = () => ({
     video: [],
     news: [],
     sites: [],
+    libraries: [],
     message: "",
     status: ""
 });
@@ -29,6 +30,15 @@ export const mutations = {
 
     HOMES_SUCCESS_SITES(state, sites) {
         state.sites = sites;
+        state.status = "";
+        state.message = "Успешно!!!";
+    },
+    HOMES_SUCCESS_LIBRARIES(state, libraries) {
+        state.libraries = libraries;
+        state.status = "";
+        state.message = "Успешно!!!";
+    },
+    HOMES_SUCCESS_COUNT_VIEWS(state) {
         state.status = "";
         state.message = "Успешно!!!";
     },
@@ -84,4 +94,25 @@ export const actions = {
         });
     },
     
+    
+    GET_HOMES_LIBRARIES({ commit }) {
+        commit('HOMES_REQUEST');
+        this.$axios.$get('/home/library').then((res) => {
+            commit('HOMES_SUCCESS_LIBRARIES', res.data);
+        }).catch((err) => {
+            
+            commit("HOMES_FAILURE");
+        });
+    },
+
+    GET_HOMES_COUNT_VIEWS({ commit, dispatch }, id) {
+        commit('HOMES_REQUEST');
+        this.$axios.$get(`/news/${id}/view`).then((res) => {
+            dispatch('GET_HOMES_NEWS')
+            commit('HOMES_SUCCESS_COUNT_VIEWS');
+        }).catch((err) => {
+            
+            commit("HOMES_FAILURE");
+        });
+    },
 }
