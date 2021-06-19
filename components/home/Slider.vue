@@ -174,7 +174,14 @@ export default {
     }
   }
   #slider {
-    padding-left: 35px !important;
+    // padding-left: 35px !important;
+    height: auto !important;
+    padding: 0px 30px;
+    background-size: contain ;
+    .search-button{
+      margin: 0 !important;
+      // margin-bottom: 40px;
+    }
   }
   .tag-section {
     display: none;
@@ -186,7 +193,13 @@ export default {
     width: 390px !important;
   }
   .slide-texts {
-    margin-top: 80px !important;
+    margin-top: 92px !important;
+  }
+  .head-text {
+    h1 {
+      font-size: 32px !important;
+      text-transform: capitalize;
+    }
   }
 }
 @media (min-width: 350px) and (max-width: 575px) {
