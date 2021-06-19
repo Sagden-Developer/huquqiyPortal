@@ -1,9 +1,10 @@
 <template>
   <div>
     <Slider />
-    <!-- <News /> -->
+    <News />
     <Section />
     <Question />
+    <Courses />
     <Rating />
     <Ebook />
     <Videos />
@@ -16,6 +17,7 @@ import Slider from "../components/home/Slider";
 import News from "../components/home/News";
 import Section from "../components/home/Section";
 import Question from "../components/home/Question";
+import Courses from "../components/home/Courses";
 import Rating from "../components/home/Rating";
 import Ebook from "../components/home/Ebook";
 import Videos from "../components/home/Videos";
@@ -23,7 +25,7 @@ import Weblinks from "../components/home/Weblinks";
 export default {
   // name: "HuquqClientIndex",
 
-  components: { Slider, News, Section, Question, Rating , Ebook, Videos ,Weblinks },
+  components: { Slider, News, Section, Question, Courses, Rating, Ebook, Videos ,Weblinks },
 
   // directives: { DirectiveName },
 

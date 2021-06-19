@@ -138,7 +138,7 @@ export default {
   .tags {
     padding: 10px 0 10px 0;
     display: flex;
-    width: 30%;
+    width: 40%;
     flex-wrap: wrap;
     justify-content: space-between;
 
