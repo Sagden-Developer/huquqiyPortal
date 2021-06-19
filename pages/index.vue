@@ -1,7 +1,7 @@
 <template>
   <div>
     <Slider />
-    <News />
+    <!-- <News /> -->
     <Section />
     <Question />
     <Rating />

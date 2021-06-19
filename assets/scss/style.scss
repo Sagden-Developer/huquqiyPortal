@@ -1,12 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap');
 
-.body {
-  width: 100% !important;
+body {
+  // width: px !important;
   margin: 0 auto;
-  background-color: #fff;
+  background:#FBF9FB;
 }
 
 *{
   font-family: 'Montserrat',
   sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.title-text{
+  font-family: 'Oxygen',
+  sans-serif !important;
 }

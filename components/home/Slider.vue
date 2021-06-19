@@ -6,9 +6,9 @@
           <h1>Huquqiy portal</h1>
         </div>
         <div class="info-text">
-          <h1>
+          <h2>
             O’zbekiston Respublikasi Milliy Huquqiy informatsion portali
-          </h1>
+          </h2>
         </div>
       </div>
       <div class="search-button">
@@ -98,7 +98,7 @@ export default {
   .search-button {
     margin: 20px 0;
     position: relative;
-    input[type=text] {
+    input[type="text"] {
       width: 570px;
       height: 54px;
       border-radius: 12px;
@@ -109,7 +109,7 @@ export default {
       z-index: 1;
       font-size: 18px;
       font-weight: 500;
-      color: #D5D5D5;
+      color: #d5d5d5;
     }
     .search-icon {
       padding: 10px;
@@ -152,7 +152,7 @@ export default {
       font-weight: 500;
       font-size: 16px;
       line-height: 20px;
-      transition: .3s linear;
+      transition: 0.3s linear;
       &:hover {
         background-color: #fff;
         color: black;
@@ -161,48 +161,30 @@ export default {
     }
   }
 }
-
-  @media (min-width: 350px) and (max-width: 576px){
-    #slider{
-      width: 350px;
-      height: 163px;
-      margin-bottom: 0;
-      .head-text{
-        h1{
-          /*margin-top: 0;*/
-          font-weight: bold;
-          font-size: 24px;
-          line-height: 0px;
-          /*margin-left: 10px;*/
-          margin-left: -25px;
-          margin-bottom: 0;
-        }
-      }
-      .info-text {
-        h1{
-         /*margin-left: 10px;*/
-          font-size: 16px;
-          line-height: 20px;
-          font-family: Montserrat sans-serif;
-          margin-left: -25px;
-          /*margin-top: 16px;*/
-        }
-      }
-      .search-button{
-        display: none;
-      }
-      .search-icon{
-        display: none;
-      }
-      .tag-links{
-        display: none;
-      }
-      img{
-        display: none;
-      }
-      .tag-text{
-        display: none;
-      }
+@media (min-width: 576px) and (max-width: 950px) {
+  .info-text {
+    h2 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #eeeeee;
     }
   }
+  #slider {
+    padding-left: 35px !important;
+  }
+  .tag-section {
+    display: none;
+  }
+  .tags {
+    display: none !important;
+  }
+  input {
+    width: 390px !important;
+  }
+  .slide-texts {
+    margin-top: 80px !important;
+  }
+}
 </style>

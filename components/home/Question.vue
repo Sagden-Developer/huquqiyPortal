@@ -1,18 +1,20 @@
 <template>
-  <div id="question">
-    <div class="question-body">
-      <div class="question-text">{{ questionTitle }}</div>
-      <div class="question-list-group">
-        <div v-for="(item, index) in questionItem" :key="index">
-          <a
-            :href="item.href"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="question-list-box"
-          >
-            <img :src="item.questionIcon" :alt="item.iimgAlt" />
-            <div class="question-title-text">{{ item.questionTitle }}</div>
-          </a>
+  <div class="container">
+    <div id="question">
+      <div class="question-body">
+        <div class="question-text title-text">{{ questionTitle }}</div>
+        <div class="question-list-group">
+          <div v-for="(item, index) in questionItem" :key="index">
+            <a
+              :href="item.href"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="question-list-box"
+            >
+              <img :src="item.questionIcon" :alt="item.iimgAlt" />
+              <div class="question-title-text">{{ item.questionTitle }}</div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -147,7 +149,6 @@ export default {
     margin: 0 30px;
     margin-bottom: 30px;
     .question-text {
-      font-family: "Oxygen";
       font-style: normal;
       font-weight: bold;
       font-size: 28px;
@@ -199,16 +200,16 @@ export default {
     }
   }
 }
-
-@media (min-width: 350px) and (max-width: 576px){
-  .question-list-group{
-    div{
-      width: 100%;
-      a{width: 100% !important}
-
-    }
-    .question-title-text{
-
+@media (min-width: 576px) and (max-width: 950px) {
+  .question-list-group {
+    // width: 50%;
+    div {
+      width: 50%;
+      display: block;
+      a {
+        margin: 10px auto !important;
+        width: 95% !important;
+      }
     }
   }
 }
