@@ -34,9 +34,9 @@
       </clipPath>
       </defs>
       </svg>
-          532
+         <p style="margin-left: 5px">532</p> 
              </p>
-             
+            
            </div>
            </div>
            
@@ -70,7 +70,7 @@
       </clipPath>
       </defs>
       </svg>
-          532
+         <p style="margin-left: 5px">532</p> 
              </p>
              
            </div>
@@ -110,7 +110,7 @@
       </clipPath>
       </defs>
       </svg>
-          532
+         <p style="margin-left: 5px">532</p> 
              </p>
              
            </div>
@@ -147,7 +147,7 @@
       </clipPath>
       </defs>
       </svg>
-          532
+         <p style="margin-left: 5px">532</p> 
              </p>
              
            </div>
@@ -187,7 +187,7 @@
       </clipPath>
       </defs>
       </svg>
-          532
+         <p style="margin-left: 5px">532</p> 
              </p>
              
            </div>
@@ -224,7 +224,7 @@
       </clipPath>
       </defs>
       </svg>
-          532
+         <p style="margin-left: 5px">532</p> 
              </p>
              
            </div>
