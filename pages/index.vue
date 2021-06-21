@@ -27,7 +27,7 @@ import Weblinks from "../components/home/Weblinks";
 export default {
   // name: "HuquqClientIndex",
 
-  components: { Slider, News, Section, Question, Rating , Ebook, Videos ,Weblinks},
+  components: { Slider, News, Section, Question,Courses, Rating , Ebook, Videos ,Weblinks},
 
   // directives: { DirectiveName },
 

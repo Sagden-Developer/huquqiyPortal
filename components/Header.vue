@@ -34,7 +34,9 @@
                   />
                 </defs></svg
             ></span>
-            <h2 class="logo-text">{{ $t("lan") }}</h2>
+            <h2 class="logo-text">
+              <a href="../" to=""> {{ $t("lan") }} </a>
+            </h2>
           </div>
 
           <div class="right">
@@ -184,6 +186,10 @@
             </div>
           </div>
         </div>
+        <div
+          @click="isMenu = !isMenu"
+          :class="isMenu ? 'fix-vh' : ''"
+        ></div>
         <div :class="isMenu ? ' bottom bottom-media' : 'bottom'">
           <ul>
             <li>
@@ -205,7 +211,11 @@
               </a>
             </li>
             <li>
-              <a href="#" @click="onlineTest = !onlineTest" class="targibot-link">
+              <a
+                href="#"
+                @click="onlineTest = !onlineTest"
+                class="targibot-link"
+              >
                 {{ $t("lan3") }}
                 <svg
                   :class="Targibot ? 'bur' : ''"
@@ -326,6 +336,10 @@ export default {
 h2.logo-text {
   font-size: 16px;
   max-width: 276px;
+  a {
+    text-decoration: none;
+    color: #333;
+  }
 }
 .bottom {
   width: 100%;
@@ -388,8 +402,8 @@ h2.logo-text {
   }
 }
 .izlash-two {
-      display: none !important;
-    }
+  display: none !important;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -409,7 +423,7 @@ h2.logo-text {
       margin-right: 15px;
     }
   }
-  
+
   .izlash {
     position: relative;
     button.search-icon {
@@ -521,25 +535,41 @@ h2.logo-text {
 }
 
 @media (min-width: 576px) and (max-width: 950px) {
+  .fix-vh {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 998;
+        top: 0;
+        left: 0;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+    }
   .bottom-media {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
     z-index: 999;
-    background-color: #fff;
-    width: 60%;
-    padding: 15px 20px;
     height: 100vh !important;
+    margin-top: 0 !important;
+    background: #fbf9fb;
+    padding: 20px;
     ul {
-      flex-direction: column;
+      // flex-direction: column;
       // display: block !important;
     }
   }
   .bottom {
-    transition: 0.3s;
-    left: -100%;
-    z-index: 23;
-    background: #fff;
+    margin-top: 0 !important;
+    background: #fbf9fb;
+    padding: 20px;
+    position: fixed;
+    width: 60%;
+    transition: 0.4s;
+    top: 0;
+    height: 100vh;
+    left: -800px;
+    z-index: 999;
+
     ul {
       flex-direction: column;
       li {
@@ -554,15 +584,15 @@ h2.logo-text {
     }
   }
   .izlash-two {
-      display: none !important;
-    }
+    display: none !important;
+  }
   h2.logo-text {
     font-size: 14px;
     max-width: 220px !important;
   }
   header {
     width: 700px;
-  
+
     .header {
       width: 90%;
       margin: 0 auto;
@@ -609,25 +639,41 @@ h2.logo-text {
   }
 }
 @media (min-width: 350px) and (max-width: 575px) {
+  .fix-vh {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 998;
+        top: 0;
+        left: 0;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+    }
   .bottom-media {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
     z-index: 999;
-    background-color: #fff;
-    width: 60%;
-    padding: 15px 20px;
     height: 100vh !important;
+    margin-top: 0 !important;
+    background: #fbf9fb;
+    padding: 20px;
     ul {
-      flex-direction: column;
+      // flex-direction: column;
       // display: block !important;
     }
   }
   .bottom {
-    transition: 0.3s;
-    left: -100%;
-    z-index: 23;
-    background: #fff;
+    margin-top: 0 !important;
+    background: #fbf9fb;
+    padding: 20px;
+    position: fixed;
+    width: 60%;
+    transition: 0.4s;
+    top: 0;
+    height: 100vh;
+    left: -800px;
+    z-index: 999;
+
     ul {
       flex-direction: column;
       li {
@@ -636,7 +682,7 @@ h2.logo-text {
         a {
           border: none;
           padding: 0;
-          font-size: 25px;
+          font-size: 15px;
         }
       }
     }

@@ -42,7 +42,7 @@ export default {
   modules: [
     "nuxt-i18n",
     '@nuxtjs/axios',
-    'bootstrap-vue/nuxt',
+    ,
   ],
   i18n: {
     locales: [

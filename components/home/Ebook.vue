@@ -237,9 +237,17 @@ export default {
 }
 @media (min-width: 350px) and (max-width: 576px) {
   .ebook {
-    width: 90%;
+    width: 95%;
     .card-book {
-      width: 160px !important;
+      width: 100% !important;
+      padding: 10px;
+      img {
+        width: 100% !important;
+        height: 205px !important;
+      }
+      p {
+        width: 100%;
+      }
     }
   }
   .rating-body {

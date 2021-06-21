@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="container">
       <div id="slider">
+    <div class="container">
         <div class="slide-texts">
           <div class="head-text">
             <h1 class="title-text">Huquqiy portal</h1>

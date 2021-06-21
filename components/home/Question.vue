@@ -167,7 +167,7 @@ export default {
       flex-wrap: wrap;
       justify-content: space-between;
       .question-list-box {
-        width: 400px;
+        width: 420px;
         height: 100px;
         margin: 10px 0;
         border-radius: 12px;
@@ -206,6 +206,9 @@ export default {
   }
 }
 @media (min-width: 576px) and (max-width: 950px) {
+  .question-text{
+    padding-left: 10px !important;
+  }
   .question-list-group {
     // width: 50%;
     div {
@@ -219,6 +222,9 @@ export default {
   }
 }
 @media (min-width: 350px) and (max-width: 575px) {
+  .question-text{
+    padding-left: 10px !important;
+  }
   .question-list-group {
     // width: 50%;
     div {

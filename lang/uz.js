@@ -9,7 +9,7 @@ export default {
     lan4: 'Huquqiy adabiyot',
     lan5: 'Huquqiy muammolar yechimi',
     lan6: 'Bepul huquqiy maslahat',
-    lan7: 'Ishonch raqamlarit',
+    lan7: 'Ishonch raqamlari',
     lan8: 'Izlash',
     lan9: 'Maxsus imkoniyatlar',
 }

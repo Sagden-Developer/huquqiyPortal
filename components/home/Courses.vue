@@ -1,6 +1,7 @@
 <template>
   <div id="courses">
-    <div class="cours-container">
+    <div class="container">
+      <div class="cours-container">
       <div class="course-head">
         <div class="head-text">
           <h3>Beepul onlayn kurslar</h3>
@@ -11,7 +12,7 @@
         <div class="card-box" v-for="(index, card) in cards" :key="index">
           <a :href="index.href" target="_blank" rel="noopener noreferrer">
             <img
-            class="star"
+              class="star"
               :src="index.cardIcon"
               :alt="index.imgAlt"
               width="400"
@@ -29,7 +30,10 @@
           </a>
         </div>
       </div>
+      <button type="submit" class="allCourseNone">Barcha Kurslar</button>
     </div>
+    </div>
+    
   </div>
 </template>
 
@@ -93,12 +97,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+ .allCourseNone {
+        display: none !important;
+      }
 #courses {
-  width: 1300px;
+  // width: 1300px;
   margin: 0 auto;
   .cours-container {
-    width: 1240px;
-    margin: 75px 30px;
+    // width: 1240px;
+    // margin: 75px 30px;
     .course-head {
       display: flex;
       justify-content: space-between;
@@ -112,6 +119,7 @@ export default {
         /* dark gray */
         color: #333333;
       }
+     
       .allCourse {
         padding: 10px 25px;
         width: 193px;
@@ -134,12 +142,13 @@ export default {
       justify-content: space-between;
       .card-box {
         margin-bottom: 20px;
-        // width: 400px;
+        width: 420px;
         // height: 320px;
         border-radius: 12px;
         background: #fff;
+      
         .video-title-content {
-          // width: 400px;
+          width: 420px;
           height: 105px;
           .video-info {
             display: flex;
@@ -156,10 +165,14 @@ export default {
   }
 }
 @media (min-width: 576px) and (max-width: 950px) {
+  .allCourseNone {
+    display: none !important;
+  }
   #courses {
     // width: 700px !important;
     .cours-container {
       width: 700px !important;
+      margin: 0 auto !important;
     }
   }
   .card-box {
@@ -172,7 +185,49 @@ export default {
       }
     }
     .video-title-content {
+    width: 100% !important;
+    }
+    .video-info {
       width: 100%;
+    }
+  }
+}
+@media (min-width: 350px) and (max-width: 575px) {
+  .allCourse{
+    display: none !important;
+  }
+  .allCourseNone {
+    display: block !important;
+    padding: 10px 25px;
+    width: 100%;
+    background: #597ba3;
+    color: #fff;
+    border-radius: 50px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    border: 1px solid white;
+  }
+  #courses {
+    width: auto !important;
+    .cours-container {
+      // width: 350px !important;
+      padding: 0 10px;
+    }
+  }
+  .card-box {
+    width: 100% !important;
+    a {
+      width: 100%;
+      img.star {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .video-title-content {
+      width: 100% !important;
     }
     .video-info {
       width: 100%;

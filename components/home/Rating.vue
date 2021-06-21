@@ -67,7 +67,7 @@ export default {
           text: "Mudofaa vazirligi"
         },
         {
-          rating: 65,
+          rating: 85,
           text: "Xalq ta'limi vazirligi"
         }
       ]
@@ -206,12 +206,14 @@ b {
   }
 }
 @media (min-width: 350px) and (max-width: 575px) {
+  .title-text{
+    font-size: 20px !important;
+  }
   .title {
     align-items: center;
     flex-direction: column !important;
     p {
       max-width: 100%;
-      font-size: 24px !important;
     }
     button {
       margin-top: 20px;

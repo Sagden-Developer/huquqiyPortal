@@ -93,7 +93,7 @@ export default {
       flex-wrap: wrap;
       justify-content: space-between;
       .section-list-box {
-        width: 400px;
+        width: 415px;
         height: 222px;
         margin: 10px 0;
         border-radius: 12px;
@@ -144,6 +144,10 @@ export default {
   }
 }
 @media (min-width: 350px) and (max-width: 576px) {
+  #section{
+    width: 98% !important;
+    margin: 0 auto !important;
+  }
   .section-list-group {
     // width: 50%;
     div {
