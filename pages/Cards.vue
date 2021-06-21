@@ -34,8 +34,8 @@
       </clipPath>
       </defs>
       </svg>
-         <p style="margin-left: 5px">532</p> 
              </p>
+             <p style="margin-left: 5px">532</p> 
             
            </div>
            </div>
@@ -70,8 +70,8 @@
       </clipPath>
       </defs>
       </svg>
-         <p style="margin-left: 5px">532</p> 
              </p>
+              <p style="margin-left: 5px">532</p> 
              
            </div>
            </div>
@@ -110,8 +110,8 @@
       </clipPath>
       </defs>
       </svg>
-         <p style="margin-left: 5px">532</p> 
              </p>
+             <p style="margin-left: 5px">532</p> 
              
            </div>
            </div>
@@ -146,9 +146,9 @@
       <rect width="22" height="22" fill="white"/>
       </clipPath>
       </defs>
-      </svg>
-         <p style="margin-left: 5px">532</p> 
+      </svg> 
              </p>
+             <p style="margin-left: 5px">532</p>
              
            </div>
            </div>
@@ -187,8 +187,8 @@
       </clipPath>
       </defs>
       </svg>
-         <p style="margin-left: 5px">532</p> 
              </p>
+             <p style="margin-left: 5px">532</p> 
              
            </div>
            </div>
@@ -224,8 +224,8 @@
       </clipPath>
       </defs>
       </svg>
-         <p style="margin-left: 5px">532</p> 
              </p>
+               <p style="margin-left: 5px">532</p> 
              
            </div>
            </div>
