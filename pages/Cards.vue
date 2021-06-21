@@ -10,24 +10,24 @@
       </div>
     </div>
 
-    <div class="cards">
-      <div
-        class="cardx"
-        v-for="material in $store.state.card.cards"
-        :key="material._id"
-      >
+    <div
+      class="cards"
+      v-for="material in $store.state.card.cards"
+      :key="material._id"
+    >
+      <div class="cardx">
         <div class="img">
           <div class="imgs">
             <img
-              :src="`http://ass.tujjor.org/api/${material.files[0]}`"
+              :src="`http://ass.tujjor.org/${material.files[0].path}`"
               alt=""
             />
             <img
-              :src="`http://ass.tujjor.org/api/${material.files[1]}`"
+              :src="`http://ass.tujjor.org/${material.files[1].path}`"
               alt=""
             />
             <img
-              :src="`http://ass.tujjor.org/api/${material.files[2]}`"
+              :src="`http://ass.tujjor.org/${material.files[2].path}`"
               alt=""
             />
           </div>
@@ -69,7 +69,7 @@
                     </defs>
                   </svg>
                 </p>
-                <p style="margin-left: 5px">{{material.views}}</p>
+                <p style="margin-left: 5px">{{ material.views }}</p>
               </div>
             </div>
 
@@ -83,230 +83,6 @@
         <div class="img">
           <div class="imgs">
             <img src="@/assets/image/image 13825.png" alt="" />
-          </div>
-
-          <div class="circle">
-            <div>
-              <h5>Normativ hujjat nomi</h5>
-              <div class="normativ" style="display: flex">
-                <p>18.06.2021</p>
-                <p style="margin-left: 35px">
-                  <svg
-                    style="margin-right: 10px"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    viewBox="0 0 22 22"
-                    fill="none"
-                  >
-                    <g clip-path="url(#clip0)">
-                      <path
-                        d="M0.916504 11C0.916504 11 4.58317 3.66669 10.9998 3.66669C17.4165 3.66669 21.0832 11 21.0832 11C21.0832 11 17.4165 18.3334 10.9998 18.3334C4.58317 18.3334 0.916504 11 0.916504 11Z"
-                        stroke="#8D8D8D"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M11 13.75C12.5188 13.75 13.75 12.5188 13.75 11C13.75 9.48122 12.5188 8.25 11 8.25C9.48122 8.25 8.25 9.48122 8.25 11C8.25 12.5188 9.48122 13.75 11 13.75Z"
-                        stroke="#8D8D8D"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0">
-                        <rect width="22" height="22" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </p>
-                <p style="margin-left: 5px">532</p>
-              </div>
-            </div>
-
-            <div class="line">
-              <p>&#10142;</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="cards">
-      <div class="cardx">
-        <div class="img">
-          <div class="imgs">
-            <img src="@/assets/image/image 13825.png" alt="" />
-            <img src="@/assets/image/card1.png" alt="" />
-          </div>
-
-          <div class="circle">
-            <div>
-              <h5>Normativ hujjat nomi</h5>
-              <div class="normativ" style="display: flex">
-                <p>18.06.2021</p>
-                <p style="margin-left: 35px">
-                  <svg
-                    style="margin-right: 10px"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    viewBox="0 0 22 22"
-                    fill="none"
-                  >
-                    <g clip-path="url(#clip0)">
-                      <path
-                        d="M0.916504 11C0.916504 11 4.58317 3.66669 10.9998 3.66669C17.4165 3.66669 21.0832 11 21.0832 11C21.0832 11 17.4165 18.3334 10.9998 18.3334C4.58317 18.3334 0.916504 11 0.916504 11Z"
-                        stroke="#8D8D8D"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M11 13.75C12.5188 13.75 13.75 12.5188 13.75 11C13.75 9.48122 12.5188 8.25 11 8.25C9.48122 8.25 8.25 9.48122 8.25 11C8.25 12.5188 9.48122 13.75 11 13.75Z"
-                        stroke="#8D8D8D"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0">
-                        <rect width="22" height="22" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </p>
-                <p style="margin-left: 5px">532</p>
-              </div>
-            </div>
-
-            <div class="line">
-              <p>&#10142;</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="cardx">
-        <div class="img">
-          <div class="imgs">
-            <img src="@/assets/image/image 13825.png" alt="" />
-            <img src="@/assets/image/card1.png" alt="" />
-            <img src="@/assets/image/card3.png" alt="" />
-          </div>
-
-          <div class="circle">
-            <div>
-              <h5>Normativ hujjat nomi</h5>
-              <div class="normativ" style="display: flex">
-                <p>18.06.2021</p>
-                <p style="margin-left: 35px">
-                  <svg
-                    style="margin-right: 10px"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    viewBox="0 0 22 22"
-                    fill="none"
-                  >
-                    <g clip-path="url(#clip0)">
-                      <path
-                        d="M0.916504 11C0.916504 11 4.58317 3.66669 10.9998 3.66669C17.4165 3.66669 21.0832 11 21.0832 11C21.0832 11 17.4165 18.3334 10.9998 18.3334C4.58317 18.3334 0.916504 11 0.916504 11Z"
-                        stroke="#8D8D8D"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M11 13.75C12.5188 13.75 13.75 12.5188 13.75 11C13.75 9.48122 12.5188 8.25 11 8.25C9.48122 8.25 8.25 9.48122 8.25 11C8.25 12.5188 9.48122 13.75 11 13.75Z"
-                        stroke="#8D8D8D"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0">
-                        <rect width="22" height="22" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </p>
-                <p style="margin-left: 5px">532</p>
-              </div>
-            </div>
-
-            <div class="line">
-              <p>&#10142;</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="cards">
-      <div class="cardx">
-        <div class="img">
-          <div class="imgs">
-            <img src="@/assets/image/image 13825.png" alt="" />
-            <img src="@/assets/image/card1.png" alt="" />
-          </div>
-
-          <div class="circle">
-            <div>
-              <h5>Normativ hujjat nomi</h5>
-              <div class="normativ" style="display: flex">
-                <p>18.06.2021</p>
-                <p style="margin-left: 35px">
-                  <svg
-                    style="margin-right: 10px"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    viewBox="0 0 22 22"
-                    fill="none"
-                  >
-                    <g clip-path="url(#clip0)">
-                      <path
-                        d="M0.916504 11C0.916504 11 4.58317 3.66669 10.9998 3.66669C17.4165 3.66669 21.0832 11 21.0832 11C21.0832 11 17.4165 18.3334 10.9998 18.3334C4.58317 18.3334 0.916504 11 0.916504 11Z"
-                        stroke="#8D8D8D"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M11 13.75C12.5188 13.75 13.75 12.5188 13.75 11C13.75 9.48122 12.5188 8.25 11 8.25C9.48122 8.25 8.25 9.48122 8.25 11C8.25 12.5188 9.48122 13.75 11 13.75Z"
-                        stroke="#8D8D8D"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0">
-                        <rect width="22" height="22" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </p>
-                <p style="margin-left: 5px">532</p>
-              </div>
-            </div>
-
-            <div class="line">
-              <p>&#10142;</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="cardx">
-        <div class="img">
-          <div class="imgs">
-            <img src="@/assets/image/image 13825.png" alt="" />
-            <img src="@/assets/image/card1.png" alt="" />
-            <img src="@/assets/image/card3.png" alt="" />
           </div>
 
           <div class="circle">
@@ -363,10 +139,10 @@
 <script>
 import dateformat from "dateformat";
 export default {
-  methods:{
-    dateFormat(date){
-      return dateformat(date, 'isoDate')
-    }
+  methods: {
+    dateFormat(date) {
+      return dateformat(date, "isoDate");
+    },
   },
   beforeCreate() {
     this.$store.dispatch("card/GET_CARDS");
