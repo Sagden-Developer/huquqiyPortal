@@ -78,6 +78,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 #news-section {
   position: relative;
   width: 1240px;

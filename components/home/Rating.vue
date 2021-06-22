@@ -12,7 +12,7 @@
           <div class="left" style="width: 65%">
             <div class="rating-list">
               <div
-                class="rating-list-item"
+                class="rating-list-item "
                 v-for="(item, index) in ratingItem"
                 :key="index"
               >

@@ -7,7 +7,7 @@
           <p class="title-text">Elektron Kutubxona</p>
         </div>
 
-        <Carousel v-bind="slickOptions">
+        <Carousel v-bind="slickOptions" >
           <div
             class="card-book"
             v-for="(library, index) in $store.state.home.libraries"
@@ -66,6 +66,10 @@ export default {
         slidesToScroll: 2,
         draggable: true,
         infinite: true,
+        scale: true,
+        // arrows: false,
+        swipeToSlide: true,
+        
         responsive: [
           {
             breakpoint: 1024,
