@@ -1,54 +1,53 @@
 <template>
-<div>
-
-  <div id="news-section">
-    <div class="news-header">
-      <h2>{{ title }}</h2>
-      <button type="submit">Barcha Yangiliklar</button>
-    </div>
-    <Carousel v-bind="settings" v-if="$store.state.home.news.length">
-      <div
-        class="news-slide"
-        v-for="(mainNews, index) in $store.state.home.news"
-        :key="index"
-      >
-        <div class="news-box">
-          <div class="news-img">
-            <img
-              class="swiper-img"
-              :src="`http://ass.tujjor.org/${mainNews.image}`"
-              width="505"
-              height="380"
-            />
-          </div>
-          <div class="news-text">
-            <div class="text-head">
-              <h3>
-                {{ mainNews.title }}
-              </h3>
+  <div>
+    <div id="news-section">
+      <div class="news-header">
+        <h2>{{ title }}</h2>
+        <button type="submit">Barcha Yangiliklar</button>
+      </div>
+      <Carousel v-bind="settings" v-if="$store.state.home.news.length">
+        <div
+          class="news-slide"
+          v-for="(mainNews, index) in $store.state.home.news"
+          :key="index"
+        >
+          <div class="news-box">
+            <div class="news-img">
+              <img
+                class="swiper-img"
+                :src="`http://ass.tujjor.org/${mainNews.image}`"
+                width="505"
+                height="380"
+              />
             </div>
-            <div class="text-info">
-              <h6 v-html="mainNews.article"></h6>
-              <nuxt-link to="/">Batafsil >></nuxt-link>
-            </div>
-            <div class="news-data">
-              <div class="info">
-                <div class="data">
-                  <img :src="icons.dataIcon" alt="" />
-                  <div>02.06.2021</div>
-                </div>
-                <div class="views">
-                  <img :src="icons.viewIcon" alt="" />
-                  <div>528</div>
+            <div class="news-text">
+              <div class="text-head">
+                <h3>
+                  {{ mainNews.title }}
+                </h3>
+              </div>
+              <div class="text-info">
+                <h6 v-html="mainNews.article"></h6>
+                <nuxt-link to="/">Batafsil >></nuxt-link>
+              </div>
+              <div class="news-data">
+                <div class="info">
+                  <div class="data">
+                    <img :src="icons.dataIcon" alt="" />
+                    <div>02.06.2021</div>
+                  </div>
+                  <div class="views">
+                    <img :src="icons.viewIcon" alt="" />
+                    <div>528</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </Carousel>
+      </Carousel>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -69,7 +68,7 @@ export default {
         slidesToShow: 1,
         slidesToScroll: 1,
         swipeToSlide: true,
-        arrows: false
+        arrows: true
         // dotsClass: "pages"
       }
     };
@@ -78,11 +77,22 @@ export default {
 </script>
 
 <style lang="scss">
-
+.slick-prev,
+.slick-next {
+  top: 92%;
+}
+.slick-next {
+  right: 50px;
+}
+.slick-prev {
+  /* left: -18px; */
+  left: 79%;
+}
 #news-section {
   position: relative;
-  width: 1240px;
-  margin: 65px auto;
+  width: 1300px;
+  /* margin: 65px auto; */
+  padding: 60px 30px;
   .news-header {
     display: flex;
     justify-content: space-between;
@@ -221,6 +231,10 @@ export default {
 
   // DOTS change
   .slick-dots {
+    width: 20%;
+    text-align: center;
+    bottom: 16px;
+    right: 16px;
     button::before {
       color: #000 !important; /* color of dots */
       background-color: transparent !important;
@@ -241,6 +255,7 @@ export default {
 
   // ARROW change
   .slick-arrow {
+    z-index: 1111111;
     width: 50px;
     height: 50px;
     background: #597ba3;
