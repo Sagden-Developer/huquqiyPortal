@@ -1,54 +1,55 @@
 <template>
-<div>
-
-  <div id="news-section">
-    <div class="news-header">
-      <h2>{{ title }}</h2>
-      <button type="submit">Barcha Yangiliklar</button>
-    </div>
-    <Carousel v-bind="settings" v-if="$store.state.home.news.length">
-      <div
-        class="news-slide"
-        v-for="(mainNews, index) in $store.state.home.news"
-        :key="index"
-      >
-        <div class="news-box">
-          <div class="news-img">
-            <img
-              class="swiper-img"
-              :src="`http://ass.tujjor.org/${mainNews.image}`"
-              width="505"
-              height="380"
-            />
-          </div>
-          <div class="news-text">
-            <div class="text-head">
-              <h3>
-                {{ mainNews.title }}
-              </h3>
-            </div>
-            <div class="text-info">
-              <h6 v-html="mainNews.article"></h6>
-              <nuxt-link to="/">Batafsil >></nuxt-link>
-            </div>
-            <div class="news-data">
-              <div class="info">
-                <div class="data">
-                  <img :src="icons.dataIcon" alt="" />
-                  <div>02.06.2021</div>
+  <div>
+    <div class="container">
+      <div id="news-section">
+        <div class="news-header">
+          <h2>{{ title }}</h2>
+          <button type="submit">Barcha Yangiliklar</button>
+        </div>
+        <Carousel v-bind="settings" v-if="$store.state.home.news.length">
+          <div
+            class="news-slide"
+            v-for="(mainNews, index) in $store.state.home.news"
+            :key="index"
+          >
+            <div class="news-box">
+              <div class="news-img">
+                <img
+                  class="swiper-img"
+                  :src="`http://ass.tujjor.org/${mainNews.image}`"
+                  width="505"
+                  height="380"
+                />
+              </div>
+              <div class="news-text">
+                <div class="text-head">
+                  <h3>
+                    {{ mainNews.title }}
+                  </h3>
                 </div>
-                <div class="views">
-                  <img :src="icons.viewIcon" alt="" />
-                  <div>528</div>
+                <div class="text-info">
+                  <h6 v-html="mainNews.article"></h6>
+                  <nuxt-link to="/">Batafsil >></nuxt-link>
+                </div>
+                <div class="news-data">
+                  <div class="info">
+                    <div class="data">
+                      <img :src="icons.dataIcon" alt="" />
+                      <div>02.06.2021</div>
+                    </div>
+                    <div class="views">
+                      <img :src="icons.viewIcon" alt="" />
+                      <div>528</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </Carousel>
       </div>
-    </Carousel>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -78,10 +79,9 @@ export default {
 </script>
 
 <style lang="scss">
-
 #news-section {
   position: relative;
-  width: 1240px;
+  // width: 1240px;
   margin: 65px auto;
   .news-header {
     display: flex;
@@ -113,7 +113,7 @@ export default {
       justify-content: center;
       align-items: center;
       .news-img {
-        width: 505px;
+        // width: 505px;
         height: 380px;
         img {
           border-radius: 12px;
@@ -121,7 +121,7 @@ export default {
       }
       .news-text {
         position: relative;
-        width: 715px;
+        // width: 715px;
         height: 380px;
         padding: 20px;
         .text-head {

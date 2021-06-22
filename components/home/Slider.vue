@@ -1,7 +1,7 @@
 <template>
   <div>
-      <div id="slider">
     <div class="container">
+      <div id="slider">
         <div class="slide-texts">
           <div class="head-text">
             <h1 class="title-text">Huquqiy portal</h1>
@@ -82,14 +82,15 @@ export default {
   font-weight: 500;
 }
 #slider {
-  max-width: 1240px;
-  height: 500px;
+  // max-width: 1240px;
+  // height: 550px;
   border: 1px solid;
   border-radius: 24px;
   padding: 55px;
   margin: 25px auto;
   background-image: url("assets/img/slide.png");
   color: #fff;
+  background-size: cover ;
   .head-text {
     text-transform: uppercase;
   }
@@ -119,7 +120,7 @@ export default {
       z-index: 10;
       position: absolute;
       top: 50%;
-      left: 48%;
+      left: 46%;
       transform: translate(-50%, -50%);
       cursor: pointer;
       border: 0;
