@@ -136,7 +136,7 @@ export default {
         padding: 20px;
         .text-head {
           // position: absolute;
-          width: 715px;
+          width: 695px;
           // height: 62px;
           font-family: Montserrat;
           font-style: normal;
