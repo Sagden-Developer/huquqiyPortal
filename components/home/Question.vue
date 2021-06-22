@@ -1,19 +1,21 @@
 <template>
-  <div class="container">
+  <div>
     <div id="question">
-      <div class="question-body">
-        <div class="question-text title-text">{{ questionTitle }}</div>
-        <div class="question-list-group">
-          <div v-for="(item, index) in questionItem" :key="index">
-            <a
-              :href="item.href"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="question-list-box"
-            >
-              <img :src="item.questionIcon" :alt="item.iimgAlt" />
-              <div class="question-title-text">{{ item.questionTitle }}</div>
-            </a>
+      <div class="container">
+        <div class="question-body">
+          <div class="question-text title-text">{{ questionTitle }}</div>
+          <div class="question-list-group">
+            <div v-for="(item, index) in questionItem" :key="index">
+              <a
+                :href="item.href"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="question-list-box"
+              >
+                <img :src="item.questionIcon" :alt="item.iimgAlt" />
+                <div class="question-title-text">{{ item.questionTitle }}</div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -144,10 +146,13 @@ export default {
 <style lang="scss" scoped>
 * {
   box-sizing: border-box;
+  // background: #E2EAF1;
   #question {
-    max-width: 1240px;
-    margin: 0 30px;
-    margin-bottom: 30px;
+    background: #e2eaf1 !important;
+    max-width: 100%;
+    margin-bottom: 70px;
+    padding-top: 40px;
+    padding-bottom: 30px;
     .question-text {
       font-style: normal;
       font-weight: bold;
@@ -155,14 +160,14 @@ export default {
       line-height: 35px;
       /* dark gray */
       color: #333333;
-      margin: 75px 0 15px 0;
+      margin: 7px 0 15px 0;
     }
     .question-list-group {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       .question-list-box {
-        width: 400px;
+        width: 420px;
         height: 100px;
         margin: 10px 0;
         border-radius: 12px;
@@ -173,9 +178,9 @@ export default {
         flex-direction: row;
         justify-content: flex-start;
         background-color: #fff;
-        -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-        -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-        box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+        // -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+        // -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+        // box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
         text-decoration: none;
         transition: 0.3s linear;
         &:hover {
@@ -201,6 +206,9 @@ export default {
   }
 }
 @media (min-width: 576px) and (max-width: 950px) {
+  .question-text{
+    padding-left: 10px !important;
+  }
   .question-list-group {
     // width: 50%;
     div {
@@ -214,6 +222,9 @@ export default {
   }
 }
 @media (min-width: 350px) and (max-width: 575px) {
+  .question-text{
+    padding-left: 10px !important;
+  }
   .question-list-group {
     // width: 50%;
     div {

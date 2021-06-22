@@ -12,7 +12,7 @@
           <div class="left" style="width: 65%">
             <div class="rating-list">
               <div
-                class="rating-list-item"
+                class="rating-list-item "
                 v-for="(item, index) in ratingItem"
                 :key="index"
               >
@@ -67,7 +67,7 @@ export default {
           text: "Mudofaa vazirligi"
         },
         {
-          rating: 65,
+          rating: 85,
           text: "Xalq ta'limi vazirligi"
         }
       ]
@@ -96,7 +96,7 @@ export default {
       line-height: 150%;
       padding: 8px 25px;
       color: #fff;
-      background: #07a287;
+      background: #597BA3;
       cursor: pointer;
       border-radius: 50px;
       border: 0;
@@ -111,6 +111,7 @@ export default {
     .right {
       width: 35%;
       img {
+        pointer-events: none;
         width: 100%;
       }
     }
@@ -205,12 +206,14 @@ b {
   }
 }
 @media (min-width: 350px) and (max-width: 575px) {
+  .title-text{
+    font-size: 20px !important;
+  }
   .title {
     align-items: center;
     flex-direction: column !important;
     p {
       max-width: 100%;
-      font-size: 24px !important;
     }
     button {
       margin-top: 20px;

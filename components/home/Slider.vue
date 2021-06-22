@@ -1,55 +1,57 @@
 <template>
   <div>
-    <div id="slider">
-      <div class="slide-texts">
-        <div class="head-text">
-          <h1>Huquqiy portal</h1>
+      <div id="slider">
+    <div class="container">
+        <div class="slide-texts">
+          <div class="head-text">
+            <h1 class="title-text">Huquqiy portal</h1>
+          </div>
+          <div class="info-text">
+            <h2>
+              O’zbekiston Respublikasi Milliy Huquqiy informatsion portali
+            </h2>
+          </div>
         </div>
-        <div class="info-text">
-          <h2>
-            O’zbekiston Respublikasi Milliy Huquqiy informatsion portali
-          </h2>
+        <div class="search-button">
+          <input type="text" :placeholder="placeholder" />
+          <button class="search-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                stroke="#333333"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M20.9999 21L16.6499 16.65"
+                stroke="#333333"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </div>
-      </div>
-      <div class="search-button">
-        <input type="text" :placeholder="placeholder" />
-        <button class="search-icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <path
-              d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
-              stroke="#333333"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M20.9999 21L16.6499 16.65"
-              stroke="#333333"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-      </div>
-      <div class="tag-section">
-        <div class="tag-text">Teglar</div>
-        <img :src="tagIcon" alt="" class="tag-icon" />
-      </div>
-      <div class="tags">
-        <input
-          type="button"
-          class="tag-links"
-          v-for="tagLink in tagLinks"
-          :key="tagLink"
-          :value="tagLink.title"
-        />
+        <div class="tag-section">
+          <div class="tag-text">Teglar</div>
+          <img :src="tagIcon" alt="" class="tag-icon" />
+        </div>
+        <div class="tags">
+          <input
+            type="button"
+            class="tag-links"
+            v-for="tagLink in tagLinks"
+            :key="tagLink"
+            :value="tagLink.title"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -86,7 +88,7 @@ export default {
   border-radius: 24px;
   padding: 55px;
   margin: 25px auto;
-  background-image: url("/img/slide.png");
+  background-image: url("assets/img/slide.png");
   color: #fff;
   .head-text {
     text-transform: uppercase;
@@ -172,7 +174,14 @@ export default {
     }
   }
   #slider {
-    padding-left: 35px !important;
+    // padding-left: 35px !important;
+    height: auto !important;
+    padding: 0px 30px;
+    background-size: contain ;
+    .search-button{
+      margin: 0 !important;
+      // margin-bottom: 40px;
+    }
   }
   .tag-section {
     display: none;
@@ -184,10 +193,19 @@ export default {
     width: 390px !important;
   }
   .slide-texts {
-    margin-top: 80px !important;
+    margin-top: 92px !important;
+  }
+  .head-text {
+    h1 {
+      font-size: 32px !important;
+      text-transform: capitalize;
+    }
   }
 }
 @media (min-width: 350px) and (max-width: 575px) {
+  .slide-texts{
+    margin-top: 0px !important;
+  }
   .info-text {
     h2 {
       font-style: normal;
@@ -199,11 +217,26 @@ export default {
   }
   #slider {
     padding-left: 35px !important;
+    margin: 16px;
+    height: 165px !important;
+    padding: 25px !important;
+  }
+  .head-text {
+    h1 {
+      font-size: 24px !important;
+      text-transform: capitalize;
+    }
+  }
+  .info-text {
+    width: 280px !important;
+    h1 {
+      font-size: 16px;
+    }
   }
   .tag-section {
     display: none;
   }
-  .search-button{
+  .search-button {
     display: none;
   }
   .tags {
@@ -213,8 +246,6 @@ export default {
     display: none;
     width: 390px !important;
   }
-  .slide-texts {
-    margin-top: 80px !important;
-  }
+  
 }
 </style>

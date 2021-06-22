@@ -1,19 +1,21 @@
 <template>
-    <div class="container">
-  <div id="sections">
-      <div class="sections-body">
-        <div class="section-text title-text">{{ sectionTitle }}</div>
-        <div class="section-list-group">
-          <div v-for="(item, index) in sectionItem" :key="index">
-            <a
-              :href="item.href"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="section-list-box"
-            >
-              <img :src="item.sectionIcon" :alt="item.iimgAlt" />
-              <div class="section-title-text">{{ item.sectionTitle }}</div>
-            </a>
+  <div>
+    <div id="sections">
+      <div class="container">
+        <div class="sections-body">
+          <div class="section-text title-text">{{ sectionTitle }}</div>
+          <div class="section-list-group">
+            <div v-for="(item, index) in sectionItem" :key="index">
+              <a
+                :href="item.href"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="section-list-box"
+              >
+                <img :src="item.sectionIcon" :alt="item.iimgAlt" />
+                <div class="section-title-text">{{ item.sectionTitle }}</div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -74,7 +76,7 @@ export default {
   box-sizing: border-box;
 
   #sections {
-    max-width: 1240px;
+    max-width: 100%;
     // height: 529px;
     margin: 60px 30px;
     .section-text {
@@ -91,7 +93,7 @@ export default {
       flex-wrap: wrap;
       justify-content: space-between;
       .section-list-box {
-        width: 400px;
+        width: 415px;
         height: 222px;
         margin: 10px 0;
         border-radius: 12px;
@@ -121,8 +123,8 @@ export default {
           font-weight: 700;
           font-size: 20px;
           line-height: 24px;
-          text-align: center;
           color: #000000;
+          text-align: center;
         }
       }
     }
@@ -142,6 +144,10 @@ export default {
   }
 }
 @media (min-width: 350px) and (max-width: 576px) {
+  #section{
+    width: 98% !important;
+    margin: 0 auto !important;
+  }
   .section-list-group {
     // width: 50%;
     div {

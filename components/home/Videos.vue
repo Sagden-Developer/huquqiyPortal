@@ -1,6 +1,7 @@
 <template>
   <div id="video">
-    <div class="video-header">
+    <div class="container">
+      <div class="video-header">
       <h1 class="v-head-text" v-text="'Videoroliklar'"></h1>
       <button type="submit" class="video-button" v-text="videoText"></button>
     </div>
@@ -48,6 +49,8 @@
         ></div>
       </div>
     </div>
+    </div>
+    
   </div>
 </template>
 
@@ -95,7 +98,7 @@ export default {
   }
 }
 #video {
-  max-width: 1300px;
+  // max-width: 1300px;
   height: 600px;
   margin: 0 auto;
   background: rgba(95, 146, 211, 0.1);

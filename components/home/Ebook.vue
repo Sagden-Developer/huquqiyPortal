@@ -7,7 +7,7 @@
           <p class="title-text">Elektron Kutubxona</p>
         </div>
 
-        <Carousel v-bind="slickOptions">
+        <Carousel v-bind="slickOptions" >
           <div
             class="card-book"
             v-for="(library, index) in $store.state.home.libraries"
@@ -66,6 +66,10 @@ export default {
         slidesToScroll: 2,
         draggable: true,
         infinite: true,
+        scale: true,
+        // arrows: false,
+        swipeToSlide: true,
+        
         responsive: [
           {
             breakpoint: 1024,
@@ -105,14 +109,14 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .ebook {
   width: 1240px;
   margin: 70px auto;
   background: #fff;
   border-radius: 24px;
   padding: 30px;
-  .slick-track{
+  .slick-track {
     overflow: show !important;
     white-space: nowrap !important;
   }
@@ -120,7 +124,7 @@ export default {
     display: block;
     width: 50px;
     height: 50px;
-    background: #501E5A;;
+    background: #501e5a;
     border-radius: 50%;
     left: -55px;
     top: 38%;
@@ -134,7 +138,7 @@ export default {
     align-items: center;
     width: 50px;
     height: 50px;
-    background: #07f32f;
+    background: #501e5a;
     border-radius: 50%;
     right: -55px;
     top: 38%;
@@ -179,14 +183,14 @@ export default {
     }
     p {
       max-width: 200px;
-        margin: 10px 0;
-        padding-right: 20px;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
+      margin: 10px 0;
+      padding-right: 20px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
     img {
       margin: 0 auto;
       width: 200px;
@@ -212,7 +216,7 @@ export default {
   }
 }
 @media (min-width: 576px) and (max-width: 950px) {
-  .ebook{
+  .ebook {
     width: 700px;
   }
   .rating-body {
@@ -236,10 +240,18 @@ export default {
   }
 }
 @media (min-width: 350px) and (max-width: 576px) {
-  .ebook{
-    width: 90%;
-    .card-book{
-      width: 160px !important;
+  .ebook {
+    width: 95%;
+    .card-book {
+      width: 100% !important;
+      padding: 10px;
+      img {
+        width: 100% !important;
+        height: 205px !important;
+      }
+      p {
+        width: 100%;
+      }
     }
   }
   .rating-body {
