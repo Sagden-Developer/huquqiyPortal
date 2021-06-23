@@ -49,9 +49,9 @@
           <span>{{ dateFormat(material.date) }}</span>
         </div>
         <div class="text">
-         <p>
-           {{material.article? material.article.uz: ""}}
-         </p>
+          <p>
+            {{ material.article ? material.article.uz : "" }}
+          </p>
         </div>
         <div class="info">
           <h3>Maqola foydali bo’ldimi?</h3>
@@ -267,7 +267,10 @@
         </div>
         <div class="section">
           <div class="one">
-            <img :src="`http://ass.tujjor.org/${material.files[0].path}`" alt="" />
+            <img
+              :src="`http://ass.tujjor.org/${material.files[0].path}`"
+              alt=""
+            />
             <div class="shadow">
               <button>
                 Yuklab olish
@@ -305,17 +308,20 @@
           </div>
           <div class="two">
             <div>
-              <img :src="`http://ass.tujjor.org/${material.files[1].path}`" alt="" />
+              <img
+                :src="`http://ass.tujjor.org/${material.files[1].path}`"
+                alt=""
+              />
             </div>
-            <img :src="`http://ass.tujjor.org/${material.files[2].path}`" alt="" />
+            <img
+              :src="`http://ass.tujjor.org/${material.files[2].path}`"
+              alt=""
+            />
           </div>
           <div class="three">
             <!-- <img src="@/assets/image/main/100.png" alt="" /> -->
             <!-- <video src="https://www.youtube.com/watch?v=rr_76nSa9Kw"></video> -->
-            <iframe
-              :src="material.link"
-              frameborder="0"
-            ></iframe>
+            <iframe :src="material.link" frameborder="0"></iframe>
             <button>yuklab olish</button>
           </div>
         </div>
