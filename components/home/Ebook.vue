@@ -243,7 +243,7 @@ export default {
       display: block;
       width: 50px;
       height: 50px;
-      background: #501e5a;
+      background: #501e5a !important;
       border-radius: 50%;
       left: -55px;
       top: 38%;
@@ -257,7 +257,7 @@ export default {
       align-items: center;
       width: 50px;
       height: 50px;
-      background: #501e5a;
+      background: #501e5a !important;
       border-radius: 50%;
       right: -55px;
       top: 38%;
