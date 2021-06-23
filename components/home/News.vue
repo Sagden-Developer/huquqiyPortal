@@ -252,13 +252,13 @@ export default {
     text-align: center;
     bottom: 16px;
     right: 16px;
-    .slick-active {
-      // width: 20px;
-      // height: 20px;
-      border-radius: 50%;
-      background: #597ba3 !important;
-      opacity: 1 !important;
-    }
+    // .slick-active {
+    //   width: 20px;
+    //   height: 20px;
+    //   border-radius: 50%;
+    //   background: #597ba3 !important;
+    //   opacity: 1 !important;
+    // }
     button::before {
       color: #000 !important; /* color of dots */
       background-color: transparent !important;
