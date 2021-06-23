@@ -228,7 +228,7 @@ export default {
   }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1400px) {
   .ebook {
     width: 1700px;
     margin: 70px auto;
@@ -285,7 +285,6 @@ export default {
     .card-book {
       // padding: 0 10px;
       // margin: 0 10px;
-      margin: 0 15px;
       a {
         text-decoration: none;
         p {
