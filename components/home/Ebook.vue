@@ -7,7 +7,7 @@
           <p class="title-text">Elektron Kutubxona</p>
         </div>
 
-        <Carousel v-bind="slickOptions" >
+        <Carousel v-bind="slickOptions">
           <div
             class="card-book"
             v-for="(library, index) in $store.state.home.libraries"
@@ -20,34 +20,46 @@
             </a>
           </div>
           <div class="card-book">
-            <img src="@/assets/image/bolalar uchun.png" alt="" />
-            <p>Bolalar uchun yuridik ensiklopediya</p>
-            <span>2021</span>
+            <a href="">
+              <img src="@/assets/image/bolalar uchun.png" alt="" />
+              <p>Bolalar uchun yuridik ensiklopediya</p>
+              <span>2021</span>
+            </a>
           </div>
           <div class="card-book">
-            <img src="@/assets/image/advokatura.png" alt="" />
-            <p>Advokatura (darslik adabiyoti)</p>
-            <span>2021</span>
+            <a
+              ><img src="@/assets/image/advokatura.png" alt="" />
+              <p>Advokatura (darslik adabiyoti)</p>
+              <span>2021</span>
+            </a>
           </div>
           <div class="card-book">
-            <img src="@/assets/image/yer huquqi.png" alt="" />
-            <p>Yer huquqi</p>
-            <span>2021</span>
+            <a
+              ><img src="@/assets/image/yer huquqi.png" alt="" />
+              <p>Yer huquqi</p>
+              <span>2021</span>
+            </a>
           </div>
           <div class="card-book">
-            <img src="@/assets/image/xalqaro huquq.png" alt="" />
-            <p>Xalqaro iqtisodiy huquq</p>
-            <span>2021</span>
+            <a
+              ><img src="@/assets/image/xalqaro huquq.png" alt="" />
+              <p>Xalqaro iqtisodiy huquq</p>
+              <span>2021</span>
+            </a>
           </div>
           <div class="card-book">
-            <img src="@/assets/image/yoshlar uchun.png" alt="" />
-            <p>Yoshlar uchun yuridik ensiklopediya</p>
-            <span>2021</span>
+            <a
+              ><img src="@/assets/image/yoshlar uchun.png" alt="" />
+              <p>Yoshlar uchun yuridik ensiklopediya</p>
+              <span>2021</span>
+            </a>
           </div>
           <div class="card-book">
-            <img src="@/assets/image/yoshlar uchun.png" alt="" />
-            <p>Yoshlar uchun yuridik ensiklopediya</p>
-            <span>2021</span>
+            <a
+              ><img src="@/assets/image/yoshlar uchun.png" alt="" />
+              <p>Yoshlar uchun yuridik ensiklopediya</p>
+              <span>2021</span>
+            </a>
           </div>
         </Carousel>
       </div>
@@ -69,7 +81,7 @@ export default {
         scale: true,
         // arrows: false,
         swipeToSlide: true,
-        
+
         responsive: [
           {
             breakpoint: 1024,
@@ -82,8 +94,8 @@ export default {
               infinite: true,
               slidesToScroll: 1,
               dots: false,
-              draggable: true
-            }
+              draggable: true,
+            },
           },
           {
             breakpoint: 600,
@@ -99,13 +111,13 @@ export default {
               autoplaySpeed: 3000,
               infinite: true,
               slidesToScroll: 1,
-              draggable: true
-            }
-          }
-        ]
-      }
+              draggable: true,
+            },
+          },
+        ],
+      },
     };
-  }
+  },
 };
 </script>
 
@@ -212,6 +224,120 @@ export default {
       font-size: 18px;
       line-height: 22px;
       color: #ffba00;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .ebook {
+    width: 1700px;
+    margin: 70px auto;
+    background: #fff;
+    border-radius: 24px;
+    padding: 30px;
+    .slick-track {
+      overflow: show !important;
+      white-space: nowrap !important;
+    }
+    .slick-prev {
+      display: block;
+      width: 50px;
+      height: 50px;
+      background: #501e5a;
+      border-radius: 50%;
+      left: -55px;
+      top: 38%;
+    }
+    .slick-prev::before {
+      content: " \276E" !important;
+    }
+    .slick-next {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      background: #501e5a;
+      border-radius: 50%;
+      right: -55px;
+      top: 38%;
+    }
+    .slick-next::before {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      content: " \276F" !important;
+    }
+    .head {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+      img {
+        margin-top: -80px;
+        width: 169px;
+        height: 125px;
+      }
+    }
+    img {
+      pointer-events: none;
+    }
+    .card-book {
+      // padding: 0 10px;
+      // margin: 0 10px;
+      a {
+        text-decoration: none;
+        p {
+          margin: 10px auto;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          text-overflow: ellipsis;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        img {
+          width: 257px;
+          height: 333px;
+          border-radius: 10px;
+        }
+        span {
+          display: block;
+          margin: auto;
+          width: 257px;
+        }
+      }
+      p {
+        max-width: 250px;
+        margin: 10px 0;
+        padding-right: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      img {
+        margin: 0 auto;
+        width: 200px;
+        height: 270px;
+        border-radius: 20px;
+        pointer-events: none;
+      }
+      a {
+        width: 100%;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #333333;
+        margin: 10px 0;
+      }
+      span {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #ffba00;
+      }
     }
   }
 }

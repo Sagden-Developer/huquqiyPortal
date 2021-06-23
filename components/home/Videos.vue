@@ -2,60 +2,120 @@
   <div id="video">
     <div class="container">
       <div class="video-header">
-      <h1 class="v-head-text" v-text="'Videoroliklar'"></h1>
-      <button type="submit" class="video-button" v-text="videoText"></button>
-    </div>
-    <div id="carusel-video-box">
-      <Carousel v-bind="slickOptions">
-        <div class="card-video">
-          <img :src="slImg" alt="" />
-        </div>
-        <div class="card-video">
-          <img :src="slImg" alt="" width="400" height="250" />
-        </div>
-        <div class="card-video">
-          <img :src="slImg" alt="" />
-        </div>
-        <div class="card-video">
-          <img :src="slImg" alt="" />
-        </div>
-        <div class="card-video">
-          <img :src="slImg" alt="" />
-        </div>
-        <div class="card-video">
-          <img :src="slImg" alt="" />
-        </div>
-        <div class="card-video">
-          <img :src="slImg" alt="" />
-        </div>
-        <div class="card-video">
-          <img :src="slImg" alt="" />
-        </div>
-        <div class="card-video">
-          <img :src="slImg" alt="" />
-        </div>
-      </Carousel>
-      <div class="video-footer-text" v-text="footText"></div>
-      <CoolLightBox :items="items" :index="index" @close="index = null">
-      </CoolLightBox>
-
-      <div class="images-wrapper">
-        <div
-          class="image"
-          v-for="(image, imageIndex) in items"
-          :key="imageIndex"
-          @click="index = imageIndex"
-          :style="{ backgroundImage: 'url(' + image + ')' }"
-        ></div>
+        <h1 class="v-head-text" v-text="'Videoroliklar'"></h1>
+        <button type="submit" class="video-button" v-text="videoText"></button>
+      </div>
+      <div id="carusel-video-box">
+        <Carousel v-bind="slickOptions">
+          <div class="card-video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PiaxdSTGl5c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="card-video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PiaxdSTGl5c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="card-video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PiaxdSTGl5c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="card-video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PiaxdSTGl5c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="card-video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PiaxdSTGl5c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="card-video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PiaxdSTGl5c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="card-video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PiaxdSTGl5c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="card-video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PiaxdSTGl5c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="card-video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PiaxdSTGl5c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </Carousel>
+        <div class="video-footer-text" v-text="footText"></div>
       </div>
     </div>
-    </div>
-    
   </div>
 </template>
 
 <script>
 import CoolLightBox from "vue-cool-lightbox";
+import SwiperCore, { coverflowEffect } from "swiper";
 export default {
   data() {
     return {
@@ -65,40 +125,39 @@ export default {
       slickOptions: {
         dots: true,
         infinite: true,
-        slidesToShow: 3,
-        centerPadding: "10px",
-        centerMode: true,
+        slidesToShow: 2.3,
         centerMode: true,
         focusOnSelect: true,
+        draggable: true,
         arrows: false
-      },
-      items: [
-        "https://cosmos-images2.imgix.net/file/spina/photo/20565/191010_nature.jpg?ixlib=rails-2.1.4&auto=format&ch=Width%2CDPR&fit=max&w=835",
-        "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/nature-quotes-1557340276.jpg?crop=0.666xw:1.00xh;0.168xw,0&resize=640:*"
-      ],
-      index: null
+      }
     };
-  },
-  components: {
-    CoolLightBox
   }
 };
 </script>
 
 <style lang="scss">
-.slick-current {
-  // background: red !important;
-  // height: 10000px !important;
-  // display: none !important;
-  .video-box-item {
-    // border: 1px solid red !important;
-    padding: 10px;
-    height: 100px;
-    margin: 15px;
-  }
-}
 #video {
-  // max-width: 1300px;
+  .slick-slide {
+    transition: 1s;
+  }
+
+  .slick-list {
+    overflow: show;
+  }
+  .slick-current {
+    transform: scale(1.5) !important;
+    iframe {
+      pointer-events: all;
+      pointer-events: auto;
+    }
+  }
+  .slick-current {
+    .video-box-item {
+      padding: 10px;
+      margin: 15px;
+    }
+  }
   height: 600px;
   margin: 0 auto;
   background: rgba(95, 146, 211, 0.1);
@@ -107,8 +166,8 @@ export default {
     display: flex;
     justify-content: space-between;
     button[type="submit"] {
-      max-width: 193px;
-      max-height: 47px;
+      width: 193px;
+      height: 47px;
       display: flex;
       flex-direction: row;
       align-items: flex-start;
@@ -117,44 +176,38 @@ export default {
       background: #597ba3;
       color: #fff;
       border: 1px solid #597ba3;
+      cursor: pointer;
+      left: 25px;
+      top: 10px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 150%;
+      color: #FFFFFF;
     }
   }
   #carusel-video-box {
-    height: 450x;
     .card-video {
       width: 427px;
-      height: 235px;
-      // margin: 10px 50px;
-      padding: 20px;
-      // border: 1px solid red;
-    }
+      height: 400px !important;
+      padding: 90px 60px;
 
+      iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+      }
+    }
     .active {
-      width: 667px;
-      height: 367px;
       border: 1px solid blue;
     }
-
-    // Slider settings
-    .slick-track {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
     .slick-slide {
-      height: 235px !important;
-      position: relative !important;
-      margin: 0px 40px !important;
       div {
         height: 100%;
         width: 100%;
       }
     }
-    .slick-current {
-      width: 667, 27px !important;
-      height: 367px !important;
-    }
-
     // DOTS CHANGE
     .slick-dots {
       button::before {
@@ -201,5 +254,7 @@ export default {
       }
     }
   }
+}
+@media (min-width: 350px) and (max-width: 575px) {
 }
 </style>

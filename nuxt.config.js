@@ -20,7 +20,8 @@ export default {
     // SCSS file in the project
     '@/assets/scss/style.scss',
     '@/assets/css/swiper.css',
-    'vue-slick-carousel/dist/vue-slick-carousel.css'
+    'vue-slick-carousel/dist/vue-slick-carousel.css',
+    'swiper/swiper.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

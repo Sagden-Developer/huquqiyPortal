@@ -555,6 +555,108 @@ h2.logo-text {
     }
   }
 }
+@media (min-width: 1300px) and (max-width: 1920px) {
+  .fix-vh {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 998;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+  }
+  // .bottom-media {
+  //   position: fixed !important;
+  //   top: 0 !important;
+  //   left: 0 !important;
+  //   z-index: 999;
+  //   height: 100vh !important;
+  //   margin-top: 0 !important;
+  //   background: #fbf9fb;
+  //   padding: 20px;
+  //   // ul {
+  //   //   // flex-direction: column;
+  //   //   // display: block !important;
+  //   // }
+  // }
+  // .bottom {
+  //   margin-top: 0 !important;
+  //   background: #fbf9fb;
+  //   padding: 20px;
+  //   position: fixed;
+  //   width: 60%;
+  //   transition: 0.4s;
+  //   top: 0;
+  //   height: 100vh;
+  //   left: -800px;
+  //   z-index: 999;
+
+  //   ul {
+  //     flex-direction: column;
+  //     li {
+  //       display: block;
+  //       margin-top: 10px;
+  //       a {
+  //         border: none;
+  //         padding: 0;
+  //         font-size: 25px;
+  //       }
+  //     }
+  //   }
+  // }
+  // .izlash-two {
+  //   display: none !important;
+  // }
+  // h2.logo-text {
+  //   font-size: 14px;
+  //   max-width: 220px !important;
+  // }
+  // header {
+  //   width: 700px;
+
+  //   .header {
+  //     width: 90%;
+  //     margin: 0 auto;
+
+  //     .right {
+  //       width: 50%;
+  //       justify-content: space-between;
+
+  //       .izlash {
+  //         input {
+  //           width: 215px;
+  //         }
+  //       }
+
+  //       .bar {
+  //         display: block;
+  //         button {
+  //           background: transparent;
+  //           border: 0;
+  //         }
+  //       }
+  //       .til {
+  //         margin: 0 20px;
+  //         button {
+  //           width: 45px;
+  //           svg {
+  //             font-size: 20px;
+  //           }
+  //           span {
+  //             display: none;
+  //           }
+  //         }
+  //       }
+  //       .maxsus {
+  //         margin-right: 10px;
+  //         h3 {
+  //           display: none;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+}
 
 @media (min-width: 576px) and (max-width: 950px) {
   .fix-vh {

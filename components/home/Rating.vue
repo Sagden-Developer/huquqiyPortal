@@ -12,7 +12,7 @@
           <div class="left" style="width: 65%">
             <div class="rating-list">
               <div
-                class="rating-list-item "
+                class="rating-list-item"
                 v-for="(item, index) in ratingItem"
                 :key="index"
               >
@@ -52,27 +52,27 @@ export default {
       ratingItem: [
         {
           rating: 78.3,
-          text: "Moliya vazirligi"
+          text: "Moliya vazirligi",
         },
         {
           rating: 93.1,
-          text: "Sog'liqni saqlash vazirligi"
+          text: "Sog'liqni saqlash vazirligi",
         },
         {
           rating: 100,
-          text: "Qurilish vazirligi"
+          text: "Qurilish vazirligi",
         },
         {
           rating: 78,
-          text: "Mudofaa vazirligi"
+          text: "Mudofaa vazirligi",
         },
         {
           rating: 85,
-          text: "Xalq ta'limi vazirligi"
-        }
-      ]
+          text: "Xalq ta'limi vazirligi",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
@@ -96,7 +96,7 @@ export default {
       line-height: 150%;
       padding: 8px 25px;
       color: #fff;
-      background: #597BA3;
+      background: #597ba3;
       cursor: pointer;
       border-radius: 50px;
       border: 0;
@@ -136,6 +136,72 @@ export default {
     }
   }
 }
+
+@media (min-width: 1400px) and (max-width: 1920px) {
+  .rating {
+    width: 100%;
+    padding: 20px;
+    background: rgba(95, 146, 211, 0.1);
+
+    .container {
+        width: 1410px;
+      .title {
+        padding: 10px;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 35px;
+        color: #333333;
+        display: flex;
+        justify-content: space-between;
+        button {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 150%;
+          padding: 8px 25px;
+          color: #fff;
+          background: #597ba3;
+          cursor: pointer;
+          border-radius: 50px;
+          border: 0;
+        }
+      }
+    }
+    .rating-body {
+      display: flex;
+      margin-top: 20px;
+      .left {
+        width: 65%;
+      }
+      .right {
+        width: 35%;
+        img {
+          pointer-events: none;
+          width: 100%;
+        }
+      }
+      .chap {
+        width: 50px !important;
+        background: transparent !important;
+      }
+      .ong {
+        margin-left: 10px;
+        background: #3c59aa;
+        border-radius: 10000px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+          padding-left: 20px;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 24px;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
 .rating-list-item {
   // background: #3c59aa;
   border-radius: 10000px;
@@ -206,7 +272,7 @@ b {
   }
 }
 @media (min-width: 350px) and (max-width: 575px) {
-  .title-text{
+  .title-text {
     font-size: 20px !important;
   }
   .title {
@@ -227,7 +293,7 @@ b {
     }
   }
   .ong {
-    h4{
+    h4 {
       font-size: 20px !important;
     }
     p {

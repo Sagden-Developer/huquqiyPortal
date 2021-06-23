@@ -53,7 +53,7 @@ export default {
           cardTitle: "Ipoteka kredit olish",
           href: "https://yandex.ru",
           imgAlt: "ipoteka-icon",
-          time: "2 soat 35 daqiqa"
+          time: "2 soat 35 daqiqa",
         },
         {
           cardIcon: require("@/assets/img/course/tadbirkor.svg"),
@@ -61,7 +61,7 @@ export default {
           cardTitle: "Tadbirkorlikda biznesni boshlash",
           href: "https://yandex.ru",
           imgAlt: "tadbirkorlik-icon",
-          time: "2 soat 35 daqiqa"
+          time: "2 soat 35 daqiqa",
         },
         {
           cardIcon: require("@/assets/img/course/imtiyoz.svg"),
@@ -69,7 +69,7 @@ export default {
           cardTitle: "Nogironligi bo’lgan shaxslarga im...",
           href: "https://yandex.ru",
           imgAlt: "imtiyoz-icon",
-          time: "2 soat 35 daqiqa"
+          time: "2 soat 35 daqiqa",
         },
         {
           cardIcon: require("@/assets/img/course/mehnat.svg"),
@@ -77,7 +77,7 @@ export default {
           cardTitle: "Mehnat huquqi",
           href: "https://yandex.ru",
           imgAlt: "mehnat-icon",
-          time: "2 soat 35 daqiqa"
+          time: "2 soat 35 daqiqa",
         },
         {
           cardIcon: require("@/assets/img/course/bogcha.svg"),
@@ -85,7 +85,7 @@ export default {
           cardTitle: "Farzandni bog’chaga berish",
           href: "https://yandex.ru",
           imgAlt: "bogcha-icon",
-          time: "2 soat 35 daqiqa"
+          time: "2 soat 35 daqiqa",
         },
         {
           cardIcon: require("@/assets/img/course/oila.svg"),
@@ -93,11 +93,11 @@ export default {
           cardTitle: "Nikoh va oila munosabatlari",
           href: "https://yandex.ru",
           imgAlt: "oila-icon",
-          time: "2 soat 35 daqiqa"
-        }
-      ]
+          time: "2 soat 35 daqiqa",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
@@ -213,6 +213,109 @@ h3 {
               text-align: right;
               /* dark gray */
               color: #333333;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1920px) {
+  #courses {
+    // width: 1300px;
+    padding: 75px 30px;
+    .cours-container {
+      width: 1410px;
+      margin: auto;
+      padding: 10px;
+      // margin: 75px 30px;
+      .course-head {
+        padding-bottom: 52px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .course-head-text {
+          font-family: Oxygen;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 28px;
+          line-height: 35px;
+          /* dark gray */
+          color: #333333;
+        }
+
+        .allCourse {
+          padding: 10px 25px;
+          width: 193px;
+          height: 47px;
+          background: #597ba3;
+          color: #fff;
+          border-radius: 50px;
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 150%;
+          border: 1px solid white;
+          cursor: pointer;
+        }
+      }
+      .course-card {
+        // margin: 40px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .card-box {
+          margin-bottom: 20px;
+          width: 450px;
+          height: 350px;
+          // height: 320px;
+          border-radius: 12px;
+          background: #fff;
+          transition: 0.3s linear;
+          &:hover {
+            -webkit-box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+            -moz-box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+            box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+          }
+          a {
+            text-decoration: none;
+            .star{
+              width: 100%;
+              height: 250px;
+              margin-top: -5px;
+            }
+          }
+          .video-title-content {
+            width: 450px;
+            height: 100px;
+            .video-info {
+              .rating {
+                width: 140px;
+                // height: 24px;
+                display: flex;
+                // justify-content: space-around;
+                align-items: center;
+                img {
+                  margin-right: 9px;
+                  
+                }
+              }
+              .time {
+                width: 160px;
+                // height: 22px;
+                // margin-left: 53px;
+                // font-family: Montserrat;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 22px;
+                /* identical to box height */
+                text-align: right;
+                /* dark gray */
+                color: #333333;
+              }
             }
           }
         }
