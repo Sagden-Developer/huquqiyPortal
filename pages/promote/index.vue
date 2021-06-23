@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="boxs">
-      <div class="box">
+      <div class="box"> 
         <h4>Qonunlar bo’yicha targ’ibot materiallari</h4>
         <p>
           <nuxt-link style="color: white; text-decoration: none" to="/" href="#"> Bosh sahifa </nuxt-link> / Targ’ibot
