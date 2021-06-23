@@ -12,6 +12,7 @@
         </div>
         <div class="card-video">
          <iframe width="560" height="315" src="https://www.youtube.com/embed/PiaxdSTGl5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p class="video-footer-text" v-text="footText"></p>
         </div>
         <div class="card-video">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/PiaxdSTGl5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -35,7 +36,6 @@
           <iframe width="560" height="315" src="https://www.youtube.com/embed/PiaxdSTGl5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </Carousel>
-      <div class="video-footer-text" v-text="footText"></div>
     
 
      
@@ -58,14 +58,45 @@ export default {
       videoText: "Barcha videolar",
       slImg: require("~/assets/img/course/bogcha.svg"),
       footText: "Qanday ishlar maqbul kelmaydigan ish hisoblanadi",
-      slickOptions: {
+     slickOptions: {
         dots: true,
         infinite: true,
         slidesToShow: 2.3,
         centerMode: true,
         focusOnSelect: true,
         draggable: true,
-        arrows: false
+        arrows: false,
+         responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              speed: 1500,
+              touchThreshold: 1000,
+              autoplay: false,
+              autoplaySpeed: 2000,
+              slidesToShow: 3,
+              infinite: true,
+              slidesToScroll: 1,
+              dots: false,
+              draggable: true,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              focusOnSelect: true,
+              arrows: false,
+              dots: false,
+              slidesToShow: 2.35,
+              speed: 1500,
+              centerMode: true,
+              touchThreshold: 1000,
+              infinite: true,
+              slidesToScroll: 1,
+              draggable: true,
+            },
+          },
+        ],
       },
      
     };
@@ -143,6 +174,7 @@ export default {
     }
     // DOTS CHANGE
     .slick-dots {
+      margin-top: 20px !important;
       button::before {
         color: #000 !important; /* color of dots */
         background-color: transparent !important;
@@ -162,33 +194,26 @@ export default {
     }
   }
   .video-footer-text {
-    margin-top: 30px;
+    // margin-top: 30px;
+    margin-bottom: 20px;
     text-align: center;
   }
-  .navigation {
-    padding: 5px;
-    margin: 10px;
-    .btns {
-      margin: 10px;
-      display: flex;
-      justify-content: center;
-      .pages {
-        width: 15px;
-        height: 15px;
-        background: #597ba3;
-        opacity: 0.5;
-        border-radius: 50%;
-        border: 0;
-        margin: 5px;
-        .current-page {
-          width: 20px;
-          height: 20px;
-        }
-      }
-    }
+ 
+}
+@media (min-width: 576px) and (max-width: 950px) {
+  .v-head-text{
+    font-size: 20px !important;
+  }
+  .card-video{
+    padding: 60px 0 !important;
   }
 }
 @media (min-width: 350px) and (max-width: 575px) {
-  
+  .v-head-text{
+    font-size: 20px !important;
+  }
+  .card-video{
+    padding: 60px 0 !important;
+  }
 }
 </style>
