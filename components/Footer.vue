@@ -4,31 +4,12 @@
       <div class="footer">
         <div class="footer-left">
           <div class="logo">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              width="64"
-              height="71"
-              viewBox="0 0 64 71"
-              fill="none"
-            >
-              <rect width="64" height="71" fill="url(#pattern0)" />
-              <defs>
-                <pattern
-                  id="pattern0"
-                  patternContentUnits="objectBoundingBox"
-                  width="1"
-                  height="1"
-                >
-                  <use
-                    xlink:href="#image0"
-                    transform="scale(0.00364964 0.00328981)"
-                  />
-                </pattern>
-                <image id="image0" width="274" height="304" />
-              </defs>
-            </svg>
-            O’zbekiston Respublikasi Milliy Huquqiy Portali
+            <nuxt-link to="/" class="logotip">
+              <img src="@/assets/image/adliya-logo.png" alt="" />
+              <p>
+                O’zbekiston Respublikasi Milliy Huquqiy Portali
+              </p>
+            </nuxt-link>
           </div>
           <div class="set">
             <a href="#">
@@ -127,9 +108,8 @@
             ></a>
           </div>
           <div class="f-text">
-          <p>2021 O’zbekiston Respublikasi Adliya Vazirligi</p>
-          <p>Barcha huquqlar himoyalangan</p>
-
+            <p>2021 O’zbekiston Respublikasi Adliya Vazirligi</p>
+            <p>Barcha huquqlar himoyalangan</p>
           </div>
         </div>
         <div class="footer-center">
@@ -152,11 +132,11 @@
                   stroke-linejoin="round"
                 />
               </svg>
-              +998 90 900 21 12
+              <a href="tel:+998 90 900 21 12">+998 90 900 21 12</a>
             </li>
 
             <li>
-              <a href="#"
+              <a href="mailto:info@gmail.com"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -210,10 +190,9 @@
               5
             </li>
           </ul>
-        <div class="f-text">
-          <p>2021 O’zbekiston Respublikasi Adliya Vazirligi</p>
-          <p>Barcha huquqlar himoyalangan</p>
-
+          <div class="f-text">
+            <p>2021 O’zbekiston Respublikasi Adliya Vazirligi</p>
+            <p>Barcha huquqlar himoyalangan</p>
           </div>
           <div class="by">
             <p>Design by</p>
@@ -259,12 +238,20 @@ footer {
     // align-items: center;
     justify-content: center;
     .logo {
-      width: 70%;
+      width: 80%;
       display: flex;
       align-items: center;
       font-weight: 600;
       font-size: 16px;
       line-height: 150%;
+      .logotip {
+        display: flex;
+        text-decoration: none;
+        p {
+          margin-left: 10px;
+          color: #fff !important;
+        }
+      }
       svg {
         margin-right: 19px;
         // transform: scale(1.5);
@@ -298,22 +285,21 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    .by{
-       display: none;
+    .by {
+      display: none;
       margin: 70px auto;
       align-items: center;
-      
     }
-    .f-text{
+    .f-text {
       display: none;
       p {
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 20px;
-      margin-top: 20px;
-      margin-bottom: 0px;
-      color: #ababab;
-    }
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 20px;
+        margin-bottom: 0px;
+        color: #ababab;
+      }
     }
     h2 {
       // margin-left: 45px;
@@ -371,13 +357,13 @@ footer {
     .footer-left {
       width: 50% !important;
       justify-content: flex-start !important;
-      .logo{
+      .logo {
         width: 88% !important;
       }
     }
     .footer-center {
       width: 50% !important;
-      .by{
+      .by {
         display: flex !important;
       }
     }
@@ -392,26 +378,25 @@ footer {
 @media (min-width: 350px) and (max-width: 576px) {
   footer {
     // padding-bottom: 10px !important;
-    .footer{
-    flex-direction: column;
-
+    .footer {
+      flex-direction: column;
     }
     .footer-left {
-      .f-text{
+      .f-text {
         display: none;
       }
       width: 100% !important;
       justify-content: flex-start !important;
-      .logo{
+      .logo {
         width: 88% !important;
       }
     }
     .footer-center {
-      .f-text{
+      .f-text {
         display: block !important;
       }
       width: 100% !important;
-      .by{
+      .by {
         display: flex !important;
       }
     }

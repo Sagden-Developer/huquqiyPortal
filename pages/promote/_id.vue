@@ -518,6 +518,7 @@ export default {
         position: relative;
         overflow: hidden;
         border-radius: 12px;
+        transition: .5s ease !important;
 
         .shadow {
           position: absolute;
@@ -550,9 +551,7 @@ export default {
         img {
           width: 100%;
         }
-        img:hover {
-          // border-bottom: 13px solid #333;
-        }
+      
       }
       .one:hover .shadow {
         display: block;

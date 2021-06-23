@@ -43,7 +43,7 @@
               </button>
             </div>
             <div class="til">
-              <button>
+              <button @click="selectLang">
                 <svg
                   class="flag"
                   xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +69,9 @@
                     fill="white"
                   />
                 </svg>
-                <span>O'zbekcha</span>
+                <span v-if="$i18n.locale == 'uz'">O'zbekcha</span>
+                <span v-if="$i18n.locale == 'kr'">Krilcha</span>
+                <span v-if="$i18n.locale == 'ru'">ruscha</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="8"
@@ -86,10 +88,23 @@
 
               <div class="til-menu">
                 <div class="">
-                  <a href="#" @click.prevent="$i18n.setLocale('uz')"
-                    >Uzbekcha</a
-                  >
-                  <a href="#" @click.prevent="$i18n.setLocale('ru')">Ruscha</a>
+                  <ul class="classLang" style="list-style:none">
+                    <li>
+                      <a href="#" @click.prevent="$i18n.setLocale('uz')"
+                        >Uzbekcha</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" @click.prevent="$i18n.setLocale('kr')"
+                        >Krilcha</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" @click.prevent="$i18n.setLocale('ru')"
+                        >Ruscha</a
+                      >
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -289,18 +304,22 @@ export default {
   data() {
     return {
       isMenu: false,
-      maxsus: false
+      maxsus: false,
+      classLang: false
     };
   },
   methods: {
     selectLan() {
-      this.classLan = !this.classLan;
+      this.classLang = !this.classLan;
     }
   }
 };
 </script>
 
 <style lang="scss">
+li.font {
+  font-size: 14px !important;
+}
 .home-link {
   display: flex;
   align-items: center;
@@ -525,10 +544,10 @@ h2.logo-text {
     margin-top: 0 !important;
     background: #fbf9fb;
     padding: 20px;
-    ul {
-      // flex-direction: column;
-      // display: block !important;
-    }
+    // ul {
+    //   // flex-direction: column;
+    //   // display: block !important;
+    // }
   }
   .bottom {
     margin-top: 0 !important;
@@ -568,9 +587,7 @@ h2.logo-text {
     .header {
       width: 90%;
       margin: 0 auto;
-      .left {
-        // width: 35%;
-      }
+
       .right {
         width: 50%;
         justify-content: space-between;
@@ -629,10 +646,10 @@ h2.logo-text {
     margin-top: 0 !important;
     background: #fbf9fb;
     padding: 20px;
-    ul {
-      // flex-direction: column;
-      // display: block !important;
-    }
+    // ul {
+    //   // flex-direction: column;
+    //   // display: block !important;
+    // }
   }
   .bottom {
     margin-top: 0 !important;
@@ -725,9 +742,9 @@ h2.logo-text {
         justify-content: space-between;
         .izlash {
           display: none;
-          input {
-            // width: 215px;
-          }
+          // input {
+          //   // width: 215px;
+          // }
         }
 
         .bar {

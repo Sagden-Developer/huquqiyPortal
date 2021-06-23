@@ -67,9 +67,17 @@
               </div>
             </div>
 
-              <div class="line" @click="$router.push({path: `/promote/${material._id}`, query: { id: material }})">
-                <p>&#10142;</p>
-              </div>
+            <div
+              class="line"
+              @click="
+                $router.push({
+                  path: `/promote/${material._id}`,
+                  query: { id: material }
+                })
+              "
+            >
+              <p>&#10142;</p>
+            </div>
           </div>
         </div>
       </div>
@@ -83,11 +91,11 @@ export default {
   methods: {
     dateFormat(date) {
       return dateformat(date, "isoDate");
-    },
+    }
   },
   beforeCreate() {
     this.$store.dispatch("card/GET_CARDS");
-  },
+  }
 };
 </script>
 
