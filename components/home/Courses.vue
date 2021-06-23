@@ -2,38 +2,37 @@
   <div id="courses">
     <div class="container">
       <div class="cours-container">
-      <div class="course-head">
-        <div class="head-text">
-          <h3>Beepul onlayn kurslar</h3>
+        <div class="course-head">
+          <div class="head-text">
+            <h3>Bepul onlayn kurslar</h3>
+          </div>
+          <button type="submit" class="allCourse">Barcha Kurslar</button>
         </div>
-        <button type="submit" class="allCourse">Barcha Kurslar</button>
-      </div>
-      <div class="course-card">
-        <div class="card-box" v-for="(index, card) in cards" :key="index">
-          <a :href="index.href" target="_blank" rel="noopener noreferrer">
-            <img
-              class="star"
-              :src="index.cardIcon"
-              :alt="index.imgAlt"
-              width="400"
-              height="215"
-            />
-            <div class="video-title-content">
-              <div class="video-title">{{ index.cardTitle }}</div>
-              <div class="video-info">
-                <div class="rating">
-                  <img :src="index.starIcon" v-for="rep in 5" :key="rep" />
+        <div class="course-card">
+          <div class="card-box" v-for="(card, index) in cards" :key="index">
+            <a :href="card.href" target="_blank">
+              <img
+                class="star"
+                :src="card.cardIcon"
+                :alt="card.imgAlt"
+                width="400"
+                height="215"
+              />
+              <div class="video-title-content">
+                <div class="video-title">{{ card.cardTitle }}</div>
+                <div class="video-info">
+                  <div class="rating">
+                    <img :src="card.starIcon" v-for="rep in 5" :key="rep" width="20" height="19" />
+                  </div>
+                  <div class="time">{{ card.time }}</div>
                 </div>
-                <div class="time">{{ index.time }}</div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
+        <button type="submit" class="allCourseNone">Barcha Kurslar</button>
       </div>
-      <button type="submit" class="allCourseNone">Barcha Kurslar</button>
     </div>
-    </div>
-    
   </div>
 </template>
 
@@ -97,16 +96,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
- .allCourseNone {
-        display: none !important;
-      }
+.allCourseNone {
+  display: none !important;
+}
+h3 {
+  font-family: Oxygen;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 35px;
+  /* dark gray */
+  color: #333333;
+}
 #courses {
   // width: 1300px;
-  margin: 0 auto;
+  padding: 75px 30px;
   .cours-container {
-    // width: 1240px;
+    width: 1240px;
     // margin: 75px 30px;
     .course-head {
+      padding-bottom: 52px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -119,7 +128,7 @@ export default {
         /* dark gray */
         color: #333333;
       }
-     
+
       .allCourse {
         padding: 10px 25px;
         width: 193px;
@@ -133,31 +142,72 @@ export default {
         font-size: 18px;
         line-height: 150%;
         border: 1px solid white;
+        cursor: pointer;
       }
     }
     .course-card {
-      margin: 40px 0px;
+      // margin: 40px 0px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       .card-box {
         margin-bottom: 20px;
-        width: 420px;
+        width: 400px;
         // height: 320px;
         border-radius: 12px;
         background: #fff;
-      
+        transition: 0.3s linear;
+        &:hover {
+          -webkit-box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+          -moz-box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+        }
+        a {
+          text-decoration: none;
+        }
         .video-title-content {
-          width: 420px;
+          width: 400px;
           height: 105px;
+          padding: 15px 25px 29px 25px;
+          .video-title {
+            width: 360px;
+            height: 24px;
+            margin-bottom: 17px;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+          }
           .video-info {
             display: flex;
-            justify-content: space-around;
-            align-content: center;
-          }
-          .video-title {
-            margin: 15px 0 15px 45px;
-            text-transform: none;
+            align-items: center;
+            // justify-content: space-around;
+            .rating {
+              width: 140px;
+              height: 24px;
+              display: flex;
+              // justify-content: space-around;
+              align-items: center;
+              img{
+                margin-right: 9px;
+              }
+            }
+            .time {
+              width: 160px;
+              height: 22px;
+              margin-left: 53px;
+              font-family: Montserrat;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 18px;
+              line-height: 22px;
+              /* identical to box height */
+              text-align: right;
+              /* dark gray */
+              color: #333333;
+            }
           }
         }
       }
@@ -185,7 +235,7 @@ export default {
       }
     }
     .video-title-content {
-    width: 100% !important;
+      width: 100% !important;
     }
     .video-info {
       width: 100%;
@@ -193,7 +243,7 @@ export default {
   }
 }
 @media (min-width: 350px) and (max-width: 575px) {
-  .allCourse{
+  .allCourse {
     display: none !important;
   }
   .allCourseNone {

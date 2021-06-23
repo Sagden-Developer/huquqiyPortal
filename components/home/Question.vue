@@ -150,7 +150,6 @@ export default {
   #question {
     background: #e2eaf1 !important;
     max-width: 100%;
-    margin-bottom: 70px;
     padding-top: 40px;
     padding-bottom: 30px;
     .question-text {

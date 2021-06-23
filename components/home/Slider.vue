@@ -47,9 +47,9 @@
           <input
             type="button"
             class="tag-links"
-            v-for="tagLink in tagLinks"
+            v-for="(index, tagLink) in tagLinks"
             :key="tagLink"
-            :value="tagLink.title"
+            :value="index.title"
           />
         </div>
       </div>
