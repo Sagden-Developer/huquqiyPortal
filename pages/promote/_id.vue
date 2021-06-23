@@ -4,8 +4,8 @@
       <div class="content">
         <h4>Qonunlar bo’yicha targ’ibot materiallari</h4>
         <p>
-          <a href="#"> Bosh sahifa </a> /
-          <a href="">Targ’ibot materiallari </a> / Normativ hujjat nomi
+          <nuxt-link to="/" href="#"> Bosh sahifa </nuxt-link> /
+          <nuxt-link href="" to="/promote">Targ’ibot materiallari </nuxt-link> / Normativ hujjat nomi
         </p>
       </div>
     </div>
