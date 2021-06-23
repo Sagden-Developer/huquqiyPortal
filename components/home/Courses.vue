@@ -22,7 +22,13 @@
                 <div class="video-title">{{ card.cardTitle }}</div>
                 <div class="video-info">
                   <div class="rating">
-                    <img :src="card.starIcon" v-for="rep in 5" :key="rep" width="20" height="19" />
+                    <img
+                      :src="card.starIcon"
+                      v-for="rep in 5"
+                      :key="rep"
+                      width="20"
+                      height="19"
+                    />
                   </div>
                   <div class="time">{{ card.time }}</div>
                 </div>
@@ -190,7 +196,7 @@ h3 {
               display: flex;
               // justify-content: space-around;
               align-items: center;
-              img{
+              img {
                 margin-right: 9px;
               }
             }
@@ -237,17 +243,17 @@ h3 {
     .video-title-content {
       width: 100% !important;
       padding: 10px !important;
-      .video-title{
+      .video-title {
         width: 90% !important;
         text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+        white-space: nowrap;
+        overflow: hidden;
       }
     }
     .video-info {
       width: 100%;
-      justify-content: space-between ;
-      .time{
+      justify-content: space-between;
+      .time {
         width: 100%;
         margin-left: 0;
       }
@@ -274,9 +280,11 @@ h3 {
   }
   #courses {
     width: auto !important;
+    padding: 0 !important;
     .cours-container {
-      // width: 350px !important;
+      width: auto !important;
       padding: 0 10px;
+      margin-bottom: 25px;
     }
   }
   .card-box {

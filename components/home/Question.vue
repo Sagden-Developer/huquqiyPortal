@@ -207,8 +207,12 @@ export default {
 @media (min-width: 576px) and (max-width: 950px) {
   .question-text{
     padding-left: 10px !important;
+    width: 700px !important;
+    margin: 10px auto !important;
   }
   .question-list-group {
+    width: 700px !important;
+    margin: 0 auto;
     // width: 50%;
     div {
       width: 50%;

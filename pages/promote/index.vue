@@ -100,9 +100,7 @@ export default {
 </script>
 
 <style lang="scss">
-body {
-  background: #e5e5e5;
-}
+
 .boxs {
   background: #597ba3;
   width: 1300px;

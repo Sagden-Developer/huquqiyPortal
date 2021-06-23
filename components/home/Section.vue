@@ -132,7 +132,7 @@ export default {
 }
 @media (min-width: 576px) and (max-width: 950px) {
   .section-list-group {
-    // width: 50%;
+    width: 700px !important;
     div {
       width: 33%;
       display: block;
@@ -144,9 +144,11 @@ export default {
   }
 }
 @media (min-width: 350px) and (max-width: 576px) {
-  #section{
-    width: 98% !important;
+  
+  #sections{
+    // width: 700px !important;
     margin: 0 auto !important;
+    padding: 65px 5px !important;
   }
   .section-list-group {
     // width: 50%;
