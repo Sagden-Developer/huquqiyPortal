@@ -58,7 +58,7 @@ export default {
       newsImg: require("@/assets/images/news.jpg"),
       icons: {
         dataIcon: require("@/assets/images/calendar.svg"),
-        viewIcon: require("@/assets/images/eye.svg"),
+        viewIcon: require("@/assets/images/eye.svg")
       },
       settings: {
         dots: true,
@@ -76,13 +76,13 @@ export default {
             settings: {
               slidesToScroll: 1,
               dots: false,
-              draggable: true,
-            },
-          },
-        ],
-      },
+              draggable: true
+            }
+          }
+        ]
+      }
     };
-  },
+  }
 };
 </script>
 
@@ -132,6 +132,8 @@ export default {
       color: #333333;
     }
     button[type="submit"] {
+      width: 215px;
+      height: 47px;
       background: #597ba3;
       color: #fff;
       border: 1px solid;
@@ -139,6 +141,16 @@ export default {
       padding: 10px 25px;
       margin-bottom: 18px;
       cursor: pointer;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 150%;
+      /* identical to box height, or 27px */
+
+      /* white */
+
+      color: #ffffff;
     }
   }
   .news-slide {
@@ -345,7 +357,7 @@ export default {
         .news-img {
           img {
             height: 380px;
-            
+
             width: 570px;
             border-radius: 12px;
           }
@@ -558,7 +570,7 @@ export default {
   }
 }
 @media (min-width: 350px) and (max-width: 576px) {
-   .slick-prev,
+  .slick-prev,
   .slick-next {
     top: 95%;
     z-index: 11111111;

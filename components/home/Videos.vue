@@ -110,7 +110,33 @@
         <div class="video-footer-text" v-text="footText"></div>
       </div>
     </div>
-  </div>
+    <div id="carusel-video-box">
+      <Carousel v-bind="slickOptions">
+        <div class="card-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/PiaxdSTGl5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="card-video">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/PiaxdSTGl5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="card-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/PiaxdSTGl5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="card-video">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/PiaxdSTGl5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+       
+      </Carousel>
+      <div class="video-footer-text" v-text="footText"></div>
+    
+
+     
+    </div>
+    </div>
+
+     
+
+    
+    
 </template>
 
 <script>
@@ -129,8 +155,40 @@ export default {
         centerMode: true,
         focusOnSelect: true,
         draggable: true,
-        arrows: false
-      }
+        arrows: false,
+         responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              speed: 1500,
+              touchThreshold: 1000,
+              autoplay: false,
+              autoplaySpeed: 2000,
+              slidesToShow: 3,
+              infinite: true,
+              slidesToScroll: 1,
+              dots: false,
+              draggable: true,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              focusOnSelect: true,
+              arrows: false,
+              dots: false,
+              slidesToShow: 2.35,
+              speed: 1500,
+              centerMode: true,
+              touchThreshold: 1000,
+              infinite: true,
+              slidesToScroll: 1,
+              draggable: true,
+            },
+          },
+        ],
+      },
+     
     };
   }
 };
@@ -164,6 +222,7 @@ export default {
   .video-header {
     padding: 30px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     button[type="submit"] {
       width: 193px;
@@ -184,7 +243,13 @@ export default {
       font-weight: 500;
       font-size: 18px;
       line-height: 150%;
-      color: #FFFFFF;
+      color: #ffffff;
+      transition: 0.3s linear;
+      &:hover {
+        box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+        -webkit-box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+      }
     }
   }
   #carusel-video-box {
@@ -196,7 +261,7 @@ export default {
       iframe {
         width: 100%;
         height: 100%;
-        border-radius: 5px;
+        border-radius: 5px !important;
       }
     }
     .active {
@@ -255,6 +320,20 @@ export default {
     }
   }
 }
+@media (min-width: 576px) and (max-width: 950px) {
+  .v-head-text{
+    font-size: 20px !important;
+  }
+  .card-video{
+    padding: 60px 0 !important;
+  }
+}
 @media (min-width: 350px) and (max-width: 575px) {
+  .v-head-text{
+    font-size: 20px !important;
+  }
+  .card-video{
+    padding: 60px 0 !important;
+  }
 }
 </style>
