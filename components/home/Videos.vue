@@ -2,113 +2,8 @@
   <div id="video">
     <div class="container">
       <div class="video-header">
-        <h1 class="v-head-text" v-text="'Videoroliklar'"></h1>
-        <button type="submit" class="video-button" v-text="videoText"></button>
-      </div>
-      <div id="carusel-video-box">
-        <Carousel v-bind="slickOptions">
-          <div class="card-video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/PiaxdSTGl5c"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="card-video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/PiaxdSTGl5c"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="card-video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/PiaxdSTGl5c"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="card-video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/PiaxdSTGl5c"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="card-video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/PiaxdSTGl5c"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="card-video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/PiaxdSTGl5c"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="card-video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/PiaxdSTGl5c"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="card-video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/PiaxdSTGl5c"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="card-video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/PiaxdSTGl5c"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </Carousel>
-        <div class="video-footer-text" v-text="footText"></div>
-      </div>
+      <h1 class="v-head-text" v-text="'Videoroliklar'"></h1>
+      <button type="submit" class="video-button" v-text="videoText"></button>
     </div>
     <div id="carusel-video-box">
       <Carousel v-bind="slickOptions">
@@ -117,6 +12,7 @@
         </div>
         <div class="card-video">
          <iframe width="560" height="315" src="https://www.youtube.com/embed/PiaxdSTGl5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p class="video-footer-text" v-text="footText"></p>
         </div>
         <div class="card-video">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/PiaxdSTGl5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -124,9 +20,22 @@
         <div class="card-video">
          <iframe width="560" height="315" src="https://www.youtube.com/embed/PiaxdSTGl5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-       
+        <div class="card-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/PiaxdSTGl5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="card-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/PiaxdSTGl5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="card-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/PiaxdSTGl5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="card-video">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/PiaxdSTGl5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="card-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/PiaxdSTGl5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </Carousel>
-      <div class="video-footer-text" v-text="footText"></div>
     
 
      
@@ -137,18 +46,19 @@
 
     
     
+  </div>
 </template>
 
 <script>
 import CoolLightBox from "vue-cool-lightbox";
-import SwiperCore, { coverflowEffect } from "swiper";
+ import SwiperCore, { coverflowEffect } from 'swiper';
 export default {
   data() {
     return {
       videoText: "Barcha videolar",
       slImg: require("~/assets/img/course/bogcha.svg"),
       footText: "Qanday ishlar maqbul kelmaydigan ish hisoblanadi",
-      slickOptions: {
+     slickOptions: {
         dots: true,
         infinite: true,
         slidesToShow: 2.3,
@@ -190,43 +100,47 @@ export default {
       },
      
     };
-  }
+  },
+
 };
 </script>
 
 <style lang="scss">
+
 #video {
   .slick-slide {
-    transition: 1s;
+  transition:  1s;
+}
+
+
+.slick-list{
+   overflow: show;
+}
+.slick-current{
+  transform: scale(1.5) !important;
+  iframe{
+    pointer-events: all;
+  pointer-events: auto;
+
   }
 
-  .slick-list {
-    overflow: show;
+}
+.slick-current {
+  .video-box-item {
+    padding: 10px;
+    margin: 15px;
   }
-  .slick-current {
-    transform: scale(1.5) !important;
-    iframe {
-      pointer-events: all;
-      pointer-events: auto;
-    }
-  }
-  .slick-current {
-    .video-box-item {
-      padding: 10px;
-      margin: 15px;
-    }
-  }
+}
   height: 600px;
   margin: 0 auto;
   background: rgba(95, 146, 211, 0.1);
   .video-header {
     padding: 30px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     button[type="submit"] {
-      width: 193px;
-      height: 47px;
+      max-width: 193px;
+      max-height: 47px;
       display: flex;
       flex-direction: row;
       align-items: flex-start;
@@ -235,21 +149,6 @@ export default {
       background: #597ba3;
       color: #fff;
       border: 1px solid #597ba3;
-      cursor: pointer;
-      left: 25px;
-      top: 10px;
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 150%;
-      color: #ffffff;
-      transition: 0.3s linear;
-      &:hover {
-        box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
-        -webkit-box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
-        -moz-box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
-      }
     }
   }
   #carusel-video-box {
@@ -257,11 +156,11 @@ export default {
       width: 427px;
       height: 400px !important;
       padding: 90px 60px;
-
-      iframe {
+     
+      iframe{
         width: 100%;
         height: 100%;
-        border-radius: 5px !important;
+        border-radius: 5px;
       }
     }
     .active {
@@ -275,6 +174,7 @@ export default {
     }
     // DOTS CHANGE
     .slick-dots {
+      margin-top: 20px !important;
       button::before {
         color: #000 !important; /* color of dots */
         background-color: transparent !important;
@@ -294,31 +194,11 @@ export default {
     }
   }
   .video-footer-text {
-    margin-top: 30px;
+    // margin-top: 30px;
+    margin-bottom: 20px;
     text-align: center;
   }
-  .navigation {
-    padding: 5px;
-    margin: 10px;
-    .btns {
-      margin: 10px;
-      display: flex;
-      justify-content: center;
-      .pages {
-        width: 15px;
-        height: 15px;
-        background: #597ba3;
-        opacity: 0.5;
-        border-radius: 50%;
-        border: 0;
-        margin: 5px;
-        .current-page {
-          width: 20px;
-          height: 20px;
-        }
-      }
-    }
-  }
+ 
 }
 @media (min-width: 576px) and (max-width: 950px) {
   .v-head-text{
