@@ -22,7 +22,7 @@
                 <div class="video-title">{{ card.cardTitle }}</div>
                 <div class="video-info">
                   <div class="rating">
-                    <img :src="card.starIcon" v-for="rep in 5" :key="rep" />
+                    <img :src="card.starIcon" v-for="rep in 5" :key="rep" width="20" height="19" />
                   </div>
                   <div class="time">{{ card.time }}</div>
                 </div>
@@ -169,18 +169,45 @@ h3 {
           width: 400px;
           height: 105px;
           padding: 15px 25px 29px 25px;
+          .video-title {
+            width: 360px;
+            height: 24px;
+            margin-bottom: 17px;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+          }
           .video-info {
             display: flex;
+            align-items: center;
             // justify-content: space-around;
-            // align-content: center;
-            .time {
-              margin-left: 62px;
+            .rating {
+              width: 140px;
+              height: 24px;
+              display: flex;
+              // justify-content: space-around;
+              align-items: center;
+              img{
+                margin-right: 9px;
+              }
             }
-          }
-          .video-title {
-            margin-bottom: 17px;
-            // margin: 15px 0 15px 45px;
-            // text-transform: none;
+            .time {
+              width: 160px;
+              height: 22px;
+              margin-left: 53px;
+              font-family: Montserrat;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 18px;
+              line-height: 22px;
+              /* identical to box height */
+              text-align: right;
+              /* dark gray */
+              color: #333333;
+            }
           }
         }
       }

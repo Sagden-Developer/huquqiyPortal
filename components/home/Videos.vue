@@ -116,7 +116,7 @@ export default {
       border-radius: 50px;
       background: #597ba3;
       color: #fff;
-      border: 1px solid;
+      border: 1px solid #597ba3;
     }
   }
   #carusel-video-box {
