@@ -2,8 +2,113 @@
   <div id="video">
     <div class="container">
       <div class="video-header">
-      <h1 class="v-head-text" v-text="'Videoroliklar'"></h1>
-      <button type="submit" class="video-button" v-text="videoText"></button>
+        <h1 class="v-head-text" v-text="'Videoroliklar'"></h1>
+        <button type="submit" class="video-button" v-text="videoText"></button>
+      </div>
+      <div id="carusel-video-box">
+        <Carousel v-bind="slickOptions">
+          <div class="card-video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PiaxdSTGl5c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="card-video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PiaxdSTGl5c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="card-video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PiaxdSTGl5c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="card-video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PiaxdSTGl5c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="card-video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PiaxdSTGl5c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="card-video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PiaxdSTGl5c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="card-video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PiaxdSTGl5c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="card-video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PiaxdSTGl5c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="card-video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PiaxdSTGl5c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </Carousel>
+        <div class="video-footer-text" v-text="footText"></div>
+      </div>
     </div>
     <div id="carusel-video-box">
       <Carousel v-bind="slickOptions">
@@ -32,12 +137,11 @@
 
     
     
-  </div>
 </template>
 
 <script>
 import CoolLightBox from "vue-cool-lightbox";
- import SwiperCore, { coverflowEffect } from 'swiper';
+import SwiperCore, { coverflowEffect } from "swiper";
 export default {
   data() {
     return {
@@ -86,37 +190,32 @@ export default {
       },
      
     };
-  },
-
+  }
 };
 </script>
 
 <style lang="scss">
-
 #video {
   .slick-slide {
-  transition:  1s;
-}
-
-
-.slick-list{
-   overflow: show;
-}
-.slick-current{
-  transform: scale(1.5) !important;
-  iframe{
-    pointer-events: all;
-  pointer-events: auto;
-
+    transition: 1s;
   }
 
-}
-.slick-current {
-  .video-box-item {
-    padding: 10px;
-    margin: 15px;
+  .slick-list {
+    overflow: show;
   }
-}
+  .slick-current {
+    transform: scale(1.5) !important;
+    iframe {
+      pointer-events: all;
+      pointer-events: auto;
+    }
+  }
+  .slick-current {
+    .video-box-item {
+      padding: 10px;
+      margin: 15px;
+    }
+  }
   height: 600px;
   margin: 0 auto;
   background: rgba(95, 146, 211, 0.1);
@@ -126,8 +225,8 @@ export default {
     align-items: center;
     justify-content: space-between;
     button[type="submit"] {
-      max-width: 193px;
-      max-height: 47px;
+      width: 193px;
+      height: 47px;
       display: flex;
       flex-direction: row;
       align-items: flex-start;
@@ -136,6 +235,21 @@ export default {
       background: #597ba3;
       color: #fff;
       border: 1px solid #597ba3;
+      cursor: pointer;
+      left: 25px;
+      top: 10px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 150%;
+      color: #ffffff;
+      transition: 0.3s linear;
+      &:hover {
+        box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+        -webkit-box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+      }
     }
   }
   #carusel-video-box {
@@ -143,8 +257,8 @@ export default {
       width: 427px;
       height: 400px !important;
       padding: 90px 60px;
-     
-      iframe{
+
+      iframe {
         width: 100%;
         height: 100%;
         border-radius: 5px !important;
