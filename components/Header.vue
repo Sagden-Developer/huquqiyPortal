@@ -70,6 +70,7 @@
                   />
                 </svg>
                 <span v-if="$i18n.locale == 'uz'">O'zbekcha</span>
+                <span v-if="$i18n.locale == 'kr'">Krilcha</span>
                 <span v-if="$i18n.locale == 'ru'">ruscha</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -91,6 +92,11 @@
                     <li>
                       <a href="#" @click.prevent="$i18n.setLocale('uz')"
                         >Uzbekcha</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" @click.prevent="$i18n.setLocale('kr')"
+                        >Krilcha</a
                       >
                     </li>
                     <li>

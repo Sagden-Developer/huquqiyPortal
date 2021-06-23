@@ -68,8 +68,18 @@ export default {
         slidesToShow: 1,
         slidesToScroll: 1,
         swipeToSlide: true,
-        arrows: true
-        // dotsClass: "pages"
+        arrows: true,
+        // dotsClass: "pages",
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToScroll: 1,
+              dots: false,
+              draggable: true
+            }
+          }
+        ]
       }
     };
   }
@@ -295,10 +305,39 @@ export default {
 }
 
 @media (min-width: 576px) and (max-width: 950px) {
+  .slick-prev,
+  .slick-next {
+    top: 83%;
+    z-index: 11111111;
+    width: 45px;
+    height: 45px;
+    background: #597ba3 !important;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    &:hover {
+      background: #597ba3;
+    }
+  }
+  .slick-next {
+    right: 10px !important;
+    background: #597ba3 !important;
+    &::before {
+      content: " \276F" !important;
+    }
+  }
+  .slick-prev {
+    background: #597ba3;
+    left: 84% !important;
+    &::before {
+      content: " \276E" !important;
+    }
+  }
   #news-section {
     position: relative;
     width: 700px;
     margin: 65px auto;
+    padding: 0 !important;
   }
   .news-text {
     width: 340px !important;
@@ -339,9 +378,11 @@ export default {
   }
   .news-box {
     height: 275px !important;
+    justify-content: flex-start !important;
   }
   .info {
     margin-top: 15px;
+    width: 200px !important;
   }
 }
 @media (min-width: 350px) and (max-width: 576px) {

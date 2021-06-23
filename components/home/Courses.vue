@@ -183,10 +183,10 @@ h3 {
           .video-info {
             display: flex;
             align-items: center;
-            // justify-content: space-around;
+            justify-content: space-between;
             .rating {
               width: 140px;
-              height: 24px;
+              // height: 24px;
               display: flex;
               // justify-content: space-around;
               align-items: center;
@@ -196,9 +196,9 @@ h3 {
             }
             .time {
               width: 160px;
-              height: 22px;
-              margin-left: 53px;
-              font-family: Montserrat;
+              // height: 22px;
+              // margin-left: 53px;
+              // font-family: Montserrat;
               font-style: normal;
               font-weight: 600;
               font-size: 18px;
@@ -236,9 +236,21 @@ h3 {
     }
     .video-title-content {
       width: 100% !important;
+      padding: 10px !important;
+      .video-title{
+        width: 90% !important;
+        text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+      }
     }
     .video-info {
       width: 100%;
+      justify-content: space-between ;
+      .time{
+        width: 100%;
+        margin-left: 0;
+      }
     }
   }
 }
