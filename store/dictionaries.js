@@ -60,46 +60,27 @@ export const actions = {
                 commit("DICTIONARIES_FAILURE")
             })
     },
-
-    GET_DICTIONARIES_NEWS({ commit }) {
-        commit('DICTIONARIES_REQUEST');
-        this.$axios.$get('/dictionary/news').then((res) => {
-            commit('DICTIONARIES_SUCCESS_NEWS', res.data);
-        }).catch((err) => {
-
-            commit("DICTIONARIES_FAILURE");
-        });
+    GET_DICTIONARY_BY_CHAR({ commit }, query) {
+        console.log(query, "bizning query");
+        this.$axios.$get(`/dictionary/all?=${query}`)
+            .then((data) => {
+                console.log(data);
+                commit("DICTIONARIES_SUCCESS_DICTIONARY", data.data);
+            }).catch((error) => {
+                console.log(error);
+                commit("DICTIONARIES_FAILURE")
+            })
+    },
+    GET_DICTIONARY2_BY_CHAR({ commit }, query) {
+        console.log(query, "bizning query");
+        this.$axios.$get(`/dictionary2/all?=${query}`)
+            .then((data) => {
+                console.log(data);
+                commit("DICTIONARIES_SUCCESS_DICTIONARY2", data.data);
+            }).catch((error) => {
+                console.log(error);
+                commit("DICTIONARIES_FAILURE")
+            })
     },
 
-    GET_DICTIONARIES_SITES({ commit }) {
-        commit('DICTIONARIES_REQUEST');
-        this.$axios.$get('/dictionary/site').then((res) => {
-            commit('DICTIONARIES_SUCCESS_SITES', res.data);
-        }).catch((err) => {
-
-            commit("DICTIONARIES_FAILURE");
-        });
-    },
-
-
-    GET_DICTIONARIES_LIBRARIES({ commit }) {
-        commit('DICTIONARIES_REQUEST');
-        this.$axios.$get('/dictionary/library').then((res) => {
-            commit('DICTIONARIES_SUCCESS_LIBRARIES', res.data);
-        }).catch((err) => {
-
-            commit("DICTIONARIES_FAILURE");
-        });
-    },
-
-    GET_DICTIONARIES_COUNT_VIEWS({ commit, dispatch }, id) {
-        commit('DICTIONARIES_REQUEST');
-        this.$axios.$get(`/news/${id}/view`).then((res) => {
-            dispatch('GET_DICTIONARIES_NEWS')
-            commit('DICTIONARIES_SUCCESS_COUNT_VIEWS');
-        }).catch((err) => {
-
-            commit("DICTIONARIES_FAILURE");
-        });
-    },
 }
