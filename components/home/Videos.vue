@@ -184,7 +184,13 @@ export default {
       font-weight: 500;
       font-size: 18px;
       line-height: 150%;
-      color: #FFFFFF;
+      color: #ffffff;
+      transition: 0.3s linear;
+      &:hover {
+        box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+        -webkit-box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+      }
     }
   }
   #carusel-video-box {

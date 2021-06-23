@@ -118,7 +118,7 @@ h3 {
   // width: 1300px;
   padding: 75px 30px;
   .cours-container {
-    width: 1240px;
+    width: 1300px;
     // margin: 75px 30px;
     .course-head {
       padding-bottom: 52px;
