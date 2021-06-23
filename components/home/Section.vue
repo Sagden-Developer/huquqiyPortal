@@ -78,7 +78,7 @@ export default {
   #sections {
     max-width: 100%;
     // height: 529px;
-    margin: 60px 30px;
+    padding: 60px 30px;
     .section-text {
       font-style: normal;
       font-weight: bold;

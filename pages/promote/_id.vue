@@ -13,10 +13,10 @@
       <div class="left">
         <div class="title">
           <div>
-            <p>Normativ hujjat nomi</p>
+            <p>{{ material.title ? material.title.uz : "" }}</p>
           </div>
           <div>
-            <span>18.06.2021</span>
+            <span>{{ dateFormat(material.createdAt) }}</span>
             <span
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -40,36 +40,18 @@
                   stroke-linejoin="round"
                 />
               </svg>
-              532</span
+              {{ material.views }}</span
             >
           </div>
         </div>
         <div class="qaror">
           <span>Vazirlar mahkamasi qarori</span>
-          <span>05.04.2016</span>
+          <span>{{ dateFormat(material.date) }}</span>
         </div>
         <div class="text">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Euismod
-            neque egestas pellentesque duis netus enim tortor tristique
-            scelerisque. Sit viverra feugiat ut nulla egestas non. Sit in nulla
-            scelerisque turpis vel id augue. Consequat tempus morbi sed et quis
-            malesuada. Lorem donec a rhoncus at amet vitae. <br />
-            <br />
-            Adipiscing duis libero nunc, id. Eget massa fermentum molestie
-            eleifend sed duis consequat. Amet, pellentesque eget egestas urna
-            varius ornare aliquam morbi. Sit donec mauris urna sit integer
-            auctor turpis eget. Volutpat eget et donec orci. <br />
-            <br />
-            Quisque enim eget velit amet, neque. Quis nulla ac vivamus auctor a
-            pulvinar. <br />
-            <br />
-            Est, sapien bibendum leo donec penatibus lectus nunc, amet nibh. Sed
-            id tincidunt cursus ligula lacus, amet mauris. Libero diam nibh
-            malesuada mattis in enim malesuada sit turpis. Duis vulputate morbi
-            euismod tempor ac maecenas sapien. Justo nunc, vitae enim tristique
-            vitae et pharetra pretium at.
-          </p>
+         <p>
+           {{material.article? material.article.uz: ""}}
+         </p>
         </div>
         <div class="info">
           <h3>Maqola foydali bo’ldimi?</h3>
@@ -87,7 +69,7 @@
             <span>
               <img src="@/assets/image/lexuz.png" alt="" />
             </span>
-            <button>
+            <a :href="material.doc" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="27"
@@ -183,8 +165,8 @@
                   </linearGradient>
                 </defs>
               </svg>
-            </button>
-            <button>
+            </a>
+            <a :href="material.pdf" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="27"
@@ -280,12 +262,12 @@
                   </linearGradient>
                 </defs>
               </svg>
-            </button>
+            </a>
           </div>
         </div>
         <div class="section">
           <div class="one">
-            <img src="@/assets/image/main/100.png" alt="" />
+            <img :src="`http://ass.tujjor.org/${material.files[0].path}`" alt="" />
             <div class="shadow">
               <button>
                 Yuklab olish
@@ -323,15 +305,15 @@
           </div>
           <div class="two">
             <div>
-              <img src="@/assets/image/main/50.png" alt="" />
+              <img :src="`http://ass.tujjor.org/${material.files[1].path}`" alt="" />
             </div>
-            <img src="@/assets/image/main/50.png" alt="" />
+            <img :src="`http://ass.tujjor.org/${material.files[2].path}`" alt="" />
           </div>
           <div class="three">
             <!-- <img src="@/assets/image/main/100.png" alt="" /> -->
             <!-- <video src="https://www.youtube.com/watch?v=rr_76nSa9Kw"></video> -->
             <iframe
-              src="https://www.youtube.com/embed/WlWqvEItVm4"
+              :src="material.link"
               frameborder="0"
             ></iframe>
             <button>yuklab olish</button>
@@ -343,14 +325,33 @@
 </template>
 
 <script>
+import dateformat from "dateformat";
 export default {
   data() {
-    return {};
+    return {
+      material: null,
+    };
   },
 
   mounted() {},
 
-  methods: {}
+  methods: {
+    dateFormat(date) {
+      let date1 = dateformat(date, "isoDate");
+      date1 = date1.split("-").reverse();
+      date1 = [date1[1], date1[0], date1[2]];
+      date1 = date1.join(".");
+      return date1;
+    },
+    setMaterial() {
+      this.material = JSON.parse(JSON.stringify(this.$route.query.id));
+      // this.material = JSON.parse(this.material);
+      console.log(typeof this.material);
+    },
+  },
+  created() {
+    this.setMaterial();
+  },
 };
 </script>
 
