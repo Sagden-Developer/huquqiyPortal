@@ -152,11 +152,11 @@
                   stroke-linejoin="round"
                 />
               </svg>
-              +998 90 900 21 12
+              <a href="tel:+998 90 900 21 12">+998 90 900 21 12</a>
             </li>
 
             <li>
-              <a href="#"
+              <a href="mailto:info@gmail.com"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
