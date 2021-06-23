@@ -80,14 +80,31 @@ export default {
 .slick-prev,
 .slick-next {
   top: 92%;
+  z-index: 11111111;
+  width: 50px;
+  height: 50px;
+  background: #597ba3 !important;
+  color: #fff;
+  border-radius: 50%;
+  &:hover {
+    background: #597ba3;
+  }
 }
 .slick-next {
   right: 50px;
+  background: #597ba3 !important;
+  &::before {
+    content: " \276F" !important;
+  }
 }
 .slick-prev {
-  /* left: -18px; */
+  background: #597ba3;
   left: 79%;
+  &::before {
+    content: " \276E" !important;
+  }
 }
+
 #news-section {
   position: relative;
   width: 1300px;
@@ -216,11 +233,11 @@ export default {
               border-radius: 50%;
               border: 0;
             }
-            .active {
-              width: 20px;
-              height: 20px;
-              background: #597ba3;
-            }
+            // .active {
+            //   width: 20px;
+            //   height: 20px;
+            //   background: #597ba3;
+            // }
           }
         }
       }
@@ -235,6 +252,13 @@ export default {
     text-align: center;
     bottom: 16px;
     right: 16px;
+    .slick-active {
+      // width: 20px;
+      // height: 20px;
+      border-radius: 50%;
+      background: #597ba3 !important;
+      opacity: 1 !important;
+    }
     button::before {
       color: #000 !important; /* color of dots */
       background-color: transparent !important;
@@ -254,20 +278,20 @@ export default {
   }
 
   // ARROW change
-  .slick-arrow {
-    z-index: 1111111;
-    width: 50px;
-    height: 50px;
-    background: #597ba3;
-    color: #fff;
-    border: 1px solid;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    font-weight: 500;
-  }
+  // .slick-arrow {
+  //   z-index: 1111111;
+  //   width: 50px;
+  //   height: 50px;
+  //   background: #597ba3;
+  //   color: #fff;
+  //   border: 1px solid;
+  //   border-radius: 50%;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   font-size: 30px;
+  //   font-weight: 500;
+  // }
 }
 
 @media (min-width: 576px) and (max-width: 950px) {
