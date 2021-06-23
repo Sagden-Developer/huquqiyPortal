@@ -103,7 +103,7 @@ export default {
 
 .boxs {
   background: #597ba3;
-  width: 1300px;
+  width: 1340px;
   height: 200px;
   margin-left: auto;
   margin-right: auto;
@@ -112,7 +112,7 @@ export default {
   .box {
     width: 1300px;
     margin: 0 auto;
-    padding: 15px;
+    padding: 15px 0;
     h4 {
       font-size: 24px;
       line-height: 29px;
@@ -154,7 +154,6 @@ export default {
       }
     }
     h5 {
-      font-family: Montserrat;
       font-style: normal;
       font-weight: 600;
       font-size: 20px;
@@ -197,7 +196,6 @@ export default {
         font-weight: 500;
         font-size: 18px;
         line-height: 22px;
-        font-family: Montserrat sans-serif;
       }
     }
   }
