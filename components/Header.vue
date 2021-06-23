@@ -509,17 +509,17 @@ h2.logo-text {
 .til-menu {
   position: absolute;
   display: none;
+  // padding: 10px;
   div {
     width: 100px;
-    padding: 0 10px;
-    margin-left: 10px;
+    padding: 10px 10px;
+    margin-left: 25px;
     display: flex;
     flex-direction: column;
     background: #fff;
     border-radius: 10px;
     a {
       text-decoration: none;
-      margin-top: 10px;
       color: #000;
     }
   }
