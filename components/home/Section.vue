@@ -104,9 +104,7 @@ export default {
         flex-wrap: nowrap;
         flex-direction: column;
         background-color: #fff;
-        -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-        -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-        box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+        
         transition: 0.3s linear;
         text-decoration: none;
         &:hover {
