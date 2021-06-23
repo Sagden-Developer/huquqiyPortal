@@ -417,7 +417,7 @@ export default {
   #news-section {
     position: relative;
     width: 400px !important;
-    margin: 65px auto;
+    margin: 0px auto;
     padding: 65px 10px;
   }
   .news-text {
@@ -452,7 +452,7 @@ export default {
     }
   }
   .news-img {
-    width: 340px !important;
+    width: 100% !important;
     height: 380px;
     img {
       width: 100%;
