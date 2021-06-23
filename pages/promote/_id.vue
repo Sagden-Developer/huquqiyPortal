@@ -322,7 +322,6 @@
             <!-- <img src="@/assets/image/main/100.png" alt="" /> -->
             <!-- <video src="https://www.youtube.com/watch?v=rr_76nSa9Kw"></video> -->
             <iframe :src="material.link" frameborder="0"></iframe>
-            <button>yuklab olish</button>
           </div>
         </div>
       </div>
