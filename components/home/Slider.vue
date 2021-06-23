@@ -66,11 +66,11 @@ export default {
         { title: "Advakatura" },
         { title: "Notariant" },
         { title: "Ishonch raqamlari" },
-        { title: "Onlayn Huquqiy maslahatlar" }
+        { title: "Onlayn Huquqiy maslahatlar" },
       ],
-      tagIcon: require("@/assets/img/tag.svg")
+      tagIcon: require("@/assets/img/tag.svg"),
     };
-  }
+  },
 };
 </script>
 
@@ -90,7 +90,7 @@ export default {
   margin: 25px auto;
   background-image: url("assets/img/slide.png");
   color: #fff;
-  background-size: cover ;
+  background-size: cover;
   .head-text {
     text-transform: uppercase;
   }
@@ -164,6 +164,99 @@ export default {
     }
   }
 }
+@media (min-width: 1300px) and (max-width: 1920px) {
+  #slider {
+    // max-width: 1240px;
+    // height: 550px;
+    border: 1px solid;
+    border-radius: 24px;
+    padding: 55px;
+    margin: 25px auto;
+    background-image: url("assets/img/slide.png");
+    color: #fff;
+    width: 1700px;
+    height: 650px;
+    background-size: cover;
+    padding-left: 145px;
+    .head-text {
+      text-transform: uppercase;
+      width: 570px;
+    }
+    .title-text {
+      font-family: Oxygen;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 46px;
+      line-height: 58px;
+
+      margin-top: 133px;
+      margin-bottom: 20px;
+    }
+    .info-text {
+      height: 58px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 29px;
+      margin-bottom: 42px;
+      width:485px;
+    }
+    .search-button {
+      position: relative;
+      .search-icon {
+        position: absolute;
+        padding: 10px;
+        background: #e6e2df;
+        z-index: 10;
+        position: absolute;
+        left: 36%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        border: 0;
+        background: transparent;
+      }
+    }
+    .tag-section {
+      position: relative;
+      font-size: 18px !important;
+      .tag-icon {
+        position: absolute;
+        left: 5%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .tags {
+      padding: 10px 0 10px 0;
+      display: flex;
+      width: 28%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .tag-links {
+        border: 1px solid #fff;
+        color: #fff;
+        border-radius: 24px;
+        margin: 10px 5px 5px 0;
+        padding: 5px 10px;
+        background: transparent;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        transition: 0.3s linear;
+        &:hover {
+          background-color: #fff;
+          color: black;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
 @media (min-width: 576px) and (max-width: 950px) {
   .info-text {
     h2 {
@@ -178,8 +271,8 @@ export default {
     // padding-left: 35px !important;
     height: auto !important;
     padding: 0px 30px;
-    background-size: contain ;
-    .search-button{
+    background-size: contain;
+    .search-button {
       margin: 0 !important;
       // margin-bottom: 40px;
     }
@@ -204,7 +297,7 @@ export default {
   }
 }
 @media (min-width: 350px) and (max-width: 575px) {
-  .slide-texts{
+  .slide-texts {
     margin-top: 0px !important;
   }
   .info-text {
@@ -247,6 +340,5 @@ export default {
     display: none;
     width: 390px !important;
   }
-  
 }
 </style>

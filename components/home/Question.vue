@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="parent-question">
     <div id="question">
       <div class="container">
         <div class="question-body">
@@ -33,113 +33,113 @@ export default {
           questionIcon: require("@/assets/img/question/mehnat.svg"),
           questionTitle: "Mehnat munosabatlari",
           href: "https://yandex.ru",
-          iimgAlt: "mehnat-icon"
+          iimgAlt: "mehnat-icon",
         },
         {
           questionIcon: require("@/assets/img/question/oilaviy.svg"),
           questionTitle: "Oilaviy munosabatlar",
           href: "https://yandex.ru",
-          iimgAlt: "oilaviy-icon"
+          iimgAlt: "oilaviy-icon",
         },
         {
           questionIcon: require("@/assets/img/question/komunal.svg"),
           questionTitle: "Uy-joy va kommunal masalalar",
           href: "https://yandex.ru",
-          iimgAlt: "komunal-icon"
+          iimgAlt: "komunal-icon",
         },
         {
           questionIcon: require("@/assets/img/question/fuqarolik.svg"),
           questionTitle: "Fuqarolik / Migratsiya",
           href: "https://yandex.ru",
-          iimgAlt: "fuqarolik-icon"
+          iimgAlt: "fuqarolik-icon",
         },
         {
           questionIcon: require("@/assets/img/question/sogliq.svg"),
           questionTitle: "Sog’liqni saqlash",
           href: "https://yandex.ru",
-          iimgAlt: "sogliq-icon"
+          iimgAlt: "sogliq-icon",
         },
         {
           questionIcon: require("@/assets/img/question/himoya.svg"),
           questionTitle: "Ijtimoiy himoya",
           href: "https://yandex.ru",
-          iimgAlt: "himoya-icon"
+          iimgAlt: "himoya-icon",
         },
         {
           questionIcon: require("@/assets/img/question/talim.svg"),
           questionTitle: "Ta’lim",
           href: "https://yandex.ru",
-          iimgAlt: "talim-icon"
+          iimgAlt: "talim-icon",
         },
         {
           questionIcon: require("@/assets/img/question/sud.svg"),
           questionTitle: "Sud-huquq masalalari",
           href: "https://yandex.ru",
-          iimgAlt: "sud-icon"
+          iimgAlt: "sud-icon",
         },
         {
           questionIcon: require("@/assets/img/question/yer.svg"),
           questionTitle: "Yer masalalari",
           href: "https://yandex.ru",
-          iimgAlt: "yer-icon"
+          iimgAlt: "yer-icon",
         },
         {
           questionIcon: require("@/assets/img/question/tadbirkorlik.svg"),
           questionTitle: "Tadbirkorlik",
           href: "https://yandex.ru",
-          iimgAlt: "tadbirkorlik-icon"
+          iimgAlt: "tadbirkorlik-icon",
         },
         {
           questionIcon: require("@/assets/img/question/soliq.svg"),
           questionTitle: "Soliqlar",
           href: "https://yandex.ru",
-          iimgAlt: "soliq-icon"
+          iimgAlt: "soliq-icon",
         },
         {
           questionIcon: require("@/assets/img/question/bank.svg"),
           questionTitle: "Bank sohasi",
           href: "https://yandex.ru",
-          iimgAlt: "bank-icon"
+          iimgAlt: "bank-icon",
         },
         {
           questionIcon: require("@/assets/img/question/davxiz.svg"),
           questionTitle: "Davlat hizmatlari",
           href: "https://yandex.ru",
-          iimgAlt: "davlat-xizmatlari-icon"
+          iimgAlt: "davlat-xizmatlari-icon",
         },
         {
           questionIcon: require("@/assets/img/question/transport.svg"),
           questionTitle: "Transport",
           href: "https://yandex.ru",
-          iimgAlt: "transport-icon"
+          iimgAlt: "transport-icon",
         },
         {
           questionIcon: require("@/assets/img/question/istemolchi.svg"),
           questionTitle: "Istemolchi huquqi",
           href: "https://yandex.ru",
-          iimgAlt: "istemolchi-icon"
+          iimgAlt: "istemolchi-icon",
         },
         {
           questionIcon: require("@/assets/img/question/chetel.svg"),
           questionTitle: "Chet elliklarga eslatma",
           href: "https://yandex.ru",
-          iimgAlt: "chet-el-icon"
+          iimgAlt: "chet-el-icon",
         },
         {
           questionIcon: require("@/assets/img/question/qishloq.svg"),
           questionTitle: "Qishloq ho’jaligi",
           href: "https://yandex.ru",
-          iimgAlt: "qishloq-icon"
+          iimgAlt: "qishloq-icon",
         },
         {
           questionIcon: require("@/assets/img/question/malumot.svg"),
           questionTitle: "Ma’lumotlar",
           href: "https://yandex.ru",
-          iimgAlt: "malumot-icon"
-        }
-      ]
+          iimgAlt: "malumot-icon",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
@@ -204,8 +204,78 @@ export default {
     }
   }
 }
+
+@media (min-width: 1300px) and (max-width: 1920px) {
+  .parent-question {
+    background: #e2eaf1 !important;
+  }
+  * {
+    box-sizing: border-box;
+    // background: #E2EAF1;
+    #question {
+      margin: auto;
+      background: #e2eaf1 !important;
+      max-width: 1415px;
+      padding-top: 40px;
+      padding-left: 22px;
+      padding-right: 22px;
+      padding-bottom: 30px;
+      .question-text {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 35px;
+        /* dark gray */
+        color: #333333;
+        margin: 7px 0 15px 0;
+      }
+      .question-list-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .question-list-box {
+          width: 435px;
+          height: 100px;
+          margin: 15px 0;
+          border-radius: 12px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          flex-wrap: nowrap;
+          flex-direction: row;
+          justify-content: flex-start;
+          background-color: #fff;
+          // -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+          // -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+          // box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+          text-decoration: none;
+          transition: 0.3s linear;
+          &:hover {
+            -webkit-box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+            -moz-box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+            box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+          }
+          img {
+            margin: 18px 15px 18px 36px;
+          }
+          .question-title-text {
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            color: #000000;
+            margin: 0 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 576px) and (max-width: 950px) {
-  .question-text{
+  .question-text {
     padding-left: 10px !important;
     width: 700px !important;
     margin: 10px auto !important;
@@ -225,7 +295,7 @@ export default {
   }
 }
 @media (min-width: 350px) and (max-width: 575px) {
-  .question-text{
+  .question-text {
     padding-left: 10px !important;
   }
   .question-list-group {

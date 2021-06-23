@@ -33,41 +33,41 @@ export default {
           sectionIcon: require("@/assets/img/section/notariant.svg"),
           sectionTitle: "Notariant",
           href: "https://yandex.ru",
-          iimgAlt: "notariant-icon"
+          iimgAlt: "notariant-icon",
         },
         {
           sectionIcon: require("@/assets/img/section/advokat.svg"),
           sectionTitle: "Advokatura",
           href: "https://google.com",
-          iimgAlt: "advokatura-icon"
+          iimgAlt: "advokatura-icon",
         },
         {
           sectionIcon: require("@/assets/img/section/yurudik.svg"),
           sectionTitle: "Yurudik ta'lim",
           href: "https://saytlar.uz",
-          iimgAlt: "yurudik-talim-icon"
+          iimgAlt: "yurudik-talim-icon",
         },
         {
           sectionIcon: require("@/assets/img/section/lugat.svg"),
           sectionTitle: "Yurudik lug'at",
           href: "https://tuit.uz",
-          iimgAlt: "yurudik-lugat-icon"
+          iimgAlt: "yurudik-lugat-icon",
         },
         {
           sectionIcon: require("@/assets/img/section/dxa.svg"),
           sectionTitle: "DXA",
           href: "https://xmn.tuit.com",
-          iimgAlt: "dxa-icon"
+          iimgAlt: "dxa-icon",
         },
         {
           sectionIcon: require("@/assets/img/section/advokat.svg"),
           sectionTitle: "FXDYO",
           href: "https://moodle.tuit.com",
-          iimgAlt: "fxdyo-icon"
-        }
-      ]
+          iimgAlt: "fxdyo-icon",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
@@ -130,6 +130,36 @@ export default {
     }
   }
 }
+
+@media (min-width: 1300px) and (max-width: 1920px) {
+  * {
+    box-sizing: border-box;
+    margin: auto;
+    #sections {
+      max-width: 1450px;
+      // height: 529px;
+      .section-text {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 35px;
+        margin-top: 83px !important;
+        margin-left: 25px !important;
+        /* dark gray */
+        color: #333333;
+      }
+      .section-list-group {
+        margin: 0 !important;
+        padding: 0px !important;
+        .section-list-box {
+          height: 250px;
+          width: 430px;
+          margin: 15px 0px !important;
+        }
+      }
+    }
+  }
+}
 @media (min-width: 576px) and (max-width: 950px) {
   .section-list-group {
     width: 700px !important;
@@ -144,9 +174,8 @@ export default {
   }
 }
 @media (min-width: 350px) and (max-width: 576px) {
-  
-  #sections{
-    // width: 700px !important;
+  #section {
+    width: 98% !important;
     margin: 0 auto !important;
     padding: 65px 5px !important;
   }
