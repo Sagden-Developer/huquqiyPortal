@@ -53,6 +53,10 @@ export default {
       {
         code: "ru",
         file: "ru.js"
+      },
+      {
+        code: "kr",
+        file: "kr.js"
       }
     ],
     lazy: true,

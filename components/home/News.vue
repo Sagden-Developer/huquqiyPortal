@@ -1,54 +1,53 @@
 <template>
-<div>
-
-  <div id="news-section">
-    <div class="news-header">
-      <h2>{{ title }}</h2>
-      <button type="submit">Barcha Yangiliklar</button>
-    </div>
-    <Carousel v-bind="settings" v-if="$store.state.home.news.length">
-      <div
-        class="news-slide"
-        v-for="(mainNews, index) in $store.state.home.news"
-        :key="index"
-      >
-        <div class="news-box">
-          <div class="news-img">
-            <img
-              class="swiper-img"
-              :src="`http://ass.tujjor.org/${mainNews.image}`"
-              width="505"
-              height="380"
-            />
-          </div>
-          <div class="news-text">
-            <div class="text-head">
-              <h3>
-                {{ mainNews.title }}
-              </h3>
+  <div>
+    <div id="news-section">
+      <div class="news-header">
+        <h2>{{ title }}</h2>
+        <button type="submit">Barcha Yangiliklar</button>
+      </div>
+      <Carousel v-bind="settings" v-if="$store.state.home.news.length">
+        <div
+          class="news-slide"
+          v-for="(mainNews, index) in $store.state.home.news"
+          :key="index"
+        >
+          <div class="news-box">
+            <div class="news-img">
+              <img
+                class="swiper-img"
+                :src="`http://ass.tujjor.org/${mainNews.image}`"
+                width="505"
+                height="380"
+              />
             </div>
-            <div class="text-info">
-              <h6 v-html="mainNews.article"></h6>
-              <nuxt-link to="/">Batafsil >></nuxt-link>
-            </div>
-            <div class="news-data">
-              <div class="info">
-                <div class="data">
-                  <img :src="icons.dataIcon" alt="" />
-                  <div>02.06.2021</div>
-                </div>
-                <div class="views">
-                  <img :src="icons.viewIcon" alt="" />
-                  <div>528</div>
+            <div class="news-text">
+              <div class="text-head">
+                <h3>
+                  {{ mainNews.title }}
+                </h3>
+              </div>
+              <div class="text-info">
+                <h6 v-html="mainNews.article"></h6>
+                <nuxt-link to="/">Batafsil >></nuxt-link>
+              </div>
+              <div class="news-data">
+                <div class="info">
+                  <div class="data">
+                    <img :src="icons.dataIcon" alt="" />
+                    <div>02.06.2021</div>
+                  </div>
+                  <div class="views">
+                    <img :src="icons.viewIcon" alt="" />
+                    <div>528</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </Carousel>
+      </Carousel>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -69,8 +68,18 @@ export default {
         slidesToShow: 1,
         slidesToScroll: 1,
         swipeToSlide: true,
-        arrows: false
-        // dotsClass: "pages"
+        arrows: true,
+        // dotsClass: "pages",
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToScroll: 1,
+              dots: false,
+              draggable: true
+            }
+          }
+        ]
       }
     };
   }
@@ -78,10 +87,39 @@ export default {
 </script>
 
 <style lang="scss">
+.slick-prev,
+.slick-next {
+  top: 92%;
+  z-index: 11111111;
+  width: 50px;
+  height: 50px;
+  background: #597ba3 !important;
+  color: #fff;
+  border-radius: 50%;
+  &:hover {
+    background: #597ba3;
+  }
+}
+.slick-next {
+  right: 50px;
+  background: #597ba3 !important;
+  &::before {
+    content: " \276F" !important;
+  }
+}
+.slick-prev {
+  background: #597ba3;
+  left: 79%;
+  &::before {
+    content: " \276E" !important;
+  }
+}
+
 #news-section {
   position: relative;
-  width: 1240px;
-  margin: 65px auto;
+  width: 1300px;
+  /* margin: 65px auto; */
+  padding: 60px 30px;
   .news-header {
     display: flex;
     justify-content: space-between;
@@ -112,7 +150,7 @@ export default {
       justify-content: center;
       align-items: center;
       .news-img {
-        width: 505px;
+        // width: 505px;
         height: 380px;
         img {
           border-radius: 12px;
@@ -120,12 +158,12 @@ export default {
       }
       .news-text {
         position: relative;
-        width: 715px;
+        // width: 715px;
         height: 380px;
         padding: 20px;
         .text-head {
           // position: absolute;
-          width: 715px;
+          width: 695px;
           // height: 62px;
           font-family: Montserrat;
           font-style: normal;
@@ -205,11 +243,11 @@ export default {
               border-radius: 50%;
               border: 0;
             }
-            .active {
-              width: 20px;
-              height: 20px;
-              background: #597ba3;
-            }
+            // .active {
+            //   width: 20px;
+            //   height: 20px;
+            //   background: #597ba3;
+            // }
           }
         }
       }
@@ -220,6 +258,17 @@ export default {
 
   // DOTS change
   .slick-dots {
+    width: 20%;
+    text-align: center;
+    bottom: 16px;
+    right: 16px;
+    // .slick-active {
+    //   width: 20px;
+    //   height: 20px;
+    //   border-radius: 50%;
+    //   background: #597ba3 !important;
+    //   opacity: 1 !important;
+    // }
     button::before {
       color: #000 !important; /* color of dots */
       background-color: transparent !important;
@@ -239,26 +288,56 @@ export default {
   }
 
   // ARROW change
-  .slick-arrow {
-    width: 50px;
-    height: 50px;
-    background: #597ba3;
-    color: #fff;
-    border: 1px solid;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    font-weight: 500;
-  }
+  // .slick-arrow {
+  //   z-index: 1111111;
+  //   width: 50px;
+  //   height: 50px;
+  //   background: #597ba3;
+  //   color: #fff;
+  //   border: 1px solid;
+  //   border-radius: 50%;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   font-size: 30px;
+  //   font-weight: 500;
+  // }
 }
 
 @media (min-width: 576px) and (max-width: 950px) {
+  .slick-prev,
+  .slick-next {
+    top: 83%;
+    z-index: 11111111;
+    width: 45px;
+    height: 45px;
+    background: #597ba3 !important;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    &:hover {
+      background: #597ba3;
+    }
+  }
+  .slick-next {
+    right: 10px !important;
+    background: #597ba3 !important;
+    &::before {
+      content: " \276F" !important;
+    }
+  }
+  .slick-prev {
+    background: #597ba3;
+    left: 84% !important;
+    &::before {
+      content: " \276E" !important;
+    }
+  }
   #news-section {
     position: relative;
     width: 700px;
     margin: 65px auto;
+    padding: 0 !important;
   }
   .news-text {
     width: 340px !important;
@@ -299,9 +378,11 @@ export default {
   }
   .news-box {
     height: 275px !important;
+    justify-content: flex-start !important;
   }
   .info {
     margin-top: 15px;
+    width: 200px !important;
   }
 }
 @media (min-width: 350px) and (max-width: 576px) {
