@@ -4,7 +4,7 @@
       <div class="box">
         <h4>Qonunlar bo’yicha targ’ibot materiallari</h4>
         <p>
-          <a style="color: white" href="#"> Bosh sahifa </a> / Targ’ibot
+          <nuxt-link style="color: white; text-decoration: none" to="/" href="#"> Bosh sahifa </nuxt-link> / Targ’ibot
           materiallari
         </p>
       </div>
@@ -100,9 +100,7 @@ export default {
 </script>
 
 <style lang="scss">
-body {
-  background: #e5e5e5;
-}
+
 .boxs {
   background: #597ba3;
   width: 1300px;
@@ -186,6 +184,7 @@ body {
       background: #597ba3;
       border-radius: 30px;
       margin-right: 28px;
+      cursor: pointer;
       p {
         margin-top: 18px;
         margin-left: 22px;

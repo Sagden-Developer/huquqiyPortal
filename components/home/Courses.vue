@@ -383,9 +383,11 @@ h3 {
   }
   #courses {
     width: auto !important;
+    padding: 0 !important;
     .cours-container {
-      // width: 350px !important;
+      width: auto !important;
       padding: 0 10px;
+      margin-bottom: 25px;
     }
   }
   .card-box {

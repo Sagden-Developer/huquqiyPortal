@@ -43,7 +43,7 @@
               </button>
             </div>
             <div class="til">
-              <button @click="selectLang">
+              <button >
                 <svg
                   class="flag"
                   xmlns="http://www.w3.org/2000/svg"
@@ -70,8 +70,8 @@
                   />
                 </svg>
                 <span v-if="$i18n.locale == 'uz'">O'zbekcha</span>
-                <span v-if="$i18n.locale == 'kr'">Krilcha</span>
-                <span v-if="$i18n.locale == 'ru'">ruscha</span>
+                <span v-if="$i18n.locale == 'kr'">Ўзбекча</span>
+                <span v-if="$i18n.locale == 'ru'">русский</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="8"
@@ -90,18 +90,18 @@
                 <div class="">
                   <ul class="classLang" style="list-style:none">
                     <li>
-                      <a href="#" @click.prevent="$i18n.setLocale('uz')"
-                        >Uzbekcha</a
+                      <h6 @click.prevent="clickUz"
+                        >O'zbekcha</h6
                       >
                     </li>
                     <li>
-                      <a href="#" @click.prevent="$i18n.setLocale('kr')"
-                        >Krilcha</a
+                      <h6  @click.prevent="clickKiril"
+                        >Ўзбекча</h6
                       >
                     </li>
                     <li>
-                      <a href="#" @click.prevent="$i18n.setLocale('ru')"
-                        >Ruscha</a
+                      <h6  @click.prevent="clickRu"
+                        >русский</h6
                       >
                     </li>
                   </ul>
@@ -177,7 +177,7 @@
         </div>
         <div @click="isMenu = !isMenu" :class="isMenu ? 'fix-vh' : ''"></div>
         <div :class="isMenu ? ' bottom bottom-media' : 'bottom'">
-          <ul>
+          <ul :class="isRu ? 'ru-menu' : ''">
             <li>
               <nuxt-link class="start targibot-link" to="/promote">
                 {{ $t("lan2") }}
@@ -303,14 +303,32 @@
 export default {
   data() {
     return {
+      isRu: false,
       isMenu: false,
       maxsus: false,
-      classLang: false
+
     };
   },
+  mounted(){
+    if(this.$i18n.locale == "ru"){
+      this.isRu = true
+    }
+  },
   methods: {
-    selectLan() {
-      this.classLang = !this.classLan;
+    // selectLan() {
+    //   this.classLang = !this.classLan;
+    // },
+    clickUz(){
+      this.$i18n.setLocale('uz')
+      this.isRu = false
+    },
+    clickKiril(){
+      this.$i18n.setLocale('kr')
+      this.isRu = false
+    },
+    clickRu(){
+      this.$i18n.setLocale('ru')
+      this.isRu = true
     }
   }
 };
@@ -369,9 +387,9 @@ h2.logo-text {
       }
       a {
         // padding: 0px 10px;
-        padding-right: 10px;
+        padding-right: 20px;
         font-weight: 500;
-        font-size: 13px;
+        font-size: 16px;
         line-height: 20px;
         text-decoration: none;
         color: #333333;
@@ -388,6 +406,14 @@ h2.logo-text {
         padding-right: 0;
       }
       // display: inline-block;
+    }
+  }
+  ul.ru-menu{
+    li{
+      a{
+        font-size: 13px !important;
+        padding-right: 10px;
+      }
     }
   }
 }
@@ -509,17 +535,22 @@ h2.logo-text {
 .til-menu {
   position: absolute;
   display: none;
+  // padding: 10px;
   div {
     width: 100px;
-    padding: 0 10px;
-    margin-left: 10px;
+    padding: 10px 10px;
+    margin-left: 25px;
     display: flex;
     flex-direction: column;
     background: #fff;
     border-radius: 10px;
-    a {
+    h6 {
       text-decoration: none;
-      margin-top: 10px;
+      color: #777;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    h6:hover{
       color: #000;
     }
   }
