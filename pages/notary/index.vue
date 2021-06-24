@@ -2,14 +2,39 @@
     <div>
          <div class="boxs">
       <div class="box"> 
-        <h4>Notariat</h4>
+        <div>
+          <h4 style="">Notariat</h4>
         <p>
-          <nuxt-link style="color: white; text-decoration: none" to="/" href="#"> Bosh sahifa </nuxt-link> / Targ’ibot
-          materiallari  
+          <nuxt-link style="color: black; text-decoration: none" to="/notary" href="#"> Bosh sahifa </nuxt-link>  /  Notariat
         </p>
+        </div>
+        <div style="margin-left: 250px">
+                <img src="@/assets/image/Group 1116.png" alt=""> 
+            </div>
+        
       </div>
     </div>
+
+    <div class="card">
+       <div class="natarius">
+         <nuxt-link style="color: black; text-decoration: none"  to="/notary/notaries">
+         <div>
+        <img src="@/assets/image/Vector (2).png" alt="">
+        <h5>Notariuslar boyicha ma'lumot</h5>
+      </div>
+         </nuxt-link>
+      
+    </div>  
+
+      <div class="natarius" style="margin-left: 30px">
+      <div>
+        <img src="@/assets/image/Vector (4).png" alt="">
+        <h5>Notarial harakatlar turi</h5>
+      </div>
+    </div>  
     </div>
+   
+     </div>
 </template>
 
 
@@ -20,7 +45,7 @@
 
 <style lang="scss">
     .boxs {
-  background: #597ba3;
+  background: #D9E6EB;
   width: 1340px;
   height: 200px;
   margin-left: auto;
@@ -31,20 +56,53 @@
     width: 1700px;
     margin: 0 auto;
     padding: 15px 0;
+    display: flex;
+    img{
+      // margin-left: 650px;
+        width: 158px;
+    }
     h4 {
       font-size: 24px;
       line-height: 29px;
       margin-top: 33px;
-      color: #fff;
+      color: #000;
       font-weight: 600;
+      margin-left: 100px;
+      
     }
     p {
       font-size: 20px;
       line-height: 24px;
-      color: #fff;
+      color: #000;
       margin-top: 40px;
+      margin-left: 100px;
+      
     }
   }
 }
+.card{
+    display: flex;
+    margin-left: 280px;
+    .natarius{
+    width: 450px;
+    height: 180px;
+    background-color: #C4C4C4;
+    margin-top: 81px;
+        margin-bottom: 445px;
+
+    img{
+       margin-left: 191px;
+       margin-top: 20px;
+    }
+    h5{
+        text-align: center;
+        margin-top: 15px;
+        font-weight: 500;
+        font-size: 20px;
+        font-family: Poppins sans-serif;
+    }
+}
+}
+
 </style>
 
