@@ -18,6 +18,15 @@
         <div class="link">
           <img src="@/assets/image/huquq.png" alt="" />
         </div>
+        <div class="link">
+          <img src="@/assets/image/huquq.png" alt="" />
+        </div>
+        <div class="link">
+          <img src="@/assets/image/huquq.png" alt="" />
+        </div>
+        <div class="link">
+          <img src="@/assets/image/huquq.png" alt="" />
+        </div>
       </Carousel>
     </div>
   </div>
@@ -31,9 +40,12 @@ export default {
         dots: false,
         speed: 500,
         slidesToShow: 4,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         draggable: true,
         infinite: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        arrows: false,
         responsive: [
           {
             breakpoint: 1024,
@@ -73,7 +85,7 @@ export default {
 };
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 .weblinks {
   // background: #E5E5E5;
   // display: flex;

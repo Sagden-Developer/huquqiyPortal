@@ -90,19 +90,13 @@
                 <div class="">
                   <ul class="classLang" style="list-style:none">
                     <li>
-                      <h6 @click.prevent="clickUz"
-                        >O'zbekcha</h6
-                      >
+                      <h6 @click.prevent="clickUz">O'zbekcha</h6>
                     </li>
                     <li>
-                      <h6  @click.prevent="clickKiril"
-                        >Ўзбекча</h6
-                      >
+                      <h6 @click.prevent="clickKiril">Ўзбекча</h6>
                     </li>
                     <li>
-                      <h6  @click.prevent="clickRu"
-                        >русский</h6
-                      >
+                      <h6 @click.prevent="clickRu">русский</h6>
                     </li>
                   </ul>
                 </div>
@@ -179,9 +173,10 @@
         <div :class="isMenu ? ' bottom bottom-media' : 'bottom'">
           <ul :class="isRu ? 'ru-menu' : ''">
             <li>
-              <nuxt-link class="start targibot-link" to="/promote">
+              <a class="start targibot-link" @click="targibotList">
                 {{ $t("lan2") }}
                 <svg
+                  :class="targibot ? 'bur' : ''"
                   xmlns="http://www.w3.org/2000/svg"
                   width="8"
                   height="6"
@@ -193,16 +188,23 @@
                     fill="#1E6BDD"
                   />
                 </svg>
-              </nuxt-link>
+              </a>
+              <div v-if="targibot" class="targibot">
+                <div class="">
+                  <nuxt-link to="/promote" class=""
+                    >Qonunlar bo’yicha</nuxt-link
+                  >
+                  <a href="" class="">Prezident hujjatlari bo’yicha</a>
+                  <a href="" class="">Hukumat qarorlari bo’yicha</a>
+                  <a href="" class="">Boshqa hujjatlar bo’yicha</a>
+                </div>
+              </div>
             </li>
             <li>
-              <a
-                href="#"
-                @click="onlineTest = !onlineTest"
-                class="targibot-link"
-              >
+              <a href="#" @click="testList" class="targibot-link">
                 {{ $t("lan3") }}
                 <svg
+                  :class="test ? 'bur' : ''"
                   xmlns="http://www.w3.org/2000/svg"
                   width="8"
                   height="6"
@@ -214,11 +216,28 @@
                     fill="#1E6BDD"
                   /></svg
               ></a>
+              <div v-if="test" class="targibot">
+                <div class="">
+                  <a href="" class=""
+                    >Bog’cha tarbiyalanuvchilari uchun testlar</a
+                  >
+                  <a href="" class=""
+                    >Maktab o’qivchilari uchun test sinovlari</a
+                  >
+                  <a href="" class=""
+                    >Davlat organlari hodimlari uchun test sinovlari</a
+                  >
+                  <a href="" class=""
+                    >Aholining barcha qatlami uchun test sinovlari</a
+                  >
+                </div>
+              </div>
             </li>
             <li>
-              <a href="#">
+              <a href="#" @click="bookList">
                 {{ $t("lan4") }}
                 <svg
+                  :class="book ? 'bur' : ''"
                   xmlns="http://www.w3.org/2000/svg"
                   width="8"
                   height="6"
@@ -230,6 +249,19 @@
                     fill="#1E6BDD"
                   /></svg
               ></a>
+              <div v-if="book" class="targibot">
+                <div class="">
+                  <a href="" class=""
+                    >Bog’cha tarbiyalanuvchilari uchun huquqiy qo’llanmalar</a
+                  >
+                  <a href="" class=""
+                    >Maktab o’quvchilari uchun huquqiy qo’llanmalar</a
+                  >
+                  <a href="" class=""
+                    >Maktab o’qituvchilari uchun huquqiy qo’llanmalar</a
+                  >
+                </div>
+              </div>
             </li>
             <li>
               <a href="#">{{ $t("lan5") }}</a>
@@ -241,31 +273,6 @@
               <a class="end" href="#">{{ $t("lan7") }}</a>
             </li>
           </ul>
-
-          <div class="targibot">
-            <div class="">
-              <a href="" class="">Targ'ibot</a>
-              <a href="" class="">Targ'ibot</a>
-              <a href="" class="">Targ'ibot</a>
-              <a href="" class="">Targ'ibot</a>
-            </div>
-          </div>
-          <div class="test">
-            <div class="">
-              <a href="" class="">Targ'ibot</a>
-              <a href="" class="">Targ'ibot</a>
-              <a href="" class="">Targ'ibot</a>
-              <a href="" class="">Targ'ibot</a>
-            </div>
-          </div>
-          <div class="book">
-            <div class="">
-              <a href="" class="">Targ'ibot</a>
-              <a href="" class="">Targ'ibot</a>
-              <a href="" class="">Targ'ibot</a>
-              <a href="" class="">Targ'ibot</a>
-            </div>
-          </div>
         </div>
         <div class="izlash-two">
           <input type="text" :placeholder="$t('lan8')" />
@@ -306,29 +313,55 @@ export default {
       isRu: false,
       isMenu: false,
       maxsus: false,
-
+      targibot: false,
+      test: false,
+      book: false
     };
   },
-  mounted(){
-    if(this.$i18n.locale == "ru"){
-      this.isRu = true
+  mounted() {
+    if (this.$i18n.locale == "ru") {
+      this.isRu = true;
     }
   },
   methods: {
-    // selectLan() {
-    //   this.classLang = !this.classLan;
-    // },
-    clickUz(){
-      this.$i18n.setLocale('uz')
-      this.isRu = false
+    bookList(){
+      this.book = !this.book;
+      if(this.test){
+        this.test = !this.test
+      }
+      if(this.targibot){
+        this.targibot = !this.targibot
+      }
     },
-    clickKiril(){
-      this.$i18n.setLocale('kr')
-      this.isRu = false
+    testList(){
+      this.test = !this.test;
+      if(this.book){
+        this.book = !this.book
+      }
+      if(this.targibot){
+        this.targibot = !this.targibot
+      }
     },
-    clickRu(){
-      this.$i18n.setLocale('ru')
-      this.isRu = true
+    targibotList(){
+      this.targibot = !this.targibot;
+      if(this.test){
+        this.test = !this.test
+      }
+      if(this.book){
+        this.book = !this.book
+      }
+    },
+    clickUz() {
+      this.$i18n.setLocale("uz");
+      this.isRu = false;
+    },
+    clickKiril() {
+      this.$i18n.setLocale("kr");
+      this.isRu = false;
+    },
+    clickRu() {
+      this.$i18n.setLocale("ru");
+      this.isRu = true;
     }
   }
 };
@@ -352,36 +385,58 @@ h2.logo-text {
 .bottom {
   width: 100%;
   margin-top: 40px;
-  .targibot,
-  .test,
-  .book {
-    display: none;
+  svg {
+    transition: 0.5s;
+  }
+  svg.bur {
+    transform: rotate(-180deg);
+  }
+  .targibot-link {
+    cursor: pointer;
+  }
+  .targibot {
     position: absolute;
-    top: 0;
-    left: 0;
+    z-index: 22;
+    top: 40px;
+    left: -10px;
+    width: 306px;
+    padding: 25px 20px;
+    background: #fff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    div {
+      display: flex;
+      flex-direction: column;
+      a {
+        padding-right: 0;
+        border: 0;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #000000 !important;
+        text-decoration: none;
+        // margin-top: 30px;
+        margin-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(178, 164, 190, 0.25);
+      }
+      a:first-child {
+        margin-top: 0;
+      }
+      a:last-child{
+        border-bottom: 0;
+      }
+    }
   }
-  a.test-link:hover {
-    display: block;
-    background: red;
-  }
-  a.book-link:hover .book {
-    display: block;
-  }
-  a.targibot-link:hover .targibot {
-    display: block !important;
-    z-index: 99;
-    background: red !important;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-  }
+
   ul {
     display: flex;
     list-style: none;
     justify-content: space-between;
     padding-left: 10px !important;
     li {
+      position: relative;
       a.start {
         padding-left: 0px;
       }
@@ -408,9 +463,9 @@ h2.logo-text {
       // display: inline-block;
     }
   }
-  ul.ru-menu{
-    li{
-      a{
+  ul.ru-menu {
+    li {
+      a {
         font-size: 13px !important;
         padding-right: 10px;
       }
@@ -425,6 +480,7 @@ h2.logo-text {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin-top: 36px;
   .left {
     font-style: normal;
     font-weight: 600;
@@ -524,9 +580,15 @@ h2.logo-text {
   svg.bur {
     transform: rotate(-180deg);
   }
-  svg {
+  svg:last-child {
     transition: 0.5s;
     transform: rotate(0);
+    font-size: 26px;
+    width: 10px;
+    height: 10px;
+    path {
+      fill: #000;
+    }
   }
 }
 .til:hover .til-menu {
@@ -535,10 +597,12 @@ h2.logo-text {
 .til-menu {
   position: absolute;
   display: none;
+  z-index: 23;
   // padding: 10px;
   div {
     width: 100px;
-    padding: 10px 10px;
+    padding: 0px 10px;
+    padding-bottom: 10px;
     margin-left: 25px;
     display: flex;
     flex-direction: column;
@@ -546,11 +610,12 @@ h2.logo-text {
     border-radius: 10px;
     h6 {
       text-decoration: none;
+      margin-top: 10px;
       color: #777;
       font-size: 14px;
       cursor: pointer;
     }
-    h6:hover{
+    h6:hover {
       color: #000;
     }
   }

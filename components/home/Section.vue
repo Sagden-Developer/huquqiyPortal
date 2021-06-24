@@ -43,13 +43,13 @@ export default {
         },
         {
           sectionIcon: require("@/assets/img/section/yurudik.svg"),
-          sectionTitle: "Yurudik ta'lim",
+          sectionTitle: "Yuridik ta'lim",
           href: "https://saytlar.uz",
           iimgAlt: "yurudik-talim-icon",
         },
         {
           sectionIcon: require("@/assets/img/section/lugat.svg"),
-          sectionTitle: "Yurudik lug'at",
+          sectionTitle: "Yuridik lug'at",
           href: "https://tuit.uz",
           iimgAlt: "yurudik-lugat-icon",
         },

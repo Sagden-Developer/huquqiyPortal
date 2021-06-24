@@ -96,6 +96,7 @@ export default {
   background: #597ba3 !important;
   color: #fff;
   border-radius: 50%;
+  font-family: "Montserrat" !important;
   &:hover {
     background: #597ba3;
   }
@@ -105,6 +106,7 @@ export default {
   background: #597ba3 !important;
   &::before {
     content: " \276F" !important;
+    font-family: "Montserrat" !important;
   }
 }
 .slick-prev {
@@ -112,6 +114,7 @@ export default {
   left: 79%;
   &::before {
     content: " \276E" !important;
+    font-family: "Montserrat" !important;
   }
 }
 
@@ -172,12 +175,12 @@ export default {
         position: relative;
         // width: 715px;
         height: 380px;
-        padding: 20px;
+        padding: 0 20px;
         .text-head {
           // position: absolute;
           width: 695px;
           // height: 62px;
-          font-family: Montserrat;
+          // font-family: Montserrat;
           font-style: normal;
           font-weight: 600;
           font-size: 24px;
@@ -187,20 +190,30 @@ export default {
         }
         .text-info {
           height: 216px;
-          font-family: Montserrat;
           font-style: normal;
           font-weight: 500;
-          font-size: 18px;
           line-height: 150%;
-          /* or 27px */
-          /* dark gray */
-          color: #333333;
-          h6 {
+          a {
+            color: #597ba3;
+            font-size: 18px;
             height: 195px;
             overflow: hidden;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
+          }
+          h6 {
+            color: #333333;
+            font-size: 18px;
+            height: 195px;
+            overflow: hidden;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
           }
         }
         .news-data {
+          margin-top: 50px;
           display: flex;
           flex-direction: row;
           align-content: center;
@@ -227,40 +240,7 @@ export default {
               justify-content: space-around;
             }
           }
-          .arrows {
-            width: 210px;
-            height: 50px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            .left-arrow,
-            .right-arrow {
-              width: 50px;
-              height: 50px;
-              background: #597ba3;
-              color: #fff;
-              border: 1px solid;
-              border-radius: 50%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              font-size: 30px;
-              font-weight: 500;
-            }
-            .pages {
-              width: 15px;
-              height: 15px;
-              background: #597ba3;
-              opacity: 0.5;
-              border-radius: 50%;
-              border: 0;
-            }
-            // .active {
-            //   width: 20px;
-            //   height: 20px;
-            //   background: #597ba3;
-            // }
-          }
+        
         }
       }
     }

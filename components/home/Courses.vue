@@ -158,7 +158,7 @@ h3 {
       justify-content: space-between;
       .card-box {
         margin-bottom: 20px;
-        width: 400px;
+        width: 420px;
         // height: 320px;
         border-radius: 12px;
         background: #fff;
@@ -167,6 +167,9 @@ h3 {
           -webkit-box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
           -moz-box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
           box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
+        }
+        img.star{
+          width: 100%;
         }
         a {
           text-decoration: none;
