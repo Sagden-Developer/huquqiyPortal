@@ -4,12 +4,28 @@
       <div class="box"> 
         <h4>Notariat</h4>
         <p>
-          <nuxt-link style="color: white; text-decoration: none" to="/" href="#"> Bosh sahifa </nuxt-link> / Targ’ibot
-          materiallari  
+          <nuxt-link style="color: white; text-decoration: none" to="/" href="#"> Bosh sahifa </nuxt-link>  /  Notatiat
         </p>
       </div>
     </div>
+
+    <div class="card">
+       <div class="natarius">
+      <div>
+        <img src="@/assets/image/Vector (2).png" alt="">
+        <h5>Notariuslar boyicha malumot</h5>
+      </div>
+    </div>  
+
+      <div class="natarius" style="margin-left: 30px">
+      <div>
+        <img src="@/assets/image/Vector (4).png" alt="">
+        <h5>Notarial harakatlar turi</h5>
+      </div>
+    </div>  
     </div>
+   
+     </div>
 </template>
 
 
@@ -46,5 +62,29 @@
     }
   }
 }
+.card{
+    display: flex;
+    margin-left: 280px;
+    .natarius{
+    width: 450px;
+    height: 180px;
+    background-color: #C4C4C4;
+    margin-top: 81px;
+        margin-bottom: 445px;
+
+    img{
+       margin-left: 191px;
+       margin-top: 20px;
+    }
+    h5{
+        text-align: center;
+        margin-top: 15px;
+        font-weight: 500;
+        font-size: 20px;
+        font-family: Poppins sans-serif;
+    }
+}
+}
+
 </style>
 
