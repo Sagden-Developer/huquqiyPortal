@@ -4,7 +4,10 @@
       <div class="container">
         <div class="header">
           <div class="left">
-            <nuxt-link to="/" class="home-link">
+            <nuxt-link
+              :to="{ name: `index___${$i18n.locale}` }"
+              class="home-link"
+            >
               <span style="margin-right: 8px">
                 <img src="@/assets/image/adliya-logo.png" alt="" />
               </span>
@@ -191,8 +194,8 @@
               </a>
               <div v-if="targibot" class="targibot">
                 <div class="">
-                  <nuxt-link to="/promote" class=""
-                    >Qonunlar bo’yicha</nuxt-link
+                  <a style="cursor: pointer" @click.prevent="clickLink('promote___')"
+                    >Qonunlar bo’yicha</a
                   >
                   <a href="" class="">Prezident hujjatlari bo’yicha</a>
                   <a href="" class="">Hukumat qarorlari bo’yicha</a>
@@ -270,7 +273,9 @@
               <a href="#">{{ $t("lan6") }}</a>
             </li>
             <li>
-              <nuxt-link to="/phone" class="end" href="#">{{ $t("lan7") }}</nuxt-link>
+              <nuxt-link to="/phone" class="end" href="#">{{
+                $t("lan7")
+              }}</nuxt-link>
             </li>
           </ul>
         </div>
@@ -324,31 +329,35 @@ export default {
     }
   },
   methods: {
-    bookList(){
+    clickLink(url) {
+      this.targibot = false;
+      this.$router.push({ name: url + this.$i18n.locale });
+    },
+    bookList() {
       this.book = !this.book;
-      if(this.test){
-        this.test = !this.test
+      if (this.test) {
+        this.test = !this.test;
       }
-      if(this.targibot){
-        this.targibot = !this.targibot
+      if (this.targibot) {
+        this.targibot = !this.targibot;
       }
     },
-    testList(){
+    testList() {
       this.test = !this.test;
-      if(this.book){
-        this.book = !this.book
+      if (this.book) {
+        this.book = !this.book;
       }
-      if(this.targibot){
-        this.targibot = !this.targibot
+      if (this.targibot) {
+        this.targibot = !this.targibot;
       }
     },
-    targibotList(){
+    targibotList() {
       this.targibot = !this.targibot;
-      if(this.test){
-        this.test = !this.test
+      if (this.test) {
+        this.test = !this.test;
       }
-      if(this.book){
-        this.book = !this.book
+      if (this.book) {
+        this.book = !this.book;
       }
     },
     clickUz() {
@@ -394,6 +403,7 @@ h2.logo-text {
   .targibot-link {
     cursor: pointer;
   }
+
   .targibot {
     position: absolute;
     z-index: 22;
@@ -404,9 +414,9 @@ h2.logo-text {
     background: #fff;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
-    transition: .5s;
+    transition: 0.5s;
     div {
-    transition: .5s;
+      transition: 0.5s;
       display: flex;
       flex-direction: column;
       a {
@@ -426,7 +436,7 @@ h2.logo-text {
       a:first-child {
         margin-top: 0;
       }
-      a:last-child{
+      a:last-child {
         border-bottom: 0;
       }
     }
@@ -726,7 +736,7 @@ h2.logo-text {
 }
 
 @media (min-width: 576px) and (max-width: 950px) {
-  header{
+  header {
     margin-top: 29px;
   }
   .fix-vh {
@@ -926,11 +936,10 @@ h2.logo-text {
     .header {
       width: 90%;
       margin: 20px auto;
-      .home-link{
-        span{
-          img{
-          width: 41px !important;
-
+      .home-link {
+        span {
+          img {
+            width: 41px !important;
           }
         }
       }

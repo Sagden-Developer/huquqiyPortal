@@ -1,5 +1,8 @@
 <template>
   <div id="law">
+    <div class="container">
+
+    
     <div class="head-content">
       <div class="head-text">
         <div class="text"></div>
@@ -17,7 +20,7 @@
           type="submit"
           v-for="(button, index) in buttons"
           :key="index"
-          @click="activation(button.id)"
+          @click="activation(button.id, button.title)"
           :class="{ activeBtn: active_el == button.id }"
         >
           {{ button.title }}
@@ -66,7 +69,7 @@
       <!-- Accardion -->
       <div id="accordion" class="accordion-container">
         <div
-          v-for="(category, index) in items"
+          v-for="(category, index) in $store.state.dictionaries.dictionary2"
           :key="index"
           class="accordion accordion__trigger"
           :class="{ accordion_active: visible === index }"
@@ -74,13 +77,13 @@
         >
           <div class="accordion__item">
             <div class="accordion-head">
-              <div>{{ category.title }}</div>
+              <div>{{ category.term.uz }}</div>
               <input type="button" :value="visible === index ? '-' : '+'" />
             </div>
             <div class="accordion__content">
               <div class="menu-sub-list" v-show="visible === index">
                 <div class="sub-list">
-                  <div class="menu-item">{{ category.sub }}</div>
+                  <div class="menu-item">{{ category.description.uz }}</div>
                 </div>
               </div>
             </div>
@@ -88,6 +91,7 @@
         </div>
       </div>
       <!-- End accordion -->
+    </div>
     </div>
   </div>
 </template>
@@ -190,9 +194,13 @@ export default {
     };
   },
   methods: {
-    activation: function(el) {
+    activation: function(el, char) {
       this.active_el = el;
+      this.$store.dispatch('dictionaries/GET_DICTIONARY2_BY_CHAR', char);
     }
+  },
+  beforeCreate(){
+      this.$store.dispatch('dictionaries/GET_DICTIONARY2', "");
   }
 };
 </script>
@@ -200,7 +208,7 @@ export default {
 <style lang="scss">
 #law {
   width: 1300px;
-  height: 1533px; //1518 agar tagidagi chiziq z-index bn bosa
+  // height: 1533px; //1518 agar tagidagi chiziq z-index bn bosa
   padding: 35px 30px 100px 30px;
   background: #f1f3f4;
   margin: 0 auto;
@@ -311,6 +319,7 @@ export default {
             background: #597ba3;
             border-radius: 8px;
             color: #ffffff;
+            border: 0;
           }
         }
       }
@@ -329,7 +338,7 @@ export default {
   .info-content {
     width: 1240px;
     height: 922px;
-    border: 1px solid gray;
+    // border: 1px solid gray;
     .accordion-container {
       .accordion {
         width: 1240px;
@@ -361,6 +370,7 @@ export default {
               background: #597ba3;
               border-radius: 14px;
               color: #fff;
+              border: 0 !important;
             }
           }
           .accordion__content {

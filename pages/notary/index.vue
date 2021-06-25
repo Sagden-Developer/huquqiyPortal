@@ -43,7 +43,7 @@
 </script>
 
 
-<style lang="scss">
+<style lang="scss" >
     .boxs {
   background: #D9E6EB;
   width: 1340px;
@@ -57,9 +57,10 @@
     margin: 0 auto;
     padding: 15px 0;
     display: flex;
+    justify-content: space-between;
     .group{
       img{
-       margin-left: 650px;
+      //  margin-left: 650px;
         width: 148px;
     }
     }
@@ -70,7 +71,7 @@
       margin-top: 33px;
       color: #000;
       font-weight: 600;
-      margin-left: 100px;
+      // margin-left: 100px;
       
     }
     p {
@@ -78,14 +79,14 @@
       line-height: 24px;
       color: #000;
       margin-top: 40px;
-      margin-left: 100px;
-      
+      // margin-left: 100px;
+      // 
     }
   }
 }
 .card{
     display: flex;
-    margin-left: 280px;
+    // margin-left: 280px;
     .natarius{
     width: 450px;
     height: 200px;
@@ -95,7 +96,7 @@
 
     img{
       width: 93px;
-      margin-left: 165px;
+      // margin-left: 165px;
        margin-top: 20px;
        
     }

@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="boxs">
+    <div class="category">
+      <div class="part1">
+        <div class="boxs">
       <div class="box">
         <div>
           <h4>Notariat</h4>
@@ -65,15 +67,260 @@
         </div>
       </div>
     </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <div class="card-notaries">
+          <img src="~assets/img/person.jpg" alt="" class="img">
+          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
+          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
+          <div class="pict">
+            <img src="~assets/img/stars.png" alt="">
+            <button><img src="~assets/img/arrow.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card-notaries">
+          <img src="~assets/img/person1.jpg" alt="" class="img">
+          <h3>Xalilova Saodat Nortajiyevna</h3>
+          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
+          <div class="pict">
+            <img src="~assets/img/stars.png" alt="">
+            <button><img src="~assets/img/arrow.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card-notaries">
+          <img src="~assets/img/person2.jpg" alt="" class="img">
+          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
+          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
+          <div class="pict">
+            <img src="~assets/img/stars.png" alt="">
+            <button><img src="~assets/img/arrow.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card-notaries">
+          <img src="~assets/img/person3.png" alt="" class="img">
+          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
+          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
+          <div class="pict">
+            <img src="~assets/img/stars.png" alt="">
+            <button><img src="~assets/img/arrow.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <div class="card-notaries">
+          <img src="~assets/img/person4.jpg" alt="" class="img">
+          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
+          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
+          <div class="pict">
+            <img src="~assets/img/stars.png" alt="">
+            <button><img src="~assets/img/arrow.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card-notaries">
+          <img src="~assets/img/person5.jpg" alt="" class="img">
+          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
+          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
+          <div class="pict">
+            <img src="~assets/img/stars.png" alt="">
+            <button><img src="~assets/img/arrow.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card-notaries">
+          <img src="~assets/img/person6.jpg" alt="" class="img">
+          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
+          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
+          <div class="pict">
+            <img src="~assets/img/stars.png" alt="">
+            <button><img src="~assets/img/arrow.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card-notaries">
+          <img src="~assets/img/person7.jpg" alt="" class="img">
+          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
+          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
+          <div class="pict">
+            <img src="~assets/img/stars.png" alt="">
+            <button><img src="~assets/img/arrow.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <div class="card-notaries">
+          <img src="~assets/img/person8.jpg" alt="" class="img">
+          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
+          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
+          <div class="pict">
+            <img src="~assets/img/stars.png" alt="">
+            <button><img src="~assets/img/arrow.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card-notaries">
+          <img src="~assets/img/person9.jpg" alt="" class="img">
+          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
+          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
+          <div class="pict">
+            <img src="~assets/img/stars.png" alt="">
+            <button><img src="~assets/img/arrow.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card-notaries">
+          <img src="~assets/img/person10.jpg" alt="" class="img">
+          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
+          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
+          <div class="pict">
+            <img src="~assets/img/stars.png" alt="">
+            <button><img src="~assets/img/arrow.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card-notaries">
+          <img src="~assets/img/person11.jpg" alt="" class="img">
+          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
+          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
+          <div class="pict">
+            <img src="~assets/img/stars.png" alt="">
+            <button><img src="~assets/img/arrow.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <div class="card-notaries">
+          <img src="~assets/img/person12.jpg" alt="" class="img">
+          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
+          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
+          <div class="pict">
+            <img src="~assets/img/stars.png" alt="">
+            <button><img src="~assets/img/arrow.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card-notaries">
+          <img src="~assets/img/person13.jpg" alt="" class="img">
+          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
+          <p>Toshkent shaxar Shayxontoxur <br> tumanidagi xususiy amaliyot bilan <br> shug‘ullanuvchi notarius</p>
+          <div class="pict">
+            <img src="~assets/img/stars.png" alt="">
+            <button><img src="~assets/img/arrow.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card-notaries">
+          <img src="~assets/img/person14.jpg" alt="" class="img">
+          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
+          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
+          <div class="pict">
+            <img src="~assets/img/stars.png" alt="">
+            <button><img src="~assets/img/arrow.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card-notaries">
+          <img src="~assets/img/person15.jpg" alt="" class="img">
+          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
+          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
+          <div class="pict">
+            <img src="~assets/img/stars2.png" alt="" class="star">
+            <button><img src="~assets/img/arrow.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-
+export default {
+  data(){
+    return{
+      title:'hello',
+    }
+  },
+}
 </script>
 
-<style lang="scss">
-.boxs {
+<style lang="scss" scoped>
+  .row{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .col-3{
+    width: 25%;
+    flex-basis: 25%;
+    padding: 15px;
+    padding-bottom: 20px;
+  }
+  .card-notaries{
+    background-color: #fff;
+    padding: 20px 25px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+   
+  }
+  .card-notaries h3{
+    color: #333333;
+     margin-top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 15px;
+    height: 48px;
+  }
+  .card-notaries p{
+   
+    text-align: left;
+    color: #8D8D8D;
+    font-size: 16px;
+    height: 60px;
+  }
+  .card-notaries .pict{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .pict button{
+    background: #597BA3;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    border: 0;
+  }
+ 
+  .pict .star{
+    height: 20px;
+    width: 120px;
+  }
+  .boxs {
   background: #d9e6eb;
   width: 1340px;
   height: 200px;
@@ -82,13 +329,14 @@
   border-radius: 24px;
   margin-top: 26px;
   .box {
-    width: 1700px;
+    width: 1300px;
     margin: 0 auto;
     padding: 15px 0;
     margin-top: 42px;
     display: flex;
+    justify-content: space-between;
     img {
-      margin-left: 400px;
+      //margin-left: 400px;
       width: 158px;
     }
     h4 {
@@ -97,14 +345,14 @@
       margin-top: 33px;
       color: black;
       font-weight: 600;
-      margin-left: 100px;
+      //margin-left: 100px;
     }
     p {
       font-size: 20px;
       line-height: 24px;
       color: black;
       margin-top: 40px;
-      margin-left: 100px;
+      //margin-left: 100px;
     }
   }
 }
@@ -120,7 +368,6 @@
   box-sizing: border-box;
   border-radius: 12px;
   display: flex;
-
   .left {
     width: 50%;
     // background: cyan;
@@ -159,7 +406,6 @@
     // margin-top: 22px;
   form{
     margin-top: 20px;
-    
     select{
       width: 545px;
       height: 50px;
@@ -168,7 +414,11 @@
       background: rgba(51, 51, 51, 0.1);
       border-radius: 10px;
       padding: 10px;
+      
     }
+    select:focus-visible{
+       outline: none; 
+      }
   }
   .box{
     margin-top: 25px;
@@ -198,4 +448,23 @@
   }
   }
 }
-</style>    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media(max-width:767px){
+    .col-3{
+      width: 50%;
+      flex-basis: 50%;
+    }
+  }
+</style>
