@@ -18,7 +18,6 @@
             type="search"
             name="search"
             v-model="search"
-            
             placeholder="Tashkilot Nomi"
           /><button @click="phones">
             Izlash
@@ -49,27 +48,23 @@
           </button>
         </div>
         <div class="phones-part">
-          <table>
-            <thead>
-              <tr>
-                <th>Tashkilotlar nomi</th>
-                <th>Telefon raqami</th>
-              </tr>
-            </thead>
-            <tbody
-              v-for="catalog in $store.state.phones.catalogs"
-              :key="catalog._id"
-            >
-              <td colspan="2" class="phone-category">{{ catalog.name.uz }}</td>
-              <tr
-                v-for="phone in getPhones($store.state.phones.phones, catalog._id)"
-                :key="phone._id"
-              >
-                <td>{{ phone.title.uz }}</td>
-                <td>{{ phone.number }}</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-phone">
+            <div class="table-head">
+              <div class="phone-organization">Tashkilotlar nomi</div>
+              <div class="phone-number">Telefon raqami</div>
+            </div>
+            <div class="table-body">
+              <div class="phone-catalog" v-for="(catalog) in $store.state.phones.catalogs" :key="catalog._id">
+                <div class="catalog">{{catalog.name.uz}}</div>
+                <div class="phone-item" v-for="(phone) in getPhones($store.state.phones.phones, catalog._id)" :key="phone._id">
+                  <div class="organization">
+                    {{phone.title.uz}}
+                  </div>
+                  <div class="phone-number">{{phone.number}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="categories">
@@ -95,6 +90,7 @@ export default {
     search: "",
     selectedItem: 0,
     categories: ["Adliya Vazirligi", "Vazirliklar", "Davlat qo’mitalari"],
+    phones:[]
   }),
   computed: {},
   methods: {
@@ -110,16 +106,19 @@ export default {
       });
     },
     phones() {
-      this.$store.dispatch('phones/GET_QUERY_PHONES');
-      // if (this.search.length > 0) {
-      //   return this.$store.state.phones.phones.filter((phone) => {
-          
-      //     return phone.title.uz.search(this.search);
-      //   });
-      // } else {
-      //   return this.$store.state.phones.phones;
-      // }
+      // this.$store.dispatch("phones/GET_QUERY_PHONES");
+      if (this.search.length > 0) {
+        return this.$store.state.phones.phones.filter((phone) => {
+
+          return phone.title.uz.search(this.search);
+        });
+      } else {
+        return this.$store.state.phones.phones;
+      }
     },
+  },
+  created(){
+    this.phones = this.$store.state.phones.phones;
   },
   beforeCreate() {
     this.$store.dispatch("phones/GET_PHONES");
@@ -234,39 +233,85 @@ $bg-color: #d9e6eb;
         }
       }
       .phones-part {
-        table {
-          background-color: white !important;
+        .table-phone {
           width: 930px;
-          text-align: center;
-          font-family: IBM Plex Sans;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 18px;
-          line-height: 23px;
-          color: #333333;
-          border-collapse: collapse;
-          border-radius: 12px;
+          background: #ffffff;
           border: 1px solid rgba(89, 123, 163, 0.2);
-          outline: none;
-          .phone-category {
-            background: #d5dee8;
-            height: 80px;
+          box-sizing: border-box;
+          border-radius: 12px;
+          padding-bottom: 17px;
+          .table-head {
+            display: flex;
+            justify-content: space-between;
             text-align: center;
-            line-height: 80px;
+            height: 77px;
+            align-items: center;
+
+            font-family: IBM Plex Sans;
             font-style: normal;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 26px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 23px;
             color: #333333;
+            .phone-organization {
+              flex: 6;
+              height: 77px;
+              text-align: left;
+              padding-left: 30px;
+              line-height: 77px;
+              border-right: 1px solid rgba(89, 123, 163, 0.2);
+              border-bottom: 1px solid rgba(89, 123, 163, 0.2);
+            }
+            .phone-number {
+              flex: 2;
+
+              height: 77px;
+              line-height: 77px;
+              border-bottom: 1px solid rgba(89, 123, 163, 0.2);
+            }
           }
-          thead tr,
-          thead tr th {
-            border: 1px solid rgba(89, 123, 163, 0.2);
-          }
-          tr {
-            height: 68px;
-            td {
-              border: 1px solid rgba(89, 123, 163, 0.2);
+          .table-body {
+            .phone-catalog {
+              .catalog {
+                background: #d5dee8;
+                font-family: IBM Plex Sans;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 26px;
+                text-align: center;
+                color: #333333;
+                height: 80px;
+                line-height: 80px;
+              }
+              .phone-item {
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+                height: 68px;
+                align-items: center;
+                font-family: IBM Plex Sans;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 23px;
+                color: #333333;
+                .organization {
+                  height: 68px;
+                  text-align: left;
+                  padding-left: 30px;
+                  line-height: 68px;
+                  border-right: 1px solid rgba(89, 123, 163, 0.2);
+                  border-bottom: 1px solid rgba(89, 123, 163, 0.2);
+                  flex: 6;
+                }
+                .phone-number {
+                  flex: 2;
+                  height: 68px;
+                  line-height: 68px;
+                  border-bottom: 1px solid rgba(89, 123, 163, 0.2);
+                }
+              }
             }
           }
         }
