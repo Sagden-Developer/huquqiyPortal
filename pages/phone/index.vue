@@ -167,10 +167,10 @@ $bg-color: #d9e6eb;
     margin-right: auto;
     border-radius: 24px;
     margin-top: 26px;
+      padding-left: 145px;
     .box {
       padding: 15px 0;
       width: auto;
-      margin-right: 145px;
       color: $text-color !important;
       h4 {
         margin-top: 53px;
