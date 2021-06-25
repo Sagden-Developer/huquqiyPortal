@@ -19,14 +19,10 @@
     <div class="cards">
       <div
         class="cardx"
-        v-for="material in $store.state.card.cards"
-        :key="material._id"
       >
         <div class="img">
           <div class="imgs">
             <img
-              v-for="(image, i) in material.files"
-              :key="i"
               :src="`http://ass.tujjor.org/${image.path}`"
               alt=""
             />
@@ -34,9 +30,9 @@
 
           <div class="circle">
             <div>
-              <h5>{{ material.title.uz }}</h5>
+              <h5>{{}}</h5>
               <div class="normativ" style="display: flex">
-                <p>{{ dateFormat(material.date) }}</p>
+                <p>{{ }}</p>
                 <p style="margin-left: 35px">
                   <svg
                     style="margin-right: 10px"

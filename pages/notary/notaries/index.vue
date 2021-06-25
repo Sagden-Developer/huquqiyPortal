@@ -15,9 +15,9 @@
               Bosh sahifa /
             </nuxt-link>
             <nuxt-link to="/notary" style="color: black; text-decoration: none">
-              Notariat /
+             Notariat / 
             </nuxt-link>
-              Niyazimetov Ruslan Bahodirovich
+             Natariuslar bo'yicha ma'lumod
           </p>
         </div>
         <div>

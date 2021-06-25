@@ -332,30 +332,7 @@
 <script>
 import dateformat from "dateformat";
 export default {
-  data() {
-    return {
-      material: null,
-    };
-  },
-
-  mounted() {},
-
-  methods: {
-    dateFormat(date) {
-      let date1 = dateformat(date, "isoDate");
-      date1 = date1.split("-").reverse();
-      date1 = date1.join(".");
-      return date1;
-    },
-    setMaterial() {
-      this.material = JSON.parse(JSON.stringify(this.$route.query.id));
-      // this.material = JSON.parse(this.material);
-      console.log(typeof this.material);
-    },
-  },
-  created() {
-    this.setMaterial();
-  },
+  
 };
 </script>
 

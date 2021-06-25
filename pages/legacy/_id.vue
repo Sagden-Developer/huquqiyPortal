@@ -13,10 +13,10 @@
       <div class="left">
         <div class="title">
           <div>
-            <p>{{ material.title ? material.title.uz : "" }}</p>
+            <p>{{ }}</p>
           </div>
           <div>
-            <span>{{ dateFormat(material.createdAt) }}</span>
+            <span>{{  }}</span>
             <span
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -46,11 +46,11 @@
         </div>
         <div class="qaror">
           <span>Vazirlar mahkamasi qarori</span>
-          <span>{{ dateFormat(material.date) }}</span>
+          <span>{{  }}</span>
         </div>
         <div class="text">
           <p>
-            {{ material.article ? material.article.uz : "" }}
+            {{ }}
           </p>
         </div>
         <div class="info">
