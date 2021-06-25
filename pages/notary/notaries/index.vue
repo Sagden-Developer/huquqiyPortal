@@ -82,13 +82,13 @@
   border-radius: 24px;
   margin-top: 26px;
   .box {
-    width: 1700px;
+    width: 1300px;
     margin: 0 auto;
     padding: 15px 0;
     margin-top: 42px;
     display: flex;
     img {
-      margin-left: 400px;
+      //margin-left: 400px;
       width: 158px;
     }
     h4 {
@@ -97,14 +97,14 @@
       margin-top: 33px;
       color: black;
       font-weight: 600;
-      margin-left: 100px;
+      //margin-left: 100px;
     }
     p {
       font-size: 20px;
       line-height: 24px;
       color: black;
       margin-top: 40px;
-      margin-left: 100px;
+      //margin-left: 100px;
     }
   }
 }
@@ -159,7 +159,6 @@
     // margin-top: 22px;
   form{
     margin-top: 20px;
-    
     select{
       width: 545px;
       height: 50px;
@@ -168,7 +167,11 @@
        background: rgba(51, 51, 51, 0.1);
       border-radius: 10px;
       padding: 10px;
+      
     }
+    select:focus-visible{
+       outline: none; 
+      }
   }
   .box{
     margin-top: 25px;

@@ -53,13 +53,13 @@
   border-radius: 24px;
   margin-top: 26px;
   .box {
-    width: 1700px;
+    width: 1300px;
     margin: 0 auto;
     padding: 15px 0;
     display: flex;
+    justify-content: space-between;
     .group{
       img{
-       margin-left: 650px;
         width: 148px;
     }
     }
@@ -70,7 +70,6 @@
       margin-top: 33px;
       color: #000;
       font-weight: 600;
-      margin-left: 100px;
       
     }
     p {
@@ -78,7 +77,6 @@
       line-height: 24px;
       color: #000;
       margin-top: 40px;
-      margin-left: 100px;
       
     }
   }
