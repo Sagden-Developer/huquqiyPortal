@@ -102,7 +102,7 @@
       width: 611px;
       height: 300px;
       background-color: #fff;
-      margin-top: 81px;
+      margin-top: 40px;
       margin-bottom: 100px;
       margin-left: auto;
       margin-right: auto;

@@ -53,26 +53,24 @@
               <div class="phone-organization">Tashkilotlar nomi</div>
               <div class="phone-number">Telefon raqami</div>
             </div>
+            {{$store.state.phones.phones}}
             <div class="table-body">
               <div
                 class="phone-catalog"
-                v-for="catalog in $store.state.phones.catalogs"
-                :key="catalog._id"
+                v-for="phone in $store.state.phones.phones"
+                :key="phone._id"
               >
-                <div class="catalog">{{ catalog.name.uz }}</div>
+                <div class="catalog">{{phone.name[$i18n.locale]}}</div>
                 <div
                   class="phone-item"
-                  v-for="phone in getPhones(
-                    $store.state.phones.phones,
-                    catalog._id
-                  )"
-                  :key="phone._id"
+                  v-for="item in phone.child"
+                  :key="item._id"
                 >
                   <div class="organization">
-                    {{ phone.title.uz }}
+                    {{ item.title[`${$i18n.locale}`] }}
                   </div>
-                  <div class="phone-number">{{ phone.number }}</div>
-                </div>
+                  <div class="phone-number">{{ item.number }}</div>
+                </div> -
               </div>
             </div>
           </div>
@@ -85,7 +83,7 @@
           :class="
             selectedItem == index ? 'category-item-active' : 'category-title'
           "
-          @click="setSelectedCatalog(index)"
+          @click="setSelectedCatalog(catalog, index)"
         >
           {{ catalog.name.uz }}
         </p>
@@ -108,8 +106,10 @@ export default {
     dateFormat(date) {
       return dateformat(date, "isoDate");
     },
-    setSelectedCatalog(index) {
+    setSelectedCatalog(catalog, index) {
       this.selectedItem = index;
+      console.log(catalog);
+      this.$store.dispatch('phones/GET_BY_CATALOG_PHONES', catalog._id);
     },
     getPhones(phones, catalogId) {
       return phones.filter(phone => {
@@ -117,14 +117,14 @@ export default {
       });
     },
     phones() {
-      // this.$store.dispatch("phones/GET_QUERY_PHONES");
-      if (this.search.length > 0) {
-        return this.$store.state.phones.phones.filter(phone => {
-          return phone.title.uz.search(this.search);
-        });
-      } else {
-        return this.$store.state.phones.phones;
-      }
+      this.$store.dispatch("phones/GET_QUERY_PHONES");
+      // if (this.search.length > 0) {
+      //   return this.$store.state.phones.phones.filter(phone => {
+      //     return phone.title.uz.search(this.search);
+      //   });
+      // } else {
+      //   return this.$store.state.phones.phones;
+      // }
     }
   },
   created() {
