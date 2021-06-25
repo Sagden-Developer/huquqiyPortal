@@ -1,8 +1,6 @@
 <template>
   <div id="law">
     <div class="container">
-
-    
     <div class="head-content">
       <div class="head-text">
         <div class="text"></div>
@@ -392,8 +390,5 @@ export default {
       }
     }
   }
-}
-@media (max-width:1300px){
-  
 }
 </style>
