@@ -54,13 +54,24 @@
               <div class="phone-number">Telefon raqami</div>
             </div>
             <div class="table-body">
-              <div class="phone-catalog" v-for="(catalog) in $store.state.phones.catalogs" :key="catalog._id">
-                <div class="catalog">{{catalog.name.uz}}</div>
-                <div class="phone-item" v-for="(phone) in getPhones($store.state.phones.phones, catalog._id)" :key="phone._id">
+              <div
+                class="phone-catalog"
+                v-for="catalog in $store.state.phones.catalogs"
+                :key="catalog._id"
+              >
+                <div class="catalog">{{ catalog.name.uz }}</div>
+                <div
+                  class="phone-item"
+                  v-for="phone in getPhones(
+                    $store.state.phones.phones,
+                    catalog._id
+                  )"
+                  :key="phone._id"
+                >
                   <div class="organization">
-                    {{phone.title.uz}}
+                    {{ phone.title.uz }}
                   </div>
-                  <div class="phone-number">{{phone.number}}</div>
+                  <div class="phone-number">{{ phone.number }}</div>
                 </div>
               </div>
             </div>
@@ -90,7 +101,7 @@ export default {
     search: "",
     selectedItem: 0,
     categories: ["Adliya Vazirligi", "Vazirliklar", "Davlat qo’mitalari"],
-    phones:[]
+    phones: []
   }),
   computed: {},
   methods: {
@@ -101,29 +112,28 @@ export default {
       this.selectedItem = index;
     },
     getPhones(phones, catalogId) {
-      return phones.filter((phone) => {
+      return phones.filter(phone => {
         return phone.catalog._id == catalogId;
       });
     },
     phones() {
       // this.$store.dispatch("phones/GET_QUERY_PHONES");
       if (this.search.length > 0) {
-        return this.$store.state.phones.phones.filter((phone) => {
-
+        return this.$store.state.phones.phones.filter(phone => {
           return phone.title.uz.search(this.search);
         });
       } else {
         return this.$store.state.phones.phones;
       }
-    },
+    }
   },
-  created(){
+  created() {
     this.phones = this.$store.state.phones.phones;
   },
   beforeCreate() {
     this.$store.dispatch("phones/GET_PHONES");
     this.$store.dispatch("phones/GET_PHONE_CATALOGS");
-  },
+  }
 };
 </script>
 
@@ -167,7 +177,7 @@ $bg-color: #d9e6eb;
     margin-right: auto;
     border-radius: 24px;
     margin-top: 26px;
-      padding-left: 145px;
+    padding-left: 145px;
     .box {
       padding: 15px 0;
       width: auto;

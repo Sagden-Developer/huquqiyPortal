@@ -362,7 +362,7 @@ export default {
 
 <style lang="scss" scoped>
 .banner {
-  background: #597ba3;
+  background: #D9E6EB;
   width: 1340px;
   height: 200px;
   margin-left: auto;
@@ -377,17 +377,17 @@ export default {
       font-size: 24px;
       line-height: 29px;
       margin-top: 33px;
-      color: #fff;
+      color: #333;
       font-weight: 600;
     }
     p {
       font-size: 20px;
       line-height: 24px;
-      color: #fff;
+      color: #333;
       margin-top: 40px;
       a {
         text-decoration: none;
-        color: #fff;
+        color: #333;
       }
     }
   }
