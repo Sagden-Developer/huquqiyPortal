@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <div class="category">
-      <div class="part1">
-        <div class="boxs">
+  <div id="notaries">
+    
+    <div id="inputs">
+      <div class="boxs">
       <div class="box">
         <div>
           <h4>Notariat</h4>
@@ -67,9 +67,13 @@
         </div>
       </div>
     </div>
-
-      </div>
     </div>
+        
+
+    
+
+   
+  
     <div class="row">
       <div class="col-3">
         <div class="card-notaries">
@@ -268,6 +272,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+#notaries{
+
+
   .row{
     display: flex;
     flex-wrap: nowrap;
@@ -320,45 +328,56 @@ export default {
     height: 20px;
     width: 120px;
   }
-  .boxs {
-  background: #d9e6eb;
-  width: 1340px;
-  height: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 24px;
-  margin-top: 26px;
-  .box {
+
+  #inputs{
     width: 1300px;
-    margin: 0 auto;
-    padding: 15px 0;
-    margin-top: 42px;
-    display: flex;
-    justify-content: space-between;
-    img {
-      //margin-left: 400px;
-      width: 158px;
-    }
-    h4 {
-      font-size: 24px;
-      line-height: 29px;
-      margin-top: 33px;
-      color: black;
-      font-weight: 600;
-      //margin-left: 100px;
-    }
-    p {
-      font-size: 20px;
-      line-height: 24px;
-      color: black;
-      margin-top: 40px;
-      //margin-left: 100px;
+    border: 1px solid;
+     margin: 0 auto;
+     padding: 35px 30px 100px 30px;
+     .boxs {
+    background: #d9e6eb;
+    width: 1240px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 24px;
+    margin-top: 26px;
+    flex-direction: column;
+    .box {
+      width: 1240px;
+      margin: 0 auto;
+      padding: 25px 50px;
+      display: flex;
+      justify-content: space-between;
+      
+      .group {
+        img {
+          //  margin-left: 650px;
+          width: 148px;
+        }
+      }
+
+      h4 {
+        font-size: 24px;
+        line-height: 29px;
+        margin-top: 33px;
+        color: #000;
+        font-weight: 600;
+        // margin-left: 100px;
+      }
+      p {
+        font-size: 20px;
+        line-height: 24px;
+        color: #000;
+        margin-top: 40px;
+        // margin-left: 100px;
+        //
+      }
     }
   }
-}
 
 .Input {
-  width: 1210px;
+  width: 1240px;
   height: 300px;
   background-color: #fff;
   margin-top: 43px;
@@ -384,7 +403,7 @@ export default {
       margin-bottom: -5px;
     }
     input {
-      width: 545px;
+      width: 585px;
       height: 50px;
       background: rgba(51, 51, 51, 0.1);
       border-radius: 8px;
@@ -406,8 +425,9 @@ export default {
     // margin-top: 22px;
   form{
     margin-top: 20px;
+    margin-left: 10px;
     select{
-      width: 545px;
+      width: 585px;
       height: 50px;
       border: 0;
        margin-top: 15px;
@@ -447,6 +467,9 @@ export default {
     }
   }
   }
+}
+  }
+ 
 }
 
 
