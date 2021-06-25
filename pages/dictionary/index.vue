@@ -1,5 +1,8 @@
 <template>
   <div id="law">
+    <div class="container">
+
+    
     <div class="head-content">
       <div class="head-text">
         <div class="text"></div>
@@ -88,6 +91,7 @@
         </div>
       </div>
       <!-- End accordion -->
+    </div>
     </div>
   </div>
 </template>
@@ -204,7 +208,7 @@ export default {
 <style lang="scss">
 #law {
   width: 1300px;
-  height: 1533px; //1518 agar tagidagi chiziq z-index bn bosa
+  // height: 1533px; //1518 agar tagidagi chiziq z-index bn bosa
   padding: 35px 30px 100px 30px;
   background: #f1f3f4;
   margin: 0 auto;
@@ -315,6 +319,7 @@ export default {
             background: #597ba3;
             border-radius: 8px;
             color: #ffffff;
+            border: 0;
           }
         }
       }
@@ -333,7 +338,7 @@ export default {
   .info-content {
     width: 1240px;
     height: 922px;
-    border: 1px solid gray;
+    // border: 1px solid gray;
     .accordion-container {
       .accordion {
         width: 1240px;
@@ -365,6 +370,7 @@ export default {
               background: #597ba3;
               border-radius: 14px;
               color: #fff;
+              border: 0 !important;
             }
           }
           .accordion__content {
