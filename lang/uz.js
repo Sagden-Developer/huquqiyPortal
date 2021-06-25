@@ -10,6 +10,6 @@ export default {
     lan5: 'Huquqiy muammolar yechimi',
     lan6: 'Bepul huquqiy maslahat',
     lan7: 'Ishonch raqamlari',
-    lan8: 'Izlash',
+    search: 'Izlash',
     lan9: 'Maxsus imkoniyatlar',
 }
