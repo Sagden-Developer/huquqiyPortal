@@ -51,7 +51,7 @@ export const actions = {
     },
     GET_DICTIONARY2({ commit }, query) {
         console.log(query, "bizning query");
-        this.$axios.$get(`/dictionary2/all/${query}`)
+        this.$axios.$get(`/legal-glossary/all?=${query}`)
             .then((data) => {
                 console.log(data);
                 commit("DICTIONARIES_SUCCESS_DICTIONARY2", data.data);
@@ -73,7 +73,7 @@ export const actions = {
     },
     GET_DICTIONARY2_BY_CHAR({ commit }, query) {
         console.log(query, "bizning query");
-        this.$axios.$get(`/dictionary2/filter/${query}`)
+        this.$axios.$get(`/legal-glossary/filter/${query}`)
             .then((data) => {
                 console.log(data);
                 commit("DICTIONARIES_SUCCESS_DICTIONARY2", data.data);
