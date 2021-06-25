@@ -73,7 +73,15 @@
               </div>
             </div>
 
-            <div class="line" @click="addViewAndRoute(material)">
+            <div
+              class="line"
+              @click="
+                $router.push({
+                  path: `/library/${material._id}`,
+                  query: { id: material }
+                })
+              "
+            >
               <p>&#10142;</p>
             </div>
           </div>
@@ -92,20 +100,11 @@ export default {
       date1 = date1.split("-").reverse();
       date1 = date1.join(".");
       return date1;
-    },
-    addViewAndRoute(material) {
-      this.$store.dispatch("card/PLUS_VIEW_CARD", material._id).then(() => {
-        material.views+=1;
-        this.$router.push({
-          path: `/promote/${material._id}`,
-          query: { id: material },
-        });
-      });
-    },
+    }
   },
   beforeCreate() {
     this.$store.dispatch("card/GET_CARDS");
-  },
+  }
 };
 </script>
 

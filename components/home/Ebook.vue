@@ -4,7 +4,7 @@
       <div class="container">
         <div class="head">
           <img src="@/assets/image/ebook.png" alt="" />
-          <p class="title-text">Elektron Kutubxona</p>
+          <p class="title-text">{{ $t('ebook')}}</p>
         </div>
 
         <Carousel v-bind="slickOptions">

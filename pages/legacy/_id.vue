@@ -2,10 +2,10 @@
   <div>
     <div class="banner">
       <div class="content">
-        <h4>Qonunlar bo’yicha targ’ibot materiallari</h4>
+        <h4>Bog’cha tarbiyalanuvchilari uchun huquqiy qo’llanmalar</h4>
         <p>
           <nuxt-link to="/" href="#"> Bosh sahifa </nuxt-link> /
-          <nuxt-link href="" to="/promote">Targ’ibot materiallari </nuxt-link> / Normativ hujjat nomi
+          <nuxt-link href="" to="/promote">Huquqiy adabiyoti</nuxt-link> / Mavzu nomi
         </p>
       </div>
     </div>
@@ -13,10 +13,10 @@
       <div class="left">
         <div class="title">
           <div>
-            <p>{{ material.title ? material.title.uz : "" }}</p>
+            <p>{{ }}</p>
           </div>
           <div>
-            <span>{{ dateFormat(material.createdAt) }}</span>
+            <span>{{  }}</span>
             <span
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -46,19 +46,19 @@
         </div>
         <div class="qaror">
           <span>Vazirlar mahkamasi qarori</span>
-          <span>{{ dateFormat(material.date) }}</span>
+          <span>{{  }}</span>
         </div>
         <div class="text">
           <p>
-            {{ material.article ? material.article.uz : "" }}
+            {{ }}
           </p>
         </div>
         <div class="info">
           <h3>Maqola foydali bo’ldimi?</h3>
           <br />
           <div>
-            <button @click="$store.dispatch('card/MINUS_HELPFULL_CARD', material._id)">Yo'q</button>
-            <button @click="$store.dispatch('card/PLUS_HELPFULL_CARD', material._id)">Ha</button>
+            <button>Yo'q</button>
+            <button>Ha</button>
           </div>
         </div>
       </div>

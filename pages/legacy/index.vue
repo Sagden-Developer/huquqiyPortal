@@ -2,7 +2,7 @@
   <div>
     <div class="boxs">
       <div class="box">
-        <h4>Qonunlar bo’yicha targ’ibot materiallari</h4>
+        <h4>Bog’cha tarbiyalanuvchilari uchun huquqiy qo’llanmalar</h4>
         <p>
           <nuxt-link
             style="color: white; text-decoration: none"
@@ -11,7 +11,7 @@
           >
             Bosh sahifa
           </nuxt-link>
-          / Targ’ibot materiallari
+          / Mavzu nomi
         </p>
       </div>
     </div>
@@ -19,14 +19,10 @@
     <div class="cards">
       <div
         class="cardx"
-        v-for="material in $store.state.card.cards"
-        :key="material._id"
       >
         <div class="img">
           <div class="imgs">
             <img
-              v-for="(image, i) in material.files"
-              :key="i"
               :src="`http://ass.tujjor.org/${image.path}`"
               alt=""
             />
@@ -34,9 +30,9 @@
 
           <div class="circle">
             <div>
-              <h5>{{ material.title.uz }}</h5>
+              <h5>{{}}</h5>
               <div class="normativ" style="display: flex">
-                <p>{{ dateFormat(material.date) }}</p>
+                <p>{{ }}</p>
                 <p style="margin-left: 35px">
                   <svg
                     style="margin-right: 10px"
@@ -73,7 +69,15 @@
               </div>
             </div>
 
-            <div class="line" @click="addViewAndRoute(material)">
+            <div
+              class="line"
+              @click="
+                $router.push({
+                  path: `/promote/${material._id}`,
+                  query: { id: material },
+                })
+              "
+            >
               <p>&#10142;</p>
             </div>
           </div>
@@ -82,32 +86,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import dateformat from "dateformat";
-export default {
-  methods: {
-    dateFormat(date) {
-      let date1 = dateformat(date, "isoDate");
-      date1 = date1.split("-").reverse();
-      date1 = date1.join(".");
-      return date1;
-    },
-    addViewAndRoute(material) {
-      this.$store.dispatch("card/PLUS_VIEW_CARD", material._id).then(() => {
-        material.views+=1;
-        this.$router.push({
-          path: `/promote/${material._id}`,
-          query: { id: material },
-        });
-      });
-    },
-  },
-  beforeCreate() {
-    this.$store.dispatch("card/GET_CARDS");
-  },
-};
-</script>
 
 <style lang="scss">
 .boxs {
@@ -147,8 +125,6 @@ export default {
   box-shadow: 0px 8px 50px rgba(119, 143, 177, 0.2);
   border-radius: 12px;
   width: 620px !important;
-  //height: 290px;
-  // margin-left: 30px;
   margin: 0 auto;
   .img {
     width: 100%;

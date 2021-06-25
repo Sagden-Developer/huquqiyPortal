@@ -3,7 +3,7 @@
     <div id="news-section">
       <div class="news-header">
         <h2> {{title[`${$i18n.locale}`]}}</h2>
-        <button type="submit">Barcha Yangiliklar</button>
+        <button type="submit">{{ $t('allnews') }}</button>
       </div>
       <Carousel v-bind="settings" v-if="$store.state.home.news.length">
         <div
@@ -139,7 +139,6 @@ export default {
       color: #333333;
     }
     button[type="submit"] {
-      width: 215px;
       height: 47px;
       background: #597ba3;
       color: #fff;

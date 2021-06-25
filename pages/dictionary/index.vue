@@ -1,8 +1,6 @@
 <template>
   <div id="law">
     <div class="container">
-
-    
     <div class="head-content">
       <div class="head-text">
         <div class="text"></div>

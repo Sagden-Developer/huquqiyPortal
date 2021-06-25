@@ -2,8 +2,8 @@
   <div id="video">
     <div class="container">
       <div class="video-header">
-        <h1 class="v-head-text" v-text="'Videoroliklar'"></h1>
-        <button type="submit" class="video-button" v-text="videoText"></button>
+        <h1 class="v-head-text" >{{ $t('videos')}} </h1>
+        <button type="submit" class="video-button" v-text="videoText[`${$i18n.locale}`]"></button>
       </div>
       <div id="carusel-video-box">
         <Carousel v-bind="slickOptions">
@@ -79,7 +79,11 @@ import SwiperCore, { coverflowEffect } from "swiper";
 export default {
   data() {
     return {
-      videoText: "Barcha videolar",
+      videoText: {
+        uz: "Barcha videolar",
+        kr: "Барча видеолар",
+        ru: "Все видео",
+      }, 
       slImg: require("~/assets/img/course/bogcha.svg"),
       footText: "Qanday ishlar maqbul kelmaydigan ish hisoblanadi",
       slickOptions: {

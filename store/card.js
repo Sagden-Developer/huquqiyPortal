@@ -39,9 +39,18 @@ export const actions = {
             commit("CARDS_FAILURE");
         });
     },
-    PLUS_HELPFULL_CARD({ commit, dispatch }) {
+    PLUS_VIEW_CARD({ commit, dispatch }, id) {
         commit('HOMES_REQUEST');
-        this.$axios.$get('/material/all').then((res) => {
+        this.$axios.$get(`/material/${id}/view`).then((res) => {
+            dispatch('GET_CARDS');
+        }).catch((err) => {
+
+            commit("CARDS_FAILURE");
+        });
+    },
+    PLUS_HELPFULL_CARD({ commit, dispatch }, id) {
+        commit('HOMES_REQUEST');
+        this.$axios.$get(`/material/${id}/helpful/1`).then((res) => {
             dispatch('GET_CARDS');
         }).catch((err) => {
 
@@ -49,12 +58,11 @@ export const actions = {
         });
     },
 
-    MINUS_HELPFULL_CARD({ commit, dispatch }) {
+    MINUS_HELPFULL_CARD({ commit, dispatch }, id) {
         commit('HOMES_REQUEST');
-        this.$axios.$get('/material/all').then((res) => {
+        this.$axios.$get(`/material/${id}/helpful/1`).then((res) => {
             dispatch('GET_CARDS');
         }).catch((err) => {
-
             commit("CARDS_FAILURE");
         });
     }

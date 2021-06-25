@@ -57,8 +57,8 @@
           <h3>Maqola foydali bo’ldimi?</h3>
           <br />
           <div>
-            <button @click="$store.dispatch('card/MINUS_HELPFULL_CARD', material._id)">Yo'q</button>
-            <button @click="$store.dispatch('card/PLUS_HELPFULL_CARD', material._id)">Ha</button>
+            <button>Yo'q</button>
+            <button>Ha</button>
           </div>
         </div>
       </div>

@@ -19,7 +19,7 @@
 
           <div class="right">
             <div class="izlash">
-              <input type="text" :placeholder="$t('lan8')" />
+              <input type="text" :placeholder="$t('search')" />
               <button class="search-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -194,7 +194,9 @@
               </a>
               <div v-if="targibot" class="targibot">
                 <div class="">
-                  <a style="cursor: pointer" @click.prevent="clickLink('promote___')"
+                  <a
+                    style="cursor: pointer"
+                    @click.prevent="clickLink('promote___')"
                     >Qonunlar bo’yicha</a
                   >
                   <a href="" class="">Prezident hujjatlari bo’yicha</a>
@@ -254,9 +256,9 @@
               ></a>
               <div v-if="book" class="targibot">
                 <div class="">
-                  <a href="" class=""
-                    >Bog’cha tarbiyalanuvchilari uchun huquqiy qo’llanmalar</a
-                  >
+                  <nuxt-link to="/library" class=""
+                    >Bog’cha tarbiyalanuvchilari uchun huquqiy qo’llanmalar
+                  </nuxt-link>
                   <a href="" class=""
                     >Maktab o’quvchilari uchun huquqiy qo’llanmalar</a
                   >
