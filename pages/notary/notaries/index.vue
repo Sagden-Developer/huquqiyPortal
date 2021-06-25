@@ -81,7 +81,7 @@
   margin-right: auto;
   border-radius: 24px;
   margin-top: 26px;
-  .box {
+  .box\ {
     width: 1300px;
     margin: 0 auto;
     padding: 15px 0;
