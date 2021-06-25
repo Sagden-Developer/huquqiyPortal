@@ -13,9 +13,9 @@
               Bosh sahifa /
             </nuxt-link>
             <nuxt-link to="/notary" style="color: black; text-decoration: none">
-             Notariat /
+              Notariat /
             </nuxt-link>
-             Niyazimetov Ruslan Bahodirovich
+              Niyazimetov Ruslan Bahodirovich
           </p>
         </div>
         <div>
@@ -164,8 +164,8 @@
       width: 545px;
       height: 50px;
       border: 0;
-       margin-top: 15px;
-       background: rgba(51, 51, 51, 0.1);
+      margin-top: 15px;
+      background: rgba(51, 51, 51, 0.1);
       border-radius: 10px;
       padding: 10px;
     }

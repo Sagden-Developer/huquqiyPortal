@@ -383,4 +383,7 @@ export default {
     }
   }
 }
+@media (max-width:1300px){
+  
+}
 </style>
