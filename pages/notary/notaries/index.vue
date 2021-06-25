@@ -7,12 +7,15 @@
           <p>
             <nuxt-link
               style="color: black; text-decoration: none"
-              to="/notary"
+              to="/"
               href="#"
             >
-              Bosh sahifa
+              Bosh sahifa /
             </nuxt-link>
-            / Notariat / Natariuslar boyicha ma'lumot
+            <nuxt-link to="/notary" style="color: black; text-decoration: none">
+             Notariat /
+            </nuxt-link>
+             Niyazimetov Ruslan Bahodirovich
           </p>
         </div>
         <div>
@@ -30,30 +33,43 @@
         </div>
       </div>
       <div class="right">
-        <v-container fluid>
-          <v-row align="center">
-            <v-select :items="items2" label="Notarial idora" solo></v-select>
+        <form>
+          <select>
+              <option value="volvo">Viloyat/Shahar</option>
+              <option value="saab">Toshkent</option>
+              <option value="mercedes">Samarand</option>
+              <option value="audi">Sirdaryo</option>
+              <option value="audi">Buxoro</option>
+          </select>
+          <br>
+           <select>
+              <option value="volvo">Tuman</option>
+              <option value="saab">Mirzo Ulug'bek</option>
+              <option value="mercedes">Yunusobat</option>
+              <option value="audi">Chilonzor</option>
+              <option value="audi">Mirobot</option>
+          </select>
+          <br>
+           <select>
+              <option value="volvo">Notarial idora</option>
+              <option value="saab">Saab</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+          </select>
+        </form>
 
-            <v-select :items="items3" label="Tuman" solo></v-select>
-
-            <v-select :items="items" label="Viloyat / Shaxar" solo></v-select>
-          </v-row>
-        </v-container>
+        <div class="box">
+          <img src="@/assets/image/repeat.png" alt="">
+          <a href="#">Filterni tozalash</a>
+          <button>Izlash</button>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      items: ["Notarial idora", "Bar", "Fizz", "Buzz"],
-      items2: ["Viloyat / Shaxar", "Bar", "Fizz", "Buzz"],
-      items3: ["Tuman", "Bar", "Fizz", "Buzz"],
-    };
-  },
-};
+
 </script>
 
 <style lang="scss">
@@ -72,7 +88,7 @@ export default {
     margin-top: 42px;
     display: flex;
     img {
-      margin-left: 450px;
+      margin-left: 400px;
       width: 158px;
     }
     h4 {
@@ -113,6 +129,7 @@ export default {
       img {
         margin-top: 40px;
         margin-left: 10%;
+        width: 427px;
       }
     }
     img {
@@ -121,12 +138,13 @@ export default {
     }
     input {
       width: 545px;
-      height: 60px;
+      height: 50px;
       background: rgba(51, 51, 51, 0.1);
       border-radius: 8px;
       border: 0;
       padding: 15px 20px;
       font-size: 16px;
+      margin-top: 5px;
       // margin-top: 43px;
       // margin-left: 43px;
     }
@@ -136,22 +154,48 @@ export default {
     }
   }
   .right {
-    width: 50%;
-    padding: 10px;
-    margin-top: 22px;
-    .v-input__slot {
-        width: 550px;
-      background: rgba(51, 51, 51, 0.1) !important;
-      height: 60px !important;
-      box-shadow: none !important;
-      border-radius: 8px !important;
-    //   margin-top: 8px;
-      margin-bottom: 0;
+    // width: 50%;
+    // padding: 10px;
+    // margin-top: 22px;
+  form{
+    margin-top: 20px;
+    
+    select{
+      width: 545px;
+      height: 50px;
+      border: 0;
+       margin-top: 15px;
+       background: rgba(51, 51, 51, 0.1);
+      border-radius: 10px;
+      padding: 10px;
     }
-
-    .v-col {
-      padding: 0 !important;
+  }
+  .box{
+    margin-top: 25px;
+    margin-left: auto;
+    margin-left: 250px;
+    a{
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      text-decoration: none;
+      color: #597BA3;
     }
+    img{
+      width: 20px;
+      margin-right: 10px;
+    }
+    button{
+      width: 93px;
+      height: 42px;
+      background: #597BA3;
+      border-radius: 10px;
+      border: 0;
+      color: #fff;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+  }
   }
 }
 </style>    
