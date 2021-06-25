@@ -404,7 +404,9 @@ h2.logo-text {
     background: #fff;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
+    transition: .5s;
     div {
+    transition: .5s;
       display: flex;
       flex-direction: column;
       a {

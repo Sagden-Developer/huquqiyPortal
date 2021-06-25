@@ -33,41 +33,41 @@ export default {
           sectionIcon: require("@/assets/img/section/notariant.svg"),
           sectionTitle: "Notariant",
           to: "/notary",
-          iimgAlt: "notariant-icon",
+          iimgAlt: "notariant-icon"
         },
         {
           sectionIcon: require("@/assets/img/section/advokat.svg"),
           sectionTitle: "Advokatura",
           to: "/phone",
-          iimgAlt: "advokatura-icon",
+          iimgAlt: "advokatura-icon"
         },
         {
           sectionIcon: require("@/assets/img/section/yurudik.svg"),
           sectionTitle: "Yuridik ta'lim",
           to: "https://saytlar.uz",
-          iimgAlt: "yurudik-talim-icon",
+          iimgAlt: "yurudik-talim-icon"
         },
         {
           sectionIcon: require("@/assets/img/section/lugat.svg"),
           sectionTitle: "Yuridik lug'at",
           to: "/dictionary",
-          iimgAlt: "yurudik-lugat-icon",
+          iimgAlt: "yurudik-lugat-icon"
         },
         {
           sectionIcon: require("@/assets/img/section/dxa.svg"),
           sectionTitle: "DXA",
           to: "https://xmn.tuit.com",
-          iimgAlt: "dxa-icon",
+          iimgAlt: "dxa-icon"
         },
         {
           sectionIcon: require("@/assets/img/section/advokat.svg"),
           sectionTitle: "FXDYO",
           to: "https://moodle.tuit.com",
-          iimgAlt: "fxdyo-icon",
-        },
-      ],
+          iimgAlt: "fxdyo-icon"
+        }
+      ]
     };
-  },
+  }
 };
 </script>
 
@@ -104,7 +104,7 @@ export default {
         flex-wrap: nowrap;
         flex-direction: column;
         background-color: #fff;
-        
+
         transition: 0.3s linear;
         text-decoration: none;
         &:hover {
@@ -159,8 +159,8 @@ export default {
   }
 }
 @media (min-width: 576px) and (max-width: 950px) {
- * #sections[data-v-29d191d0] {
-    padding: 0px 30px 60px 30px  !important;
+  * #sections[data-v-29d191d0] {
+    padding: 0px 30px 60px 30px !important;
   }
   .section-list-group {
     width: 700px !important;
@@ -175,7 +175,7 @@ export default {
   }
 }
 @media (min-width: 350px) and (max-width: 576px) {
-* #sections[data-v-29d191d0] {
+  * #sections[data-v-29d191d0] {
     margin: 0 auto !important;
     padding: 65px 5px !important;
   }

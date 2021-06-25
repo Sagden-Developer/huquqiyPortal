@@ -131,6 +131,7 @@ export default {
 #video {
   .slick-slide {
     transition: 1s;
+    width: 515px !important;
   }
   .slick-center {
     iframe {
