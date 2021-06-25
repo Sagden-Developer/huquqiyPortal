@@ -344,7 +344,7 @@ export default {
     dateFormat(date) {
       let date1 = dateformat(date, "isoDate");
       date1 = date1.split("-").reverse();
-      date1 = [date1[1], date1[0], date1[2]];
+      // date1 = [date1[1], date1[0], date1[2]];
       date1 = date1.join(".");
       return date1;
     },

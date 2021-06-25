@@ -39,5 +39,24 @@ export const actions = {
             commit("CARDS_FAILURE");
         });
     },
+    PLUS_HELPFULL_CARD({ commit, dispatch }) {
+        commit('HOMES_REQUEST');
+        this.$axios.$get('/material/all').then((res) => {
+            dispatch('GET_CARDS');
+        }).catch((err) => {
+
+            commit("CARDS_FAILURE");
+        });
+    },
+
+    MINUS_HELPFULL_CARD({ commit, dispatch }) {
+        commit('HOMES_REQUEST');
+        this.$axios.$get('/material/all').then((res) => {
+            dispatch('GET_CARDS');
+        }).catch((err) => {
+
+            commit("CARDS_FAILURE");
+        });
+    }
 
 }

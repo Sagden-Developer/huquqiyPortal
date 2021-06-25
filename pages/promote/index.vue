@@ -1,11 +1,17 @@
 <template>
   <div>
     <div class="boxs">
-      <div class="box"> 
+      <div class="box">
         <h4>Qonunlar bo’yicha targ’ibot materiallari</h4>
         <p>
-          <nuxt-link style="color: white; text-decoration: none" to="/" href="#"> Bosh sahifa </nuxt-link> / Targ’ibot
-          materiallari
+          <nuxt-link
+            style="color: white; text-decoration: none"
+            to="/"
+            href="#"
+          >
+            Bosh sahifa
+          </nuxt-link>
+          / Targ’ibot materiallari
         </p>
       </div>
     </div>
@@ -72,7 +78,7 @@
               @click="
                 $router.push({
                   path: `/promote/${material._id}`,
-                  query: { id: material }
+                  query: { id: material },
                 })
               "
             >
@@ -90,17 +96,19 @@ import dateformat from "dateformat";
 export default {
   methods: {
     dateFormat(date) {
-      return dateformat(date, "isoDate");
-    }
+      let date1 = dateformat(date, "isoDate");
+      date1 = date1.split("-").reverse();
+      date1 = date1.join(".");
+      return date1;
+    },
   },
   beforeCreate() {
     this.$store.dispatch("card/GET_CARDS");
-  }
+  },
 };
 </script>
 
 <style lang="scss">
-
 .boxs {
   background: #597ba3;
   width: 1340px;

@@ -197,7 +197,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 #law {
   width: 1300px;
   height: 1533px; //1518 agar tagidagi chiziq z-index bn bosa
