@@ -6,12 +6,7 @@
           <div class="section-text title-text">{{ sectionTitle }}</div>
           <div class="section-list-group">
             <div v-for="(item, index) in sectionItem" :key="index">
-              <nuxt-link
-                :to="item.to"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="section-list-box"
-              >
+              <nuxt-link :to="item.to" class="section-list-box">
                 <img :src="item.sectionIcon" :alt="item.iimgAlt" />
                 <div class="section-title-text">{{ item.sectionTitle }}</div>
               </nuxt-link>
@@ -129,7 +124,7 @@ export default {
   }
 }
 
-@media (min-width: 1400px) and (max-width: 1920px) {
+@media (min-width: 1500px) and (max-width: 1920px) {
   * {
     box-sizing: border-box;
     margin: auto;

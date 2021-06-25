@@ -5,10 +5,10 @@
         <div>
           <h4 style="">Notariat</h4>
         <p>
-          <nuxt-link style="color: black; text-decoration: none" to="/notary" href="#"> Bosh sahifa </nuxt-link>  /  Notariat
+          <nuxt-link style="color: black; text-decoration: none" to="/" href="#"> Bosh sahifa </nuxt-link>  /  Notariat
         </p>
         </div>
-        <div style="margin-left: 250px">
+        <div class="group">
                 <img src="@/assets/image/Group 1116.png" alt=""> 
             </div>
         
@@ -19,7 +19,7 @@
        <div class="natarius">
          <nuxt-link style="color: black; text-decoration: none"  to="/notary/notaries">
          <div>
-        <img src="@/assets/image/Vector (2).png" alt="">
+        <img src="@/assets/image/Group 1117.png" alt="">
         <h5>Notariuslar boyicha ma'lumot</h5>
       </div>
          </nuxt-link>
@@ -28,13 +28,13 @@
 
       <div class="natarius" style="margin-left: 30px">
       <div>
-        <img src="@/assets/image/Vector (4).png" alt="">
+        <img src="@/assets/image/logoo.png" alt="">
         <h5>Notarial harakatlar turi</h5>
       </div>
     </div>  
     </div>
    
-     </div>
+     </div> 
 </template>
 
 
@@ -57,10 +57,13 @@
     margin: 0 auto;
     padding: 15px 0;
     display: flex;
-    img{
-      // margin-left: 650px;
-        width: 158px;
+    .group{
+      img{
+       margin-left: 650px;
+        width: 148px;
     }
+    }
+    
     h4 {
       font-size: 24px;
       line-height: 29px;
@@ -85,14 +88,16 @@
     margin-left: 280px;
     .natarius{
     width: 450px;
-    height: 180px;
-    background-color: #C4C4C4;
+    height: 200px;
+    background-color: #fff;
     margin-top: 81px;
-        margin-bottom: 445px;
+    margin-bottom: 100px;
 
     img{
-       margin-left: 191px;
+      width: 93px;
+      margin-left: 165px;
        margin-top: 20px;
+       
     }
     h5{
         text-align: center;

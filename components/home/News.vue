@@ -296,7 +296,7 @@ export default {
   // }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1500px) {
   #news-section {
     position: relative;
     width: 1430px;

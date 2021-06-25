@@ -234,7 +234,7 @@ export default {
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1500px) {
   .ebook {
     width: 1700px;
     margin: 70px auto;
