@@ -52,7 +52,7 @@ export const actions = {
     },
     GET_QUERY_PHONES({ commit }, query) {
         commit('PHONES_REQUEST');
-        this.$axios.$get(`/helpline/filter/${query}`).then((res) => {
+        this.$axios.$get(`/helpline/search?text=${query}`).then((res) => {
             console.log(res.data);
             commit('PHONES_SUCCESS', res.data);
         }).catch((err) => {
@@ -60,6 +60,17 @@ export const actions = {
             commit("PHONES_FAILURE");
         });
     },
+    GET_BY_CATALOG_PHONES({ commit }, id) {
+        commit('PHONES_REQUEST');
+        this.$axios.$get(`/helpline/all?category=${id}`).then((res) => {
+            console.log(res.data);
+            commit('PHONES_SUCCESS', res.data);
+        }).catch((err) => {
+
+            commit("PHONES_FAILURE");
+        });
+    },
+    
     GET_PHONE_CATALOGS({ commit }) {
         commit('PHONES_REQUEST');
         this.$axios.$get('/phones-catalog/all').then((res) => {
