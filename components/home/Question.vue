@@ -6,15 +6,10 @@
           <div class="question-text title-text">{{ questionTitle }}</div>
           <div class="question-list-group">
             <div v-for="(item, index) in questionItem" :key="index">
-              <a
-                :href="item.href"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="question-list-box"
-              >
+              <nuxt-link :to="item.to" class="question-list-box">
                 <img :src="item.questionIcon" :alt="item.iimgAlt" />
                 <div class="question-title-text">{{ item.questionTitle }}</div>
-              </a>
+              </nuxt-link>
             </div>
           </div>
         </div>
@@ -32,114 +27,114 @@ export default {
         {
           questionIcon: require("@/assets/img/question/mehnat.svg"),
           questionTitle: "Mehnat munosabatlari",
-          href: "https://yandex.ru",
-          iimgAlt: "mehnat-icon",
+          to: "/",
+          iimgAlt: "mehnat-icon"
         },
         {
           questionIcon: require("@/assets/img/question/oilaviy.svg"),
           questionTitle: "Oilaviy munosabatlar",
-          href: "https://yandex.ru",
-          iimgAlt: "oilaviy-icon",
+          to: "/",
+          iimgAlt: "oilaviy-icon"
         },
         {
           questionIcon: require("@/assets/img/question/komunal.svg"),
           questionTitle: "Uy-joy va kommunal masalalar",
-          href: "https://yandex.ru",
-          iimgAlt: "komunal-icon",
+          to: "/",
+          iimgAlt: "komunal-icon"
         },
         {
           questionIcon: require("@/assets/img/question/fuqarolik.svg"),
           questionTitle: "Fuqarolik / Migratsiya",
-          href: "https://yandex.ru",
-          iimgAlt: "fuqarolik-icon",
+          to: "https://yandex.ru",
+          iimgAlt: "fuqarolik-icon"
         },
         {
           questionIcon: require("@/assets/img/question/sogliq.svg"),
           questionTitle: "Sog’liqni saqlash",
-          href: "https://yandex.ru",
-          iimgAlt: "sogliq-icon",
+          to: "https://yandex.ru",
+          iimgAlt: "sogliq-icon"
         },
         {
           questionIcon: require("@/assets/img/question/himoya.svg"),
           questionTitle: "Ijtimoiy himoya",
-          href: "https://yandex.ru",
-          iimgAlt: "himoya-icon",
+          to: "https://yandex.ru",
+          iimgAlt: "himoya-icon"
         },
         {
           questionIcon: require("@/assets/img/question/talim.svg"),
           questionTitle: "Ta’lim",
-          href: "https://yandex.ru",
-          iimgAlt: "talim-icon",
+          to: "https://yandex.ru",
+          iimgAlt: "talim-icon"
         },
         {
           questionIcon: require("@/assets/img/question/sud.svg"),
           questionTitle: "Sud-huquq masalalari",
-          href: "https://yandex.ru",
-          iimgAlt: "sud-icon",
+          to: "https://yandex.ru",
+          iimgAlt: "sud-icon"
         },
         {
           questionIcon: require("@/assets/img/question/yer.svg"),
           questionTitle: "Yer masalalari",
-          href: "https://yandex.ru",
-          iimgAlt: "yer-icon",
+          to: "https://yandex.ru",
+          iimgAlt: "yer-icon"
         },
         {
           questionIcon: require("@/assets/img/question/tadbirkorlik.svg"),
           questionTitle: "Tadbirkorlik",
-          href: "https://yandex.ru",
-          iimgAlt: "tadbirkorlik-icon",
+          to: "/",
+          iimgAlt: "tadbirkorlik-icon"
         },
         {
           questionIcon: require("@/assets/img/question/soliq.svg"),
           questionTitle: "Soliqlar",
-          href: "https://yandex.ru",
-          iimgAlt: "soliq-icon",
+          to: "/",
+          iimgAlt: "soliq-icon"
         },
         {
           questionIcon: require("@/assets/img/question/bank.svg"),
           questionTitle: "Bank sohasi",
-          href: "https://yandex.ru",
-          iimgAlt: "bank-icon",
+          to: "/",
+          iimgAlt: "bank-icon"
         },
         {
           questionIcon: require("@/assets/img/question/davxiz.svg"),
           questionTitle: "Davlat hizmatlari",
-          href: "https://yandex.ru",
-          iimgAlt: "davlat-xizmatlari-icon",
+          to: "/",
+          iimgAlt: "davlat-xizmatlari-icon"
         },
         {
           questionIcon: require("@/assets/img/question/transport.svg"),
           questionTitle: "Transport",
-          href: "https://yandex.ru",
-          iimgAlt: "transport-icon",
+          to: "/",
+          iimgAlt: "transport-icon"
         },
         {
           questionIcon: require("@/assets/img/question/istemolchi.svg"),
           questionTitle: "Istemolchi huquqi",
-          href: "https://yandex.ru",
-          iimgAlt: "istemolchi-icon",
+          to: "/",
+          iimgAlt: "istemolchi-icon"
         },
         {
           questionIcon: require("@/assets/img/question/chetel.svg"),
           questionTitle: "Chet elliklarga eslatma",
-          href: "https://yandex.ru",
-          iimgAlt: "chet-el-icon",
+          to: "/",
+          iimgAlt: "chet-el-icon"
         },
         {
           questionIcon: require("@/assets/img/question/qishloq.svg"),
           questionTitle: "Qishloq ho’jaligi",
-          href: "https://yandex.ru",
-          iimgAlt: "qishloq-icon",
+          to: "/",
+          iimgAlt: "qishloq-icon"
         },
         {
           questionIcon: require("@/assets/img/question/malumot.svg"),
           questionTitle: "Ma’lumotlar",
-          href: "https://yandex.ru",
-          iimgAlt: "malumot-icon",
-        },
-      ],
+          to: "/",
+          iimgAlt: "malumot-icon"
+        }
+      ]
     };
-  },
+  }
 };
 </script>
 

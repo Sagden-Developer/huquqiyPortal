@@ -394,6 +394,7 @@ h2.logo-text {
   .targibot-link {
     cursor: pointer;
   }
+  
   .targibot {
     position: absolute;
     z-index: 22;
