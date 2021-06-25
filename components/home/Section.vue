@@ -3,12 +3,14 @@
     <div id="sections">
       <div class="container">
         <div class="sections-body">
-          <div class="section-text title-text">{{ sectionTitle }}</div>
+          <div class="section-text title-text">
+            {{ sectionTitle[`${$i18n.locale}`] }}
+          </div>
           <div class="section-list-group">
             <div v-for="(item, index) in sectionItem" :key="index">
               <nuxt-link :to="item.to" class="section-list-box">
                 <img :src="item.sectionIcon" :alt="item.iimgAlt" />
-                <div class="section-title-text">{{ item.sectionTitle }}</div>
+                <div class="section-title-text">{{ item.sectionTitle[`${$i18n.locale}`] }}</div>
               </nuxt-link>
             </div>
           </div>
@@ -22,41 +24,74 @@
 export default {
   data() {
     return {
-      sectionTitle: "Bo'limlar",
+      sectionTitle: {
+        uz: "Bo'limlar",
+        kr: "Бўлимлар",
+        ru: "Разделы"
+      },
+
       sectionItem: [
         {
           sectionIcon: require("@/assets/img/section/notariant.svg"),
-          sectionTitle: "Notariant",
+          sectionTitle: {
+            uz: "Notariant",
+            kr: "Нотариат",
+            ru: "Нотариат"
+          },
           to: "/notary",
           iimgAlt: "notariant-icon"
         },
         {
           sectionIcon: require("@/assets/img/section/advokat.svg"),
-          sectionTitle: "Advokatura",
+          sectionTitle: {
+            uz: "Advokatura",
+            kr: "Адвокатура",
+            ru: "Адвокатура"
+          },
           to: "/phone",
           iimgAlt: "advokatura-icon"
         },
         {
           sectionIcon: require("@/assets/img/section/yurudik.svg"),
-          sectionTitle: "Yuridik ta'lim",
+          sectionTitle: {
+            uz: "Yuridik ta'lim",
+            kr: "Юридик таълим",
+            ru: "Юридическое образование"
+          },
+
           to: "https://saytlar.uz",
           iimgAlt: "yurudik-talim-icon"
         },
         {
           sectionIcon: require("@/assets/img/section/lugat.svg"),
-          sectionTitle: "Yuridik lug'at",
+          sectionTitle: {
+            uz: "Yuridik lug'at",
+            kr: "Юридик таълим",
+            ru: "Юридическое образование"
+          },
+
           to: "/dictionary",
           iimgAlt: "yurudik-lugat-icon"
         },
         {
           sectionIcon: require("@/assets/img/section/dxa.svg"),
-          sectionTitle: "DXA",
+          sectionTitle: 
+          {
+            uz:  "DXA",
+            kr: "ДХА",
+            ru: "СГБ"
+          },
+         
           to: "https://xmn.tuit.com",
           iimgAlt: "dxa-icon"
         },
         {
           sectionIcon: require("@/assets/img/section/advokat.svg"),
-          sectionTitle: "FXDYO",
+          sectionTitle:  {
+            uz:  "FXDYO",
+            kr: "ФХДЁ",
+            ru: "ГИБДД"
+          }, 
           to: "https://moodle.tuit.com",
           iimgAlt: "fxdyo-icon"
         }

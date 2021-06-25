@@ -152,7 +152,7 @@ $bg-color: #d9e6eb;
     width: 1300px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     padding: 15px 0;
     
     h4 {
@@ -174,14 +174,14 @@ $bg-color: #d9e6eb;
 
 @media (min-width: 1400px) and (max-width: 1920px) {
   .boxs {
-    background: $bg-color !important;
-    width: 1700px !important;
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 24px;
-    margin-top: 26px;
-    padding-left: 145px;
+    // background: $bg-color !important;
+    // width: 1700px !important;
+    // height: 200px;
+    // margin-left: auto;
+    // margin-right: auto;
+    // border-radius: 24px;
+    // margin-top: 26px;
+    // padding-left: 145px;
     .box {
       padding: 15px 0;
       width: auto;

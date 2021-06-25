@@ -4,16 +4,16 @@
       <div id="slider">
         <div class="slide-texts">
           <div class="head-text">
-            <h1 class="title-text">Huquqiy portal</h1>
+            <h1 class="title-text">{{ $t("legal") }}</h1>
           </div>
           <div class="info-text">
             <h2>
-              O’zbekiston Respublikasi Milliy Huquqiy informatsion portali
+              {{ $t("national_info") }} 
             </h2>
           </div>
         </div>
         <div class="search-button">
-          <input type="text" :placeholder="placeholder" />
+          <input type="text" :placeholder="$t('search')" />
           <button class="search-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@
           </button>
         </div>
         <div class="tag-section">
-          <div class="tag-text">Teglar</div>
+          <div class="tag-text">{{ $t("tegs") }}</div>
           <img :src="tagIcon" alt="" class="tag-icon" />
         </div>
         <div class="tags">
@@ -49,7 +49,7 @@
             class="tag-links"
             v-for="(index, tagLink) in tagLinks"
             :key="tagLink"
-            :value="index.title"
+            :value="index.title[`${$i18n.locale}`]"
           />
         </div>
       </div>
@@ -63,14 +63,38 @@ export default {
     return {
       placeholder: "Izlash",
       tagLinks: [
-        { title: "Advakatura" },
-        { title: "Notariant" },
-        { title: "Ishonch raqamlari" },
-        { title: "Onlayn Huquqiy maslahatlar" },
+        {
+          title: {
+            uz: "Advakatura",
+            ru: "Адвокатура",
+            kr: "Адвокатура"
+          }
+        },
+        {
+          title: {
+            uz: "Notariant",
+            ru: "Нотариус",
+            kr: "Нотариант"
+          }
+        },
+        {
+          title: {
+            uz: "Ishonch raqamlari",
+            ru: "Номера доверия",
+            kr: "Ишонч рақамлари"
+          }
+        },
+        {
+          title: {
+            uz: "Onlayn Huquqiy maslahatlar",
+            ru: "Онлайн юридические консультации",
+            kr: "Онлайн Ҳуқуқий маслаҳатлар"
+          }
+        }
       ],
-      tagIcon: require("@/assets/img/tag.svg"),
+      tagIcon: require("@/assets/img/tag.svg")
     };
-  },
+  }
 };
 </script>
 
@@ -200,7 +224,7 @@ export default {
       font-size: 16px;
       line-height: 29px;
       margin-bottom: 42px;
-      width:485px;
+      width: 485px;
     }
     .search-button {
       position: relative;

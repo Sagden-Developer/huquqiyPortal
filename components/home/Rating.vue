@@ -4,9 +4,9 @@
       <div class="container">
         <div class="title title-text">
           <p class="title-text">
-            Huquqiy targ’ibotni baholash tizimi bo’yicha reyting
+            {{ $t('pointsystem')}}
           </p>
-          <button>To'liq reyting</button>
+          <button> {{ $t('bigrating')}} </button>
         </div>
         <div class="rating-body">
           <div class="left" style="width: 65%">
@@ -26,7 +26,7 @@
                     'width:' + 'calc( ' + item.rating + '%' + ' - 60px );'
                   "
                 >
-                  <p>{{ item.text }}</p>
+                  <p>{{ item.text[`${$i18n.locale}`] }}</p>
                   <h4>
                     {{ item.rating }}
                   </h4>
@@ -51,24 +51,44 @@ export default {
     return {
       ratingItem: [
         {
-          rating: 78.3,
-          text: "Moliya vazirligi",
+          rating: 95,
+          text: {
+            uz: "Moliya vazirligi",
+            kr: "Молия вазирлиги",
+            ru: "Министерство финансов",
+          } 
         },
         {
-          rating: 93.1,
-          text: "Sog'liqni saqlash vazirligi",
+          rating: 92.4,
+          text: {
+            uz: "Sog'liqni saqlash vazirligi",
+            kr: "Соғлиқни сақлаш вазирлиги",
+            ru: "Министерство Здравоохранения",
+          }  
         },
         {
-          rating: 100,
-          text: "Qurilish vazirligi",
+          rating: 86,
+          text: {
+            uz: "Qurilish vazirligi",
+            kr: "Қурилиш вазирлиги",
+            ru: "Министерство строительства",
+          }  
         },
         {
-          rating: 78,
-          text: "Mudofaa vazirligi",
+          rating: 83,
+          text: {
+            uz: "Mudofaa vazirligi",
+            kr: "Мудофаа вазирлиги",
+            ru: "Министерство обороны",
+          }  
         },
         {
-          rating: 85,
-          text: "Xalq ta'limi vazirligi",
+          rating: 75,
+          text: {
+            uz: "Xalq ta'limi vazirligi",
+            kr: "Халқ таълими вазирлиги",
+            ru: "Министерство народного образования",
+          } 
         },
       ],
     };

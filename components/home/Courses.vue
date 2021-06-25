@@ -4,9 +4,11 @@
       <div class="cours-container">
         <div class="course-head">
           <div class="head-text">
-            <h3>Bepul onlayn kurslar</h3>
+            <h3>{{ $t("freecourse") }} </h3>
           </div>
-          <button type="submit" class="allCourse">Barcha Kurslar</button>
+          <button type="submit" class="allCourse">
+            {{ $t("allcourse") }}
+          </button>
         </div>
         <div class="course-card">
           <div class="card-box" v-for="(card, index) in cards" :key="index">
@@ -19,7 +21,7 @@
                 height="215"
               />
               <div class="video-title-content">
-                <div class="video-title">{{ card.cardTitle }}</div>
+                <div class="video-title">{{ card.cardTitle[`${$i18n.locale}`] }}</div>
                 <div class="video-info">
                   <div class="rating">
                     <img
@@ -36,7 +38,9 @@
             </a>
           </div>
         </div>
-        <button type="submit" class="allCourseNone">Barcha Kurslar</button>
+        <button type="submit" class="allCourseNone">
+          {{ $t("allcourse") }}Barcha Kurslar
+        </button>
       </div>
     </div>
   </div>
@@ -50,54 +54,78 @@ export default {
         {
           cardIcon: require("@/assets/img/course/ipoteka.svg"),
           starIcon: require("@/assets/img/course/star.svg"),
-          cardTitle: "Ipoteka kredit olish",
+          cardTitle: {
+            uz: "Ipoteka kredit olish",
+            kr: "Ипотека кредит олиш",
+            ru: "Получение ипотечного кредита"
+          },
           href: "https://yandex.ru",
           imgAlt: "ipoteka-icon",
-          time: "2 soat 35 daqiqa",
+          time: "2 soat 35 daqiqa"
         },
         {
           cardIcon: require("@/assets/img/course/tadbirkor.svg"),
           starIcon: require("@/assets/img/course/star.svg"),
-          cardTitle: "Tadbirkorlikda biznesni boshlash",
+          cardTitle: {
+            uz: "Tadbirkorlikda biznesni boshlash",
+            kr: "Тадбиркорликда бизнесни бошлаш",
+            ru: "Начало бизнеса в предпринимательстве"
+          },
           href: "https://yandex.ru",
           imgAlt: "tadbirkorlik-icon",
-          time: "2 soat 35 daqiqa",
+          time: "2 soat 35 daqiqa"
         },
         {
           cardIcon: require("@/assets/img/course/imtiyoz.svg"),
           starIcon: require("@/assets/img/course/star.svg"),
-          cardTitle: "Nogironligi bo’lgan shaxslarga im...",
+          cardTitle: {
+            uz: "Nogironligi bo’lgan shaxslarga im...",
+            kr: "Ногиронлиги бо’лган шахсларга им...",
+            ru: "Лицам, имеющим инвалидность"
+          },
           href: "https://yandex.ru",
           imgAlt: "imtiyoz-icon",
-          time: "2 soat 35 daqiqa",
+          time: "2 soat 35 daqiqa"
         },
         {
           cardIcon: require("@/assets/img/course/mehnat.svg"),
           starIcon: require("@/assets/img/course/star.svg"),
-          cardTitle: "Mehnat huquqi",
+          cardTitle: {
+            uz: "Mehnat huquqi",
+            kr: "Меҳнат ҳуқуқи",
+            ru: "Трудовое право"
+          },
           href: "https://yandex.ru",
           imgAlt: "mehnat-icon",
-          time: "2 soat 35 daqiqa",
+          time: "2 soat 35 daqiqa"
         },
         {
           cardIcon: require("@/assets/img/course/bogcha.svg"),
           starIcon: require("@/assets/img/course/star.svg"),
-          cardTitle: "Farzandni bog’chaga berish",
+          cardTitle: {
+            uz: "Farzandni bog’chaga berish",
+            kr: "Фарзандни бог’чага бериш",
+            ru: "Отдача ребенка в детский сад"
+          },
           href: "https://yandex.ru",
           imgAlt: "bogcha-icon",
-          time: "2 soat 35 daqiqa",
+          time: "2 soat 35 daqiqa"
         },
         {
           cardIcon: require("@/assets/img/course/oila.svg"),
           starIcon: require("@/assets/img/course/star.svg"),
-          cardTitle: "Nikoh va oila munosabatlari",
+          cardTitle: {
+            uz: "Nikoh va oila munosabatlari",
+            kr: "Никоҳ ва оила муносабатлари",
+            ru: "Брак и семейные отношения"
+          },
           href: "https://yandex.ru",
           imgAlt: "oila-icon",
-          time: "2 soat 35 daqiqa",
-        },
-      ],
+          time: "2 soat 35 daqiqa"
+        }
+      ]
     };
-  },
+  }
 };
 </script>
 
@@ -168,7 +196,7 @@ h3 {
           -moz-box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
           box-shadow: 0px 5px 50px 2px rgba(34, 60, 80, 0.2);
         }
-        img.star{
+        img.star {
           width: 100%;
         }
         a {
@@ -284,7 +312,7 @@ h3 {
           }
           a {
             text-decoration: none;
-            .star{
+            .star {
               width: 100%;
               height: 250px;
               margin-top: -5px;
@@ -302,7 +330,6 @@ h3 {
                 align-items: center;
                 img {
                   margin-right: 9px;
-                  
                 }
               }
               .time {
@@ -367,7 +394,7 @@ h3 {
   }
 }
 @media (min-width: 350px) and (max-width: 575px) {
-  h3[data-v-03a69523]{
+  h3[data-v-03a69523] {
     margin-top: 40px;
   }
   .allCourse {
