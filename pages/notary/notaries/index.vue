@@ -331,7 +331,6 @@ export default {
 
   #inputs{
     width: 1300px;
-    border: 1px solid;
      margin: 0 auto;
      padding: 35px 30px 100px 30px;
      .boxs {
@@ -441,9 +440,11 @@ export default {
       }
   }
   .box{
-    margin-top: 25px;
-    margin-left: auto;
-    margin-left: 250px;
+    width: 595px;
+    height: 75px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     a{
       font-weight: 500;
       font-size: 18px;
