@@ -1,190 +1,89 @@
 <template>
   <div>
-    <div class="category">
-      <div class="part1">
+    <div class="boxs">
+      <div class="box">
+        <h4>Qonunlar bo’yicha targ’ibot materiallari</h4>
+        <p>
+          <nuxt-link
+            style="color: white; text-decoration: none"
+            to="/"
+            href="#"
+          >
+            Bosh sahifa
+          </nuxt-link>
+          / Targ’ibot materiallari
+        </p>
+      </div>
+    </div>
 
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-3">
-        <div class="box">
-          <img src="../img/person.jpg" alt="" class="img">
-          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
-          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
-          <div class="pict">
-            <img src="../img/stars.png" alt="">
-            <button><img src="../img/arrow.png" alt=""></button>
+    <div class="cards">
+      <div
+        class="cardx"
+        v-for="material in $store.state.card.cards"
+        :key="material._id"
+      >
+        <div class="img">
+          <div class="imgs">
+            <img
+              v-for="(image, i) in material.files"
+              :key="i"
+              :src="`http://ass.tujjor.org/${image.path}`"
+              alt=""
+            />
           </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="box">
-          <img src="../img/person1.jpg" alt="" class="img">
-          <h3>Xalilova Saodat Nortajiyevna</h3>
-          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
-          <div class="pict">
-            <img src="../img/stars.png" alt="">
-            <button><img src="../img/arrow.png" alt=""></button>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="box">
-          <img src="../img/person2.jpg" alt="" class="img">
-          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
-          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
-          <div class="pict">
-            <img src="../img/stars.png" alt="">
-            <button><img src="../img/arrow.png" alt=""></button>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="box">
-          <img src="../img/person3.png" alt="" class="img">
-          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
-          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
-          <div class="pict">
-            <img src="../img/stars.png" alt="">
-            <button><img src="../img/arrow.png" alt=""></button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-3">
-        <div class="box">
-          <img src="../img/person4.jpg" alt="" class="img">
-          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
-          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
-          <div class="pict">
-            <img src="../img/stars.png" alt="">
-            <button><img src="../img/arrow.png" alt=""></button>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="box">
-          <img src="../img/person5.jpg" alt="" class="img">
-          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
-          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
-          <div class="pict">
-            <img src="../img/stars.png" alt="">
-            <button><img src="../img/arrow.png" alt=""></button>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="box">
-          <img src="../img/person6.jpg" alt="" class="img">
-          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
-          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
-          <div class="pict">
-            <img src="../img/stars.png" alt="">
-            <button><img src="../img/arrow.png" alt=""></button>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="box">
-          <img src="../img/person7.jpg" alt="" class="img">
-          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
-          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
-          <div class="pict">
-            <img src="../img/stars.png" alt="">
-            <button><img src="../img/arrow.png" alt=""></button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-3">
-        <div class="box">
-          <img src="../img/person8.jpg" alt="" class="img">
-          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
-          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
-          <div class="pict">
-            <img src="../img/stars.png" alt="">
-            <button><img src="../img/arrow.png" alt=""></button>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="box">
-          <img src="../img/person9.jpg" alt="" class="img">
-          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
-          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
-          <div class="pict">
-            <img src="../img/stars.png" alt="">
-            <button><img src="../img/arrow.png" alt=""></button>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="box">
-          <img src="../img/person10.jpg" alt="" class="img">
-          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
-          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
-          <div class="pict">
-            <img src="../img/stars.png" alt="">
-            <button><img src="../img/arrow.png" alt=""></button>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="box">
-          <img src="../img/person11.jpg" alt="" class="img">
-          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
-          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
-          <div class="pict">
-            <img src="../img/stars.png" alt="">
-            <button><img src="../img/arrow.png" alt=""></button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-3">
-        <div class="box">
-          <img src="../img/person12.jpg" alt="" class="img">
-          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
-          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
-          <div class="pict">
-            <img src="../img/stars.png" alt="">
-            <button><img src="../img/arrow.png" alt=""></button>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="box">
-          <img src="../img/person13.jpg" alt="" class="img">
-          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
-          <p>Toshkent shaxar Shayxontoxur <br> tumanidagi xususiy amaliyot bilan <br> shug‘ullanuvchi notarius</p>
-          <div class="pict">
-            <img src="../img/stars.png" alt="">
-            <button><img src="../img/arrow.png" alt=""></button>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="box">
-          <img src="../img/person14.jpg" alt="" class="img">
-          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
-          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
-          <div class="pict">
-            <img src="../img/stars.png" alt="">
-            <button><img src="../img/arrow.png" alt=""></button>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="box">
-          <img src="../img/person15.jpg" alt="" class="img">
-          <h3>Niyazimbetov Ruslan Bahodirovich</h3>
-          <p>Qoraqolpog‘iston Respublikasi <br> Amudaryo tumanida xususiy <br> amaliyot bilan shug‘ullanuvchi <br> notarius</p>
-          <div class="pict">
-            <img src="../img/stars2.png" alt="" class="star">
-            <button><img src="../img/arrow.png" alt=""></button>
+
+          <div class="circle">
+            <div>
+              <h5>{{ material.title.uz }}</h5>
+              <div class="normativ" style="display: flex">
+                <p>{{ dateFormat(material.date) }}</p>
+                <p style="margin-left: 35px">
+                  <svg
+                    style="margin-right: 10px"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                  >
+                    <g clip-path="url(#clip0)">
+                      <path
+                        d="M0.916504 11C0.916504 11 4.58317 3.66669 10.9998 3.66669C17.4165 3.66669 21.0832 11 21.0832 11C21.0832 11 17.4165 18.3334 10.9998 18.3334C4.58317 18.3334 0.916504 11 0.916504 11Z"
+                        stroke="#8D8D8D"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11 13.75C12.5188 13.75 13.75 12.5188 13.75 11C13.75 9.48122 12.5188 8.25 11 8.25C9.48122 8.25 8.25 9.48122 8.25 11C8.25 12.5188 9.48122 13.75 11 13.75Z"
+                        stroke="#8D8D8D"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0">
+                        <rect width="22" height="22" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </p>
+                <p style="margin-left: 5px">{{ material.views }}</p>
+              </div>
+            </div>
+
+            <div
+              class="line"
+              @click="
+                $router.push({
+                  path: `/promote/${material._id}`,
+                  query: { id: material },
+                })
+              "
+            >
+              <p>&#10142;</p>
+            </div>
           </div>
         </div>
       </div>
@@ -193,70 +92,120 @@
 </template>
 
 <script>
+import dateformat from "dateformat";
 export default {
-  data(){
-    return{
-      title:'hello',
-    }
+  methods: {
+    dateFormat(date) {
+      let date1 = dateformat(date, "isoDate");
+      date1 = date1.split("-").reverse();
+      date1 = date1.join(".");
+      return date1;
+    },
   },
-}
+  beforeCreate() {
+    this.$store.dispatch("card/GET_CARDS");
+  },
+};
 </script>
 
-<style scoped>
-  .row{
-    display: flex;
-    flex-wrap: nowrap;
-  }
-  .col-3{
-    width: 25%;
-    flex-basis: 25%;
-    padding: 15px;
-    padding-bottom: 20px;
-  }
-  .box{
-    background-color: #fff;
-    padding: 20px 25px;
-    border-radius: 12px;
-  }
-  .box h3{
-    color: #333333;
-    font-size: 20px;
-    font-weight: 600;
-    text-align: left;
-    margin-bottom: 15px;
-    height: 48px;
-  }
-  .box p{
-    text-align: left;
-    color: #8D8D8D;
-    font-size: 16px;
-    height: 60px;
-  }
-  .box .pict{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 25px;
-  }
-  .pict button{
-    background: #597BA3;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    border: 0;
-  }
-  .box .img{
-    height: 250px;
-    width: 290px;
-  }
-  .pict .star{
-    height: 20px;
-    width: 120px;
-  }
-  @media(max-width:767px){
-    .col-3{
-      width: 50%;
-      flex-basis: 50%;
+<style lang="scss">
+.boxs {
+  background: #597ba3;
+  width: 1340px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 24px;
+  margin-top: 26px;
+  .box {
+    width: 1300px;
+    margin: 0 auto;
+    padding: 15px 0;
+    h4 {
+      font-size: 24px;
+      line-height: 29px;
+      margin-top: 33px;
+      color: #fff;
+      font-weight: 600;
+    }
+    p {
+      font-size: 20px;
+      line-height: 24px;
+      color: #fff;
+      margin-top: 40px;
     }
   }
+}
+.cards {
+  width: 1300px;
+  display: flex;
+  margin: 30px auto;
+}
+.cardx {
+  background: #ffffff;
+  box-shadow: 0px 8px 50px rgba(119, 143, 177, 0.2);
+  border-radius: 12px;
+  width: 620px !important;
+  //height: 290px;
+  // margin-left: 30px;
+  margin: 0 auto;
+  .img {
+    width: 100%;
+    margin-top: 25px;
+    margin-left: 8px;
+    .imgs {
+      margin: 0 auto;
+      width: 100%;
+      img {
+        width: 28%;
+        // margin: 0 auto;
+      }
+    }
+    h5 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      margin-left: 15px;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    p {
+      margin-top: 22px;
+      margin-left: 17px;
+      margin-bottom: 27px;
+    }
+    img {
+      text-align: center;
+      margin: 0 10px 25px 10px;
+      //@at-rootmargin: 25px 10px;
+      // width: 195px;
+    }
+  }
+  .circle {
+    display: flex;
+    justify-content: space-between;
+    .line {
+      width: 60px;
+      height: 60px;
+      background: #597ba3;
+      border-radius: 30px;
+      margin-right: 28px;
+      cursor: pointer;
+      p {
+        margin-top: 18px;
+        margin-left: 22px;
+        color: #fff;
+      }
+    }
+    .normativ {
+      p {
+        color: #8d8d8d;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+}
 </style>
