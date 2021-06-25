@@ -197,11 +197,11 @@
                   <a
                     style="cursor: pointer"
                     @click.prevent="clickLink('promote___')"
-                    >Qonunlar bo’yicha</a
+                    >{{ $t('law')}} </a
                   >
-                  <a href="" class="">Prezident hujjatlari bo’yicha</a>
-                  <a href="" class="">Hukumat qarorlari bo’yicha</a>
-                  <a href="" class="">Boshqa hujjatlar bo’yicha</a>
+                  <a href="" class="">{{ $t('presidentlaw')}}</a>
+                  <a href="" class="">{{ $t('state')}}</a>
+                  <a href="" class="">{{ $t('other')}}</a>
                 </div>
               </div>
             </li>
@@ -224,16 +224,16 @@
               <div v-if="test" class="targibot">
                 <div class="">
                   <a href="" class=""
-                    >Bog’cha tarbiyalanuvchilari uchun testlar</a
+                    >{{ $t('testeducator')}}</a
                   >
                   <a href="" class=""
-                    >Maktab o’qivchilari uchun test sinovlari</a
+                    >{{ $t('testpupil')}}</a
                   >
                   <a href="" class=""
-                    >Davlat organlari hodimlari uchun test sinovlari</a
+                    >{{ $t('testworker')}}</a
                   >
                   <a href="" class=""
-                    >Aholining barcha qatlami uchun test sinovlari</a
+                    >{{ $t('testpeople')}}</a
                   >
                 </div>
               </div>
@@ -257,13 +257,13 @@
               <div v-if="book" class="targibot">
                 <div class="">
                   <nuxt-link to="/library" class=""
-                    >Bog’cha tarbiyalanuvchilari uchun huquqiy qo’llanmalar
+                    >{{ $t('insceducator')}} 
                   </nuxt-link>
                   <a href="" class=""
-                    >Maktab o’quvchilari uchun huquqiy qo’llanmalar</a
+                    >{{ $t('inscpupil')}}</a
                   >
                   <a href="" class=""
-                    >Maktab o’qituvchilari uchun huquqiy qo’llanmalar</a
+                    >{{ $t('inscteacher')}} </a
                   >
                 </div>
               </div>

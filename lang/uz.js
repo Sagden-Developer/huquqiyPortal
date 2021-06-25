@@ -28,6 +28,26 @@ export default {
     map: 'O\'zbekiston Respublikasi, 100047, Toshkent sh., Sayilgoh ko\'chasi, 5',
     mistake: 'Matnda xato topsangiz administratorni xabardor qilish uchun Ctrl + Enter tugmasini bosing',
 
-        
-        
+    // targibot materiallari
+    law: 'Qonunlar bo’yicha',
+    presidentlaw: 'Prezident hujjatlari bo’yicha',
+    state: 'Hukumat qarorlari bo’yicha',
+    other: 'Boshqa hujjatlar bo’yicha',
+
+    // onlayn test
+    testeducator: 'Bog’cha tarbiyalanuvchilari uchun testlar',
+    testpupil: 'Maktab o’qivchilari uchun test sinovlari',
+    testworker: 'Davlat organlari hodimlari uchun test sinovlari',
+    testpeople: 'Aholining barcha qatlami uchun test sinovlari',
+
+    // huquqiy adabiyot
+
+    insceducator: 'Bog’cha tarbiyalanuvchilari uchun huquqiy qo’llanmalar',
+    inscpupil: 'Maktab o’quvchilari uchun huquqiy qo’llanmalar',
+    inscteacher: 'Maktab o’qituvchilari uchun huquqiy qo’llanmalar',
+
+
+
+
+
 }
