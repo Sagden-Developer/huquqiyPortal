@@ -549,6 +549,9 @@ export default {
     width: 200px !important;
   }
 }
+ .news-data{
+   margin-top: 0 !important;
+ }
 @media (min-width: 350px) and (max-width: 576px) {
   .slick-prev,
   .slick-next {

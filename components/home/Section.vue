@@ -6,15 +6,15 @@
           <div class="section-text title-text">{{ sectionTitle }}</div>
           <div class="section-list-group">
             <div v-for="(item, index) in sectionItem" :key="index">
-              <a
-                :href="item.href"
+              <nuxt-link
+                :to="item.to"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="section-list-box"
               >
                 <img :src="item.sectionIcon" :alt="item.iimgAlt" />
                 <div class="section-title-text">{{ item.sectionTitle }}</div>
-              </a>
+              </nuxt-link>
             </div>
           </div>
         </div>
@@ -32,37 +32,37 @@ export default {
         {
           sectionIcon: require("@/assets/img/section/notariant.svg"),
           sectionTitle: "Notariant",
-          href: "https://yandex.ru",
+          to: "/notary",
           iimgAlt: "notariant-icon",
         },
         {
           sectionIcon: require("@/assets/img/section/advokat.svg"),
           sectionTitle: "Advokatura",
-          href: "https://google.com",
+          to: "/phone",
           iimgAlt: "advokatura-icon",
         },
         {
           sectionIcon: require("@/assets/img/section/yurudik.svg"),
           sectionTitle: "Yuridik ta'lim",
-          href: "https://saytlar.uz",
+          to: "https://saytlar.uz",
           iimgAlt: "yurudik-talim-icon",
         },
         {
           sectionIcon: require("@/assets/img/section/lugat.svg"),
           sectionTitle: "Yuridik lug'at",
-          href: "https://tuit.uz",
+          to: "/dictionary",
           iimgAlt: "yurudik-lugat-icon",
         },
         {
           sectionIcon: require("@/assets/img/section/dxa.svg"),
           sectionTitle: "DXA",
-          href: "https://xmn.tuit.com",
+          to: "https://xmn.tuit.com",
           iimgAlt: "dxa-icon",
         },
         {
           sectionIcon: require("@/assets/img/section/advokat.svg"),
           sectionTitle: "FXDYO",
-          href: "https://moodle.tuit.com",
+          to: "https://moodle.tuit.com",
           iimgAlt: "fxdyo-icon",
         },
       ],
@@ -159,6 +159,9 @@ export default {
   }
 }
 @media (min-width: 576px) and (max-width: 950px) {
+ * #sections[data-v-29d191d0] {
+    padding: 0px 30px 60px 30px  !important;
+  }
   .section-list-group {
     width: 700px !important;
     div {
@@ -172,8 +175,7 @@ export default {
   }
 }
 @media (min-width: 350px) and (max-width: 576px) {
-  #section {
-    width: 98% !important;
+* #sections[data-v-29d191d0] {
     margin: 0 auto !important;
     padding: 65px 5px !important;
   }

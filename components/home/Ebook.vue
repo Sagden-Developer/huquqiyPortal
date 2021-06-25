@@ -95,6 +95,7 @@ export default {
               slidesToScroll: 1,
               dots: false,
               draggable: true,
+              arrows: false,
             },
           },
           {

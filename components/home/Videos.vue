@@ -98,7 +98,7 @@ export default {
               touchThreshold: 1000,
               autoplay: false,
               autoplaySpeed: 2000,
-              slidesToShow: 3,
+              slidesToShow: 2.3,
               infinite: true,
               slidesToScroll: 1,
               dots: false,
@@ -111,7 +111,7 @@ export default {
               focusOnSelect: true,
               arrows: false,
               dots: false,
-              slidesToShow: 2.35,
+              slidesToShow: 2.3,
               speed: 1500,
               centerMode: true,
               touchThreshold: 1000,
@@ -245,19 +245,60 @@ export default {
   }
 }
 @media (min-width: 576px) and (max-width: 950px) {
-  .v-head-text {
-    font-size: 20px !important;
-  }
-  .card-video {
-    padding: 60px 0 !important;
+  #video {
+    height: auto;
+      padding-bottom: 45px !important;
+    #carusel-video-box {
+       .slick-current{
+        //  height: 350px !important;
+       }
+      .card-video {
+        height: auto !important;
+        padding: 60px 30px !important;
+      }
+    }
+
+    .slick-list {
+      padding: 0 40px !important;
+    }
+    .v-head-text {
+      font-size: 20px !important;
+    }
+    .card-video {
+      padding: 60px 0 !important;
+    }
   }
 }
 @media (min-width: 350px) and (max-width: 575px) {
-  .v-head-text {
-    font-size: 20px !important;
+   .video-footer-text{
+    p{
+      font-size: 12px !important;
+    }
   }
-  .card-video {
-    padding: 60px 0 !important;
+ #video {
+    height: auto;
+      padding-bottom: 45px !important;
+    #carusel-video-box {
+       .slick-current{
+        //  height: 350px !important;
+       }
+      .card-video {
+        height: auto !important;
+        padding: 60px 30px !important;
+      }
+    }
+
+    .slick-list {
+      padding: 0 40px !important;
+    }
+    .v-head-text {
+      font-size: 20px !important;
+    }
+    .card-video {
+      padding: 60px 0 !important;
+    }
+
   }
+ 
 }
 </style>
