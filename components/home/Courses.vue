@@ -367,6 +367,9 @@ h3 {
   }
 }
 @media (min-width: 350px) and (max-width: 575px) {
+  h3[data-v-03a69523]{
+    margin-top: 40px;
+  }
   .allCourse {
     display: none !important;
   }

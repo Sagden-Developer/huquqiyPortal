@@ -260,6 +260,7 @@ b {
       }
     }
     .right {
+      display: none !important;
       padding: 40px;
       margin-top: 30px;
       width: 100% !important;
@@ -272,6 +273,9 @@ b {
   }
 }
 @media (min-width: 350px) and (max-width: 575px) {
+  .rating{
+    padding: 20px 10px !important;
+  }
   .title-text {
     font-size: 20px !important;
   }
@@ -311,6 +315,7 @@ b {
       }
     }
     .right {
+      display: none !important;
       padding: 40px;
       margin-top: 30px;
       width: 100% !important;

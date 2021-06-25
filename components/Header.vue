@@ -270,7 +270,7 @@
               <a href="#">{{ $t("lan6") }}</a>
             </li>
             <li>
-              <a class="end" href="#">{{ $t("lan7") }}</a>
+              <nuxt-link to="/phone" class="end" href="#">{{ $t("lan7") }}</nuxt-link>
             </li>
           </ul>
         </div>
@@ -724,6 +724,9 @@ h2.logo-text {
 }
 
 @media (min-width: 576px) and (max-width: 950px) {
+  header{
+    margin-top: 29px;
+  }
   .fix-vh {
     position: fixed;
     width: 100%;
@@ -920,7 +923,15 @@ h2.logo-text {
 
     .header {
       width: 90%;
-      margin: 0 auto;
+      margin: 20px auto;
+      .home-link{
+        span{
+          img{
+          width: 41px !important;
+
+          }
+        }
+      }
       .left {
         // width: 35%;
         span {
