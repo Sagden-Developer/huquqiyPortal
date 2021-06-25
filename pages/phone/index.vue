@@ -3,7 +3,7 @@
     <div class="boxs">
       <div class="box">
         <h4>Ishonch raqamlari</h4>
-        <p>
+        <p class="phone-breadcrumbs">
           <nuxt-link style="color: #333; text-decoration: none" to="/" href="#">
             Bosh sahifa
           </nuxt-link>
@@ -90,7 +90,6 @@ export default {
     search: "",
     selectedItem: 0,
     categories: ["Adliya Vazirligi", "Vazirliklar", "Davlat qo’mitalari"],
-    phones:[]
   }),
   computed: {},
   methods: {
@@ -141,7 +140,10 @@ $bg-color: #d9e6eb;
   .box {
     width: 1300px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
     padding: 15px 0;
+    
     h4 {
       font-size: 24px;
       line-height: 29px;
@@ -150,6 +152,7 @@ $bg-color: #d9e6eb;
       font-weight: 600;
     }
     p {
+      display: flex;
       font-size: 20px;
       line-height: 24px;
       color: #fff;

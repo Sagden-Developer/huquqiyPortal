@@ -17,7 +17,7 @@
           type="submit"
           v-for="(button, index) in buttons"
           :key="index"
-          @click="activation(button.id)"
+          @click="activation(button.id, button.title)"
           :class="{ activeBtn: active_el == button.id }"
         >
           {{ button.title }}
@@ -66,7 +66,7 @@
       <!-- Accardion -->
       <div id="accordion" class="accordion-container">
         <div
-          v-for="(category, index) in items"
+          v-for="(category, index) in $store.state.dictionaries.dictionary2"
           :key="index"
           class="accordion accordion__trigger"
           :class="{ accordion_active: visible === index }"
@@ -74,13 +74,13 @@
         >
           <div class="accordion__item">
             <div class="accordion-head">
-              <div>{{ category.title }}</div>
+              <div>{{ category.term.uz }}</div>
               <input type="button" :value="visible === index ? '-' : '+'" />
             </div>
             <div class="accordion__content">
               <div class="menu-sub-list" v-show="visible === index">
                 <div class="sub-list">
-                  <div class="menu-item">{{ category.sub }}</div>
+                  <div class="menu-item">{{ category.description.uz }}</div>
                 </div>
               </div>
             </div>
@@ -190,9 +190,13 @@ export default {
     };
   },
   methods: {
-    activation: function(el) {
+    activation: function(el, char) {
       this.active_el = el;
+      this.$store.dispatch('dictionaries/GET_DICTIONARY2_BY_CHAR', char);
     }
+  },
+  beforeCreate(){
+      this.$store.dispatch('dictionaries/GET_DICTIONARY2', "");
   }
 };
 </script>
