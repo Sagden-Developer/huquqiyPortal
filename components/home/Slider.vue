@@ -4,12 +4,11 @@
       <div id="slider">
         <div class="slide-texts">
           <div class="head-text">
-            <h1 class="title-text">{{ $t("legal") }}Huquqiy portal</h1>
+            <h1 class="title-text">{{ $t("legal") }}</h1>
           </div>
           <div class="info-text">
             <h2>
-              {{ $t("national-info") }} O’zbekiston Respublikasi Milliy Huquqiy
-              informatsion portali
+              {{ $t("national_info") }} 
             </h2>
           </div>
         </div>
@@ -41,7 +40,7 @@
           </button>
         </div>
         <div class="tag-section">
-          <div class="tag-text">{{ $t("national-info") }} Teglar</div>
+          <div class="tag-text">{{ $t("tegs") }}</div>
           <img :src="tagIcon" alt="" class="tag-icon" />
         </div>
         <div class="tags">

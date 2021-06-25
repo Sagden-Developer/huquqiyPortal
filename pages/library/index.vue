@@ -77,7 +77,7 @@
               class="line"
               @click="
                 $router.push({
-                  path: `/promote/${material._id}`,
+                  path: `/library/${material._id}`,
                   query: { id: material }
                 })
               "

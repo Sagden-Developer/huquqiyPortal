@@ -3,12 +3,12 @@
     <div id="question">
       <div class="container">
         <div class="question-body">
-          <div class="question-text title-text">{{ questionTitle }}</div>
+          <div class="question-text title-text">{{ questionTitle[`${$i18n.locale}`] }}</div>
           <div class="question-list-group">
             <div v-for="(item, index) in questionItem" :key="index">
               <nuxt-link :to="item.to" class="question-list-box">
                 <img :src="item.questionIcon" :alt="item.iimgAlt" />
-                <div class="question-title-text">{{ item.questionTitle }}</div>
+                <div class="question-title-text">{{ item.questionTitle[`${$i18n.locale}`] }}</div>
               </nuxt-link>
             </div>
           </div>
@@ -22,113 +22,189 @@
 export default {
   data() {
     return {
-      questionTitle: "Huquqiy muamolar yechimi",
+      questionTitle: {
+        uz: "Huquqiy muamolar yechimi",
+        kr: "Ҳуқуқий муамолар ечими",
+        ru: "Решение правовых проблем"
+      },
       questionItem: [
         {
           questionIcon: require("@/assets/img/question/mehnat.svg"),
-          questionTitle: "Mehnat munosabatlari",
+          questionTitle: {
+            uz: "Mehnat munosabatlari",
+            kr: "Меҳнат муносабатлари",
+            ru: "Трудовые отношения"
+          },
           to: "/",
           iimgAlt: "mehnat-icon"
         },
         {
           questionIcon: require("@/assets/img/question/oilaviy.svg"),
-          questionTitle: "Oilaviy munosabatlar",
+          questionTitle: {
+            uz: "Oilaviy munosabatlar",
+            kr: "Оилавий муносабатлар",
+            ru: "Семейные отношения"
+          },
           to: "/",
           iimgAlt: "oilaviy-icon"
         },
         {
           questionIcon: require("@/assets/img/question/komunal.svg"),
-          questionTitle: "Uy-joy va kommunal masalalar",
+          questionTitle: {
+            uz: "Uy-joy va kommunal masalalar",
+            kr: "Уй-жой ва коммунал масалалар",
+            ru: "Жилищно-коммунальные вопросы"
+          },
           to: "/",
           iimgAlt: "komunal-icon"
         },
         {
           questionIcon: require("@/assets/img/question/fuqarolik.svg"),
-          questionTitle: "Fuqarolik / Migratsiya",
+          questionTitle: {
+            uz: "Fuqarolik / Migratsiya",
+            kr: "Фуқаролик / Мигратсия",
+            ru: "Гражданство / Миграция"
+          },
           to: "https://yandex.ru",
           iimgAlt: "fuqarolik-icon"
         },
         {
           questionIcon: require("@/assets/img/question/sogliq.svg"),
-          questionTitle: "Sog’liqni saqlash",
+          questionTitle: {
+            uz: "Sog’liqni saqlash",
+            kr: "Ҳуқуқий муамолар ечими",
+            ru: "Решение правовых проблем"
+          },
           to: "https://yandex.ru",
           iimgAlt: "sogliq-icon"
         },
         {
           questionIcon: require("@/assets/img/question/himoya.svg"),
-          questionTitle: "Ijtimoiy himoya",
+          questionTitle: {
+            uz: "Ijtimoiy himoya",
+            kr: "Ижтимоий ҳимоя",
+            ru: "Социальная защита"
+          },
           to: "https://yandex.ru",
           iimgAlt: "himoya-icon"
         },
         {
           questionIcon: require("@/assets/img/question/talim.svg"),
-          questionTitle: "Ta’lim",
+          questionTitle: {
+            uz: "Ta’lim",
+            kr: "Та’лим",
+            ru: "Образование"
+          },
           to: "https://yandex.ru",
           iimgAlt: "talim-icon"
         },
         {
           questionIcon: require("@/assets/img/question/sud.svg"),
-          questionTitle: "Sud-huquq masalalari",
+          questionTitle: {
+            uz: "Sud-huquq masalalari",
+            kr: "Суд-ҳуқуқ масалалари",
+            ru: "Судебно-правовые вопросы"
+          },
           to: "https://yandex.ru",
           iimgAlt: "sud-icon"
         },
         {
           questionIcon: require("@/assets/img/question/yer.svg"),
-          questionTitle: "Yer masalalari",
+          questionTitle: {
+            uz: "Yer masalalari",
+            kr: "Ҳуқуқий муамолар ечими",
+            ru: "Решение правовых проблем"
+          },
           to: "https://yandex.ru",
           iimgAlt: "yer-icon"
         },
         {
           questionIcon: require("@/assets/img/question/tadbirkorlik.svg"),
-          questionTitle: "Tadbirkorlik",
+          questionTitle: {
+            uz: "Tadbirkorlik",
+            kr: "Тадбиркорлик",
+            ru: "Предпринимательство"
+          },
           to: "/",
           iimgAlt: "tadbirkorlik-icon"
         },
         {
           questionIcon: require("@/assets/img/question/soliq.svg"),
-          questionTitle: "Soliqlar",
+          questionTitle: {
+            uz: "Soliqlar",
+            kr: "Солиқлар",
+            ru: "Налоги"
+          },
           to: "/",
           iimgAlt: "soliq-icon"
         },
         {
           questionIcon: require("@/assets/img/question/bank.svg"),
-          questionTitle: "Bank sohasi",
+          questionTitle: {
+            uz: "Bank sohasi",
+            kr: "Банк соҳаси",
+            ru: "Банковская сфера"
+          },
           to: "/",
           iimgAlt: "bank-icon"
         },
         {
           questionIcon: require("@/assets/img/question/davxiz.svg"),
-          questionTitle: "Davlat hizmatlari",
+          questionTitle: {
+            uz: "Davlat hizmatlari",
+            kr: "Давлат ҳизматлари",
+            ru: "Государственные услуги"
+          },
           to: "/",
           iimgAlt: "davlat-xizmatlari-icon"
         },
         {
           questionIcon: require("@/assets/img/question/transport.svg"),
-          questionTitle: "Transport",
+          questionTitle: {
+            uz: "Transport",
+            kr: "Транспорт",
+            ru: "Транспорт"
+          },
           to: "/",
           iimgAlt: "transport-icon"
         },
         {
           questionIcon: require("@/assets/img/question/istemolchi.svg"),
-          questionTitle: "Istemolchi huquqi",
+          questionTitle: {
+            uz: "Istemolchi huquqi",
+            kr: "Истемолчи ҳуқуқи",
+            ru: "Права истца"
+          },
           to: "/",
           iimgAlt: "istemolchi-icon"
         },
         {
           questionIcon: require("@/assets/img/question/chetel.svg"),
-          questionTitle: "Chet elliklarga eslatma",
+          questionTitle: {
+            uz: "Chet elliklarga eslatma",
+            kr: "Чет елликларга еслатма",
+            ru: "Примечание для иностранцев"
+          },
           to: "/",
           iimgAlt: "chet-el-icon"
         },
         {
           questionIcon: require("@/assets/img/question/qishloq.svg"),
-          questionTitle: "Qishloq ho’jaligi",
+          questionTitle: {
+            uz: "Qishloq ho’jaligi",
+            kr: "Қишлоқ ҳо’жалиги",
+            ru: "Сельское хозяйство"
+          },
           to: "/",
           iimgAlt: "qishloq-icon"
         },
         {
           questionIcon: require("@/assets/img/question/malumot.svg"),
-          questionTitle: "Ma’lumotlar",
+          questionTitle: {
+            uz: "Ma’lumotlar",
+            kr: "Ма’лумотлар",
+            ru: "Данные"
+          },
           to: "/",
           iimgAlt: "malumot-icon"
         }

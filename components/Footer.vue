@@ -7,7 +7,7 @@
             <nuxt-link to="/" class="logotip">
               <img src="@/assets/image/adliya-logo.png" alt="" />
               <p>
-                O’zbekiston Respublikasi Milliy Huquqiy Portali
+                {{ $t('lan')}}
               </p>
             </nuxt-link>
           </div>
@@ -128,13 +128,13 @@
                   fill="#ABABAB"
                 />
               </svg>
-              2021 O’zbekiston Respublikasi Adliya Vazirligi
+              2021 {{ $t('adliya')}} 
             </p>
-            <p>Barcha huquqlar himoyalangan</p>
+            <p>{{ $t('all_legal')}} </p>
           </div>
         </div>
         <div class="footer-center">
-          <h2>Aloqa uchun</h2>
+          <h2>{{ $t('forcall')}}</h2>
 
           <ul>
             <li>
@@ -208,13 +208,13 @@
                   stroke-linejoin="round"
                 />
               </svg>
-              O'zbekiston Respublikasi, 100047, Toshkent sh., Sayilgoh ko'chasi,
-              5
+              {{ $t('map')}} 
+              
             </li>
           </ul>
           <div class="f-text">
-            <p>2021 O’zbekiston Respublikasi Adliya Vazirligi</p>
-            <p>Barcha huquqlar himoyalangan</p>
+            <p>2021 {{ $t('adliya')}}</p>
+            <p>{{ $t('all_legal')}}</p>
           </div>
           <div class="by">
             <p>Design by</p>
@@ -223,8 +223,8 @@
         </div>
         <div class="footer-right">
           <p class="matn">
-            Matnda xato topsangiz administratorni xabardor qilish uchun Ctrl +
-            Enter tugmasini bosing
+            {{ $t('mistake')}}
+           
           </p>
           <div class="by">
             <p>Design by</p>
