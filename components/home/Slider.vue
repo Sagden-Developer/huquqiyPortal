@@ -164,7 +164,7 @@ export default {
     }
   }
 }
-@media (min-width: 1400px) and (max-width: 1920px) {
+@media (min-width: 1500px) and (max-width: 1920px) {
   #slider {
     // max-width: 1240px;
     // height: 550px;
