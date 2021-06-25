@@ -410,8 +410,8 @@ export default {
       width: 545px;
       height: 50px;
       border: 0;
-       margin-top: 15px;
-       background: rgba(51, 51, 51, 0.1);
+      margin-top: 15px;
+      background: rgba(51, 51, 51, 0.1);
       border-radius: 10px;
       padding: 10px;
       
