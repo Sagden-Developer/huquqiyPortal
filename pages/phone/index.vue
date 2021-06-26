@@ -98,12 +98,8 @@ import dateformat from "dateformat";
 export default {
    head() {
     return {
-      title: "Ishonch raqamlari",
-      // {
-      //   uz: "Yuridik lug'at",
-      //   kr: "Dictionary",
-      //   ru: "Dictionary"
-      // },
+      title: this.$t('lan7'),
+     
    
       htmlAttrs: {
         lang: this.$i18n.locale

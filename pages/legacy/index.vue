@@ -91,11 +91,7 @@ export default {
   head() {
     return {
       title: "Bog’cha tarbiyalanuvchilari uchun huquqiy qo’llanmalar",
-      // {
-      //   uz: "Yuridik lug'at",
-      //   kr: "Dictionary",
-      //   ru: "Dictionary"
-      // },
+      
    
       htmlAttrs: {
         lang: this.$i18n.locale

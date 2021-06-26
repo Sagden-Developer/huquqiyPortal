@@ -79,7 +79,7 @@ export default {
           {
             uz:  "DXA",
             kr: "ДХА",
-            ru: "СГБ"
+            ru: "СГA"
           },
          
           to: "https://xmn.tuit.com",
@@ -109,6 +109,7 @@ export default {
     max-width: 100%;
     // height: 529px;
     padding: 60px 30px;
+    padding-top: 15px;
     padding-bottom: 75px;
     .section-text {
       font-style: normal;

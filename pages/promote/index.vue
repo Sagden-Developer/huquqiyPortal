@@ -2,16 +2,16 @@
   <div>
     <div class="boxs">
       <div class="box">
-        <h4>Qonunlar bo’yicha targ’ibot materiallari</h4>
+        <h4>{{ $t("tarqonun") }}</h4>
         <p>
           <nuxt-link
             style="color: white; text-decoration: none"
             to="/"
             href="#"
           >
-            Bosh sahifa
+            {{ $t("head") }}
           </nuxt-link>
-          / Targ’ibot materiallari
+          / {{ $t("lan2") }}
         </p>
       </div>
     </div>
@@ -86,15 +86,11 @@
 <script>
 import dateformat from "dateformat";
 export default {
-   head() {
+  head() {
     return {
-      title: "Qonunlar bo’yicha targ’ibot materiallari",
-      // {
-      //   uz: "Yuridik lug'at",
-      //   kr: "Dictionary",
-      //   ru: "Dictionary"
-      // },
-   
+      title:  this.$t('tarqonun'),
+     
+
       htmlAttrs: {
         lang: this.$i18n.locale
       },
@@ -117,17 +113,17 @@ export default {
     },
     addViewAndRoute(material) {
       this.$store.dispatch("card/PLUS_VIEW_CARD", material._id).then(() => {
-        material.views+=1;
+        material.views += 1;
         this.$router.push({
           path: `/promote/${material._id}`,
-          query: { id: material },
+          query: { id: material }
         });
       });
-    },
+    }
   },
   beforeCreate() {
     this.$store.dispatch("card/GET_CARDS");
-  },
+  }
 };
 </script>
 

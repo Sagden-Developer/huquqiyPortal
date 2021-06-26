@@ -46,6 +46,17 @@ export default {
     inscpupil: 'Maktab o’quvchilari uchun huquqiy qo’llanmalar',
     inscteacher: 'Maktab o’qituvchilari uchun huquqiy qo’llanmalar',
 
+    ////
+    
+    head: 'Bosh sahifa',
+    tarqonun: 'Qonunlar bo’yicha targ’ibot materiallari',
+
+
+    //titles
+    titlenotary: "Notariat",
+    titlenotaries: "Natariuslar bo'yicha ma'lumot",
+    dictionary_yur: "Yuridik lug’at",
+
 
 
 

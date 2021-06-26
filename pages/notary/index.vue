@@ -49,12 +49,8 @@
 export default {
    head() {
     return {
-      title: "Notariat",
-      // {
-      //   uz: "Yuridik lug'at",
-      //   kr: "Dictionary",
-      //   ru: "Dictionary"
-      // },
+      title: this.$t('titlenotary') ,
+      
    
       htmlAttrs: {
         lang: this.$i18n.locale

@@ -17,7 +17,7 @@
             <nuxt-link to="/notary" style="color: black; text-decoration: none">
              Notariat / 
             </nuxt-link>
-             Natariuslar bo'yicha ma'lumod
+             Natariuslar bo'yicha ma'lumot
           </p>
         </div>
         <div>
@@ -265,12 +265,7 @@
 export default {
    head() {
     return {
-      title: "Notariat",
-      // {
-      //   uz: "Yuridik lug'at",
-      //   kr: "Dictionary",
-      //   ru: "Dictionary"
-      // },
+      title: this.$t('titlenotaries'),
    
       htmlAttrs: {
         lang: this.$i18n.locale

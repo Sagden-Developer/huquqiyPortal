@@ -250,7 +250,10 @@
               ></a>
               <div v-if="book" class="targibot">
                 <div class="">
-                  <a class="" @click.prevent="clickLink('library___')"
+                  <a
+                    style="cursor: pointer"
+                    class=""
+                    @click.prevent="clickLink2('library___')"
                     >{{ $t("insceducator") }}
                   </a>
                   <a href="" class="">{{ $t("inscpupil") }}</a>
@@ -267,9 +270,13 @@
               <a href="#">{{ $t("lan6") }}</a>
             </li>
             <li>
-              <nuxt-link to="/phone" class="end" href="#">{{
-                $t("lan7")
-              }}</nuxt-link>
+              <a
+                style="cursor: pointer"
+                @click.prevent="clickLinkPhone('phone___')"
+                class="end"
+                href="#"
+                >{{ $t("lan7") }}</a
+              >
             </li>
           </ul>
         </div>
@@ -325,6 +332,16 @@ export default {
   methods: {
     clickLink(url) {
       this.targibot = false;
+      this.$router.push({ name: url + this.$i18n.locale });
+    },
+    clickLink2(url) {
+      this.book = false;
+      this.$router.push({ name: url + this.$i18n.locale });
+    },
+    clickLinkPhone(url) {
+      this.targibot = false;
+      this.book = false;
+      this.test = false;
       this.$router.push({ name: url + this.$i18n.locale });
     },
     bookList() {

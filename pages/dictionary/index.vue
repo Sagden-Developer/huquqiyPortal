@@ -96,6 +96,24 @@
 
 <script>
 export default {
+   head() {
+    return {
+      title:  this.$t('dictionary_yur') ,
+      
+   
+      htmlAttrs: {
+        lang: this.$i18n.locale
+      },
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: "description",
+          name: "description",
+          content: "My custom description"
+        }
+      ]
+    };
+  },
   data() {
     return {
       search: "",
