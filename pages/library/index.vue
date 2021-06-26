@@ -2,7 +2,7 @@
   <div>
     <div class="boxs">
       <div class="box">
-        <h4>Qonunlar bo’yicha targ’ibot materiallari</h4>
+        <h4>Bog’cha tarbiyalanuvchilari uchun huquqiy qo’llanmalar</h4>
         <p>
           <nuxt-link
             style="color: white; text-decoration: none"
