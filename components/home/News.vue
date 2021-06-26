@@ -2,8 +2,8 @@
   <div>
     <div id="news-section">
       <div class="news-header">
-        <h2 class="title-text"> {{title[`${$i18n.locale}`]}}</h2>
-        <button class="btn" type="submit">{{ $t('allnews') }}</button>
+        <h2 class="title-text">{{ title[`${$i18n.locale}`] }}</h2>
+        <button class="btn" type="submit">{{ $t("allnews") }}</button>
       </div>
       <Carousel v-bind="settings" v-if="$store.state.home.news.length">
         <div
@@ -23,22 +23,22 @@
             <div class="news-text">
               <div class="text-head">
                 <h3>
-                  {{ mainNews.title }}
+                  {{ mainNews.title[$i18n.locale] }}
                 </h3>
               </div>
               <div class="text-info">
-                <h6 v-html="mainNews.article"></h6>
+                <h6 v-html="mainNews.article[$i18n.locale]"></h6>
                 <nuxt-link to="/">Batafsil >></nuxt-link>
               </div>
               <div class="news-data">
                 <div class="info">
                   <div class="data">
                     <img :src="icons.dataIcon" alt="" />
-                    <div>02.06.2021</div>
+                    <div>{{dateFormat(mainNews.createdAt)}}</div>
                   </div>
                   <div class="views">
                     <img :src="icons.viewIcon" alt="" />
-                    <div>528</div>
+                    <div>{{mainNews.views}}</div>
                   </div>
                 </div>
               </div>
@@ -51,6 +51,7 @@
 </template>
 
 <script>
+import dateformat from "dateformat";
 export default {
   data() {
     return {
@@ -62,7 +63,7 @@ export default {
       newsImg: require("@/assets/images/news.jpg"),
       icons: {
         dataIcon: require("@/assets/images/calendar.svg"),
-        viewIcon: require("@/assets/images/eye.svg")
+        viewIcon: require("@/assets/images/eye.svg"),
       },
       settings: {
         dots: true,
@@ -80,13 +81,21 @@ export default {
             settings: {
               slidesToScroll: 1,
               dots: false,
-              draggable: true
-            }
-          }
-        ]
-      }
+              draggable: true,
+            },
+          },
+        ],
+      },
     };
-  }
+  },
+  methods: {
+    dateFormat(date) {
+      let date1 = dateformat(date, "isoDate");
+      date1 = date1.split("-").reverse();
+      date1 = date1.join(".");
+      return date1;
+    },
+  },
 };
 </script>
 
@@ -242,7 +251,6 @@ export default {
               justify-content: space-around;
             }
           }
-        
         }
       }
     }
@@ -551,9 +559,9 @@ export default {
     width: 200px !important;
   }
 }
- .news-data{
-   margin-top: 0 !important;
- }
+.news-data {
+  margin-top: 0 !important;
+}
 @media (min-width: 350px) and (max-width: 576px) {
   .slick-prev,
   .slick-next {
