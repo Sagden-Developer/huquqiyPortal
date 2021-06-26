@@ -209,6 +209,9 @@ export default {
   * #sections[data-v-29d191d0] {
     margin: 0 auto !important;
     padding: 65px 5px !important;
+    .section-text{
+      padding: 0 5px;
+    }
   }
   .section-list-group {
     // width: 50%;

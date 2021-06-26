@@ -274,7 +274,7 @@
           </ul>
         </div>
         <div class="izlash-two">
-          <input type="text" :placeholder="$t('lan8')" />
+          <input type="text" :placeholder="$t('search')" />
           <button class="search-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -106,7 +106,7 @@ export default {
               touchThreshold: 1000,
               autoplay: false,
               autoplaySpeed: 2000,
-              slidesToShow: 2.3,
+              slidesToShow: 2,
               infinite: true,
               slidesToScroll: 1,
               dots: false,
@@ -119,7 +119,7 @@ export default {
               focusOnSelect: true,
               arrows: false,
               dots: false,
-              slidesToShow: 2.3,
+              slidesToShow: 1,
               speed: 1500,
               centerMode: true,
               touchThreshold: 1000,
@@ -250,24 +250,40 @@ export default {
   }
 }
 @media (min-width: 576px) and (max-width: 950px) {
+  .video-footer-text {
+    p {
+      font-size: 12px !important;
+    }
+  }
   #video {
     height: auto;
+    padding: 10px;
     padding-bottom: 45px !important;
     #carusel-video-box {
       .card-video {
+        width: 300px !important;
         height: auto !important;
-        padding: 60px 30px !important;
+        padding: 0 10px !important;
       }
     }
 
     .slick-list {
-      padding: 0 40px !important;
+      // padding: 0 40px !important;
     }
     .v-head-text {
       font-size: 20px !important;
     }
-    .card-video {
-      padding: 60px 0 !important;
+
+    .slick-slide {
+      width: auto !important;
+    }
+    .slick-current {
+      transform: scale(1) !important;
+      pointer-events: all !important;
+      iframe {
+        // pointer-events: all !important;
+        pointer-events: auto !important;
+      }
     }
   }
 }
@@ -279,22 +295,33 @@ export default {
   }
   #video {
     height: auto;
-    padding-bottom: 45px !important;
+    padding: 10px;
+    // padding-bottom: 45px !important;
     #carusel-video-box {
       .card-video {
+        width: 294px !important;
         height: auto !important;
-        padding: 60px 30px !important;
+        padding: 0 10px !important;
       }
     }
 
     .slick-list {
-      padding: 0 40px !important;
+      // padding: 0 40px !important;
     }
     .v-head-text {
       font-size: 20px !important;
     }
-    .card-video {
-      padding: 60px 0 !important;
+
+    .slick-slide {
+      width: auto !important;
+    }
+    .slick-current {
+      transform: scale(1) !important;
+      pointer-events: all !important;
+      iframe {
+        // pointer-events: all !important;
+        pointer-events: auto !important;
+      }
     }
   }
 }
