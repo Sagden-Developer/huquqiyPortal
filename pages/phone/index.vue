@@ -99,19 +99,9 @@ import dateformat from "dateformat";
 export default {
   head() {
     return {
-<<<<<<< HEAD
       title: this.$t('lan7'),
      
    
-=======
-      title: "Ishonch raqamlari",
-      // {
-      //   uz: "Yuridik lug'at",
-      //   kr: "Dictionary",
-      //   ru: "Dictionary"
-      // },
-
->>>>>>> 82d0319fd4befe4174bd5c573f0e79c67c63864f
       htmlAttrs: {
         lang: this.$i18n.locale,
       },
