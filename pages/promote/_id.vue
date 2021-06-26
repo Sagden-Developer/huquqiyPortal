@@ -5,7 +5,8 @@
         <h4>Qonunlar bo’yicha targ’ibot materiallari</h4>
         <p>
           <nuxt-link to="/" href="#"> Bosh sahifa </nuxt-link> /
-          <nuxt-link href="" to="/promote">Targ’ibot materiallari </nuxt-link> / Normativ hujjat nomi
+          <nuxt-link href="" to="/promote">Targ’ibot materiallari </nuxt-link> /
+          Normativ hujjat nomi
         </p>
       </div>
     </div>
@@ -57,8 +58,16 @@
           <h3>Maqola foydali bo’ldimi?</h3>
           <br />
           <div>
-            <button @click="$store.dispatch('card/MINUS_HELPFULL_CARD', material._id)">Yo'q</button>
-            <button @click="$store.dispatch('card/PLUS_HELPFULL_CARD', material._id)">Ha</button>
+            <button
+              @click="$store.dispatch('card/MINUS_HELPFULL_CARD', material._id)"
+            >
+              Yo'q
+            </button>
+            <button
+              @click="$store.dispatch('card/PLUS_HELPFULL_CARD', material._id)"
+            >
+              Ha
+            </button>
           </div>
         </div>
       </div>
@@ -331,22 +340,19 @@
 
 <script>
 import dateformat from "dateformat";
-export default {
-  
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
 .banner {
-  background: #D9E6EB;
-  width: 1340px;
+  background: #d9e6eb;
+  width: 1300px;
   height: 200px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 24px;
   margin-top: 26px;
   .content {
-    width: 1300px;
     margin: 0 auto;
     padding: 15px;
     h4 {
@@ -493,7 +499,7 @@ export default {
         position: relative;
         overflow: hidden;
         border-radius: 12px;
-        transition: .5s ease !important;
+        transition: 0.5s ease !important;
 
         .shadow {
           position: absolute;
@@ -526,7 +532,6 @@ export default {
         img {
           width: 100%;
         }
-      
       }
       .one:hover .shadow {
         display: block;

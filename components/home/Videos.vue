@@ -267,9 +267,7 @@ export default {
       }
     }
 
-    .slick-list {
-      // padding: 0 40px !important;
-    }
+   
     .v-head-text {
       font-size: 20px !important;
     }
@@ -305,9 +303,7 @@ export default {
       }
     }
 
-    .slick-list {
-      // padding: 0 40px !important;
-    }
+    
     .v-head-text {
       font-size: 20px !important;
     }

@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="not">
-      <div class="container">
+    <div class="container">
+      <div class="not">
         <div class="part1">
           <h3>Notariant</h3>
           <div class="text">
-            <h4>Bosh sahifa/</h4>
-            <h4>Notariat/</h4>
+            <nuxt-link to="/">Bosh sahifa/</nuxt-link>
+            <nuxt-link to="/notary">Notariat/</nuxt-link>
             <h4>Niyazimbetov Ruslan Bahodirovich</h4>
           </div>
         </div>
@@ -50,7 +50,7 @@
               +99861-515-20-32 +99897-220-02-24
             </div>
             <img src="~assets/img/stars.png" alt="" />
-            <button>
+            <button class="btn">
               <svg
                 width="22"
                 height="22"
@@ -113,48 +113,47 @@
 export default {
   data() {
     return {
-      title: "hello",
+      title: "hello"
     };
-  },
+  }
 };
 </script>
 
 <style scoped>
-.container {
-  width: 1410px;
-  margin: auto;
-}
-.not .container {
-  width: 1410px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .not {
+  margin-top: 35px;
   background-color: #d9e6eb;
-  padding-top: 30px;
-  padding-bottom: 30px;
   align-items: center;
   border-radius: 24px;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
 }
-.part1 h3 {
+.part1 a {
   font-size: 24px;
   color: #333333;
   font-weight: bold;
-  margin-bottom: 30px;
 }
 .text {
   display: flex;
+  margin-top: 40px;
 }
-.text h4 {
+.text a, h4 {
+  text-decoration: none;
   margin-right: 7px;
   font-size: 20px;
   font-weight: 500;
+  font-family: Montserrat;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+
+color: #333333;
 }
 .person {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  margin-top: 40px;
+  margin-bottom: 65px;
 }
 .info {
   display: flex;
@@ -208,8 +207,9 @@ export default {
   padding-right: 25px;
   display: flex;
   align-items: center;
-  background: #07a287;
+  background: #597ba3;
   border-radius: 50px;
+  cursor: pointer;
   border: 0;
   color: #fff;
   font-size: 18px;
