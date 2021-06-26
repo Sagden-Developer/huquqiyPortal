@@ -53,7 +53,6 @@
               <div class="phone-organization">Tashkilotlar nomi</div>
               <div class="phone-number">Telefon raqami</div>
             </div>
-            {{ $store.state.phones.phones }}
             <div class="table-body">
               <div
                 class="phone-catalog"
@@ -71,7 +70,9 @@
                   </div>
                   <div class="phone-number">{{ item.number }}</div>
                 </div>
-                -
+                <div v-if="phone.child.length==0" class="not-foundPhone">
+                  Hech nima topilmadi
+                </div>
               </div>
             </div>
           </div>
@@ -86,7 +87,7 @@
           "
           @click="setSelectedCatalog(catalog, index)"
         >
-          {{ catalog.name.uz }}
+          {{ catalog.name[`${$i18n.locale}`] }}
         </p>
       </div>
     </div>
@@ -96,22 +97,32 @@
 <script>
 import dateformat from "dateformat";
 export default {
-   head() {
+  head() {
     return {
+<<<<<<< HEAD
       title: this.$t('lan7'),
      
    
+=======
+      title: "Ishonch raqamlari",
+      // {
+      //   uz: "Yuridik lug'at",
+      //   kr: "Dictionary",
+      //   ru: "Dictionary"
+      // },
+
+>>>>>>> 82d0319fd4befe4174bd5c573f0e79c67c63864f
       htmlAttrs: {
-        lang: this.$i18n.locale
+        lang: this.$i18n.locale,
       },
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
           hid: "description",
           name: "description",
-          content: "My custom description"
-        }
-      ]
+          content: "My custom description",
+        },
+      ],
     };
   },
   data: () => ({
@@ -130,7 +141,7 @@ export default {
       this.$store.dispatch("phones/GET_BY_CATALOG_PHONES", catalog._id);
     },
     getPhones(phones, catalogId) {
-      return phones.filter(phone => {
+      return phones.filter((phone) => {
         return phone.catalog._id == catalogId;
       });
     },
@@ -143,7 +154,7 @@ export default {
       // } else {
       //   return this.$store.state.phones.phones;
       // }
-    }
+    },
   },
   created() {
     this.phones = this.$store.state.phones.phones;
@@ -151,11 +162,17 @@ export default {
   beforeCreate() {
     this.$store.dispatch("phones/GET_PHONES");
     this.$store.dispatch("phones/GET_PHONE_CATALOGS");
-  }
+  },
 };
 </script>
 
 <style lang="scss">
+.not-foundPhone{
+  text-align: center;
+  margin-top: 17px;
+  font-size: 18px;
+  font-weight: 600;
+}
 $text-color: #333333;
 $bg-color: #d9e6eb;
 .boxs {
