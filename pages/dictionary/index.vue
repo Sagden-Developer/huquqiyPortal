@@ -26,9 +26,9 @@
       </div>
       <div class="search-content">
         <div class="search-btns">
-          <input type="text" />
+          <input type="text" v-model="search" />
           <div class="search-button">
-            <button type="submit">
+            <button type="submit" @click="searchByText()">
               Izlash
               <div class="search-icon">
                 <svg
@@ -75,13 +75,13 @@
         >
           <div class="accordion__item">
             <div class="accordion-head">
-              <div>{{ category.term.uz }}</div>
+              <div>{{ category.term[$i18n.locale] }}</div>
               <input type="button" :value="visible === index ? '-' : '+'" />
             </div>
             <div class="accordion__content">
               <div class="menu-sub-list" v-show="visible === index">
                 <div class="sub-list">
-                  <div class="menu-item">{{ category.description.uz }}</div>
+                  <div class="menu-item">{{ category.description[$i18n.locale] }}</div>
                 </div>
               </div>
             </div>
@@ -98,6 +98,7 @@
 export default {
   data() {
     return {
+      search: "",
       isActive: false,
       items: [
         {
@@ -195,6 +196,9 @@ export default {
     activation: function(el, char) {
       this.active_el = el;
       this.$store.dispatch('dictionaries/GET_DICTIONARY2_BY_CHAR', char);
+    },
+    searchByText(){
+      this.$store.dispatch('dictionaries/GET_DICTIONARY2', this.search);
     }
   },
   beforeCreate(){
