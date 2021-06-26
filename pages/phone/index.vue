@@ -164,7 +164,7 @@ export default {
 .not-foundPhone{
   text-align: center;
   margin-top: 17px;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
 }
 $text-color: #333333;
