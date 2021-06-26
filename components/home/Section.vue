@@ -79,7 +79,7 @@ export default {
           {
             uz:  "DXA",
             kr: "ДХА",
-            ru: "СГБ"
+            ru: "СГA"
           },
          
           to: "https://xmn.tuit.com",
@@ -109,6 +109,8 @@ export default {
     max-width: 100%;
     // height: 529px;
     padding: 60px 30px;
+    padding-top: 15px;
+    padding-bottom: 75px;
     .section-text {
       font-style: normal;
       font-weight: bold;
@@ -125,7 +127,7 @@ export default {
       .section-list-box {
         width: 415px;
         height: 222px;
-        margin: 10px 0;
+        margin: 15px 0;
         border-radius: 12px;
         cursor: pointer;
         display: flex;
@@ -208,6 +210,9 @@ export default {
   * #sections[data-v-29d191d0] {
     margin: 0 auto !important;
     padding: 65px 5px !important;
+    .section-text{
+      padding: 0 5px;
+    }
   }
   .section-list-group {
     // width: 50%;

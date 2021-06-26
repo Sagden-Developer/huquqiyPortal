@@ -4,7 +4,7 @@
     <div class="head-content">
       <div class="head-text">
         <div class="text"></div>
-        <h4>Yuridik lug’at</h4>
+        <h4 class="title-text">Yuridik lug’at</h4>
         <p>
           <nuxt-link to="/" class="link-text"> Bosh sahifa </nuxt-link> /
           Yuridik lug’at
@@ -26,9 +26,9 @@
       </div>
       <div class="search-content">
         <div class="search-btns">
-          <input type="text" />
+          <input type="text" v-model="search" />
           <div class="search-button">
-            <button type="submit">
+            <button type="submit" @click="searchByText()">
               Izlash
               <div class="search-icon">
                 <svg
@@ -75,13 +75,13 @@
         >
           <div class="accordion__item">
             <div class="accordion-head">
-              <div>{{ category.term.uz }}</div>
+              <div>{{ category.term[$i18n.locale] }}</div>
               <input type="button" :value="visible === index ? '-' : '+'" />
             </div>
             <div class="accordion__content">
               <div class="menu-sub-list" v-show="visible === index">
                 <div class="sub-list">
-                  <div class="menu-item">{{ category.description.uz }}</div>
+                  <div class="menu-item">{{ category.description[$i18n.locale] }}</div>
                 </div>
               </div>
             </div>
@@ -96,8 +96,27 @@
 
 <script>
 export default {
+   head() {
+    return {
+      title:  this.$t('dictionary_yur') ,
+      
+   
+      htmlAttrs: {
+        lang: this.$i18n.locale
+      },
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: "description",
+          name: "description",
+          content: "My custom description"
+        }
+      ]
+    };
+  },
   data() {
     return {
+      search: "",
       isActive: false,
       items: [
         {
@@ -195,6 +214,9 @@ export default {
     activation: function(el, char) {
       this.active_el = el;
       this.$store.dispatch('dictionaries/GET_DICTIONARY2_BY_CHAR', char);
+    },
+    searchByText(){
+      this.$store.dispatch('dictionaries/GET_DICTIONARY2', this.search);
     }
   },
   beforeCreate(){
@@ -205,22 +227,18 @@ export default {
 
 <style lang="scss">
 #law {
-  width: 1300px;
   // height: 1533px; //1518 agar tagidagi chiziq z-index bn bosa
-  padding: 35px 30px 100px 30px;
+  padding: 40px 0;
   background: #f1f3f4;
   margin: 0 auto;
   .head-content {
-    width: 1240px;
-    height: 200px;
     background: #d9e6eb;
     border-radius: 24px;
-    padding: 23px 50px;
+    padding: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     .head-text {
-      padding: 30px 0;
       h4 {
         font-family: Montserrat;
         font-style: normal;
@@ -252,7 +270,6 @@ export default {
     }
   }
   .info-nav {
-    width: 1240px;
     height: 187px;
     padding: 40px 0 20px 0;
     display: flex;
@@ -334,12 +351,9 @@ export default {
     }
   }
   .info-content {
-    width: 1240px;
-    height: 922px;
     // border: 1px solid gray;
     .accordion-container {
       .accordion {
-        width: 1240px;
         background: #ffffff;
         border: 1px solid rgba(89, 123, 163, 0.2);
         border-radius: 12px;

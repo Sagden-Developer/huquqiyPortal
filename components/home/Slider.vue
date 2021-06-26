@@ -116,7 +116,7 @@ export default {
   color: #fff;
   background-size: cover;
   .head-text {
-    text-transform: uppercase;
+    text-transform: capitalize;
   }
   .info-text {
     width: 60%;

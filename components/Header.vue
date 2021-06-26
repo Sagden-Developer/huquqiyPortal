@@ -73,7 +73,7 @@
                   />
                 </svg>
                 <span v-if="$i18n.locale == 'uz'">O'zbekcha</span>
-                <span v-if="$i18n.locale == 'kr'">Ўзбекча</span>
+                <span v-if="$i18n.locale == 'cy'">Ўзбекча</span>
                 <span v-if="$i18n.locale == 'ru'">русский</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -129,12 +129,14 @@
                     stroke-linejoin="round"
                   /></svg
               ></span>
-              <h3 @click="maxsus = !maxsus">{{ $t("lan9") }}</h3>
-              <br />
+              <h3 @click="maxsus = !maxsus">
+                {{ $t("lan9") }}
 
-              <div v-if="maxsus" class="special">
-                <p>Shrift o'lchami</p>
-              </div>
+                <div v-if="maxsus" class="special">
+                  <p>Shrift o'lchami</p>
+                </div>
+              </h3>
+              <br />
             </div>
 
             <div class="bar">
@@ -197,11 +199,11 @@
                   <a
                     style="cursor: pointer"
                     @click.prevent="clickLink('promote___')"
-                    >{{ $t('law')}} </a
-                  >
-                  <a href="" class="">{{ $t('presidentlaw')}}</a>
-                  <a href="" class="">{{ $t('state')}}</a>
-                  <a href="" class="">{{ $t('other')}}</a>
+                    >{{ $t("law") }}
+                  </a>
+                  <a href="" class="">{{ $t("presidentlaw") }}</a>
+                  <a href="" class="">{{ $t("state") }}</a>
+                  <a href="" class="">{{ $t("other") }}</a>
                 </div>
               </div>
             </li>
@@ -223,18 +225,10 @@
               ></a>
               <div v-if="test" class="targibot">
                 <div class="">
-                  <a href="" class=""
-                    >{{ $t('testeducator')}}</a
-                  >
-                  <a href="" class=""
-                    >{{ $t('testpupil')}}</a
-                  >
-                  <a href="" class=""
-                    >{{ $t('testworker')}}</a
-                  >
-                  <a href="" class=""
-                    >{{ $t('testpeople')}}</a
-                  >
+                  <a href="" class="">{{ $t("testeducator") }}</a>
+                  <a href="" class="">{{ $t("testpupil") }}</a>
+                  <a href="" class="">{{ $t("testworker") }}</a>
+                  <a href="" class="">{{ $t("testpeople") }}</a>
                 </div>
               </div>
             </li>
@@ -256,33 +250,38 @@
               ></a>
               <div v-if="book" class="targibot">
                 <div class="">
-                  <nuxt-link to="/library" class=""
-                    >{{ $t('insceducator')}} 
-                  </nuxt-link>
-                  <a href="" class=""
-                    >{{ $t('inscpupil')}}</a
-                  >
-                  <a href="" class=""
-                    >{{ $t('inscteacher')}} </a
-                  >
+                  <a
+                    style="cursor: pointer"
+                    class=""
+                    @click.prevent="clickLink2('library___')"
+                    >{{ $t("insceducator") }}
+                  </a>
+                  <a href="" class="">{{ $t("inscpupil") }}</a>
+                  <a href="" class="">{{ $t("inscteacher") }} </a>
                 </div>
               </div>
             </li>
             <li>
-              <a href="#">{{ $t("lan5") }}</a>
+              <nuxt-link to="/" class="test" href="#">{{
+                $t("lan5")
+              }}</nuxt-link>
             </li>
             <li>
               <a href="#">{{ $t("lan6") }}</a>
             </li>
             <li>
-              <nuxt-link to="/phone" class="end" href="#">{{
-                $t("lan7")
-              }}</nuxt-link>
+              <a
+                style="cursor: pointer"
+                @click.prevent="clickLinkPhone('phone___')"
+                class="end"
+                href="#"
+                >{{ $t("lan7") }}</a
+              >
             </li>
           </ul>
         </div>
         <div class="izlash-two">
-          <input type="text" :placeholder="$t('lan8')" />
+          <input type="text" :placeholder="$t('search')" />
           <button class="search-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -335,6 +334,16 @@ export default {
       this.targibot = false;
       this.$router.push({ name: url + this.$i18n.locale });
     },
+    clickLink2(url) {
+      this.book = false;
+      this.$router.push({ name: url + this.$i18n.locale });
+    },
+    clickLinkPhone(url) {
+      this.targibot = false;
+      this.book = false;
+      this.test = false;
+      this.$router.push({ name: url + this.$i18n.locale });
+    },
     bookList() {
       this.book = !this.book;
       if (this.test) {
@@ -367,7 +376,7 @@ export default {
       this.isRu = false;
     },
     clickKiril() {
-      this.$i18n.setLocale("kr");
+      this.$i18n.setLocale("cy");
       this.isRu = false;
     },
     clickRu() {
@@ -569,6 +578,16 @@ h2.logo-text {
         font-size: 16px;
         line-height: 20px;
         color: #333333;
+        cursor: pointer;
+        position: relative;
+        div {
+          position: absolute;
+          // width: 300px;
+          background: #fff;
+          color: #000;
+          top: 30px;
+          left: 0;
+        }
       }
     }
   }

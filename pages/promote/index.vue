@@ -2,16 +2,16 @@
   <div>
     <div class="boxs">
       <div class="box">
-        <h4>Qonunlar bo’yicha targ’ibot materiallari</h4>
+        <h4>{{ $t("tarqonun") }}</h4>
         <p>
           <nuxt-link
-            style="color: white; text-decoration: none"
+            style="text-decoration: none"
             to="/"
             href="#"
           >
-            Bosh sahifa
+            {{ $t("head") }}
           </nuxt-link>
-          / Targ’ibot materiallari
+          / {{ $t("lan2") }}
         </p>
       </div>
     </div>
@@ -86,6 +86,23 @@
 <script>
 import dateformat from "dateformat";
 export default {
+  head() {
+    return {
+      title: this.$t("tarqonun"),
+
+      htmlAttrs: {
+        lang: this.$i18n.locale
+      },
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: "description",
+          name: "description",
+          content: "My custom description"
+        }
+      ]
+    };
+  },
   methods: {
     dateFormat(date) {
       let date1 = dateformat(date, "isoDate");
@@ -95,44 +112,49 @@ export default {
     },
     addViewAndRoute(material) {
       this.$store.dispatch("card/PLUS_VIEW_CARD", material._id).then(() => {
-        material.views+=1;
+        material.views += 1;
         this.$router.push({
           path: `/promote/${material._id}`,
-          query: { id: material },
+          query: { id: material }
         });
       });
-    },
+    }
   },
   beforeCreate() {
     this.$store.dispatch("card/GET_CARDS");
-  },
+  }
 };
 </script>
 
 <style lang="scss">
 .boxs {
-  background: #597ba3;
-  width: 1340px;
+  background: #d9e6eb;
+  width: 1300px;
+  padding: 0 50px;
   height: 200px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 24px;
   margin-top: 26px;
   .box {
-    width: 1300px;
     margin: 0 auto;
     padding: 15px 0;
+    a{
+      color: #333 !important;
+
+    }
+
     h4 {
       font-size: 24px;
       line-height: 29px;
       margin-top: 33px;
-      color: #fff;
+      color: #333;
       font-weight: 600;
     }
     p {
       font-size: 20px;
       line-height: 24px;
-      color: #fff;
+      color: #333;
       margin-top: 40px;
     }
   }

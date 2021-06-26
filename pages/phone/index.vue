@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="boxs">
-      <div class="box">
+      <div class="box-phone">
         <h4>Ishonch raqamlari</h4>
         <p class="phone-breadcrumbs">
           <nuxt-link style="color: #333; text-decoration: none" to="/" href="#">
@@ -19,7 +19,7 @@
             name="search"
             v-model="search"
             placeholder="Tashkilot Nomi"
-          /><button @click="phones">
+          /><button @click="searchPhones()">
             Izlash
             <span>
               <svg
@@ -53,14 +53,13 @@
               <div class="phone-organization">Tashkilotlar nomi</div>
               <div class="phone-number">Telefon raqami</div>
             </div>
-            {{$store.state.phones.phones}}
             <div class="table-body">
               <div
                 class="phone-catalog"
                 v-for="phone in $store.state.phones.phones"
                 :key="phone._id"
               >
-                <div class="catalog">{{phone.name[$i18n.locale]}}</div>
+                <div class="catalog">{{ phone.name[$i18n.locale] }}</div>
                 <div
                   class="phone-item"
                   v-for="item in phone.child"
@@ -70,7 +69,10 @@
                     {{ item.title[`${$i18n.locale}`] }}
                   </div>
                   <div class="phone-number">{{ item.number }}</div>
-                </div> -
+                </div>
+                <div v-if="phone.child.length==0" class="not-foundPhone">
+                  Hech nima topilmadi
+                </div>
               </div>
             </div>
           </div>
@@ -85,7 +87,7 @@
           "
           @click="setSelectedCatalog(catalog, index)"
         >
-          {{ catalog.name.uz }}
+          {{ catalog.name[`${$i18n.locale}`] }}
         </p>
       </div>
     </div>
@@ -95,11 +97,28 @@
 <script>
 import dateformat from "dateformat";
 export default {
+  head() {
+    return {
+      title: this.$t('lan7'),
+     
+   
+      htmlAttrs: {
+        lang: this.$i18n.locale,
+      },
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: "description",
+          name: "description",
+          content: "My custom description",
+        },
+      ],
+    };
+  },
   data: () => ({
     search: "",
     selectedItem: 0,
     categories: ["Adliya Vazirligi", "Vazirliklar", "Davlat qo’mitalari"],
-    phones: []
   }),
   computed: {},
   methods: {
@@ -109,15 +128,15 @@ export default {
     setSelectedCatalog(catalog, index) {
       this.selectedItem = index;
       console.log(catalog);
-      this.$store.dispatch('phones/GET_BY_CATALOG_PHONES', catalog._id);
+      this.$store.dispatch("phones/GET_BY_CATALOG_PHONES", catalog._id);
     },
     getPhones(phones, catalogId) {
-      return phones.filter(phone => {
+      return phones.filter((phone) => {
         return phone.catalog._id == catalogId;
       });
     },
-    phones() {
-      this.$store.dispatch("phones/GET_QUERY_PHONES");
+    searchPhones() {
+      this.$store.dispatch("phones/GET_QUERY_PHONES", this.search);
       // if (this.search.length > 0) {
       //   return this.$store.state.phones.phones.filter(phone => {
       //     return phone.title.uz.search(this.search);
@@ -125,7 +144,7 @@ export default {
       // } else {
       //   return this.$store.state.phones.phones;
       // }
-    }
+    },
   },
   created() {
     this.phones = this.$store.state.phones.phones;
@@ -133,11 +152,17 @@ export default {
   beforeCreate() {
     this.$store.dispatch("phones/GET_PHONES");
     this.$store.dispatch("phones/GET_PHONE_CATALOGS");
-  }
+  },
 };
 </script>
 
 <style lang="scss">
+.not-foundPhone{
+  text-align: center;
+  margin-top: 17px;
+  font-size: 18px;
+  font-weight: 600;
+}
 $text-color: #333333;
 $bg-color: #d9e6eb;
 .boxs {
@@ -148,13 +173,11 @@ $bg-color: #d9e6eb;
   margin-right: auto;
   border-radius: 24px;
   margin-top: 26px;
-  .box {
+  .box-phone {
     width: 1300px;
-    margin: 0 auto;
-    display: flex;
-    // flex-direction: column;
+
     padding: 15px 0;
-    
+
     h4 {
       font-size: 24px;
       line-height: 29px;
@@ -174,17 +197,16 @@ $bg-color: #d9e6eb;
 
 @media (min-width: 1400px) and (max-width: 1920px) {
   .boxs {
-    // background: $bg-color !important;
-    // width: 1700px !important;
-    // height: 200px;
-    // margin-left: auto;
-    // margin-right: auto;
-    // border-radius: 24px;
-    // margin-top: 26px;
-    // padding-left: 145px;
-    .box {
+    background: $bg-color !important;
+    width: 1700px !important;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 24px;
+    margin-top: 26px;
+    padding-left: 145px;
+    .box-phone {
       padding: 15px 0;
-      width: auto;
       color: $text-color !important;
       h4 {
         margin-top: 53px;

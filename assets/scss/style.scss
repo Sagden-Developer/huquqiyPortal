@@ -23,7 +23,19 @@ body {
   font-family: 'Oxygen',
   sans-serif !important;
 }
+.slick-arrow:hover {
+  background: #678DBA !important;
+}
 
+.slick-arrow:active {
+  background: #455F7D !important;
+}
+.btn:hover{
+  background: #678DBA !important;
+}
+.btn:active{
+  background: #455F7D !important;
+}
 
 @media (min-width: 1400px) and (max-width: 1920px){
   body {

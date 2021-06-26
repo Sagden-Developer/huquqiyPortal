@@ -4,24 +4,20 @@
       <div class="cours-container">
         <div class="course-head">
           <div class="head-text">
-            <h3>{{ $t("freecourse") }} </h3>
+            <h3>{{ $t("freecourse") }}</h3>
           </div>
-          <button type="submit" class="allCourse">
+          <button type="submit" class="btn allCourse">
             {{ $t("allcourse") }}
           </button>
         </div>
         <div class="course-card">
           <div class="card-box" v-for="(card, index) in cards" :key="index">
             <a :href="card.href" target="_blank">
-              <img
-                class="star"
-                :src="card.cardIcon"
-                :alt="card.imgAlt"
-                width="400"
-                height="215"
-              />
+              <img class="star" :src="card.cardIcon" :alt="card.imgAlt" />
               <div class="video-title-content">
-                <div class="video-title">{{ card.cardTitle[`${$i18n.locale}`] }}</div>
+                <div class="video-title">
+                  {{ card.cardTitle[`${$i18n.locale}`] }}
+                </div>
                 <div class="video-info">
                   <div class="rating">
                     <img

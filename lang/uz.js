@@ -13,7 +13,7 @@ export default {
     search: 'Izlash',
     lan9: 'Maxsus imkoniyatlar',
     allnews: "Barcha yangiliklar",
-    legal: 'HUQUQIY PORTAL',
+    legal: 'Huquqiy portal',
     national_info: 'O’zbekiston Respublikasi Milliy Huquqiy informatsion portali',
     tegs: 'Teglar',
     freecourse: 'Bepul onlayn kurslar',
@@ -45,6 +45,17 @@ export default {
     insceducator: 'Bog’cha tarbiyalanuvchilari uchun huquqiy qo’llanmalar',
     inscpupil: 'Maktab o’quvchilari uchun huquqiy qo’llanmalar',
     inscteacher: 'Maktab o’qituvchilari uchun huquqiy qo’llanmalar',
+
+    ////
+    
+    head: 'Bosh sahifa',
+    tarqonun: 'Qonunlar bo’yicha targ’ibot materiallari',
+
+
+    //titles
+    titlenotary: "Notariat",
+    titlenotaries: "Natariuslar bo'yicha ma'lumot",
+    dictionary_yur: "Yuridik lug’at",
 
 
 
