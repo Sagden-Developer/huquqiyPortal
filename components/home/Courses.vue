@@ -6,7 +6,7 @@
           <div class="head-text">
             <h3>{{ $t("freecourse") }}</h3>
           </div>
-          <button type="submit" class="allCourse">
+          <button type="submit" class="btn allCourse">
             {{ $t("allcourse") }}
           </button>
         </div>

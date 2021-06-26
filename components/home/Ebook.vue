@@ -147,12 +147,12 @@ export default {
     content: " \276E" !important;
     opacity: 1 !important;
   }
-   .slick-arrow:hover{
-     background:  #678DBA !important;
-   }
-   .slick-arrow:active{
-     background:  #455F7D !important;
-   }
+  .slick-arrow:hover {
+    background: #678dba !important;
+  }
+  .slick-arrow:active {
+    background: #455f7d !important;
+  }
   .slick-next {
     display: flex;
     justify-content: center;
@@ -183,7 +183,7 @@ export default {
       font-weight: bold;
       font-size: 28px;
       line-height: 35px;
-      color: #501e5a;
+      color: #597ba3;
     }
   }
   img {

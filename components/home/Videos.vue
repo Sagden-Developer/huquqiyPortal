@@ -5,7 +5,7 @@
         <h1 class="v-head-text title-text">{{ $t("videos") }}</h1>
         <button
           type="submit"
-          class="video-button"
+          class="btn video-button"
           v-text="videoText[`${$i18n.locale}`]"
         ></button>
       </div>

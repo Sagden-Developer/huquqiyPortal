@@ -30,6 +30,14 @@ body {
   background: #455F7D !important;
 }
 
+.btn:hover {
+  background: #678DBA !important;
+}
+
+.btn:active {
+  background: #455F7D !important;
+}
+
 @media (min-width: 1400px) and (max-width: 1920px) {
   body {
     margin: 0 auto;

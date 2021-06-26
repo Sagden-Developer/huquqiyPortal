@@ -3,7 +3,7 @@
     <div id="news-section">
       <div class="news-header">
         <h2 class="title-text"> {{title[`${$i18n.locale}`]}}</h2>
-        <button type="submit">{{ $t('allnews') }}</button>
+        <button class="btn" type="submit">{{ $t('allnews') }}</button>
       </div>
       <Carousel v-bind="settings" v-if="$store.state.home.news.length">
         <div

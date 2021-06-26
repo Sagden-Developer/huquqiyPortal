@@ -6,7 +6,7 @@
           <p class="title-text">
             {{ $t('pointsystem')}}
           </p>
-          <button> {{ $t('bigrating')}} </button>
+          <button class="btn"> {{ $t('bigrating')}} </button>
         </div>
         <div class="rating-body">
           <div class="left" style="width: 65%">
