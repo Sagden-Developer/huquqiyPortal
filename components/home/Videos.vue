@@ -11,11 +11,16 @@
       </div>
       <div id="carusel-video-box">
         <Carousel v-bind="slickOptions">
+          
+          
+          
           <div class="card-video">
             <iframe
+              v-for="video in $store.state.home.video"
+              :key="video._id"
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/PiaxdSTGl5c"
+              :src="video.link"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -23,54 +28,7 @@
             ></iframe>
             <p class="video-footer-text" v-text="footText"></p>
           </div>
-          <div class="card-video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/PiaxdSTGl5c"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <p class="video-footer-text" v-text="footText"></p>
-          </div>
-          <div class="card-video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/PiaxdSTGl5c"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <p class="video-footer-text" v-text="footText"></p>
-          </div>
-          <div class="card-video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/PiaxdSTGl5c"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <p class="video-footer-text" v-text="footText"></p>
-          </div>
-          <div class="card-video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/PiaxdSTGl5c"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <p class="video-footer-text" v-text="footText"></p>
-          </div>
+          
         </Carousel>
       </div>
     </div>
@@ -86,7 +44,7 @@ export default {
       videoText: {
         uz: "Barcha videolar",
         kr: "Барча видеолар",
-        ru: "Все видео"
+        ru: "Все видео",
       },
       slImg: require("~/assets/img/course/bogcha.svg"),
       footText: "Qanday ishlar maqbul kelmaydigan ish hisoblanadi",
@@ -110,8 +68,8 @@ export default {
               infinite: true,
               slidesToScroll: 1,
               dots: false,
-              draggable: true
-            }
+              draggable: true,
+            },
           },
           {
             breakpoint: 600,
@@ -125,13 +83,13 @@ export default {
               touchThreshold: 1000,
               infinite: true,
               slidesToScroll: 1,
-              draggable: true
-            }
-          }
-        ]
-      }
+              draggable: true,
+            },
+          },
+        ],
+      },
     };
-  }
+  },
 };
 </script>
 

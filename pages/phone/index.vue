@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="boxs">
-      <div class="box">
+      <div class="box-phone">
         <h4>Ishonch raqamlari</h4>
         <p class="phone-breadcrumbs">
           <nuxt-link style="color: #333; text-decoration: none" to="/" href="#">
@@ -173,9 +173,8 @@ $bg-color: #d9e6eb;
   margin-right: auto;
   border-radius: 24px;
   margin-top: 26px;
-  .box {
+  .box-phone {
     width: 1300px;
-    margin: 0 auto;
 
     padding: 15px 0;
 
@@ -198,17 +197,16 @@ $bg-color: #d9e6eb;
 
 @media (min-width: 1400px) and (max-width: 1920px) {
   .boxs {
-    // background: $bg-color !important;
-    // width: 1700px !important;
-    // height: 200px;
-    // margin-left: auto;
-    // margin-right: auto;
-    // border-radius: 24px;
-    // margin-top: 26px;
-    // padding-left: 145px;
-    .box {
+    background: $bg-color !important;
+    width: 1700px !important;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 24px;
+    margin-top: 26px;
+    padding-left: 145px;
+    .box-phone {
       padding: 15px 0;
-      width: auto;
       color: $text-color !important;
       h4 {
         margin-top: 53px;

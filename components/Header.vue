@@ -73,7 +73,7 @@
                   />
                 </svg>
                 <span v-if="$i18n.locale == 'uz'">O'zbekcha</span>
-                <span v-if="$i18n.locale == 'kr'">Ўзбекча</span>
+                <span v-if="$i18n.locale == 'cy'">Ўзбекча</span>
                 <span v-if="$i18n.locale == 'ru'">русский</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -376,7 +376,7 @@ export default {
       this.isRu = false;
     },
     clickKiril() {
-      this.$i18n.setLocale("kr");
+      this.$i18n.setLocale("cy");
       this.isRu = false;
     },
     clickRu() {
