@@ -53,7 +53,6 @@
               <div class="phone-organization">Tashkilotlar nomi</div>
               <div class="phone-number">Telefon raqami</div>
             </div>
-            {{ $store.state.phones.phones }}
             <div class="table-body">
               <div
                 class="phone-catalog"
