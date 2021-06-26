@@ -70,7 +70,9 @@
                   </div>
                   <div class="phone-number">{{ item.number }}</div>
                 </div>
-                -
+                <div v-if="phone.child.length==0" class="not-foundPhone">
+                  Hech nima topilmadi
+                </div>
               </div>
             </div>
           </div>
@@ -85,7 +87,7 @@
           "
           @click="setSelectedCatalog(catalog, index)"
         >
-          {{ catalog.name.uz }}
+          {{ catalog.name[`${$i18n.locale}`] }}
         </p>
       </div>
     </div>
@@ -95,7 +97,7 @@
 <script>
 import dateformat from "dateformat";
 export default {
-   head() {
+  head() {
     return {
       title: "Ishonch raqamlari",
       // {
@@ -103,18 +105,18 @@ export default {
       //   kr: "Dictionary",
       //   ru: "Dictionary"
       // },
-   
+
       htmlAttrs: {
-        lang: this.$i18n.locale
+        lang: this.$i18n.locale,
       },
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
           hid: "description",
           name: "description",
-          content: "My custom description"
-        }
-      ]
+          content: "My custom description",
+        },
+      ],
     };
   },
   data: () => ({
@@ -133,7 +135,7 @@ export default {
       this.$store.dispatch("phones/GET_BY_CATALOG_PHONES", catalog._id);
     },
     getPhones(phones, catalogId) {
-      return phones.filter(phone => {
+      return phones.filter((phone) => {
         return phone.catalog._id == catalogId;
       });
     },
@@ -146,7 +148,7 @@ export default {
       // } else {
       //   return this.$store.state.phones.phones;
       // }
-    }
+    },
   },
   created() {
     this.phones = this.$store.state.phones.phones;
@@ -154,11 +156,17 @@ export default {
   beforeCreate() {
     this.$store.dispatch("phones/GET_PHONES");
     this.$store.dispatch("phones/GET_PHONE_CATALOGS");
-  }
+  },
 };
 </script>
 
 <style lang="scss">
+.not-foundPhone{
+  text-align: center;
+  margin-top: 17px;
+  font-size: 24px;
+  font-weight: 600;
+}
 $text-color: #333333;
 $bg-color: #d9e6eb;
 .boxs {
