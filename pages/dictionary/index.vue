@@ -75,13 +75,13 @@
         >
           <div class="accordion__item">
             <div class="accordion-head">
-              <div>{{ category.term[$i18n.locale] }}</div>
+              <div>{{ category.term.uz }}</div>
               <input type="button" :value="visible === index ? '-' : '+'" />
             </div>
             <div class="accordion__content">
               <div class="menu-sub-list" v-show="visible === index">
                 <div class="sub-list">
-                  <div class="menu-item">{{ category.description[$i18n.locale] }}</div>
+                  <div class="menu-item">{{ category.description.uz }}</div>
                 </div>
               </div>
             </div>

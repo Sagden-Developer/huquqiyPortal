@@ -2,8 +2,12 @@
   <div id="video">
     <div class="container">
       <div class="video-header">
-        <h1 class="v-head-text" >{{ $t('videos')}} </h1>
-        <button type="submit" class="video-button" v-text="videoText[`${$i18n.locale}`]"></button>
+        <h1 class="v-head-text title-text">{{ $t("videos") }}</h1>
+        <button
+          type="submit"
+          class="video-button"
+          v-text="videoText[`${$i18n.locale}`]"
+        ></button>
       </div>
       <div id="carusel-video-box">
         <Carousel v-bind="slickOptions">
@@ -82,8 +86,8 @@ export default {
       videoText: {
         uz: "Barcha videolar",
         kr: "Барча видеолар",
-        ru: "Все видео",
-      }, 
+        ru: "Все видео"
+      },
       slImg: require("~/assets/img/course/bogcha.svg"),
       footText: "Qanday ishlar maqbul kelmaydigan ish hisoblanadi",
       slickOptions: {
@@ -155,10 +159,6 @@ export default {
     }
   }
   .slick-current {
-    iframe {
-      // pointer-events: all !important;
-    }
-    // pointer-events: all !important;
     .video-box-item {
       padding: 10px;
       margin: 15px;
@@ -168,7 +168,7 @@ export default {
   margin: 0 auto;
   background: rgba(95, 146, 211, 0.1);
   .video-header {
-    padding: 30px;
+    padding: 30px 0;
     display: flex;
     justify-content: space-between;
     button[type="submit"] {
@@ -252,11 +252,8 @@ export default {
 @media (min-width: 576px) and (max-width: 950px) {
   #video {
     height: auto;
-      padding-bottom: 45px !important;
+    padding-bottom: 45px !important;
     #carusel-video-box {
-       .slick-current{
-        //  height: 350px !important;
-       }
       .card-video {
         height: auto !important;
         padding: 60px 30px !important;
@@ -275,18 +272,15 @@ export default {
   }
 }
 @media (min-width: 350px) and (max-width: 575px) {
-   .video-footer-text{
-    p{
+  .video-footer-text {
+    p {
       font-size: 12px !important;
     }
   }
- #video {
+  #video {
     height: auto;
-      padding-bottom: 45px !important;
+    padding-bottom: 45px !important;
     #carusel-video-box {
-       .slick-current{
-        //  height: 350px !important;
-       }
       .card-video {
         height: auto !important;
         padding: 60px 30px !important;
@@ -302,8 +296,6 @@ export default {
     .card-video {
       padding: 60px 0 !important;
     }
-
   }
- 
 }
 </style>

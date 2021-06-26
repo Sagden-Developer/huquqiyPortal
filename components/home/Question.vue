@@ -221,8 +221,8 @@ export default {
   #question {
     background: #e2eaf1 !important;
     max-width: 100%;
-    padding-top: 40px;
-    padding-bottom: 30px;
+    padding-top: 45px;
+    padding-bottom: 45px;
     .question-text {
       font-style: normal;
       font-weight: bold;
@@ -230,12 +230,12 @@ export default {
       line-height: 35px;
       /* dark gray */
       color: #333333;
-      margin: 7px 0 15px 0;
     }
     .question-list-group {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      margin-top: 20px;
       .question-list-box {
         width: 420px;
         height: 100px;

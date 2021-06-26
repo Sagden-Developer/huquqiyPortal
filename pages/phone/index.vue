@@ -53,14 +53,14 @@
               <div class="phone-organization">Tashkilotlar nomi</div>
               <div class="phone-number">Telefon raqami</div>
             </div>
-            {{$store.state.phones.phones}}
+            {{ $store.state.phones.phones }}
             <div class="table-body">
               <div
                 class="phone-catalog"
                 v-for="phone in $store.state.phones.phones"
                 :key="phone._id"
               >
-                <div class="catalog">{{phone.name[$i18n.locale]}}</div>
+                <div class="catalog">{{ phone.name[$i18n.locale] }}</div>
                 <div
                   class="phone-item"
                   v-for="item in phone.child"
@@ -70,7 +70,8 @@
                     {{ item.title[`${$i18n.locale}`] }}
                   </div>
                   <div class="phone-number">{{ item.number }}</div>
-                </div> -
+                </div>
+                -
               </div>
             </div>
           </div>
@@ -95,6 +96,28 @@
 <script>
 import dateformat from "dateformat";
 export default {
+   head() {
+    return {
+      title: "Ishonch raqamlari",
+      // {
+      //   uz: "Yuridik lug'at",
+      //   kr: "Dictionary",
+      //   ru: "Dictionary"
+      // },
+   
+      htmlAttrs: {
+        lang: this.$i18n.locale
+      },
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: "description",
+          name: "description",
+          content: "My custom description"
+        }
+      ]
+    };
+  },
   data: () => ({
     search: "",
     selectedItem: 0,
@@ -108,7 +131,7 @@ export default {
     setSelectedCatalog(catalog, index) {
       this.selectedItem = index;
       console.log(catalog);
-      this.$store.dispatch('phones/GET_BY_CATALOG_PHONES', catalog._id);
+      this.$store.dispatch("phones/GET_BY_CATALOG_PHONES", catalog._id);
     },
     getPhones(phones, catalogId) {
       return phones.filter(phone => {
@@ -150,10 +173,9 @@ $bg-color: #d9e6eb;
   .box {
     width: 1300px;
     margin: 0 auto;
-    display: flex;
-    // flex-direction: column;
+
     padding: 15px 0;
-    
+
     h4 {
       font-size: 24px;
       line-height: 29px;

@@ -13,7 +13,7 @@ export default {
     search: 'Izlash',
     lan9: 'Maxsus imkoniyatlar',
     allnews: "Barcha yangiliklar",
-    legal: 'HUQUQIY PORTAL',
+    legal: 'Huquqiy portal',
     national_info: 'O’zbekiston Respublikasi Milliy Huquqiy informatsion portali',
     tegs: 'Teglar',
     freecourse: 'Bepul onlayn kurslar',

@@ -99,11 +99,11 @@ export default {
 <style lang="scss" scoped>
 .rating {
   width: 100%;
-  padding: 20px;
+  padding: 45px 30px;
   background: rgba(95, 146, 211, 0.1);
 
   .title {
-    padding: 10px;
+    // padding: 10px;
     font-weight: bold;
     font-size: 28px;
     line-height: 35px;
@@ -124,7 +124,7 @@ export default {
   }
   .rating-body {
     display: flex;
-    margin-top: 20px;
+    margin-top: 50px;
     .left {
       width: 65%;
     }

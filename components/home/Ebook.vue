@@ -4,7 +4,7 @@
       <div class="container">
         <div class="head">
           <img src="@/assets/image/ebook.png" alt="" />
-          <p class="title-text">{{ $t('ebook')}}</p>
+          <p class="title-text">{{ $t("ebook") }}</p>
         </div>
 
         <Carousel v-bind="slickOptions">
@@ -95,8 +95,8 @@ export default {
               slidesToScroll: 1,
               dots: false,
               draggable: true,
-              arrows: false,
-            },
+              arrows: false
+            }
           },
           {
             breakpoint: 600,
@@ -112,20 +112,21 @@ export default {
               autoplaySpeed: 3000,
               infinite: true,
               slidesToScroll: 1,
-              draggable: true,
-            },
-          },
-        ],
-      },
+              draggable: true
+            }
+          }
+        ]
+      }
     };
-  },
+  }
 };
 </script>
 
 <style lang="scss">
 .ebook {
   width: 1240px;
-  margin: 70px auto;
+  margin: 150px auto;
+  margin-bottom: 75px;
   background: #fff;
   border-radius: 24px;
   padding: 30px;
@@ -137,14 +138,21 @@ export default {
     display: block;
     width: 50px;
     height: 50px;
-    background: #597ba3!important;
+    background: #597ba3 !important;
     border-radius: 50%;
     left: -55px;
     top: 38%;
   }
   .slick-prev::before {
     content: " \276E" !important;
+    opacity: 1 !important;
   }
+   .slick-arrow:hover{
+     background:  #678DBA !important;
+   }
+   .slick-arrow:active{
+     background:  #455F7D !important;
+   }
   .slick-next {
     display: flex;
     justify-content: center;
@@ -166,9 +174,16 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     img {
-      margin-top: -80px;
+      margin-top: -110px;
+    }
+    p {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 35px;
+      color: #501e5a;
     }
   }
   img {
