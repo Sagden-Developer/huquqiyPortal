@@ -129,12 +129,14 @@
                     stroke-linejoin="round"
                   /></svg
               ></span>
-              <h3 @click="maxsus = !maxsus">{{ $t("lan9") }}</h3>
-              <br />
+              <h3 @click="maxsus = !maxsus">
+                {{ $t("lan9") }}
 
-              <div v-if="maxsus" class="special">
-                <p>Shrift o'lchami</p>
-              </div>
+                <div v-if="maxsus" class="special">
+                  <p>Shrift o'lchami</p>
+                </div>
+              </h3>
+              <br />
             </div>
 
             <div class="bar">
@@ -197,11 +199,11 @@
                   <a
                     style="cursor: pointer"
                     @click.prevent="clickLink('promote___')"
-                    >{{ $t('law')}} </a
-                  >
-                  <a href="" class="">{{ $t('presidentlaw')}}</a>
-                  <a href="" class="">{{ $t('state')}}</a>
-                  <a href="" class="">{{ $t('other')}}</a>
+                    >{{ $t("law") }}
+                  </a>
+                  <a href="" class="">{{ $t("presidentlaw") }}</a>
+                  <a href="" class="">{{ $t("state") }}</a>
+                  <a href="" class="">{{ $t("other") }}</a>
                 </div>
               </div>
             </li>
@@ -223,18 +225,10 @@
               ></a>
               <div v-if="test" class="targibot">
                 <div class="">
-                  <a href="" class=""
-                    >{{ $t('testeducator')}}</a
-                  >
-                  <a href="" class=""
-                    >{{ $t('testpupil')}}</a
-                  >
-                  <a href="" class=""
-                    >{{ $t('testworker')}}</a
-                  >
-                  <a href="" class=""
-                    >{{ $t('testpeople')}}</a
-                  >
+                  <a href="" class="">{{ $t("testeducator") }}</a>
+                  <a href="" class="">{{ $t("testpupil") }}</a>
+                  <a href="" class="">{{ $t("testworker") }}</a>
+                  <a href="" class="">{{ $t("testpeople") }}</a>
                 </div>
               </div>
             </li>
@@ -256,20 +250,18 @@
               ></a>
               <div v-if="book" class="targibot">
                 <div class="">
-                  <nuxt-link to="/library" class=""
-                    >{{ $t('insceducator')}} 
-                  </nuxt-link>
-                  <a href="" class=""
-                    >{{ $t('inscpupil')}}</a
-                  >
-                  <a href="" class=""
-                    >{{ $t('inscteacher')}} </a
-                  >
+                  <a class="" @click.prevent="clickLink('library___')"
+                    >{{ $t("insceducator") }}
+                  </a>
+                  <a href="" class="">{{ $t("inscpupil") }}</a>
+                  <a href="" class="">{{ $t("inscteacher") }} </a>
                 </div>
               </div>
             </li>
             <li>
-              <a href="#">{{ $t("lan5") }}</a>
+              <nuxt-link to="/" class="test" href="#">{{
+                $t("lan5")
+              }}</nuxt-link>
             </li>
             <li>
               <a href="#">{{ $t("lan6") }}</a>
@@ -569,6 +561,16 @@ h2.logo-text {
         font-size: 16px;
         line-height: 20px;
         color: #333333;
+        cursor: pointer;
+        position: relative;
+        div {
+          position: absolute;
+          // width: 300px;
+          background: #fff;
+          color: #000;
+          top: 30px;
+          left: 0;
+        }
       }
     }
   }

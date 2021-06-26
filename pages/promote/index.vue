@@ -86,6 +86,28 @@
 <script>
 import dateformat from "dateformat";
 export default {
+   head() {
+    return {
+      title: "Qonunlar bo’yicha targ’ibot materiallari",
+      // {
+      //   uz: "Yuridik lug'at",
+      //   kr: "Dictionary",
+      //   ru: "Dictionary"
+      // },
+   
+      htmlAttrs: {
+        lang: this.$i18n.locale
+      },
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: "description",
+          name: "description",
+          content: "My custom description"
+        }
+      ]
+    };
+  },
   methods: {
     dateFormat(date) {
       let date1 = dateformat(date, "isoDate");

@@ -1,95 +1,95 @@
 <template>
   <div id="law">
     <div class="container">
-    <div class="head-content">
-      <div class="head-text">
-        <div class="text"></div>
-        <h4>Yuridik lug’at</h4>
-        <p>
-          <nuxt-link to="/" class="link-text"> Bosh sahifa </nuxt-link> /
-          Yuridik lug’at
-        </p>
+      <div class="head-content">
+        <div class="head-text">
+          <div class="text"></div>
+          <h4>Yuridik lug’at</h4>
+          <p>
+            <nuxt-link to="/" class="link-text"> Bosh sahifa </nuxt-link> /
+            Yuridik lug’at
+          </p>
+        </div>
+        <div class="head-logo"></div>
       </div>
-      <div class="head-logo"></div>
-    </div>
-    <div class="info-nav">
-      <div class="alphabet">
-        <button
-          type="submit"
-          v-for="(button, index) in buttons"
-          :key="index"
-          @click="activation(button.id, button.title)"
-          :class="{ activeBtn: active_el == button.id }"
-        >
-          {{ button.title }}
-        </button>
-      </div>
-      <div class="search-content">
-        <div class="search-btns">
-          <input type="text" />
-          <div class="search-button">
-            <button type="submit">
-              Izlash
-              <div class="search-icon">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
-                    stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M21.0004 21L16.6504 16.65"
-                    stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-            </button>
+      <div class="info-nav">
+        <div class="alphabet">
+          <button
+            type="submit"
+            v-for="(button, index) in buttons"
+            :key="index"
+            @click="activation(button.id, button.title)"
+            :class="{ activeBtn: active_el == button.id }"
+          >
+            {{ button.title }}
+          </button>
+        </div>
+        <div class="search-content">
+          <div class="search-btns">
+            <input type="text" />
+            <div class="search-button">
+              <button type="submit">
+                Izlash
+                <div class="search-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M21.0004 21L16.6504 16.65"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div class="search-info">
+            4000 dan ortiq maxsus yuridik terminlar, yuridik amaliyot, nazariya,
+            ilm-fan va ta'lim jarayonida keng qo‘llaniladigan so‘zlar jamlangan
           </div>
         </div>
-        <div class="search-info">
-          4000 dan ortiq maxsus yuridik terminlar, yuridik amaliyot, nazariya,
-          ilm-fan va ta'lim jarayonida keng qo‘llaniladigan so‘zlar jamlangan
-        </div>
       </div>
-    </div>
-    <div class="info-content">
-      <!-- Accardion -->
-      <div id="accordion" class="accordion-container">
-        <div
-          v-for="(category, index) in $store.state.dictionaries.dictionary2"
-          :key="index"
-          class="accordion accordion__trigger"
-          :class="{ accordion_active: visible === index }"
-          @click="visible == null ? (visible = index) : (visible = null)"
-        >
-          <div class="accordion__item">
-            <div class="accordion-head">
-              <div>{{ category.term.uz }}</div>
-              <input type="button" :value="visible === index ? '-' : '+'" />
-            </div>
-            <div class="accordion__content">
-              <div class="menu-sub-list" v-show="visible === index">
-                <div class="sub-list">
-                  <div class="menu-item">{{ category.description.uz }}</div>
+      <div class="info-content">
+        <!-- Accardion -->
+        <div id="accordion" class="accordion-container">
+          <div
+            v-for="(category, index) in $store.state.dictionaries.dictionary2"
+            :key="index"
+            class="accordion accordion__trigger"
+            :class="{ accordion_active: visible === index }"
+            @click="visible == null ? (visible = index) : (visible = null)"
+          >
+            <div class="accordion__item">
+              <div class="accordion-head">
+                <div>{{ category.term.uz }}</div>
+                <input type="button" :value="visible === index ? '-' : '+'" />
+              </div>
+              <div class="accordion__content">
+                <div class="menu-sub-list" v-show="visible === index">
+                  <div class="sub-list">
+                    <div class="menu-item">{{ category.description.uz }}</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- End accordion -->
       </div>
-      <!-- End accordion -->
-    </div>
     </div>
   </div>
 </template>
@@ -191,14 +191,36 @@ export default {
       active_el: 1
     };
   },
+  head() {
+    return {
+      title: "Yuridik lug'at",
+      // {
+      //   uz: "Yuridik lug'at",
+      //   kr: "Dictionary",
+      //   ru: "Dictionary"
+      // },
+   
+      htmlAttrs: {
+        lang: this.$i18n.locale
+      },
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: "description",
+          name: "description",
+          content: "My custom description"
+        }
+      ]
+    };
+  },
   methods: {
     activation: function(el, char) {
       this.active_el = el;
-      this.$store.dispatch('dictionaries/GET_DICTIONARY2_BY_CHAR', char);
+      this.$store.dispatch("dictionaries/GET_DICTIONARY2_BY_CHAR", char);
     }
   },
-  beforeCreate(){
-      this.$store.dispatch('dictionaries/GET_DICTIONARY2', "");
+  beforeCreate() {
+    this.$store.dispatch("dictionaries/GET_DICTIONARY2", "");
   }
 };
 </script>

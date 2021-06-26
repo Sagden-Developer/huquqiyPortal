@@ -7,7 +7,7 @@
             <nuxt-link to="/" class="logotip">
               <img src="@/assets/image/adliya-logo.png" alt="" />
               <p>
-                {{ $t('lan')}}
+                {{ $t("lan") }}
               </p>
             </nuxt-link>
           </div>
@@ -128,13 +128,13 @@
                   fill="#ABABAB"
                 />
               </svg>
-              2021 {{ $t('adliya')}} 
+              2021 {{ $t("adliya") }}
             </p>
-            <p>{{ $t('all_legal')}} </p>
+            <p>{{ $t("all_legal") }}</p>
           </div>
         </div>
         <div class="footer-center">
-          <h2>{{ $t('forcall')}}</h2>
+          <h2>{{ $t("forcall") }}</h2>
 
           <ul>
             <li>
@@ -208,13 +208,12 @@
                   stroke-linejoin="round"
                 />
               </svg>
-              {{ $t('map')}} 
-              
+              {{ $t("map") }}
             </li>
           </ul>
           <div class="f-text">
-            <p>2021 {{ $t('adliya')}}</p>
-            <p>{{ $t('all_legal')}}</p>
+            <p>2021 {{ $t("adliya") }}</p>
+            <p>{{ $t("all_legal") }}</p>
           </div>
           <div class="by">
             <p>Design by</p>
@@ -223,8 +222,7 @@
         </div>
         <div class="footer-right">
           <p class="matn">
-            {{ $t('mistake')}}
-           
+            {{ $t("mistake") }}
           </p>
           <div class="by">
             <p>Design by</p>
@@ -282,13 +280,26 @@ footer {
     .set {
       margin-top: 20px;
       margin-bottom: 15px;
+      display: flex;
+      border-radius: 50%;
       a {
+        border-radius: 50%;
+        display: block;
         width: 48px;
         height: 48px;
         margin-left: 5px;
         svg {
           path {
             fill: #fff;
+          }
+        }
+      }
+      a:hover {
+        // background: #597ba3;
+        svg {
+          path {
+            color: #fff;
+            fill: #597ba3;
           }
         }
       }

@@ -2,7 +2,7 @@
   <div>
     <div id="news-section">
       <div class="news-header">
-        <h2> {{title[`${$i18n.locale}`]}}</h2>
+        <h2 class="title-text"> {{title[`${$i18n.locale}`]}}</h2>
         <button type="submit">{{ $t('allnews') }}</button>
       </div>
       <Carousel v-bind="settings" v-if="$store.state.home.news.length">
@@ -131,7 +131,6 @@ export default {
     display: flex;
     justify-content: space-between;
     h2 {
-      font-family: Oxygen;
       font-style: normal;
       font-weight: bold;
       font-size: 28px;
@@ -147,7 +146,7 @@ export default {
       padding: 10px 25px;
       margin-bottom: 18px;
       cursor: pointer;
-      font-family: Montserrat;
+      // font-family: Montserrat;
       font-style: normal;
       font-weight: 500;
       font-size: 18px;

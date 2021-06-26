@@ -109,6 +109,7 @@ export default {
     max-width: 100%;
     // height: 529px;
     padding: 60px 30px;
+    padding-bottom: 75px;
     .section-text {
       font-style: normal;
       font-weight: bold;
@@ -125,7 +126,7 @@ export default {
       .section-list-box {
         width: 415px;
         height: 222px;
-        margin: 10px 0;
+        margin: 15px 0;
         border-radius: 12px;
         cursor: pointer;
         display: flex;
