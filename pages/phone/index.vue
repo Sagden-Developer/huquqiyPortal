@@ -19,7 +19,7 @@
             name="search"
             v-model="search"
             placeholder="Tashkilot Nomi"
-          /><button @click="phones">
+          /><button @click="searchPhones()">
             Izlash
             <span>
               <svg
@@ -122,7 +122,6 @@ export default {
     search: "",
     selectedItem: 0,
     categories: ["Adliya Vazirligi", "Vazirliklar", "Davlat qo’mitalari"],
-    phones: []
   }),
   computed: {},
   methods: {
@@ -139,8 +138,8 @@ export default {
         return phone.catalog._id == catalogId;
       });
     },
-    phones() {
-      this.$store.dispatch("phones/GET_QUERY_PHONES");
+    searchPhones() {
+      this.$store.dispatch("phones/GET_QUERY_PHONES", this.search);
       // if (this.search.length > 0) {
       //   return this.$store.state.phones.phones.filter(phone => {
       //     return phone.title.uz.search(this.search);

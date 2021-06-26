@@ -66,7 +66,7 @@ export const actions = {
             console.log(res.data);
             commit('PHONES_SUCCESS', res.data);
         }).catch((err) => {
-
+            console.log(err);
             commit("PHONES_FAILURE");
         });
     },
