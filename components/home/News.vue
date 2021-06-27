@@ -28,7 +28,7 @@
               </div>
               <div class="text-info">
                 <h6 v-html="mainNews.article[$i18n.locale]"></h6>
-                <nuxt-link to="/">Batafsil >></nuxt-link>
+                <nuxt-link to="/">{{$t('more')}} >></nuxt-link>
               </div>
               <div class="news-data">
                 <div class="info">

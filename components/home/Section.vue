@@ -26,7 +26,7 @@ export default {
     return {
       sectionTitle: {
         uz: "Bo'limlar",
-        kr: "Бўлимлар",
+        cy: "Бўлимлар",
         ru: "Разделы"
       },
 
@@ -35,7 +35,7 @@ export default {
           sectionIcon: require("@/assets/img/section/notariant.svg"),
           sectionTitle: {
             uz: "Notariant",
-            kr: "Нотариат",
+            cy: "Нотариат",
             ru: "Нотариат"
           },
           to: "/notary",
@@ -45,7 +45,7 @@ export default {
           sectionIcon: require("@/assets/img/section/advokat.svg"),
           sectionTitle: {
             uz: "Advokatura",
-            kr: "Адвокатура",
+            cy: "Адвокатура",
             ru: "Адвокатура"
           },
           to: "/phone",
@@ -55,7 +55,7 @@ export default {
           sectionIcon: require("@/assets/img/section/yurudik.svg"),
           sectionTitle: {
             uz: "Yuridik ta'lim",
-            kr: "Юридик таълим",
+            cy: "Юридик таълим",
             ru: "Юридическое образование"
           },
 
@@ -66,7 +66,7 @@ export default {
           sectionIcon: require("@/assets/img/section/lugat.svg"),
           sectionTitle: {
             uz: "Yuridik lug'at",
-            kr: "Юридик таълим",
+            cy: "Юридик таълим",
             ru: "Юридическое образование"
           },
 
@@ -78,7 +78,7 @@ export default {
           sectionTitle: 
           {
             uz:  "DXA",
-            kr: "ДХА",
+            cy: "ДХА",
             ru: "СГA"
           },
          
@@ -89,7 +89,7 @@ export default {
           sectionIcon: require("@/assets/img/section/advokat.svg"),
           sectionTitle:  {
             uz:  "FXDYO",
-            kr: "ФХДЁ",
+            cy: "ФХДЁ",
             ru: "ГИБДД"
           }, 
           to: "https://moodle.tuit.com",

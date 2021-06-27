@@ -11,13 +11,12 @@
       </div>
       <div id="carusel-video-box">
         <Carousel v-bind="slickOptions">
-          
-          
-          
-          <div class="card-video">
-            <iframe
-              v-for="video in $store.state.home.video"
-              :key="video._id"
+          <div
+            class="card-video"
+            v-for="video in $store.state.home.video"
+            :key="video._id"
+          >
+            <!-- <iframe
               width="560"
               height="315"
               :src="video.link"
@@ -26,9 +25,9 @@
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
-            <p class="video-footer-text" v-text="footText"></p>
+             -->
+            <p class="video-footer-text" >{{video.title}}</p>
           </div>
-          
         </Carousel>
       </div>
     </div>
@@ -36,8 +35,6 @@
 </template>
 
 <script>
-import CoolLightBox from "vue-cool-lightbox";
-import SwiperCore, { coverflowEffect } from "swiper";
 export default {
   data() {
     return {
@@ -193,6 +190,7 @@ export default {
   }
   .video-footer-text {
     // margin-top: 30px;
+      text-align: center;
     p {
       font-style: normal;
       font-weight: 600;
@@ -200,7 +198,6 @@ export default {
       line-height: 24px;
       overflow: hidden;
       text-overflow: ellipsis;
-
       /* dark gray */
 
       color: #333333;

@@ -28,6 +28,9 @@ export default {
     map: 'O\'zbekiston Respublikasi, 100047, Toshkent sh., Sayilgoh ko\'chasi, 5',
     mistake: 'Matnda xato topsangiz administratorni xabardor qilish uchun Ctrl + Enter tugmasini bosing',
 
+    // yangiliklar
+    more: "Batafsil",
+
     // targibot materiallari
     law: 'Qonunlar bo’yicha',
     presidentlaw: 'Prezident hujjatlari bo’yicha',

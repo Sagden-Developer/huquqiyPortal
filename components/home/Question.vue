@@ -24,7 +24,7 @@ export default {
     return {
       questionTitle: {
         uz: "Huquqiy muamolar yechimi",
-        kr: "Ҳуқуқий муамолар ечими",
+        cy: "Ҳуқуқий муамолар ечими",
         ru: "Решение правовых проблем"
       },
       questionItem: [
@@ -32,7 +32,7 @@ export default {
           questionIcon: require("@/assets/img/question/mehnat.svg"),
           questionTitle: {
             uz: "Mehnat munosabatlari",
-            kr: "Меҳнат муносабатлари",
+            cy: "Меҳнат муносабатлари",
             ru: "Трудовые отношения"
           },
           to: "/",
@@ -42,7 +42,7 @@ export default {
           questionIcon: require("@/assets/img/question/oilaviy.svg"),
           questionTitle: {
             uz: "Oilaviy munosabatlar",
-            kr: "Оилавий муносабатлар",
+            cy: "Оилавий муносабатлар",
             ru: "Семейные отношения"
           },
           to: "/",
@@ -52,7 +52,7 @@ export default {
           questionIcon: require("@/assets/img/question/komunal.svg"),
           questionTitle: {
             uz: "Uy-joy va kommunal masalalar",
-            kr: "Уй-жой ва коммунал масалалар",
+            cy: "Уй-жой ва коммунал масалалар",
             ru: "Жилищно-коммунальные вопросы"
           },
           to: "/",
@@ -62,7 +62,7 @@ export default {
           questionIcon: require("@/assets/img/question/fuqarolik.svg"),
           questionTitle: {
             uz: "Fuqarolik / Migratsiya",
-            kr: "Фуқаролик / Мигратсия",
+            cy: "Фуқаролик / Мигратсия",
             ru: "Гражданство / Миграция"
           },
           to: "https://yandex.ru",
@@ -72,7 +72,7 @@ export default {
           questionIcon: require("@/assets/img/question/sogliq.svg"),
           questionTitle: {
             uz: "Sog’liqni saqlash",
-            kr: "Ҳуқуқий муамолар ечими",
+            cy: "Ҳуқуқий муамолар ечими",
             ru: "Решение правовых проблем"
           },
           to: "https://yandex.ru",
@@ -82,7 +82,7 @@ export default {
           questionIcon: require("@/assets/img/question/himoya.svg"),
           questionTitle: {
             uz: "Ijtimoiy himoya",
-            kr: "Ижтимоий ҳимоя",
+            cy: "Ижтимоий ҳимоя",
             ru: "Социальная защита"
           },
           to: "https://yandex.ru",
@@ -92,7 +92,7 @@ export default {
           questionIcon: require("@/assets/img/question/talim.svg"),
           questionTitle: {
             uz: "Ta’lim",
-            kr: "Та’лим",
+            cy: "Та’лим",
             ru: "Образование"
           },
           to: "https://yandex.ru",
@@ -102,7 +102,7 @@ export default {
           questionIcon: require("@/assets/img/question/sud.svg"),
           questionTitle: {
             uz: "Sud-huquq masalalari",
-            kr: "Суд-ҳуқуқ масалалари",
+            cy: "Суд-ҳуқуқ масалалари",
             ru: "Судебно-правовые вопросы"
           },
           to: "https://yandex.ru",
@@ -112,7 +112,7 @@ export default {
           questionIcon: require("@/assets/img/question/yer.svg"),
           questionTitle: {
             uz: "Yer masalalari",
-            kr: "Ҳуқуқий муамолар ечими",
+            cy: "Ҳуқуқий муамолар ечими",
             ru: "Решение правовых проблем"
           },
           to: "https://yandex.ru",
@@ -122,7 +122,7 @@ export default {
           questionIcon: require("@/assets/img/question/tadbirkorlik.svg"),
           questionTitle: {
             uz: "Tadbirkorlik",
-            kr: "Тадбиркорлик",
+            cy: "Тадбиркорлик",
             ru: "Предпринимательство"
           },
           to: "/",
@@ -132,7 +132,7 @@ export default {
           questionIcon: require("@/assets/img/question/soliq.svg"),
           questionTitle: {
             uz: "Soliqlar",
-            kr: "Солиқлар",
+            cy: "Солиқлар",
             ru: "Налоги"
           },
           to: "/",
@@ -142,7 +142,7 @@ export default {
           questionIcon: require("@/assets/img/question/bank.svg"),
           questionTitle: {
             uz: "Bank sohasi",
-            kr: "Банк соҳаси",
+            cy: "Банк соҳаси",
             ru: "Банковская сфера"
           },
           to: "/",
@@ -152,7 +152,7 @@ export default {
           questionIcon: require("@/assets/img/question/davxiz.svg"),
           questionTitle: {
             uz: "Davlat hizmatlari",
-            kr: "Давлат ҳизматлари",
+            cy: "Давлат ҳизматлари",
             ru: "Государственные услуги"
           },
           to: "/",
@@ -162,7 +162,7 @@ export default {
           questionIcon: require("@/assets/img/question/transport.svg"),
           questionTitle: {
             uz: "Transport",
-            kr: "Транспорт",
+            cy: "Транспорт",
             ru: "Транспорт"
           },
           to: "/",
@@ -172,7 +172,7 @@ export default {
           questionIcon: require("@/assets/img/question/istemolchi.svg"),
           questionTitle: {
             uz: "Istemolchi huquqi",
-            kr: "Истемолчи ҳуқуқи",
+            cy: "Истемолчи ҳуқуқи",
             ru: "Права истца"
           },
           to: "/",
@@ -182,7 +182,7 @@ export default {
           questionIcon: require("@/assets/img/question/chetel.svg"),
           questionTitle: {
             uz: "Chet elliklarga eslatma",
-            kr: "Чет елликларга еслатма",
+            cy: "Чет елликларга еслатма",
             ru: "Примечание для иностранцев"
           },
           to: "/",
@@ -192,7 +192,7 @@ export default {
           questionIcon: require("@/assets/img/question/qishloq.svg"),
           questionTitle: {
             uz: "Qishloq ho’jaligi",
-            kr: "Қишлоқ ҳо’жалиги",
+            cy: "Қишлоқ ҳо’жалиги",
             ru: "Сельское хозяйство"
           },
           to: "/",
@@ -202,7 +202,7 @@ export default {
           questionIcon: require("@/assets/img/question/malumot.svg"),
           questionTitle: {
             uz: "Ma’lumotlar",
-            kr: "Ма’лумотлар",
+            cy: "Ма’лумотлар",
             ru: "Данные"
           },
           to: "/",
