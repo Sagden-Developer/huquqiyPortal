@@ -1,26 +1,20 @@
 <template>
   <div id="notary">
     <div class="container">
-      <div class="boxs">
-      <div class="box">
-        <div>
-          <h4 style="">Notariat</h4>
-          <p>
-            <nuxt-link
-              style="color: black; text-decoration: none"
-              to="/"
-              href="#"
-            >
-              Bosh sahifa
-            </nuxt-link>
-            / Notariat
+        <div class="head-content">
+        <div class="head-text">
+          <div class="text"></div>
+          <h4 class="title-text">
+            Notariat
+          </h4>
+          <p class="link-text">
+            <nuxt-link to="/" class="link-text"> Bosh sahifa </nuxt-link> /
+           Notariat
           </p>
         </div>
-        <div class="group">
-          <img src="@/assets/image/Group 1116.png" alt="" />
-        </div>
+        <div class="head-logo"></div>
       </div>
-    </div>
+     
 
     <div class="card">
       <div class="natarius">
@@ -81,37 +75,46 @@ export default {
 #notary {
   margin: 0 auto;
   padding: 35px 30px 100px 30px;
-  .boxs {
-    background: #d9e6eb;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 24px;
-    flex-direction: column;
+  .head-content {
+      background: #d9e6eb;
+      height: 200px;
+      border-radius: 24px;
       padding: 50px;
-    .box {
-      margin: 0 auto;
       display: flex;
+      align-items: center;
       justify-content: space-between;
-  
-
-      h4 {
-        font-size: 24px;
-        line-height: 29px;
-        margin-top: 33px;
-        color: #000;
-        font-weight: 600;
+      .head-text {
+        h4 {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 29px;
+          color: #333333;
+          height: 29px;
+          margin-bottom: 20px;
+        }
+        .link-text {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 24px;
+          color: #333333;
+          margin-top: 20px;
+          text-decoration: none;
+        }
       }
-      p {
-        font-size: 20px;
-        line-height: 24px;
-        color: #000;
-        margin-top: 40px;
+      .head-logo {
+        width: 150.76px;
+        height: 154.46px;
+        background-image: url("~/assets/image/Group 1116.png");
       }
     }
-  }
+  
+  
   .card {
     display: flex;
-    padding: 40px 0 100px 0;
+    padding: 40px 0 0px 0;
     .natarius {
       width: 690px;
       height: 300px;

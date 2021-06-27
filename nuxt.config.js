@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Huquqiy Milliy Portal',
+    title: ' Milliy Huquqiy  Portal',
     htmlAttrs: {
       lang: 'en'
     },

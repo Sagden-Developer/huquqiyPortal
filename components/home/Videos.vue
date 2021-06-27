@@ -11,24 +11,15 @@
       </div>
       <div id="carusel-video-box">
         <Carousel v-bind="slickOptions">
-          
-          
-          
-          <div class="card-video">
-            <iframe
-              v-for="video in $store.state.home.video"
-              :key="video._id"
-              width="560"
-              height="315"
-              :src="video.link"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <p class="video-footer-text" v-text="footText"></p>
+          <div
+            class="card-video"
+            v-for="video in $store.state.home.video"
+            :key="video._id"
+          >
+            <div v-html="video.link"></div>
+            <p class="video-footer-text">{{ video.title }}</p>
           </div>
-          
+          <template></template>
         </Carousel>
       </div>
     </div>
@@ -36,15 +27,13 @@
 </template>
 
 <script>
-import CoolLightBox from "vue-cool-lightbox";
-import SwiperCore, { coverflowEffect } from "swiper";
 export default {
   data() {
     return {
       videoText: {
         uz: "Barcha videolar",
         kr: "Барча видеолар",
-        ru: "Все видео",
+        ru: "Все видео"
       },
       slImg: require("~/assets/img/course/bogcha.svg"),
       footText: "Qanday ishlar maqbul kelmaydigan ish hisoblanadi",
@@ -68,8 +57,8 @@ export default {
               infinite: true,
               slidesToScroll: 1,
               dots: false,
-              draggable: true,
-            },
+              draggable: true
+            }
           },
           {
             breakpoint: 600,
@@ -83,13 +72,13 @@ export default {
               touchThreshold: 1000,
               infinite: true,
               slidesToScroll: 1,
-              draggable: true,
-            },
-          },
-        ],
-      },
+              draggable: true
+            }
+          }
+        ]
+      }
     };
-  },
+  }
 };
 </script>
 
@@ -193,6 +182,7 @@ export default {
   }
   .video-footer-text {
     // margin-top: 30px;
+    text-align: center;
     p {
       font-style: normal;
       font-weight: 600;
@@ -200,7 +190,6 @@ export default {
       line-height: 24px;
       overflow: hidden;
       text-overflow: ellipsis;
-
       /* dark gray */
 
       color: #333333;
@@ -225,7 +214,6 @@ export default {
       }
     }
 
-   
     .v-head-text {
       font-size: 20px !important;
     }
@@ -261,7 +249,6 @@ export default {
       }
     }
 
-    
     .v-head-text {
       font-size: 20px !important;
     }

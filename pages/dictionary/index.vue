@@ -232,42 +232,80 @@ export default {
   background: #f1f3f4;
   margin: 0 auto;
   .head-content {
-    background: #d9e6eb;
-    border-radius: 24px;
-    padding: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .head-text {
-      h4 {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 29px;
-        color: #333333;
-        height: 29px;
-        margin-bottom: 20px;
+      background: #d9e6eb;
+      height: 200px;
+      border-radius: 24px;
+      padding: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .head-text {
+        h4 {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 29px;
+          color: #333333;
+          height: 29px;
+          margin-bottom: 20px;
+        }
+        .link-text {
+          width: 280px;
+          height: 24px;
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 24px;
+          color: #333333;
+          margin-top: 20px;
+          text-decoration: none;
+        }
       }
-      .link-text {
-        width: 280px;
-        height: 24px;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 24px;
-        color: #333333;
-        margin-top: 20px;
-        text-decoration: none;
+      .head-logo {
+        width: 150.76px;
+        height: 154.46px;
+        background-image: url("~/assets/img/law/headbook.svg");
       }
     }
-    .head-logo {
-      width: 150.76px;
-      height: 154.46px;
-      background-image: url("~/assets/img/law/headbook.svg");
-    }
-  }
+  // .head-content {
+  //   background: #d9e6eb;
+  //   border-radius: 24px;
+  //   padding: 50px;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-between;
+  //   .head-text {
+  //     h4 {
+  //       font-family: Montserrat;
+  //       font-style: normal;
+  //       font-weight: 600;
+  //       font-size: 24px;
+  //       line-height: 29px;
+  //       color: #333333;
+  //       height: 29px;
+  //       margin-bottom: 20px;
+  //     }
+  //     .link-text {
+  //       width: 280px;
+  //       height: 24px;
+  //       font-family: Montserrat;
+  //       font-style: normal;
+  //       font-weight: 500;
+  //       font-size: 20px;
+  //       line-height: 24px;
+  //       color: #333333;
+  //       margin-top: 20px;
+  //       text-decoration: none;
+  //     }
+  //   }
+  //   .head-logo {
+  //     width: 150.76px;
+  //     height: 154.46px;
+  //     background-image: url("~/assets/img/law/headbook.svg");
+  //   }
+  // }
   .info-nav {
     height: 187px;
     padding: 40px 0 20px 0;

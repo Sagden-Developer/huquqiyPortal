@@ -1,6 +1,21 @@
 <template>
-  <div class="parent-question">
-    <div id="question">
+  <div>
+    <div class="container">
+      <div class="head-content">
+        <div class="head-text">
+          <div class="text"></div>
+          <h4 class="title-text">
+            Huquqiy muammolar yechimi
+          </h4>
+          <p class="link-text">
+            <nuxt-link to="/" class="link-text"> Bosh sahifa </nuxt-link> /
+           Huquqiy muamolar yechimi
+          </p>
+        </div>
+        <div class="head-logo"></div>
+      </div>
+      <div class="parent-question">
+    <div class="question">
       <div class="container">
         <div class="question-body">
           <div class="question-text title-text">{{ questionTitle[`${$i18n.locale}`] }}</div>
@@ -14,6 +29,8 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
     </div>
   </div>
 </template>
@@ -215,11 +232,44 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-* {
-  box-sizing: border-box;
-  // background: #E2EAF1;
-  #question {
-    background: #e2eaf1 !important;
+.head-content {
+      background: #d9e6eb;
+      height: 200px;
+      border-radius: 24px;
+      padding: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 40px;
+      .head-text {
+        h4 {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 29px;
+          color: #333333;
+          height: 29px;
+          margin-bottom: 20px;
+        }
+        .link-text {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 24px;
+          color: #333333;
+          margin-top: 20px;
+          text-decoration: none;
+        }
+      }
+      .head-logo {
+        width: 200px;
+        height: 140.46px;
+        background-image: url("~/assets/img/question/questionicon.png");
+      }
+    }
+
+     .question {
     max-width: 100%;
     padding-top: 45px;
     padding-bottom: 45px;
@@ -274,18 +324,16 @@ export default {
       }
     }
   }
-}
+
 
 @media (min-width: 1500px) and (max-width: 1920px) {
   .parent-question {
-    background: #e2eaf1 !important;
   }
   * {
     box-sizing: border-box;
     // background: #E2EAF1;
     #question {
       margin: auto;
-      background: #e2eaf1 !important;
       max-width: 1415px;
       padding-top: 40px;
       padding-left: 22px;
