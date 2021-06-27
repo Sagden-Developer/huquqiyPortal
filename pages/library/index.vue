@@ -63,7 +63,7 @@
               </div>
             </div>
             <div class="left-content">
-              <nuxt-link to="/">
+              <nuxt-link to="/library/id">
                 <button class="btn">
                   <svg
                     width="24"
@@ -200,17 +200,17 @@ export default {};
     padding: 40px 0 0 0;
     display: flex;
     flex-wrap: wrap;
-    height: 1010px;
+    height: 880px;
     justify-content: space-between;
     .card-box {
-      width: 610px;
+      width: 640px;
       height: 260px;
       padding: 20px;
       background: #ffffff;
       border: 1px solid rgba(89, 123, 163, 0.2);
       box-sizing: border-box;
       border-radius: 12px;
-      margin-bottom: 78px;
+      margin-bottom: 20px;
       .img-box {
         width: 100%;
         height: 130px;
@@ -220,6 +220,7 @@ export default {};
           width: 180px;
           height: 130px;
           background-image: url("~/assets/image/card1.png");
+          border-radius: 8px;
         }
       }
       .card-page {
