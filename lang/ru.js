@@ -57,5 +57,10 @@ export default {
     titlenotaries: "Информация о нотариусах",
     dictionary_yur: "Юридический словарь",
 
+    // notary
+    notinfo: 'Информация о нотариусах',
+    notmove: 'Вид нотариальных действий',
+
+    notname: 'Notarius F.I.O',
 
 }

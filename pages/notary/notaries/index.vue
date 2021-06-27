@@ -6,17 +6,17 @@
           <div class="head-text">
             <div class="text"></div>
             <h4 class="title-text">
-              Notariat
+              {{ $t('titlenotary')}}
             </h4>
             <p class="link-text">
-              <nuxt-link to="/" class="link-text"> Bosh sahifa /</nuxt-link
+              <nuxt-link to="/" class="link-text"> {{ $t('head')}} /</nuxt-link
               ><nuxt-link
                 to="/notary"
-                style="color: black; text-decoration: none"
+                
               >
-                Notariat /
+               {{ $t('titlenotary')}} /
               </nuxt-link>
-              Notariuslar bo'yicha ma'lumot
+              {{ $t('notinfo')}}
             </p>
           </div>
           <div class="head-logo"></div>
@@ -29,7 +29,7 @@
               <input
                 style="border: 0"
                 type="text"
-                placeholder="Notarius F.I.O"
+                :placeholder="$t('notname')"
               />
               <img src="@/assets/image/search.png" alt="" />
             </div>
@@ -394,15 +394,19 @@ export default {
         margin-bottom: 20px;
       }
       .link-text {
+        a{
+        text-decoration: none;
+        color: #333333;
+
+        }
+        color: #333333;
         height: 24px;
         font-family: Montserrat;
         font-style: normal;
         font-weight: 500;
         font-size: 20px;
         line-height: 24px;
-        color: #333333;
         margin-top: 20px;
-        text-decoration: none;
       }
     }
     .head-logo {

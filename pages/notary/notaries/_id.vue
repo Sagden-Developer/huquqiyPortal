@@ -5,32 +5,21 @@
         <div class="head-text">
           <div class="text"></div>
           <h4 class="title-text">
-            Notariat
+           {{$t('titlenotary')}}
           </h4>
           <p class="link-text">
-            <nuxt-link to="/" class="link-text"> Bosh sahifa /</nuxt-link
+            <nuxt-link to="/" class="link-text">{{$t('head')}} /</nuxt-link
             ><nuxt-link to="/notary">
-              Notariat /
+              {{$t('titlenotary')}} /
+            </nuxt-link>
+            <nuxt-link to="/notary/notaries">
+              {{$t('notinfo')}}/
             </nuxt-link>
             Niyazimbetov Ruslan Bahodirovich
           </p>
         </div>
         <div class="head-logo"></div>
       </div>
-      <!-- <div class="not">
-        
-        <div class="part1">
-          <h3>Notariant</h3>
-          <div class="text">
-            <nuxt-link to="/">Bosh sahifa/</nuxt-link>
-            <nuxt-link to="/notary">Notariat/</nuxt-link>
-            <h4>Niyazimbetov Ruslan Bahodirovich</h4>
-          </div>
-        </div>
-        <div class="part2">
-          <img src="~assets/img/dress.png" alt="" />
-        </div>
-      </div> -->
     </div>
     <div class="person">
       <div class="container">
@@ -64,7 +53,12 @@
                   stroke-linejoin="round"
                 />
               </svg>
-              +99861-515-20-32 +99897-220-02-24
+              <span>
+                +99861-515-20-32
+              </span>
+              <span>
+                +99897-220-02-24
+              </span>
             </div>
             <img src="~assets/img/stars.png" alt="" />
             <button class="btn">
@@ -240,6 +234,9 @@ h4 {
   font-size: 18px;
   color: #333333;
   font-weight: 500;
+  span:last-child {
+    margin-left: 15px !important;
+  }
 }
 .tel svg {
   margin-right: 15px;

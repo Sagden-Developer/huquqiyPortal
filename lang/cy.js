@@ -59,4 +59,13 @@ export default {
     titlenotary: "Нотариат",
     titlenotaries: "Нотариуслар бўйича маълумот",
     dictionary_yur: "Юридик луғат",
+
+    // notary
+    notinfo: 'Нотариуслар бўйича маълумот',
+    notmove: 'Нотариал ҳаракатлар тури',
+
+
+    notname: 'Notarius F.I.O',
+
+    
 }

@@ -61,6 +61,14 @@ export default {
     dictionary_yur: "Yuridik lug’at",
 
 
+    // notary
+
+    notinfo: 'Notariuslar boyicha ma\'lumot',
+    notmove: 'Notarial harakatlar turi',
+
+
+    notname: 'Notarius F.I.O',
+
 
 
 

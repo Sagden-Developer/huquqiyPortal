@@ -62,7 +62,7 @@ export default {
             cy: "Оилавий муносабатлар",
             ru: "Семейные отношения"
           },
-          to: "/",
+          to: "/family",
           iimgAlt: "oilaviy-icon"
         },
         {
