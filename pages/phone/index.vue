@@ -195,7 +195,7 @@ $bg-color: #d9e6eb;
   }
 }
 
-@media (min-width: 1400px) and (max-width: 1920px) {
+@media (min-width: 1400px)/* and (max-width: 1920px)*/ {
   .boxs {
     background: $bg-color !important;
     width: 1700px !important;
@@ -413,7 +413,7 @@ $bg-color: #d9e6eb;
 @media  (max-width: 1400px) {
   .boxs {
     background: $bg-color !important;
-    width: 80% !important;
+    width: 95% !important;
     height: 200px;
     margin: auto;
     border-radius: 24px;
@@ -436,7 +436,7 @@ $bg-color: #d9e6eb;
   }
 
   #phones-body {
-    width: 1240px !important;
+    width: 95% !important;
     margin: auto !important;
     margin-top: 50px !important;
     margin-bottom: 100px !important;
@@ -446,12 +446,12 @@ $bg-color: #d9e6eb;
       display: flex;
       flex-direction: column;
       justify-content: center !important;
-      width: 820px !important;
+      width: 67% !important;
       box-sizing: border-box;
       .search-part {
         margin-bottom: 30px;
         input {
-          width: 673px;
+          width: 82%;
           outline: none;
           height: 50px;
           padding: 12px 20px;
@@ -466,7 +466,7 @@ $bg-color: #d9e6eb;
           justify-content: center;
           color: white;
           margin-left: 15px;
-          width: 132px;
+          width: 15%;
           height: 50px;
           background: #597ba3;
           border-radius: 8px;
@@ -484,7 +484,7 @@ $bg-color: #d9e6eb;
       }
       .phones-part {
         .table-phone {
-          width: 820px;
+          width: 100%;
           background: #ffffff;
           border: 1px solid rgba(89, 123, 163, 0.2);
           box-sizing: border-box;
@@ -570,7 +570,7 @@ $bg-color: #d9e6eb;
     .categories {
       display: flex;
       flex-direction: column;
-      width: 400px;
+      width: 33%;
       margin-left: 20px;
       background: #ffffff;
       border: 1px solid rgba(89, 123, 163, 0.2);
@@ -578,12 +578,12 @@ $bg-color: #d9e6eb;
       border-radius: 12px;
       padding: 25px;
       .category-title {
-        width: 350px !important;
+        width: 87.5% !important;
         height: 53px;
         color: #333333;
-        padding: 15px;
+        padding: 3.75%;
         cursor: pointer;
-        margin-bottom: 10px;
+        margin-bottom: 3%;
         &:hover {
           border-radius: 8px;
           background: rgba(89, 123, 163, 0.15);
@@ -592,11 +592,11 @@ $bg-color: #d9e6eb;
         }
       }
       .category-item-active {
-        width: 350px;
+        width: 87.5%;
         cursor: pointer;
         height: 53px;
         margin: auto;
-        padding: 20px;
+        padding: 3.75%;
         color: $bg-color;
         background: #597ba3;
         border-radius: 8px;

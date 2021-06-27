@@ -10,24 +10,16 @@
         ></button>
       </div>
       <div id="carusel-video-box">
-        <Carousel v-bind="slickOptions">
+        <Carousel v-bind="slickOptions" >
           <div
             class="card-video"
             v-for="video in $store.state.home.video"
             :key="video._id"
           >
-            <!-- <iframe
-              width="560"
-              height="315"
-              :src="video.link"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-             -->
+              <div v-html="video.link"></div>
             <p class="video-footer-text" >{{video.title}}</p>
           </div>
+          <template></template>
         </Carousel>
       </div>
     </div>
