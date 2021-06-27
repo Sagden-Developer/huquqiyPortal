@@ -4,7 +4,7 @@
     <div class="head-content">
       <div class="head-text">
         <div class="text"></div>
-        <h4>Yuridik lug’at</h4>
+        <h4 class="title-text">Yuridik lug’at</h4>
         <p>
           <nuxt-link to="/" class="link-text"> Bosh sahifa </nuxt-link> /
           Yuridik lug’at
@@ -227,22 +227,18 @@ export default {
 
 <style lang="scss">
 #law {
-  width: 1300px;
   // height: 1533px; //1518 agar tagidagi chiziq z-index bn bosa
-  padding: 35px 30px 100px 30px;
+  padding: 40px 0;
   background: #f1f3f4;
   margin: 0 auto;
   .head-content {
-    width: 1240px;
-    height: 200px;
     background: #d9e6eb;
     border-radius: 24px;
-    padding: 23px 50px;
+    padding: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     .head-text {
-      padding: 30px 0;
       h4 {
         font-family: Montserrat;
         font-style: normal;
@@ -250,7 +246,6 @@ export default {
         font-size: 24px;
         line-height: 29px;
         color: #333333;
-        width: 164px;
         height: 29px;
         margin-bottom: 20px;
       }
@@ -274,7 +269,6 @@ export default {
     }
   }
   .info-nav {
-    width: 1240px;
     height: 187px;
     padding: 40px 0 20px 0;
     display: flex;
@@ -356,12 +350,9 @@ export default {
     }
   }
   .info-content {
-    width: 1240px;
-    height: 922px;
     // border: 1px solid gray;
     .accordion-container {
       .accordion {
-        width: 1240px;
         background: #ffffff;
         border: 1px solid rgba(89, 123, 163, 0.2);
         border-radius: 12px;

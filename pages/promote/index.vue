@@ -5,7 +5,7 @@
         <h4>{{ $t("tarqonun") }}</h4>
         <p>
           <nuxt-link
-            style="color: white; text-decoration: none"
+            style="text-decoration: none"
             to="/"
             href="#"
           >
@@ -88,8 +88,7 @@ import dateformat from "dateformat";
 export default {
   head() {
     return {
-      title:  this.$t('tarqonun'),
-     
+      title: this.$t("tarqonun"),
 
       htmlAttrs: {
         lang: this.$i18n.locale
@@ -129,28 +128,33 @@ export default {
 
 <style lang="scss">
 .boxs {
-  background: #597ba3;
-  width: 1340px;
+  background: #d9e6eb;
+  width: 1300px;
+  padding: 0 50px;
   height: 200px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 24px;
   margin-top: 26px;
   .box {
-    width: 1300px;
     margin: 0 auto;
     padding: 15px 0;
+    a{
+      color: #333 !important;
+
+    }
+
     h4 {
       font-size: 24px;
       line-height: 29px;
       margin-top: 33px;
-      color: #fff;
+      color: #333;
       font-weight: 600;
     }
     p {
       font-size: 20px;
       line-height: 24px;
-      color: #fff;
+      color: #333;
       margin-top: 40px;
     }
   }

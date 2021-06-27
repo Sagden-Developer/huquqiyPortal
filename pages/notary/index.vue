@@ -1,6 +1,7 @@
 <template>
   <div id="notary">
-    <div class="boxs">
+    <div class="container">
+      <div class="boxs">
       <div class="box">
         <div>
           <h4 style="">Notariat</h4>
@@ -41,6 +42,8 @@
         </div>
       </div>
     </div>
+    </div>
+    
   </div>
 </template>
 
@@ -76,31 +79,20 @@ export default {
 
 <style lang="scss" >
 #notary {
-  width: 1300px;
-  height: 675px;
   margin: 0 auto;
   padding: 35px 30px 100px 30px;
   .boxs {
     background: #d9e6eb;
-    width: 1240px;
-    height: 200px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 24px;
-    margin-top: 26px;
     flex-direction: column;
+      padding: 50px;
     .box {
-      width: 1240px;
       margin: 0 auto;
-      padding: 25px 50px;
       display: flex;
       justify-content: space-between;
-      .group {
-        img {
-          //  margin-left: 650px;
-          width: 148px;
-        }
-      }
+  
 
       h4 {
         font-size: 24px;
@@ -108,29 +100,22 @@ export default {
         margin-top: 33px;
         color: #000;
         font-weight: 600;
-        // margin-left: 100px;
       }
       p {
         font-size: 20px;
         line-height: 24px;
         color: #000;
         margin-top: 40px;
-        // margin-left: 100px;
-        //
       }
     }
   }
   .card {
     display: flex;
-    // margin-left: 280px;
+    padding: 40px 0 100px 0;
     .natarius {
-      width: 611px;
+      width: 690px;
       height: 300px;
       background-color: #fff;
-      margin-top: 40px;
-      margin-bottom: 100px;
-      margin-left: auto;
-      margin-right: auto;
       border-radius: 12px;
       img {
         width: 153px;
@@ -144,7 +129,6 @@ export default {
         margin-top: 40px;
         font-weight: 500;
         font-size: 20px;
-        font-family: Poppins sans-serif;
       }
     }
   }
