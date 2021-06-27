@@ -246,7 +246,6 @@ export default {
         font-size: 24px;
         line-height: 29px;
         color: #333333;
-        width: 164px;
         height: 29px;
         margin-bottom: 20px;
       }
