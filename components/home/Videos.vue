@@ -10,14 +10,14 @@
         ></button>
       </div>
       <div id="carusel-video-box">
-        <Carousel v-bind="slickOptions" >
+        <Carousel v-bind="slickOptions">
           <div
             class="card-video"
             v-for="video in $store.state.home.video"
             :key="video._id"
           >
-              <div v-html="video.link"></div>
-            <p class="video-footer-text" >{{video.title}}</p>
+            <div v-html="video.link"></div>
+            <p class="video-footer-text">{{ video.title }}</p>
           </div>
           <template></template>
         </Carousel>
@@ -33,7 +33,7 @@ export default {
       videoText: {
         uz: "Barcha videolar",
         kr: "Барча видеолар",
-        ru: "Все видео",
+        ru: "Все видео"
       },
       slImg: require("~/assets/img/course/bogcha.svg"),
       footText: "Qanday ishlar maqbul kelmaydigan ish hisoblanadi",
@@ -57,8 +57,8 @@ export default {
               infinite: true,
               slidesToScroll: 1,
               dots: false,
-              draggable: true,
-            },
+              draggable: true
+            }
           },
           {
             breakpoint: 600,
@@ -72,13 +72,13 @@ export default {
               touchThreshold: 1000,
               infinite: true,
               slidesToScroll: 1,
-              draggable: true,
-            },
-          },
-        ],
-      },
+              draggable: true
+            }
+          }
+        ]
+      }
     };
-  },
+  }
 };
 </script>
 
@@ -182,7 +182,7 @@ export default {
   }
   .video-footer-text {
     // margin-top: 30px;
-      text-align: center;
+    text-align: center;
     p {
       font-style: normal;
       font-weight: 600;
@@ -214,7 +214,6 @@ export default {
       }
     }
 
-   
     .v-head-text {
       font-size: 20px !important;
     }
@@ -250,7 +249,6 @@ export default {
       }
     }
 
-    
     .v-head-text {
       font-size: 20px !important;
     }

@@ -262,7 +262,7 @@
               </div>
             </li>
             <li>
-              <nuxt-link to="/" class="test" href="#">{{
+              <nuxt-link to="/question" class="test" href="#">{{
                 $t("lan5")
               }}</nuxt-link>
             </li>

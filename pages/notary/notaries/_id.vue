@@ -1,7 +1,24 @@
 <template>
   <div>
     <div class="container">
-      <div class="not">
+      <div class="head-content">
+        <div class="head-text">
+          <div class="text"></div>
+          <h4 class="title-text">
+            Notariat
+          </h4>
+          <p class="link-text">
+            <nuxt-link to="/" class="link-text"> Bosh sahifa /</nuxt-link
+            ><nuxt-link to="/notary">
+              Notariat /
+            </nuxt-link>
+            Niyazimbetov Ruslan Bahodirovich
+          </p>
+        </div>
+        <div class="head-logo"></div>
+      </div>
+      <!-- <div class="not">
+        
         <div class="part1">
           <h3>Notariant</h3>
           <div class="text">
@@ -13,7 +30,7 @@
         <div class="part2">
           <img src="~assets/img/dress.png" alt="" />
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="person">
       <div class="container">
@@ -119,37 +136,65 @@ export default {
 };
 </script>
 
-<style scoped>
-.not {
-  margin-top: 35px;
-  background-color: #d9e6eb;
-  align-items: center;
+<style lang="scss" scoped>
+.head-content {
+  background: #d9e6eb;
+  height: 200px;
   border-radius: 24px;
-  display: flex;
-  justify-content: space-between;
   padding: 50px;
-}
-.part1 a {
-  font-size: 24px;
-  color: #333333;
-  font-weight: bold;
-}
-.text {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 40px;
+  .head-text {
+    h4 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      color: #333333;
+      height: 29px;
+      margin-bottom: 20px;
+    }
+    .link-text {
+      a {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: #333333;
+        margin-top: 20px;
+        text-decoration: none;
+      }
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #333333;
+      margin-top: 20px;
+      text-decoration: none;
+    }
+  }
+  .head-logo {
+    width: 150.76px;
+    height: 154.46px;
+    background-image: url("~/assets/image/Group 1116.png");
+  }
 }
-.text a, h4 {
+
+.text a,
+h4 {
   text-decoration: none;
   margin-right: 7px;
   font-size: 20px;
   font-weight: 500;
   font-family: Montserrat;
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 24px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
 
-color: #333333;
+  color: #333333;
 }
 .person {
   margin-top: 40px;

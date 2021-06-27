@@ -1,20 +1,21 @@
 <template>
   <div>
-    <div class="boxs">
-      <div class="box">
-        <h4>{{ $t("tarqonun") }}</h4>
-        <p>
-          <nuxt-link
-            style="text-decoration: none"
-            to="/"
-            href="#"
-          >
-            {{ $t("head") }}
-          </nuxt-link>
-          / {{ $t("lan2") }}
-        </p>
+    <div class="container">
+        <div class="head-content">
+        <div class="head-text">
+          <div class="text"></div>
+          <h4 class="title-text">
+           {{ $t("tarqonun") }}
+          </h4>
+          <p class="link-text">
+            <nuxt-link to="/" class="link-text">  {{ $t("head") }}</nuxt-link> /
+          {{ $t("lan2") }}
+          </p>
+        </div>
+        <div class="head-logo"></div>
       </div>
     </div>
+    
 
     <div class="cards">
       <div
@@ -127,38 +128,45 @@ export default {
 </script>
 
 <style lang="scss">
-.boxs {
-  background: #d9e6eb;
-  width: 1300px;
-  padding: 0 50px;
-  height: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 24px;
-  margin-top: 26px;
-  .box {
-    margin: 0 auto;
-    padding: 15px 0;
-    a{
-      color: #333 !important;
-
-    }
-
-    h4 {
-      font-size: 24px;
-      line-height: 29px;
-      margin-top: 33px;
-      color: #333;
-      font-weight: 600;
-    }
-    p {
-      font-size: 20px;
-      line-height: 24px;
-      color: #333;
+.head-content {
+      background: #d9e6eb;
+      height: 200px;
+      border-radius: 24px;
+      padding: 50px;
+      display: flex;
+      align-items: center;
       margin-top: 40px;
+      justify-content: space-between;
+      .head-text {
+        h4 {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 29px;
+          color: #333333;
+          height: 29px;
+          margin-bottom: 20px;
+        }
+        .link-text {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 24px;
+          color: #333333;
+          margin-top: 20px;
+          text-decoration: none;
+        }
+      }
+      .head-logo {
+        width: 195px;
+        height: 154.46px;
+        background-repeat: no-repeat;
+        background-image: url("~/assets/img/promote/promoteicon.png");
+      }
     }
-  }
-}
+
+  
 .cards {
   width: 1300px;
   display: flex;

@@ -1,15 +1,21 @@
 <template>
   <div>
-    <div class="banner">
-      <div class="content">
-        <h4>Qonunlar bo’yicha targ’ibot materiallari</h4>
-        <p>
-          <nuxt-link to="/" href="#"> Bosh sahifa </nuxt-link> /
-          <nuxt-link href="" to="/promote">Targ’ibot materiallari </nuxt-link> /
+    <div class="container">
+        <div class="head-content">
+        <div class="head-text">
+          <div class="text"></div>
+          <h4 class="title-text">
+           {{ $t("tarqonun") }}
+          </h4>
+          <p class="link-text">
+            <nuxt-link to="/" class="link-text">  {{ $t("head") }}</nuxt-link> /
           Normativ hujjat nomi
-        </p>
+          </p>
+        </div>
+        <div class="head-logo"></div>
       </div>
     </div>
+   
     <div class="main">
       <div class="left">
         <div class="title">
@@ -344,36 +350,44 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.banner {
-  background: #d9e6eb;
-  width: 1300px;
-  height: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 24px;
-  margin-top: 26px;
-  .content {
-    margin: 0 auto;
-    padding: 15px;
-    h4 {
-      font-size: 24px;
-      line-height: 29px;
-      margin-top: 33px;
-      color: #333;
-      font-weight: 600;
-    }
-    p {
-      font-size: 20px;
-      line-height: 24px;
-      color: #333;
+.head-content {
+      background: #d9e6eb;
+      height: 200px;
+      border-radius: 24px;
+      padding: 50px;
+      display: flex;
+      align-items: center;
       margin-top: 40px;
-      a {
-        text-decoration: none;
-        color: #333;
+      justify-content: space-between;
+      .head-text {
+        h4 {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 29px;
+          color: #333333;
+          height: 29px;
+          margin-bottom: 20px;
+        }
+        .link-text {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 24px;
+          color: #333333;
+          margin-top: 20px;
+          text-decoration: none;
+        }
+      }
+      .head-logo {
+        width: 195px;
+        height: 154.46px;
+        background-repeat: no-repeat;
+        background-image: url("~/assets/img/promote/promoteicon.png");
       }
     }
-  }
-}
+
 .main {
   width: 1300px;
   margin: 0 auto;

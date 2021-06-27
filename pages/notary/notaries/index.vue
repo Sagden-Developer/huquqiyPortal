@@ -2,32 +2,26 @@
   <div id="notaries">
     <div class="container">
       <div id="inputs">
-        <div class="boxs">
-          <div class="box">
-            <div>
-              <h4>Notariat</h4>
-              <p>
-                <nuxt-link
-                  style="color: black; text-decoration: none"
-                  to="/"
-                  href="#"
-                >
-                  Bosh sahifa /
-                </nuxt-link>
-                <nuxt-link
-                  to="/notary"
-                  style="color: black; text-decoration: none"
-                >
-                  Notariat /
-                </nuxt-link>
-                Natariuslar bo'yicha ma'lumot
-              </p>
-            </div>
-            <div>
-              <img src="@/assets/image/Group 1116.png" alt="" />
-            </div>
+        <div class="head-content">
+          <div class="head-text">
+            <div class="text"></div>
+            <h4 class="title-text">
+              Notariat
+            </h4>
+            <p class="link-text">
+              <nuxt-link to="/" class="link-text"> Bosh sahifa /</nuxt-link
+              ><nuxt-link
+                to="/notary"
+                style="color: black; text-decoration: none"
+              >
+                Notariat /
+              </nuxt-link>
+              Notariuslar bo'yicha ma'lumot
+            </p>
           </div>
+          <div class="head-logo"></div>
         </div>
+        
 
         <div class="Input">
           <div class="left">
@@ -92,7 +86,9 @@
             </p>
             <div class="pict">
               <img src="~assets/img/stars.png" alt="" />
-              <nuxt-link to="/notary/notaries/id"><img src="~assets/img/arrow.png" alt="" /></nuxt-link>
+              <nuxt-link to="/notary/notaries/id"
+                ><img src="~assets/img/arrow.png" alt=""
+              /></nuxt-link>
             </div>
           </div>
         </div>
@@ -378,6 +374,43 @@ export default {
   // width: 1300px;
   margin: 0 auto;
   margin-top: 35px;
+  .head-content {
+    background: #d9e6eb;
+    height: 200px;
+    border-radius: 24px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .head-text {
+      h4 {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        color: #333333;
+        height: 29px;
+        margin-bottom: 20px;
+      }
+      .link-text {
+        height: 24px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: #333333;
+        margin-top: 20px;
+        text-decoration: none;
+      }
+    }
+    .head-logo {
+      width: 150.76px;
+      height: 154.46px;
+      background-image: url("~/assets/image/Group 1116.png");
+    }
+  }
 
   .row {
     display: flex;
@@ -386,7 +419,7 @@ export default {
     justify-content: space-between;
     margin: 20px auto;
   }
-  .row:last-child{
+  .row:last-child {
     margin-bottom: 75px;
   }
   .col-3 {
@@ -448,43 +481,7 @@ export default {
   #inputs {
     margin-top: 35px;
     margin: 0 auto;
-    .boxs {
-      background: #d9e6eb;
-      margin-left: auto;
-      margin-right: auto;
-      border-radius: 24px;
-      flex-direction: column;
-      padding: 50px;
-      .box {
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-
-        .group {
-          img {
-            //  margin-left: 650px;
-            width: 148px;
-          }
-        }
-
-        h4 {
-          font-size: 24px;
-          line-height: 29px;
-          margin-top: 33px;
-          color: #000;
-          font-weight: 600;
-          // margin-left: 100px;
-        }
-        p {
-          font-size: 20px;
-          line-height: 24px;
-          color: #000;
-          margin-top: 40px;
-          // margin-left: 100px;
-          //
-        }
-      }
-    }
+   
 
     .Input {
       // width: 1240px;
