@@ -8,7 +8,7 @@
     <Courses />
     <Rating />
     <Ebook />
-    <Videos />
+    <!-- <Videos /> -->
     <Weblinks />
 
   </div>
@@ -22,13 +22,13 @@ import Question from "../components/home/Question";
 import Courses from "../components/home/Courses";
 import Rating from "../components/home/Rating";
 import Ebook from "../components/home/Ebook";
-import Videos from "../components/home/Videos";
+// import Videos from "../components/home/Videos";
 import Weblinks from "../components/home/Weblinks";
 
 export default {
   // name: "HuquqClientIndex",
 
-  components: { Slider, News, Section, Question,Courses, Rating , Ebook, Videos ,Weblinks},
+  components: { Slider, News, Section, Question,Courses, Rating , Ebook, /*Videos ,*/Weblinks},
 
   // directives: { DirectiveName },
 
